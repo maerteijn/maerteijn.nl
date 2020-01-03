@@ -1,0 +1,32 @@
+{
+  "name": "maerteijn.nl",
+  "version": "1.0.0",
+  "description": "My professional website build with vue.js and bulma",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel --hmr-port 3000 src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maerteijn/maerteijn.github.io.git"
+  },
+  "keywords": [],
+  "author": "Martijn Jacobs",
+  "license": "SEE LICENSE IN LICENS",
+  "homepage": "https://github.com/maerteijn/maerteijn.github.io",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.24.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
