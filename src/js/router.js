@@ -1,8 +1,7 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'
 
-import Home from "./pages/home";
-import About from "./pages/about";
+import Home from "./pages/home"
+import About from "./pages/about"
 
 const router = new VueRouter({
   mode: 'history',
@@ -12,4 +11,4 @@ const router = new VueRouter({
   ]
 })
 
-export default router;
+export default router
