@@ -1,0 +1,28 @@
+{
+  "site_info": {
+    "title": "maerteijn - freelance software developer",
+    "name": "martijn jacobs"
+  },
+  "logo_links": [
+    {
+      "title": "Email info@maerteijn.nl",
+      "url": "mailto:info@maerteijn.nl",
+      "font_awesome_icon": "fas-envelope"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/maerteijn/",
+      "font_awesome_icon": "fab-linkedin-in"
+    },
+    {
+      "title": "Github",
+      "url": "https://www.github.com/maerteijn/",
+      "font_awesome_icon": "fab-github"
+    },
+    {
+      "title": "Gitlab",
+      "url": "https://www.gitlab.com/maerteijn/",
+      "font_awesome_icon": "fab-gitlab"
+    }
+  ]
+}
