@@ -1,22 +1,26 @@
 <template>
 <div class="main">
-  <h1>Welcome to maerteijn's vue.js website</h1>
+  <h1>{{ content.site_info.title }}</h1>
   <nav>
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view />
+  <router-view></router-view>
+
 </div>
 </template>
 
 <script>
-export default {
-};
-</script>
+import { state, actions } from "./js/store"
 
-<style scoped>
-h1 {
-  color: #FB7516;
-  font-size: 5.75vw;
+export default {
+   computed: {
+      content() {
+        return state.content
+      }
+    },
+    created() {
+      actions.fetchJsonContent()
+    }
 }
-</style>
+</script>
