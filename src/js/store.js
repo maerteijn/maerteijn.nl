@@ -6,7 +6,7 @@ export const state = Vue.observable({
 })
 
 export const actions = {
-  fetchJsonContent() {
+  loadContent() {
     return axios.get("/data.json").then((response) => {
       state.content = response.data
     })

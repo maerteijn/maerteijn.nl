@@ -3,9 +3,10 @@
 </template>
 
 <script>
+import { actions } from "./js/store"
 export default {
   created() {
-    console.log("Load content here")
+    actions.loadContent()
   },
 }
 </script>
