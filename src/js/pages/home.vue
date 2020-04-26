@@ -1,3 +1,5 @@
 <template>
-    <p>This is the homepage component</p>
+  <default-layout>
+    right
+  </default-layout>
 </template>
