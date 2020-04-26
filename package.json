@@ -7,6 +7,8 @@
     "dev": "parcel --hmr-port 3000 src/index.html",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
+    "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
+    "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
     "build": "parcel build main.js src/index.html"
   },
   "repository": {
@@ -52,6 +54,13 @@
         "error",
         "never"
       ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "string-quotes": "double",
+      "scss/at-import-no-partial-leading-underscore": null
     }
   }
 }
