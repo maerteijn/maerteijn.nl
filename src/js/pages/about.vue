@@ -1,3 +1,3 @@
 <template>
-    <p>This is the about component</p>
+  <p>This is the about component</p>
 </template>

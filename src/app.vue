@@ -6,6 +6,6 @@
 export default {
   created() {
     console.log("Load content here")
-  }
+  },
 }
 </script>
