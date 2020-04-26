@@ -18,7 +18,7 @@
   "license": "SEE LICENSE IN LICENS",
   "homepage": "https://github.com/maerteijn/maerteijn.github.io",
   "devDependencies": {
-    "@vue/component-compiler-utils": "^3.1.0",
+    "@vue/component-compiler-utils": "^3.1.2",
     "bulma": "^0.8.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -31,7 +31,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "vue": "^2.6.11",
-    "vue-router": "^3.1.4"
+    "vue-router": "^3.1.6"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
