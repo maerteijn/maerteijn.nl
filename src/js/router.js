@@ -7,10 +7,9 @@ import About from "./pages/about"
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: "history",
   routes: [
-    { path: "/", component: Home },
-    { path: "/about", component: About },
+    { name: "home", path: "/", component: Home },
+    { name: "about", path: "/about", component: About },
   ],
 })
 
