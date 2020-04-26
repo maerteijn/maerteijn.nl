@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from "vue"
 import App from "./app"
 import router from "./js/router"
 
@@ -6,10 +6,10 @@ import router from "./js/router"
 import Default from "./js/layouts/default"
 Vue.component("default-layout", Default)
 
-import './scss/main.scss'
+import "./scss/main.scss"
 
 new Vue({
   router: router,
-  el: '#app',
-  render: h => h(App),
+  el: "#app",
+  render: (h) => h(App),
 })

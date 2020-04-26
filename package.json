@@ -9,6 +9,8 @@
     "eslint:fix": "eslint src/ --fix",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
     "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
+    "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
+    "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "build": "parcel build main.js src/index.html"
   },
   "repository": {
@@ -26,6 +28,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
+    "prettier": "^2.0.5",
     "sass": "^1.26.5",
     "stylelint": "^13.3.3",
     "stylelint-config-sass-guidelines": "^7.0.0",
@@ -62,5 +65,9 @@
       "string-quotes": "double",
       "scss/at-import-no-partial-leading-underscore": null
     }
+  },
+  "prettier": {
+    "semi": false,
+    "vueIndentScriptAndStyle": false
   }
 }
