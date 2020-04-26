@@ -19,6 +19,7 @@
   "homepage": "https://github.com/maerteijn/maerteijn.github.io",
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.1.0",
+    "bulma": "^0.8.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "parcel-bundler": "^1.12.4",
@@ -29,7 +30,6 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "bulma": "^0.8.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.4"
   },
