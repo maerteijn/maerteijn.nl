@@ -1,0 +1,12 @@
+// Add bulma overrides before importing bulma
+$family-primary: "Play";
+
+$title-size: 1.5rem;
+$subtitle-size: 1.1rem;
+$subtitle-negative-margin: 0;
+
+$body-background-color: #1a1a1a;
+$body-color: #ffffff;
+$body-weight: 400;
+
+@import "~bulma";
