@@ -4,8 +4,8 @@
 
 <script>
 export default {
-    created() {
-      actions.fetchJsonContent()
-    }
+  created() {
+    console.log("Load content here")
+  }
 }
 </script>
