@@ -11,12 +11,12 @@
 .main {
   display: grid;
   height: 100vh;
-  overflow:hidden;
+  overflow: hidden;
   width: 100vw;
 
   .left {
     box-shadow: 0 0 5px 0 variables.$drop-shadow-color;
-    z-index:1;
+    z-index: 1;
   }
 
   .right {
@@ -31,7 +31,7 @@
   .main {
     .left {
       box-shadow: 0 0 15px 0 variables.$drop-shadow-color;
-      position:relative
+      position: relative;
     }
   }
 }
