@@ -7,6 +7,12 @@
   </main>
 </template>
 
+<script>
+export default {
+  name: "layout-default",
+}
+</script>
+
 <style lang="scss">
 .main {
   display: grid;
