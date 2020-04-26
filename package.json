@@ -11,7 +11,7 @@
     "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
-    "build": "parcel build main.js src/index.html"
+    "build": "parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting"
   },
   "repository": {
     "type": "git",
@@ -39,9 +39,6 @@
     "axios": "^0.19.2",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
-  },
-  "alias": {
-    "vue": "./node_modules/vue/dist/vue.common.js"
   },
   "eslintConfig": {
     "root": true,
