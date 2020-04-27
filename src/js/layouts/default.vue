@@ -21,12 +21,13 @@ export default {
   width: 100vw;
 
   .left {
+    background-color: variables.$background-color-left;
     box-shadow: 0 0 5px 0 variables.$drop-shadow-color;
     z-index: 1;
   }
 
   .right {
-    background-color: variables.$background-color;
+    background-color: variables.$background-color-right;
     color: variables.$font-color;
     height: 100%;
     overflow: scroll;
