@@ -36,6 +36,9 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "axios": "^0.19.2",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
@@ -59,6 +62,7 @@
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
     "rules": {
+      "max-nesting-depth": 3,
       "string-quotes": "double",
       "scss/at-import-no-partial-leading-underscore": null
     }
