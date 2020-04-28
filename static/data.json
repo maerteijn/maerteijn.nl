@@ -3,6 +3,21 @@
     "title": "maerteijn - freelance software developer",
     "name": "martijn jacobs"
   },
+  "navigation": [
+    {
+      "title": "projects",
+      "route": "projects"
+    },
+    {
+      "title": "impressum",
+      "route": "impressum"
+    },
+    {
+      "title": "colofon",
+      "route": "colofon"
+    }
+
+  ],
   "logo_links": [
     {
       "title": "Email info@maerteijn.nl",

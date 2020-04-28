@@ -35,9 +35,9 @@
 
     <div class="nav-bottom">
       <div class="navigation">
-        <div class="item"><a href="">home</a></div>
-        <div class="item"><a href="">impression</a></div>
-        <div class="item"><a href="">personal</a></div>
+        <div class="item" v-for="item in navigation">
+          <a v-html="item.title"></a>
+        </div>
       </div>
     </div>
   </nav>
@@ -51,6 +51,9 @@ export default {
   computed: {
     links() {
       return this.$state.content.logo_links
+    },
+    navigation() {
+      return this.$state.content.navigation
     },
     site_info() {
       return this.$state.content.site_info
