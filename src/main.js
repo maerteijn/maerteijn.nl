@@ -6,6 +6,10 @@ import router from "./js/router"
 import Default from "./js/layouts/default"
 Vue.component("default-layout", Default)
 
+// register state as a global prototype
+import { state } from "./js/store"
+Vue.prototype.$state = state
+
 import "./scss/main.scss"
 
 new Vue({
