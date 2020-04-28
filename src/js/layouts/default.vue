@@ -47,11 +47,15 @@ export default {
 
 @media screen and (max-width: bulma.$tablet) {
   .main {
+    .column {
+      padding: 0.5rem;
+    }
+
     .left {
       box-shadow: 0 0 15px 0 variables.$drop-shadow-color;
-      padding: 1rem 2rem;
       position: relative;
     }
+
   }
 }
 </style>
