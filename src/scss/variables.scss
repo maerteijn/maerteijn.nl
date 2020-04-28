@@ -1,10 +1,15 @@
 @charset "utf-8";
 
 // add global variables here
-$font-color: #1a1a1a;
 $drop-shadow-color: rgba(0, 0, 0, 0.75);
 
 // background
 $background-color-left-start: #1b2838;
 $background-color-left-end: #171a21;
 $background-color-right: #f8f9fa;
+
+// left
+$font-color-left: #f8f9fa;
+
+// right
+$font-color-right: #1a1a1a;
