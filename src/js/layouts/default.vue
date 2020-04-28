@@ -1,15 +1,22 @@
 <template>
   <main class="main">
     <div class="columns">
-      <div class="column is-two-fifths left">left</div>
+      <div class="column is-two-fifths left">
+        <navigation></navigation>
+      </div>
       <div class="column right"><slot name="default"></slot></div>
     </div>
   </main>
 </template>
 
 <script>
+import Navigation from "../components/navigation"
+
 export default {
   name: "layout-default",
+  components: {
+    navigation: Navigation,
+  },
 }
 </script>
 
@@ -20,15 +27,19 @@ export default {
   overflow: hidden;
   width: 100vw;
 
+  .column {
+    padding: 2rem;
+  }
+
   .left {
-    background-color: variables.$background-color-left;
+    background-color: variables.$background-color-left-start;
     box-shadow: 0 0 5px 0 variables.$drop-shadow-color;
     z-index: 1;
   }
 
   .right {
     background-color: variables.$background-color-right;
-    color: variables.$font-color;
+    color: variables.$font-color-right;
     height: 100%;
     overflow: scroll;
   }
@@ -38,6 +49,7 @@ export default {
   .main {
     .left {
       box-shadow: 0 0 15px 0 variables.$drop-shadow-color;
+      padding: 1rem 2rem;
       position: relative;
     }
   }
