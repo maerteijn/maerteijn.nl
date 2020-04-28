@@ -32,7 +32,7 @@ export default {
   }
 
   .left {
-    background-color: variables.$background-color-left-start;
+    background-color: variables.$background-color-left;
     box-shadow: 0 0 5px 0 variables.$drop-shadow-color;
     z-index: 1;
   }
