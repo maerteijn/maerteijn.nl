@@ -22,10 +22,12 @@ export default {
 
 <style lang="scss">
 .main {
+  box-shadow: 0 0 5px 0 variables.$drop-shadow-color;
   display: grid;
   height: 100vh;
+  margin: 0 auto;
+  max-width: bulma.$widescreen;
   overflow: hidden;
-  width: 100vw;
 
   .column {
     padding: 2rem;
@@ -52,6 +54,7 @@ export default {
     }
 
     .left {
+      border-top: solid 1px variables.$orange-color;
       box-shadow: 0 0 15px 0 variables.$drop-shadow-color;
       position: relative;
     }
