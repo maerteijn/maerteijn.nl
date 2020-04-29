@@ -1,11 +1,11 @@
 <template>
   <default-layout>
-    home
+    colophon
   </default-layout>
 </template>
 
 <script>
 export default {
-  name: "home",
+  name: "colophon",
 }
 </script>
