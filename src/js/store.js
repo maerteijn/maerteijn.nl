@@ -7,7 +7,7 @@ export const state = Vue.observable({
 
 export const actions = {
   loadContent() {
-    return axios.get("/data.json").then((response) => {
+    return axios.get("./content.json").then((response) => {
       state.content = response.data
     })
   },
