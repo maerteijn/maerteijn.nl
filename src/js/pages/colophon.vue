@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "colophon",
+  name: "colophon-page",
 }
 </script>
