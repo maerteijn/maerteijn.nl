@@ -6,7 +6,7 @@
 import { actions } from "./js/store"
 export default {
   created() {
-    actions.loadContent()
+    actions.loadStructure()
   },
 }
 </script>

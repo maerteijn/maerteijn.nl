@@ -1,19 +1,15 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 
-import HomePage from "./pages/home"
-import ProjectsPage from "./pages/projects"
-import ColophonPage from "./pages/colophon"
+import ContentPage from "./pages/content"
 import NotFoundPage from "./pages/notfound"
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
-    { name: "home", path: "/", component: HomePage },
-    { name: "projects", path: "/projects", component: ProjectsPage },
-    { name: "colophon", path: "/colophon", component: ColophonPage },
-    { name: "404", path: "*", component: NotFoundPage },
+    { name: "not-found", path: "/not-found", component: NotFoundPage },
+    { name: "content", path: "*", component: ContentPage },
   ],
 })
 

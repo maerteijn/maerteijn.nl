@@ -1,0 +1,44 @@
+<template>
+  <default-layout>
+    <div class="content" v-html="renderedMarkdown"></div>
+  </default-layout>
+</template>
+
+<script>
+import axios from "axios"
+import marked from "marked"
+import { actions, getters } from "../store"
+
+export default {
+  name: "content-page",
+  computed: {
+    content() {
+      return getters.getContent(this.$route.path)
+    },
+    renderedMarkdown() {
+      const markdown = this.content || ""
+      return marked(markdown)
+    },
+    loaded() {
+      return this.$state.loaded
+    },
+    page_metadata() {
+      return getters.getPageMetaData(this.$route.path)
+    },
+  },
+  watch: {
+    loaded: {
+      immediate: true,
+      handler(loaded) {
+        if (loaded) {
+          if (!this.page_metadata) {
+            return this.$router.push({ name: "not-found" })
+          }
+          actions.downloadContent(this.$route.path)
+          document.title = this.page_metadata.title
+        }
+      },
+    },
+  },
+}
+</script>
