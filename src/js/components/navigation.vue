@@ -95,7 +95,7 @@ nav {
   }
 
   .logo-container-desktop {
-    margin-top: 9rem;
+    margin-top: 8rem;
     max-width: 20rem;
 
     .icons {
