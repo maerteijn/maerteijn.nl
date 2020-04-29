@@ -5,25 +5,20 @@
   },
   "navigation": [
     {
+      "title": "home",
+      "route": "home"
+    },
+    {
       "title": "projects",
       "route": "projects"
     },
     {
-      "title": "impressum",
-      "route": "impressum"
-    },
-    {
-      "title": "colofon",
-      "route": "colofon"
+      "title": "colophon",
+      "route": "colophon"
     }
 
   ],
   "logo_links": [
-    {
-      "title": "Email info@maerteijn.nl",
-      "url": "mailto:info@maerteijn.nl",
-      "font_awesome_icon": "fas-envelope"
-    },
     {
       "title": "LinkedIn",
       "url": "https://www.linkedin.com/in/maerteijn/",
