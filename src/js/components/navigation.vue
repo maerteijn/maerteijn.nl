@@ -104,9 +104,13 @@ nav {
 
   .navigation {
     display: flex;
+    margin-top: 2.5rem;
     max-width: 20rem;
 
     .item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       flex-grow: 1;
     }
   }
@@ -138,6 +142,7 @@ nav {
     }
 
     .navigation {
+      margin-top: 0;
       max-width: 100%;
     }
   }
