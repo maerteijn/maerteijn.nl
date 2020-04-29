@@ -5,13 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel --hmr-port 3000 src/index.html",
+    "test:unit": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
     "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
-    "build": "parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting"
+    "build": "parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting -d dist/release",
+    "build:test": "parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -19,13 +21,17 @@
   },
   "keywords": [],
   "author": "Martijn Jacobs",
-  "license": "SEE LICENSE IN LICENS",
+  "license": "SEE LICENSE IN LICENCE",
   "homepage": "https://github.com/maerteijn/maerteijn.github.io",
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.1.2",
     "bulma": "^0.8.2",
+    "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "jsdom": "^16.2.2",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^7.1.2",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
     "prettier": "^2.0.5",
@@ -40,8 +46,19 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "axios": "^0.19.2",
+    "esm": "^3.2.25",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
+  },
+  "esm": {
+    "cache": false
+  },
+  "mocha": {
+    "require": [
+      "esm",
+      "jsdom-global/register"
+    ],
+    "recursive": true
   },
   "eslintConfig": {
     "root": true,
