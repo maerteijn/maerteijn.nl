@@ -4,18 +4,15 @@ import Navigation from "../src/js/components/navigation.vue"
 
 import DefaultLayout from "../src/js/layouts/default"
 
-import HomePage from "../src/js/pages/home"
-import ProjectsPage from "../src/js/pages/projects"
-import ColophonPage from "../src/js/pages/colophon"
 import NotFoundPage from "../src/js/pages/notfound"
+import ContentPage from "../src/js/pages/content"
 
 import router from "../src/js/router"
 
 export default {
   Navigation,
   DefaultLayout,
-  HomePage,
-  ProjectsPage,
   NotFoundPage,
+  ContentPage,
   router,
 }

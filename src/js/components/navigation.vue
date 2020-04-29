@@ -37,8 +37,8 @@
       <div class="navigation">
         <div class="item" v-for="item in navigation">
           <router-link
-            v-bind:to="{ name: item.route }"
-            v-html="item.title"
+            v-bind:to="{ path: item.path }"
+            v-html="item.name"
           ></router-link>
         </div>
       </div>
@@ -53,13 +53,13 @@ export default {
   name: "navigation",
   computed: {
     links() {
-      return this.$state.content.logo_links
+      return this.$state.structure.logo_links
     },
     navigation() {
-      return this.$state.content.navigation
+      return this.$state.structure.pages
     },
     site_info() {
-      return this.$state.content.site_info
+      return this.$state.structure.site_info
     },
   },
   methods: {

@@ -1,0 +1,64 @@
+{
+  "site_info": {
+    "title": "maerteijn - freelance software developer",
+    "name": "martijn jacobs"
+  },
+  "pages": [
+    {
+      "name": "home",
+      "title": "maerteijn - home",
+      "path": "/",
+      "url": "./content/home.md",
+      "type": "ContentPage",
+      "show_in_menu": true
+    },
+    {
+      "name": "projects",
+      "title": "maerteijn - projects",
+      "path": "/projects",
+      "url": "./content/projects.md",
+      "type": "ContentPage",
+      "show_in_menu": true
+    },
+    {
+      "name": "contact",
+      "title": "maerteijn - contact",
+      "path": "/contact",
+      "url": "./content/contact.md",
+      "type": "ContentPage",
+      "show_in_menu": true
+    },
+    {
+      "name": "colophon",
+      "title": "maerteijn - colophon",
+      "path": "/colophon",
+      "url": "./content/colophon.md",
+      "type": "ContentPage",
+      "show_in_menu": true
+    },
+    {
+      "name": "not-found",
+      "title": "maerteijn - 404",
+      "path": "*",
+      "type": "NotFoundPage",
+      "show_in_menu": false
+    }
+  ],
+  "logo_links": [
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/maerteijn/",
+      "font_awesome_icon": "fab-linkedin-in"
+    },
+    {
+      "title": "Github",
+      "url": "https://www.github.com/maerteijn/",
+      "font_awesome_icon": "fab-github"
+    },
+    {
+      "title": "Gitlab",
+      "url": "https://www.gitlab.com/maerteijn/",
+      "font_awesome_icon": "fab-gitlab"
+    }
+  ]
+}
