@@ -36,7 +36,10 @@
     <div class="nav-bottom">
       <div class="navigation">
         <div class="item" v-for="item in navigation">
-          <a v-html="item.title"></a>
+          <router-link
+            v-bind:to="{ name: item.route }"
+            v-html="item.title"
+          ></router-link>
         </div>
       </div>
     </div>
