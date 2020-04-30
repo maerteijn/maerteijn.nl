@@ -6,7 +6,8 @@
 
 <script>
 import axios from "axios"
-import marked from "marked"
+
+import { renderMarkdown } from "../markdown"
 import { actions, getters } from "../store"
 
 export default {
@@ -17,7 +18,7 @@ export default {
     },
     renderedMarkdown() {
       const markdown = this.content || ""
-      return marked(markdown)
+      return renderMarkdown(markdown)
     },
     loaded() {
       return this.$state.loaded
@@ -42,3 +43,21 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.content {
+  img {
+    border-radius: 1%;
+    box-shadow: 1px 1px 8px variables.$drop-shadow-color;
+    margin-right: 0.75rem;
+  }
+
+  img[src*="#left"] {
+    float: left;
+  }
+
+  img[src*="#right"] {
+    float: right;
+  }
+}
+</style>
