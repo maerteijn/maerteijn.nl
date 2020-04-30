@@ -4,7 +4,7 @@
       <div class="logo-container-desktop">
         <figure class="image is-3by1">
           <img
-            src="../../../static/logo-full.svg"
+            src="../../../static/images/logo-full.svg"
             alt="freelance software developer"
             title="maerteijn"
           />
@@ -25,7 +25,7 @@
       <div class="logo-container-mobile">
         <figure class="image is-1by1">
           <img
-            src="../../../static/logo-small.svg"
+            src="../../../static/images/logo-small.svg"
             alt="freelance software developer"
             title="maerteijn"
           />
