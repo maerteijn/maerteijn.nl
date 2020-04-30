@@ -1,14 +1,12 @@
 // Add bulma overrides before importing bulma
 $family-primary: "Play";
 
-$title-size: 1.5rem;
-$subtitle-size: 1.1rem;
-$subtitle-negative-margin: 0;
-
 $body-background-color: #171a21;
 $body-weight: 400;
 $body-font-size: 1.1em;
+$link-hover: variables.$orange-color;
 
-$column-gap: 0;
-
-@import "~bulma";
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/base/_all";
+@import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/image";
