@@ -10,8 +10,8 @@
           />
         </figure>
 
-        <div class="level icons">
-          <div class="level-item" v-for="item in links">
+        <div class="navigation icons">
+          <div class="item" v-for="item in links">
             <a
               target="_blank"
               v-bind:href="item.url"
@@ -99,9 +99,7 @@ nav {
     max-width: 20rem;
 
     .icons {
-      .level-item {
-        font-size: 2rem;
-      }
+      font-size: 2rem;
     }
   }
 
