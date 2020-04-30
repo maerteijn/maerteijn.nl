@@ -1,11 +1,9 @@
 <template>
   <main class="main">
-    <div class="columns">
-      <div class="column is-two-fifths left">
-        <navigation></navigation>
-      </div>
-      <div class="column right"><slot name="default"></slot></div>
+    <div class="left area">
+      <navigation></navigation>
     </div>
+    <div class="right area"><slot name="default"></slot></div>
   </main>
 </template>
 
@@ -24,13 +22,15 @@ export default {
 .main {
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
+  grid-template-areas: "navigation main";
+  grid-template-columns: 40% 1fr;
   height: 100vh;
   margin: 0 auto;
   max-height: variables.$site-max-height;
   max-width: bulma.$widescreen;
   overflow: hidden;
 
-  .column {
+  .area {
     padding: 2rem;
   }
 
@@ -38,21 +38,27 @@ export default {
     background-color: variables.$background-color-left-first;
     border-right: solid 1px variables.$orange-color;
     box-shadow: 0 5px 15px 0 variables.$drop-shadow-color;
+    grid-area: navigation;
     z-index: 1;
   }
 
   .right {
     background-color: variables.$background-color-right;
     color: variables.$font-color-right;
-    height: 100%;
-    max-height: 100vh;
+    grid-area: main;
     overflow: scroll;
   }
 }
 
 @media screen and (max-width: bulma.$tablet) {
   .main {
-    .column {
+    grid-template-areas:
+      "navigation"
+      "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+
+    .area {
       padding: 0.5rem;
     }
 
