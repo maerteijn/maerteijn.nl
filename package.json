@@ -87,7 +87,13 @@
       "max-nesting-depth": 3,
       "selector-max-compound-selectors": 4,
       "string-quotes": "double",
-      "scss/at-import-no-partial-leading-underscore": null
+      "scss/at-import-no-partial-leading-underscore": null,
+      "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": ["attribute"]
+        }
+      ]
     }
   },
   "prettier": {
