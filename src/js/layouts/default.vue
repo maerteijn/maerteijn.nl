@@ -56,10 +56,10 @@ export default {
       "navigation"
       "main";
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: variables.$top-bar-size 1fr;
 
     .area {
-      padding: 0.5rem;
+      padding: 0 1rem;
     }
 
     .left {
