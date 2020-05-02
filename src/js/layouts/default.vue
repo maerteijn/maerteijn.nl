@@ -1,24 +1,43 @@
 <template>
   <main class="main">
     <div class="left area">
-      <navigation></navigation>
+      <nav>
+        <div class="nav-top">
+          <logo></logo>
+        </div>
+        <div class="nav-bottom">
+          <navigation></navigation>
+        </div>
+      </nav>
     </div>
     <div class="right area"><slot name="default"></slot></div>
   </main>
 </template>
 
 <script>
+import Logo from "../components/logo"
 import Navigation from "../components/navigation"
 
 export default {
   name: "layout-default",
   components: {
+    logo: Logo,
     navigation: Navigation,
   },
 }
 </script>
 
 <style lang="scss">
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .nav-top {
+    flex-grow: 1;
+  }
+}
+
 .main {
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
@@ -40,6 +59,16 @@ export default {
     box-shadow: 0 5px 15px 0 variables.$drop-shadow-color;
     grid-area: navigation;
     z-index: 1;
+
+    a {
+      border-bottom: solid 1px rgba(0, 0, 0, 0);
+      color: variables.$font-color-left;
+
+      &:hover {
+        border-bottom: solid 1px variables.$font-color-left;
+        color: variables.$font-color-left;
+      }
+    }
   }
 
   .right {
@@ -51,6 +80,15 @@ export default {
 }
 
 @media screen and (max-width: bulma.$tablet) {
+  nav {
+    align-items: center;
+    flex-direction: row;
+
+    .nav-bottom {
+      flex-grow: 2;
+    }
+  }
+
   .main {
     grid-template-areas:
       "navigation"
