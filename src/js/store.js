@@ -1,5 +1,7 @@
 import Vue from "vue"
 import axios from "axios"
+import router from "./router"
+import getPageComponent from "./pages/utils"
 
 export const state = Vue.observable({
   structure: {
@@ -27,6 +29,17 @@ export const actions = {
         console.error("Invalid json response")
       }
       state.structure = response.data
+
+      // dynamic create routes here from the pages structure and add them to
+      // the router
+      const routes = state.structure.pages.map((page) => {
+        return {
+          name: page.name,
+          path: page.path,
+          component: getPageComponent(page.type),
+        }
+      })
+      router.addRoutes(routes)
       state.loaded = true
     })
   },
@@ -37,14 +50,21 @@ export const actions = {
     }
 
     // check if there is such a path defined in the content and get the
-    // markdown download link
+    // downloadlink
     const downloadLink = getters.getPageMetaData(path).url
     if (!downloadLink) {
       return Promise.reject(`${path} can't be found in the content`)
     }
 
+    // download the content and save it in the store
     return axios.get(downloadLink).then((response) => {
       Vue.set(state.content, path, response.data)
     })
   },
+}
+
+export default {
+  state,
+  getters,
+  actions,
 }

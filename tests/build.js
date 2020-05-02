@@ -9,10 +9,13 @@ import ContentPage from "../src/js/pages/content"
 
 import router from "../src/js/router"
 
+import store from "../src/js/store"
+
 export default {
   Navigation,
   DefaultLayout,
   NotFoundPage,
   ContentPage,
   router,
+  store,
 }
