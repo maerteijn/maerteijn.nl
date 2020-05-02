@@ -32,9 +32,6 @@ export default {
       immediate: true,
       handler(loaded) {
         if (loaded) {
-          if (!this.page_metadata) {
-            return this.$router.push({ name: "not-found" })
-          }
           actions.downloadContent(this.$route.path)
           document.title = this.page_metadata.title
         }

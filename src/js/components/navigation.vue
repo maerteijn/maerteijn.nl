@@ -23,7 +23,7 @@ export default {
   name: "navigation",
   computed: {
     navigation() {
-      return this.$state.structure.pages
+      return this.$state.structure.pages.filter((page) => page.show_in_menu)
     },
   },
   methods: {
@@ -53,6 +53,7 @@ export default {
 
   .navigation {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 2.5rem;
     max-width: 20rem;
 

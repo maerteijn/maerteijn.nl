@@ -3,7 +3,6 @@ import VueRouter from "vue-router"
 import { mount, createLocalVue } from "@vue/test-utils"
 
 import modules from "../dist/test"
-import { state } from "../src/js/store"
 
 export const createVueInstance = () => {
   const localVue = createLocalVue()
@@ -26,7 +25,7 @@ export const createComponent = (
     router: modules.router,
     propsData: propsData,
     mocks: {
-      $state: localState || state,
+      $state: localState || modules.store.state,
     },
   })
 }
