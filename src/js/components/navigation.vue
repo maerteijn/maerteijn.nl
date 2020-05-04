@@ -58,7 +58,7 @@ export default {
     max-width: 20rem;
 
     .item {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
