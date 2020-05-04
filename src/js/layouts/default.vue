@@ -10,18 +10,23 @@
         </div>
       </nav>
     </div>
-    <div class="right area"><slot name="default"></slot></div>
+    <div class="right area">
+      <slot name="default"></slot>
+      <lastupdated></lastupdated>
+    </div>
   </main>
 </template>
 
 <script>
 import Logo from "../components/logo"
 import Navigation from "../components/navigation"
+import LastUpdated from "../components/last-updated"
 
 export default {
   name: "layout-default",
   components: {
     logo: Logo,
+    lastupdated: LastUpdated,
     navigation: Navigation,
   },
 }
