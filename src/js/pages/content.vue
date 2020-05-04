@@ -46,15 +46,17 @@ export default {
   img {
     border-radius: 1%;
     box-shadow: 1px 1px 8px variables.$drop-shadow-color;
-    margin-right: 0.75rem;
+    margin: 0.25rem 0.75rem;
   }
 
   img[src*="#left"] {
     float: left;
+    margin-left: 0;
   }
 
   img[src*="#right"] {
     float: right;
+    margin-right: 0;
   }
 }
 </style>
