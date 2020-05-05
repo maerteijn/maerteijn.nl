@@ -1,2 +1,2 @@
-# maerteijn.github.io
+# maerteijn.nl
 My professional website
