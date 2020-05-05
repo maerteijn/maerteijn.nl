@@ -61,7 +61,7 @@ export default {
   }
 
   .logo-container-desktop {
-    margin-top: 8rem;
+    margin-top: 5rem;
     max-width: 20rem;
 
     .icons {
