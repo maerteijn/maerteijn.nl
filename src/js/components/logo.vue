@@ -78,7 +78,8 @@ export default {
   }
 }
 
-@media screen and (max-width: bulma.$tablet) {
+@media screen and (max-width: bulma.$tablet),
+  screen and (max-height: variables.$site-min-height) {
   .logo-component {
     .logo-container-mobile {
       display: block;

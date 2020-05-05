@@ -12,7 +12,6 @@
     </div>
     <div class="right area">
       <slot name="default"></slot>
-      <lastupdated></lastupdated>
     </div>
   </main>
 </template>
@@ -20,13 +19,11 @@
 <script>
 import Logo from "../components/logo"
 import Navigation from "../components/navigation"
-import LastUpdated from "../components/last-updated"
 
 export default {
   name: "layout-default",
   components: {
     logo: Logo,
-    lastupdated: LastUpdated,
     navigation: Navigation,
   },
 }
@@ -84,7 +81,8 @@ nav {
   }
 }
 
-@media screen and (max-width: bulma.$tablet) {
+@media screen and (max-width: bulma.$tablet),
+  screen and (max-height: variables.$site-min-height) {
   nav {
     align-items: center;
     flex-direction: row;
