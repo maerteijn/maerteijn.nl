@@ -1,11 +1,16 @@
 <template>
   <default-layout>
-    <div class="content" v-html="renderedMarkdown"></div>
+    <div class="page">
+      <div class="content" v-html="renderedMarkdown"></div>
+      <lastupdated></lastupdated>
+    </div>
   </default-layout>
 </template>
 
 <script>
 import axios from "axios"
+
+import LastUpdated from "../components/last-updated"
 
 import { renderMarkdown } from "../markdown"
 import { actions, getters } from "../store"
@@ -38,25 +43,36 @@ export default {
       },
     },
   },
+  components: {
+    lastupdated: LastUpdated,
+  },
 }
 </script>
 
 <style lang="scss">
-.content {
-  img {
-    border-radius: 1%;
-    box-shadow: 1px 1px 8px variables.$drop-shadow-color;
-    margin: 0.25rem 0.75rem;
-  }
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-  img[src*="#left"] {
-    float: left;
-    margin-left: 0;
-  }
+  .content {
+    flex-grow: 1;
 
-  img[src*="#right"] {
-    float: right;
-    margin-right: 0;
+    img {
+      border-radius: 1%;
+      box-shadow: 1px 1px 8px variables.$drop-shadow-color;
+      margin: 0.25rem 0.75rem;
+    }
+
+    img[src*="#left"] {
+      float: left;
+      margin-left: 0;
+    }
+
+    img[src*="#right"] {
+      float: right;
+      margin-right: 0;
+    }
   }
 }
 </style>
