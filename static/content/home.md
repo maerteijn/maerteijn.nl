@@ -6,4 +6,4 @@ Hi, I'm Martijn Jacobs, a freelance software developer based in [Arnhem](https:/
 
 I'm a web developer with +15 years of experience, mostly (but not limited) with [Python](https://www.python.org/). I consider Open Source Software a good thing and try to contribute where I can. The last years I've mainly used the web application framework [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/), but I'm curious for any platform or technology as long it's the right tool for the job.
 
-See the [Projects](#/projects) page for an impression of the projects I did in the past.
+See the [Projects](./projects) page for an impression of the projects I did in the past.
