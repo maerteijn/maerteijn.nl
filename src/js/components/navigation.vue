@@ -96,6 +96,7 @@ export default {
       width: 100%;
 
       .item {
+        align-items: center;
         padding: 0.5rem 0;
       }
     }
