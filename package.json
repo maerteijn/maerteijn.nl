@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "My professional website build with vue.js and bulma",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel --hmr-port 3000 src/index.html",
+    "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js",
     "test:unit": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js",
+    "test": "npm run test:unit",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
@@ -13,7 +14,7 @@
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "build": "BUILD_TIME=$(date) parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting -d dist/release",
-    "build:test": "parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./",
+    "build:test": "parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -73,7 +74,13 @@
     ],
     "rules": {
       "no-console": [
-        "error", {"allow": ["warn", "error"] }
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
       ],
       "semi": [
         "error",
@@ -91,7 +98,9 @@
       "selector-no-qualifying-type": [
         true,
         {
-          "ignore": ["attribute"]
+          "ignore": [
+            "attribute"
+          ]
         }
       ]
     }
