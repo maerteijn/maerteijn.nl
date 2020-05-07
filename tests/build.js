@@ -4,6 +4,7 @@ import Navigation from "../src/js/components/navigation.vue"
 
 import DefaultLayout from "../src/js/layouts/default"
 
+import getPageComponent from "../src/js/pages/utils"
 import NotFoundPage from "../src/js/pages/notfound"
 import ContentPage from "../src/js/pages/content"
 
@@ -14,6 +15,7 @@ import store from "../src/js/store"
 export default {
   Navigation,
   DefaultLayout,
+  getPageComponent,
   NotFoundPage,
   ContentPage,
   router,
