@@ -2,7 +2,7 @@
   <default-layout>
     <div class="page">
       <div class="content" v-html="renderedMarkdown"></div>
-      <lastupdated></lastupdated>
+      <lastupdated v-bind:updated="build_time"></lastupdated>
     </div>
   </default-layout>
 </template>
@@ -18,6 +18,9 @@ import { actions, getters } from "../store"
 export default {
   name: "content-page",
   computed: {
+    build_time() {
+      return process.env.BUILD_TIME || "unknown"
+    },
     content() {
       return getters.getContent(this.$route.path)
     },
