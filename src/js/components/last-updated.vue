@@ -1,16 +1,14 @@
 <template>
-  <div class="last-updated" v-if="lastUpdated">
-    Last update: <span>{{ lastUpdated }}</span>
+  <div class="last-updated" v-if="updated">
+    Last update: <span>{{ updated }}</span>
   </div>
 </template>
 
 <script>
 export default {
   name: "last-updated",
-  computed: {
-    lastUpdated() {
-      return process.env.BUILD_TIME
-    },
+  props: {
+    updated: String,
   },
 }
 </script>
