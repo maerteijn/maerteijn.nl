@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import icons from "../icons"
+import { getIcon } from "../icons"
 
 export default {
   name: "navigation",
@@ -27,9 +27,7 @@ export default {
     },
   },
   methods: {
-    icon(name) {
-      return icons[name]
-    },
+    icon: getIcon,
   },
 }
 </script>
