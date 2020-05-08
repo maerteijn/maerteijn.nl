@@ -9,7 +9,7 @@
         />
       </figure>
 
-      <div class="icons">
+      <div class="icons" v-if="links">
         <div class="item" v-for="item in links">
           <a
             target="_blank"
@@ -39,15 +39,12 @@ import { getIcon } from "../icons"
 export default {
   name: "logo",
   computed: {
-    site_info() {
-      return this.$state.structure.site_info
-    },
     links() {
-      return this.$state.structure.logo_links
+      return this.$state.loaded ? this.$state.structure.logo_links : []
     },
   },
   methods: {
-    icon: getIcon
+    icon: getIcon,
   },
 }
 </script>
