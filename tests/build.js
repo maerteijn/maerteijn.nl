@@ -9,6 +9,8 @@ import NotFoundPage from "../src/js/pages/notfound"
 import ContentPage from "../src/js/pages/content"
 
 import LastUpdated from "../src/js/components/last-updated"
+import Logo from "../src/js/components/logo"
+
 import router from "../src/js/router"
 
 import store from "../src/js/store"
@@ -19,6 +21,7 @@ export default {
   getPageComponent,
   NotFoundPage,
   ContentPage,
+  Logo,
   LastUpdated,
   router,
   store,
