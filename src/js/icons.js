@@ -9,10 +9,11 @@ import {
 
 const iconList = [faLinkedinIn, faGithub, faGitlab, faBars]
 
-const mapped = Object.fromEntries(
+export const icons = Object.fromEntries(
   iconList.map((item) => [
     `${item.prefix}-${item.iconName}`,
     icon(item).html[0],
   ])
 )
-export default mapped
+
+export const getIcon = (name) => icons[name]

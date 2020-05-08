@@ -1,6 +1,6 @@
 import { assert } from "chai"
 
-import icons from "../../src/js/icons"
+import { icons, getIcon } from "../../src/js/icons"
 
 describe("Test icons", () => {
   it("The icons export contains 4 icons", () => {
@@ -16,6 +16,12 @@ describe("Test icons", () => {
   it("The icons all contain svg data", () => {
     Object.keys(icons).forEach((key) => {
       assert.isTrue(icons[key].startsWith("<svg"))
+    })
+  })
+
+  it("The getIcon method works as expected", () => {
+    Object.keys(icons).forEach((key) => {
+      assert.isTrue(getIcon(key).startsWith("<svg"))
     })
   })
 })
