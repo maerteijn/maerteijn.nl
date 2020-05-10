@@ -5,8 +5,8 @@
       ><span v-html="icon('fas-bars')"></span
     ></label>
 
-    <div class="navigation">
-      <div class="item" v-for="item in navigation">
+    <div class="navigation" v-if="pages">
+      <div class="item" v-for="item in pages">
         <router-link
           v-bind:to="{ path: item.path }"
           v-html="item.name"
@@ -22,7 +22,7 @@ import { getIcon } from "../icons"
 export default {
   name: "navigation",
   computed: {
-    navigation() {
+    pages() {
       return this.$state.structure.pages.filter((page) => page.show_in_menu)
     },
   },
