@@ -18,12 +18,13 @@
 
 <script>
 import { getIcon } from "../icons"
+import store from "../store"
 
 export default {
   name: "navigation",
   computed: {
     pages() {
-      return this.$state.structure.pages.filter((page) => page.show_in_menu)
+      return store.getters.getPagesForNavigation()
     },
   },
   methods: {
