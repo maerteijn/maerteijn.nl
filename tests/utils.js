@@ -1,8 +1,12 @@
+import axios from "axios"
 import VueRouter from "vue-router"
+import sinon from "sinon"
 
 import { mount, createLocalVue } from "@vue/test-utils"
 
 import modules from "../dist/test"
+
+import * as fixtures from "./fixtures"
 
 export const createVueInstance = () => {
   const localVue = createLocalVue()
@@ -28,4 +32,46 @@ export const createComponent = (
       $state: localState || modules.store.state,
     },
   })
+}
+
+export const mock_axios_success = () => {
+  const stub = sinon.stub()
+
+  // return the parsed structure json
+  stub.withArgs("./content/structure.json").returns(
+    Promise.resolve({
+      data: JSON.parse(fixtures.structure_json),
+    })
+  )
+
+  // add stubs for the content calls
+  stub
+    .withArgs("./content/home.md")
+    .returns(Promise.resolve({ data: fixtures.home_content }))
+  stub
+    .withArgs("./content/projects.md")
+    .returns(Promise.resolve({ data: fixtures.projects_content }))
+
+  // patch the axios.get call
+  axios.get = stub
+
+  return stub
+}
+
+export const mock_axios_error = () => {
+  const stub = sinon.stub()
+  // returning a string means that axios could not parse the JSON
+  stub.withArgs("./content/structure.json").returns(
+    Promise.resolve({
+      data: "a string",
+    })
+  )
+  axios.get = stub
+  return stub
+}
+
+export const resetState = (state) => {
+  state.structure = { pages: [] }
+  state.content = {}
+  state.loaded = false
 }
