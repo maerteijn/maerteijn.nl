@@ -27,10 +27,10 @@ export const getters = {
 }
 
 export const actions = {
-  loadStructure() {
-    return axios.get("./content/structure.json").then((response) => {
+  loadStructure(url) {
+    return axios.get(url).then((response) => {
       if (String(response.data) === response.data) {
-        console.error("Invalid json response")
+        throw `Invalid JSON response when requesting ${url}`
       }
       state.structure = response.data
 
