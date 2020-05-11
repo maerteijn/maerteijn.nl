@@ -12,6 +12,7 @@ import LastUpdated from "../src/js/components/last-updated"
 import Logo from "../src/js/components/logo"
 
 import router from "../src/js/router"
+import { resetRouter } from "../src/js/router"
 
 import store from "../src/js/store"
 
@@ -24,5 +25,6 @@ export default {
   Logo,
   LastUpdated,
   router,
+  resetRouter,
   store,
 }
