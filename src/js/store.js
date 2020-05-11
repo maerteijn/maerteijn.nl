@@ -21,6 +21,9 @@ export const getters = {
     const content = state.content[path] || ""
     return content
   },
+  getPagesForNavigation() {
+    return state.structure.pages.filter((page) => page.show_in_menu)
+  },
 }
 
 export const actions = {
