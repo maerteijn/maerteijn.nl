@@ -6,7 +6,9 @@
 import { actions } from "./js/store"
 export default {
   created() {
-    actions.loadStructure()
+    actions
+      .loadStructure("./content/structure.json")
+      .catch((e) => console.error)
   },
 }
 </script>
