@@ -44,7 +44,7 @@ nav {
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
   grid-template-areas: "navigation main";
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: minmax(350px, 40%) 1fr;
   height: 100vh;
   margin: 0 auto;
   max-height: variables.$site-max-height;
