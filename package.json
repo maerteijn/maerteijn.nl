@@ -38,6 +38,7 @@
     "parcel-plugin-static-files-copy": "^2.3.1",
     "prettier": "^2.0.5",
     "sass": "^1.26.5",
+    "sinon": "^9.0.2",
     "stylelint": "^13.3.3",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "vue-hot-reload-api": "^2.3.4",
