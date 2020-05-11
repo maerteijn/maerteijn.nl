@@ -2,11 +2,17 @@ import { assert } from "chai"
 
 import modules from "../../../dist/test"
 
-import { createComponent } from "../../utils"
+import { createComponent, resetState } from "../../utils"
 
 import * as fixtures from "../../fixtures"
 
+const store = modules.store
+
 describe("Navigation component", () => {
+  beforeEach(() => {
+    resetState(store.state)
+  })
+
   it("We can initialize a Navigation component", () => {
     const wrapper = createComponent(modules.Navigation)
     assert.equal(wrapper.name(), "navigation")
@@ -28,12 +34,13 @@ describe("Navigation component", () => {
 describe("Navigation component - extended", () => {
   beforeEach(function () {
     this.wrapper = createComponent(modules.Navigation)
-    this.wrapper.vm.$state.structure = JSON.parse(fixtures.structure_json)
-    this.wrapper.vm.$state.loaded = true
+    store.state.structure = JSON.parse(fixtures.structure_json)
+    store.state.loaded = true
   })
 
   afterEach(function () {
     this.wrapper = null
+    resetState(store.state)
   })
 
   it("The navigations component renders page links from the store correctly", function () {
