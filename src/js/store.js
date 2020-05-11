@@ -49,21 +49,22 @@ export const actions = {
     })
   },
   downloadContent(path) {
-    // first check if we have not already loaded it
+    // resolve when the requested content is already loaded
     if (path in state.content) {
       return Promise.resolve(state.content[path])
     }
 
-    // check if there is such a path defined in the content and get the
-    // downloadlink
-    const downloadLink = getters.getPageMetaData(path).url
-    if (!downloadLink) {
-      return Promise.reject(`${path} can't be found in the content`)
+    // lookup the corresponding page
+    const metadata = getters.getPageMetaData(path)
+
+    if (!metadata) {
+      return Promise.reject(`${path} can't be found in the structure`)
     }
 
     // download the content and save it in the store
-    return axios.get(downloadLink).then((response) => {
+    return axios.get(metadata.url).then((response) => {
       Vue.set(state.content, path, response.data)
+      return response.data
     })
   },
 }
