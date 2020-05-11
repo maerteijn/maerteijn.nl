@@ -1,3 +1,7 @@
+export const home_content = "# home"
+
+export const projects_content = "# projects"
+
 export const structure_json = `
 {
   "site_info": {
