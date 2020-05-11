@@ -1,6 +1,7 @@
 import Vue from "vue"
 import axios from "axios"
 import router from "./router"
+import { resetRouter } from "./router"
 import getPageComponent from "./pages/utils"
 
 export const state = Vue.observable({
@@ -39,6 +40,7 @@ export const actions = {
           component: getPageComponent(page.type),
         }
       })
+      resetRouter(router)
       router.addRoutes(routes)
       state.loaded = true
     })
