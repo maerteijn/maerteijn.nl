@@ -27,7 +27,7 @@ describe("Logo component - extended", () => {
   })
 
   afterEach(function () {
-    this.wrapper = null
+    this.wrapper.vm.$destroy()
   })
 
   it("The logo component renders icons from the store correctly", function () {
