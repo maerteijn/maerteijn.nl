@@ -38,7 +38,7 @@ describe("Navigation component - extended", () => {
   })
 
   afterEach(function () {
-    this.wrapper = null
+    this.wrapper.vm.$destroy()
     resetState(store.state)
   })
 
