@@ -34,14 +34,21 @@ export default {
     page_metadata() {
       return getters.getPageMetaData(this.$route.path)
     },
+    page_title() {
+      return this.page_metadata ? this.page_metadata.title : ""
+    }
   },
   watch: {
     loaded: {
       immediate: true,
       handler(loaded) {
-        if (loaded) {
-          actions.downloadContent(this.$route.path)
-          document.title = this.page_metadata.title
+        if (loaded && this.$route.path) {
+          actions
+            .downloadContent(this.$route.path)
+            .then(() => {
+              document.title = this.page_title
+            })
+            .catch(console.error)
         }
       },
     },
