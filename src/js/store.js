@@ -10,6 +10,7 @@ export const state = Vue.observable({
   },
   content: {},
   loaded: false,
+  lastUpdated: process.env.BUILD_TIME || "unknown",
 })
 
 export const getters = {
