@@ -8,10 +8,13 @@ import modules from "../dist/test"
 
 import * as fixtures from "./fixtures"
 
-export const createVueInstance = () => {
+export function createVueInstance(withRouter = true) {
   const localVue = createLocalVue()
-  // Let the local vue instance use Vuerouter
-  localVue.use(VueRouter)
+
+  if (withRouter) {
+    // Let the local vue instance use Vuerouter
+    localVue.use(VueRouter)
+  }
 
   // And let the local vue instance have the global component available
   localVue.component("default-layout", modules.DefaultLayout)
@@ -19,22 +22,29 @@ export const createVueInstance = () => {
   return localVue
 }
 
-export const createComponent = (
-  component,
-  propsData = {},
-  localState = null
-) => {
+export function createComponent(component, propsData = {}) {
   return mount(component, {
     localVue: createVueInstance(),
     router: modules.router,
     propsData: propsData,
     mocks: {
-      $state: localState || modules.store.state,
+      $state: modules.store.state,
     },
   })
 }
 
-export const mock_axios_success = () => {
+export function createComponentWithoutRouter(component, current_route = {}) {
+  return mount(component, {
+    localVue: createVueInstance(false),
+    mocks: {
+      $state: modules.store.state,
+      $route: current_route,
+    },
+    stubs: ["router-link", "router-view"],
+  })
+}
+
+export function mock_axios_success() {
   const stub = sinon.stub()
 
   // return the parsed structure json
@@ -58,7 +68,7 @@ export const mock_axios_success = () => {
   return stub
 }
 
-export const mock_axios_error = () => {
+export function mock_axios_error() {
   const stub = sinon.stub()
   // returning a string means that axios could not parse the JSON
   stub.withArgs("./content/structure.json").returns(
@@ -70,8 +80,20 @@ export const mock_axios_error = () => {
   return stub
 }
 
-export const resetState = (state) => {
+export function loadDefaultState(state) {
+  state.structure = JSON.parse(fixtures.structure_json)
+  state.loaded = true
+}
+
+export function resetState(state) {
   state.structure = { pages: [] }
   state.content = {}
   state.loaded = false
+}
+
+export function waitForPromises() {
+  // A trick to wait for all promises to be resolved due to the scheduler nature
+  // of javascript. See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+  // and https://github.com/testing-library/react-testing-library/issues/11
+  return new Promise((resolve) => setImmediate(resolve))
 }
