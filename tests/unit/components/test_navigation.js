@@ -2,7 +2,7 @@ import { assert } from "chai"
 
 import modules from "../../../dist/test"
 
-import { createComponent, resetState } from "../../utils"
+import { createComponent, loadDefaultState, resetState } from "../../utils"
 
 import * as fixtures from "../../fixtures"
 
@@ -34,8 +34,7 @@ describe("Navigation component", () => {
 describe("Navigation component - extended", () => {
   beforeEach(function () {
     this.wrapper = createComponent(modules.Navigation)
-    store.state.structure = JSON.parse(fixtures.structure_json)
-    store.state.loaded = true
+    loadDefaultState(store.state)
   })
 
   afterEach(function () {
