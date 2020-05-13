@@ -37,8 +37,10 @@ describe("Test store", () => {
       resetState(store.state)
     })
 
-    it("getPageMetaData returns null when the requested path does not exist", function () {
-      assert.isNull(store.getters.getPageMetaData("/i-do-not-exist"))
+    it("getPageMetaData returns an empty object when the requested path does not exist", function () {
+      const metadata = store.getters.getPageMetaData("/i-do-not-exist")
+      assert.isEmpty(metadata)
+      assert.isObject(metadata)
     })
 
     it("getPageMetaData returns useful things with paths that do exist", function () {

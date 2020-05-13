@@ -16,7 +16,7 @@ export const state = Vue.observable({
 export const getters = {
   getPageMetaData(path) {
     const pages = state.structure.pages.filter((page) => page.path == path)
-    return pages.length > 0 ? pages[0] : null
+    return pages.length > 0 ? pages[0] : {}
   },
   getContent(path) {
     const content = state.content[path] || ""
@@ -58,7 +58,7 @@ export const actions = {
     // lookup the corresponding page
     const metadata = getters.getPageMetaData(path)
 
-    if (!metadata) {
+    if (!metadata.path) {
       return Promise.reject(`${path} can't be found in the structure`)
     }
 

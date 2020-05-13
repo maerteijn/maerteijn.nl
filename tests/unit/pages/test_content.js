@@ -46,11 +46,6 @@ describe("Content page", () => {
     assert.equal(this.wrapper.vm.lastUpdated, "today")
   })
 
-  it("The content computed property works as expected", function () {
-    Vue.set(store.state.content, "/", "Hello!")
-    assert.equal(this.wrapper.vm.content, "Hello!")
-  })
-
   it("The renderedMarkdown computed property works as expected", function () {
     Vue.set(store.state.content, "/", "# Hello!")
     assert.equal(this.wrapper.vm.renderedMarkdown, '<h1 id="hello">Hello!</h1>')
@@ -63,6 +58,16 @@ describe("Content page", () => {
     Vue.set(store.state.content, "/", "Hello!")
     store.state.loaded = true
     assert.isTrue(this.wrapper.vm.loaded)
+  })
+
+  it("The page_metadata computed property works as expected", function () {
+    const metadata = {
+      name: "home",
+      title: "Home",
+      path: "/",
+    }
+    store.state.structure.pages.push(metadata)
+    assert.deepEqual(this.wrapper.vm.page_metadata, metadata)
   })
 })
 
