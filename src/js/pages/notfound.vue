@@ -1,8 +1,11 @@
 <template>
-  <default-layout>
-    Is it <router-link v-bind:to="{ path: '/' }">me</router-link> you are
-    looking for?
-  </default-layout>
+  <component v-bind:is="$state.layout">
+    <div class="content">
+      <h1>Not Found</h1>
+      Is it <router-link v-bind:to="{ path: '/' }">me</router-link> you are
+      looking for?
+    </div>
+  </component>
 </template>
 
 <script>

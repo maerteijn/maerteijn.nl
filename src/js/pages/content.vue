@@ -1,10 +1,10 @@
 <template>
-  <default-layout>
+  <component v-bind:is="$state.layout">
     <div class="page">
       <div class="content" v-html="renderedMarkdown"></div>
       <lastupdated v-bind:updated="lastUpdated"></lastupdated>
     </div>
-  </default-layout>
+  </component>
 </template>
 
 <script>
