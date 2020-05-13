@@ -1,5 +1,6 @@
 import Vue from "vue"
 import axios from "axios"
+
 import router from "./router"
 import { resetRouter } from "./router"
 import getPageComponent from "./pages/utils"
@@ -11,6 +12,7 @@ export const state = Vue.observable({
   content: {},
   loaded: false,
   lastUpdated: process.env.BUILD_TIME || "unknown",
+  layout: "default-layout",
 })
 
 export const getters = {
