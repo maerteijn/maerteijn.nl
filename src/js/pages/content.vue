@@ -21,11 +21,8 @@ export default {
     lastUpdated() {
       return this.$state.lastUpdated
     },
-    content() {
-      return getters.getContent(this.$route.path)
-    },
     renderedMarkdown() {
-      const markdown = this.content || ""
+      const markdown = getters.getContent(this.$route.path) || ""
       return renderMarkdown(markdown)
     },
     loaded() {
@@ -33,9 +30,6 @@ export default {
     },
     page_metadata() {
       return getters.getPageMetaData(this.$route.path)
-    },
-    page_title() {
-      return this.page_metadata ? this.page_metadata.title : ""
     },
   },
   watch: {
@@ -46,7 +40,7 @@ export default {
           actions
             .downloadContent(this.$route.path)
             .then(() => {
-              document.title = this.page_title
+              document.title = this.page_metadata.title || ""
             })
             .catch(console.error)
         }
