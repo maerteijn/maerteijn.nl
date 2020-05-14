@@ -16,8 +16,9 @@ export function createVueInstance(withRouter = true) {
     localVue.use(VueRouter)
   }
 
-  // And let the local vue instance have the global component available
+  // And let the local vue instance have the global layout components available
   localVue.component("default-layout", modules.DefaultLayout)
+  localVue.component("basic-layout", modules.BasicLayout)
 
   return localVue
 }
@@ -89,6 +90,7 @@ export function resetState(state) {
   state.structure = { pages: [] }
   state.content = {}
   state.loaded = false
+  state.layout = "default-layout"
 }
 
 export function waitForPromises() {
