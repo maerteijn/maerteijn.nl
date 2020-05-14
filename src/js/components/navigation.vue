@@ -4,7 +4,6 @@
     <label class="menu-icon" for="menu-btn"
       ><span v-html="icon('fas-bars')"></span
     ></label>
-
     <div class="navigation" v-if="pages">
       <div class="item" v-for="item in pages">
         <router-link
@@ -52,25 +51,12 @@ export default {
 
   .navigation {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 2.5rem;
-    max-width: 20rem;
 
     .item {
       align-items: flex-start;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-    }
-  }
-}
-
-@media screen and (max-width: bulma.$tablet),
-  screen and (max-height: variables.$site-min-height) {
-  .navigation-component {
-    .navigation {
-      margin-top: 0;
-      max-width: 100%;
     }
   }
 }
