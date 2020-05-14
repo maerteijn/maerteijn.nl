@@ -39,6 +39,15 @@ describe("Content page", () => {
     assert.isEmpty(this.wrapper.find(".content").text())
   })
 
+  it("It renders correctly with another layout", function () {
+    store.state.layout = "basic-layout"
+    return this.wrapper.vm.$nextTick().then(() => {
+      assert.isTrue(this.wrapper.find(".page").exists())
+      assert.isTrue(this.wrapper.find(".content").exists())
+      assert.isEmpty(this.wrapper.find(".content").text())
+    })
+  })
+
   it("The lastUpdated computed property works as expected", function () {
     assert.equal(this.wrapper.vm.lastUpdated, "unknown")
 
