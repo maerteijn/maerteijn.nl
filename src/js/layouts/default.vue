@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main class="default-layout">
     <div class="left area">
       <nav>
         <div class="nav-top">
@@ -30,17 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-nav {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
-  .nav-top {
-    flex-grow: 1;
-  }
-}
-
-.main {
+.default-layout {
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
   grid-template-areas: "navigation main";
@@ -51,6 +41,35 @@ nav {
   max-width: bulma.$widescreen;
   overflow: hidden;
 
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .navigation {
+      .item {
+        padding-right: 0.5rem;
+      }
+    }
+
+    .nav-top {
+      flex-grow: 1;
+
+      .logo-component {
+        margin-top: 5rem;
+      }
+    }
+
+    .nav-bottom {
+      display: flex;
+      max-width: 20rem;
+
+      .navigation-component {
+        flex-grow: 1;
+      }
+    }
+  }
+
   .area {
     padding: 2rem;
   }
@@ -59,6 +78,7 @@ nav {
     background-color: variables.$background-color-left-first;
     border-right: solid 1px variables.$orange-color;
     box-shadow: 0 5px 15px 0 variables.$drop-shadow-color;
+    color: variables.$font-color-left;
     grid-area: navigation;
     z-index: 1;
 
@@ -83,21 +103,32 @@ nav {
 
 @media screen and (max-width: bulma.$tablet),
   screen and (max-height: variables.$site-min-height) {
-  nav {
-    align-items: center;
-    flex-direction: row;
-
-    .nav-bottom {
-      flex-grow: 2;
-    }
-  }
-
-  .main {
+  .default-layout {
     grid-template-areas:
       "navigation"
       "main";
     grid-template-columns: 1fr;
     grid-template-rows: variables.$top-bar-size 1fr;
+
+    nav {
+      align-items: center;
+      flex-direction: row;
+
+      .nav-top {
+        .logo-component {
+          margin-top: 0;
+        }
+      }
+
+      .nav-bottom {
+        flex-grow: 1;
+        max-width: 100%;
+
+        .switch-layout {
+          padding-left: 1rem;
+        }
+      }
+    }
 
     .area {
       padding: 0 1rem;
