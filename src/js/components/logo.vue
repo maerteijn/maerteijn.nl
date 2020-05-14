@@ -1,14 +1,20 @@
 <template>
   <div class="logo-component">
-    <div class="logo-container-desktop">
-      <figure class="image is-3by1">
+    <div class="logo-container">
+      <figure class="image desktop is-3by1">
         <img
           src="../../../static/images/logo-full.svg"
           alt="freelance software developer"
           title="maerteijn"
         />
       </figure>
-
+      <figure class="image mobile">
+        <img
+          src="../../../static/images/logo-small.svg"
+          alt="freelance software developer"
+          title="maerteijn"
+        />
+      </figure>
       <div class="icons" v-if="links">
         <div class="item" v-for="item in links">
           <a
@@ -20,21 +26,12 @@
         </div>
       </div>
     </div>
-
-    <div class="logo-container-mobile">
-      <figure class="image is-1by1">
-        <img
-          src="../../../static/images/logo-small.svg"
-          alt="freelance software developer"
-          title="maerteijn"
-        />
-      </figure>
-    </div>
   </div>
 </template>
 
 <script>
 import { getIcon } from "../icons"
+import SwitchLayout from "../components/switch-layout"
 
 export default {
   name: "logo",
@@ -51,13 +48,12 @@ export default {
 
 <style lang="scss">
 .logo-component {
-  .logo-container-mobile {
-    display: none;
-  }
-
-  .logo-container-desktop {
-    margin-top: 5rem;
+  .logo-container {
     max-width: 20rem;
+
+    figure.mobile {
+      display: none;
+    }
 
     .icons {
       display: flex;
@@ -76,14 +72,22 @@ export default {
 @media screen and (max-width: bulma.$tablet),
   screen and (max-height: variables.$site-min-height) {
   .logo-component {
-    .logo-container-mobile {
-      display: block;
-      max-width: 2.75rem;
-      min-width: 2.75rem;
-    }
+    .logo-container {
+      align-items: center;
+      display: flex;
 
-    .logo-container-desktop {
-      display: none;
+      figure.mobile {
+        display: block;
+        width: 2.25rem;
+      }
+
+      figure.desktop {
+        display: none;
+      }
+
+      .icons {
+        display: none;
+      }
     }
   }
 }
