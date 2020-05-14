@@ -3,9 +3,12 @@ import VueRouter from "vue-router"
 import App from "./app"
 import router from "./js/router"
 
-// register global components
-import Default from "./js/layouts/default"
-Vue.component("default-layout", Default)
+// register global layouts
+import DefaultLayout from "./js/layouts/default"
+Vue.component("default-layout", DefaultLayout)
+
+import BasicLayout from "./js/layouts/basic"
+Vue.component("basic-layout", BasicLayout)
 
 // register state as a global prototype
 import { state } from "./js/store"
