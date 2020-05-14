@@ -14,8 +14,8 @@ describe("Logo component", () => {
 
   it("The logo component renders a desktop and mobile version", () => {
     const wrapper = createComponent(modules.Logo)
-    assert.isTrue(wrapper.find(".logo-container-desktop").exists())
-    assert.isTrue(wrapper.find(".logo-container-mobile").exists())
+    assert.isTrue(wrapper.find(".logo-container figure.desktop").exists())
+    assert.isTrue(wrapper.find(".logo-container figure.mobile").exists())
   })
 })
 
