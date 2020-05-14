@@ -7,6 +7,7 @@
         </div>
         <div class="nav-bottom">
           <navigation></navigation>
+          <switch-layout></switch-layout>
         </div>
       </nav>
     </div>
@@ -19,12 +20,14 @@
 <script>
 import Logo from "../components/logo"
 import Navigation from "../components/navigation"
+import SwitchLayout from "../components/switch-layout"
 
 export default {
   name: "layout-default",
   components: {
     logo: Logo,
     navigation: Navigation,
+    "switch-layout": SwitchLayout,
   },
 }
 </script>
