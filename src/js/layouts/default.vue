@@ -8,6 +8,7 @@
         <div class="nav-bottom">
           <navigation></navigation>
           <switch-layout></switch-layout>
+          <switch-language></switch-language>
         </div>
       </nav>
     </div>
@@ -21,6 +22,7 @@
 import Logo from "../components/logo"
 import Navigation from "../components/navigation"
 import SwitchLayout from "../components/switch-layout"
+import SwitchLanguage from "../components/switch-language"
 
 export default {
   name: "layout-default",
@@ -28,6 +30,7 @@ export default {
     logo: Logo,
     navigation: Navigation,
     "switch-layout": SwitchLayout,
+    "switch-language": SwitchLanguage,
   },
 }
 </script>
@@ -43,6 +46,10 @@ export default {
   max-height: variables.$site-max-height;
   max-width: bulma.$widescreen;
   overflow: hidden;
+
+  .icon {
+    padding: 0 0.5rem;
+  }
 
   nav {
     display: flex;
@@ -65,7 +72,6 @@ export default {
 
     .nav-bottom {
       display: flex;
-      max-width: 20rem;
 
       .navigation-component {
         flex-grow: 1;
