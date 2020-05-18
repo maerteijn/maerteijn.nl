@@ -85,3 +85,12 @@ export default {
   getters,
   actions,
 }
+
+// Let parcel hot reload the current structure when developing
+if (process.env.NODE_ENV === "development") {
+  if (module.hot) {
+    module.hot.accept(() => {
+      actions.loadStructure("/content/structure.json")
+    })
+  }
+}
