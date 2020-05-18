@@ -23,7 +23,7 @@ export default {
   name: "navigation",
   computed: {
     pages() {
-      return store.getters.getPagesForNavigation()
+      return store.getters.getPagesForNavigation(this.$route.path)
     },
   },
   methods: {

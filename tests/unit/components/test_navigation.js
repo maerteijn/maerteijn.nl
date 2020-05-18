@@ -2,7 +2,11 @@ import { assert } from "chai"
 
 import modules from "../../../dist/test"
 
-import { createComponent, loadDefaultState, resetState } from "../../utils"
+import {
+  createComponentWithoutRouter,
+  loadDefaultState,
+  resetState,
+} from "../../utils"
 
 import * as fixtures from "../../fixtures"
 
@@ -14,26 +18,28 @@ describe("Navigation component", () => {
   })
 
   it("We can initialize a Navigation component", () => {
-    const wrapper = createComponent(modules.Navigation)
+    const wrapper = createComponentWithoutRouter(modules.Navigation)
     assert.equal(wrapper.name(), "navigation")
   })
 
   it("The navigation component renders a mobile menu", () => {
-    const wrapper = createComponent(modules.Navigation)
+    const wrapper = createComponentWithoutRouter(modules.Navigation)
     assert.isTrue(wrapper.find("svg").exists())
     assert.isTrue(wrapper.find(".menu-button").exists())
     assert.isTrue(wrapper.find(".menu-icon").exists())
   })
 
   it("And a navigation container with no items", () => {
-    const wrapper = createComponent(modules.Navigation)
+    const wrapper = createComponentWithoutRouter(modules.Navigation)
     assert.isFalse(wrapper.find(".navigation .item").exists())
   })
 })
 
 describe("Navigation component - extended", () => {
   beforeEach(function () {
-    this.wrapper = createComponent(modules.Navigation)
+    this.wrapper = createComponentWithoutRouter(modules.Navigation, {
+      path: "/",
+    })
     loadDefaultState(store.state)
   })
 
@@ -49,7 +55,7 @@ describe("Navigation component - extended", () => {
       // all pages except one (show_in_menu = false) should be in the
       // navigation menu
       const pages = this.wrapper.vm.$state.structure.pages
-      const page_links = pages.filter((page) => page.show_in_menu)
+      const page_links = pages.filter((page) => page.settings.show_in_menu)
 
       assert.equal(
         this.wrapper.findAll(".navigation .item").length,
@@ -58,17 +64,31 @@ describe("Navigation component - extended", () => {
     })
   })
 
+  it("The navigation component is language aware", function () {
+    const language = "en"
+    store.state.structure.pages[0].settings.language = language
+
+    return this.wrapper.vm.$nextTick().then(() => {
+      const pages = this.wrapper.vm.$state.structure.pages
+      const page_links = pages.filter(
+        (page) =>
+          page.settings.show_in_menu && page.settings.language == language
+      )
+      assert.equal(this.wrapper.vm.pages.length, page_links.length)
+    })
+  })
+
   it("The pages computed property returns only pages with show_in_menu = true", function () {
     return this.wrapper.vm.$nextTick().then(() => {
       const pages = this.wrapper.vm.$state.structure.pages
-      const page_links = pages.filter((page) => page.show_in_menu)
+      const page_links = pages.filter((page) => page.settings.show_in_menu)
 
       assert.equal(this.wrapper.vm.pages.length, page_links.length)
     })
   })
 
   it("The pages computed property is immediately updated from the store", function () {
-    this.wrapper.vm.$state.structure.pages = []
+    store.state.structure.pages = []
     return this.wrapper.vm.$nextTick().then(() => {
       assert.equal(this.wrapper.vm.pages.length, 0)
     })
