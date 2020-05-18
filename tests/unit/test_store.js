@@ -105,9 +105,9 @@ describe("Test store", () => {
         .then(() => {
           // all routes from the structure should be resolvable by the router
           structure.pages.forEach((page) => {
-            assert.equal(
-              modules.router.resolve(page.path).route.name,
-              page.name
+            assert.include(
+              modules.router.resolve(page.path).route.path,
+              page.path
             )
           })
         })
