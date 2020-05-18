@@ -3,8 +3,8 @@ import { assert } from "chai"
 import { icons, getIcon } from "../../src/js/icons"
 
 describe("Test icons", () => {
-  it("The icons export contains 5 icons", () => {
-    assert.lengthOf(Object.keys(icons), 5)
+  it("The icons export contains 6 icons", () => {
+    assert.lengthOf(Object.keys(icons), 6)
   })
 
   it("The icon keys are in the format 'fas-loader'", () => {
