@@ -65,16 +65,13 @@ describe("Navigation component - extended", () => {
   })
 
   it("The navigation component is language aware", function () {
-    const language = "en"
-    store.state.structure.pages[0].settings.language = language
+    // two pages have the language 'nl' per default
+    assert.lengthOf(this.wrapper.vm.pages, 2)
 
+    store.state.structure.pages[0].settings.language = "en"
     return this.wrapper.vm.$nextTick().then(() => {
-      const pages = this.wrapper.vm.$state.structure.pages
-      const page_links = pages.filter(
-        (page) =>
-          page.settings.show_in_menu && page.settings.language == language
-      )
-      assert.equal(this.wrapper.vm.pages.length, page_links.length)
+      // and now it's only one
+      assert.lengthOf(this.wrapper.vm.pages, 1)
     })
   })
 

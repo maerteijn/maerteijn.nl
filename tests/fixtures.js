@@ -25,7 +25,7 @@ export const structure_json = `
       "title": "projects",
       "path": "/nl/projects",
       "type": "ContentPage",
-      "url": "./content/nl/projects.md",
+      "url": "/content/nl/projects.md",
       "settings": {
         "language": "nl",
         "show_in_menu": true
