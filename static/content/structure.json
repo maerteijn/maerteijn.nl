@@ -1,47 +1,102 @@
 {
-  "site_info": {
+  "site_settings": {
     "title": "maerteijn - freelance software developer",
-    "name": "martijn jacobs"
+    "languages": ["nl", "en"]
   },
   "pages": [
     {
-      "name": "home",
-      "title": "maerteijn - home",
-      "path": "/",
-      "url": "./content/home.md",
+      "title": "maerteijn - hallo",
+      "name": "hallo",
+      "path": "/nl/",
+      "url": "/content/nl/hallo.md",
       "type": "ContentPage",
-      "show_in_menu": true
+      "settings": {
+        "language": "nl",
+        "show_in_menu": true
+       }
     },
     {
-      "name": "projects",
-      "title": "maerteijn - projects",
-      "path": "/projects",
-      "url": "./content/projects.md",
+      "title": "maerteijn - projecten",
+      "name": "projecten",
+      "path": "/nl/projecten",
+      "url": "/content/nl/projecten.md",
       "type": "ContentPage",
-      "show_in_menu": true
+      "settings": {
+        "language": "nl",
+        "show_in_menu": true
+       }
     },
     {
-      "name": "contact",
       "title": "maerteijn - contact",
-      "path": "/contact",
-      "url": "./content/contact.md",
+      "name": "contact",
+      "path": "/nl/contact",
+      "url": "/content/nl/contact.md",
       "type": "ContentPage",
-      "show_in_menu": true
+      "settings": {
+        "language": "nl",
+        "show_in_menu": true
+       }
     },
     {
-      "name": "colophon",
+      "title": "maerteijn - colofon",
+      "name": "colofon",
+      "path": "/nl/colophon",
+      "url": "/content/nl/colofon.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - home",
+      "name": "home",
+      "path": "/en/",
+      "url": "/content/en/home.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - projects",
+      "name": "projects",
+      "path": "/en/projects",
+      "url": "/content/en/projects.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - contact",
+      "name": "contact",
+      "path": "/en/contact",
+      "url": "/content/en/contact.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
       "title": "maerteijn - colophon",
-      "path": "/colophon",
-      "url": "./content/colophon.md",
+      "name": "colophon",
+      "path": "/en/colophon",
+      "url": "/content/en/colophon.md",
       "type": "ContentPage",
-      "show_in_menu": true
+      "settings": {
+        "language": "en",
+        "show_in_menu": true
+       }
     },
     {
-      "name": "not-found",
       "title": "maerteijn - 404",
       "path": "*",
       "type": "NotFoundPage",
-      "show_in_menu": false
+      "settings": {}
     }
   ],
   "logo_links": [

@@ -111,7 +111,7 @@ describe("Content page - extended", () => {
 
     // so let's go to the projects page
     loadDefaultState(store.state)
-    this.wrapper.vm.$route = { path: "/projects" }
+    this.wrapper.vm.$route = { path: "/nl/projects" }
 
     return waitForPromises().then(() => {
       assert.isTrue(this.wrapper.find("h1#projects").exists())

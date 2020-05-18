@@ -5,7 +5,8 @@ export const projects_content = "# projects"
 export const structure_json = `
 {
   "site_info": {
-    "title": "My site"
+    "title": "My site",
+    "languages": ["nl", "en"]
   },
   "pages": [
     {
@@ -13,23 +14,29 @@ export const structure_json = `
       "title": "home",
       "path": "/",
       "type": "ContentPage",
-      "url": "./content/home.md",
-      "show_in_menu": true
+      "url": "/content/nl/home.md",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": true
+       }
     },
     {
       "name": "projects",
       "title": "projects",
-      "path": "/projects",
+      "path": "/nl/projects",
       "type": "ContentPage",
-      "url": "./content/projects.md",
-      "show_in_menu": true
+      "url": "./content/nl/projects.md",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": true
+       }
     },
     {
       "name": "not-found",
       "title": "maerteijn - 404",
       "path": "*",
       "type": "NotFoundPage",
-      "show_in_menu": false
+      "settings": {}
     }
   ],
   "logo_links": [
