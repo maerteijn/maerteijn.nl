@@ -13,6 +13,7 @@
       <navigation></navigation>
       <div class="icons">
         <switch-layout></switch-layout>
+        <switch-language></switch-language>
       </div>
     </div>
     <slot name="default"></slot>
@@ -23,6 +24,7 @@
 import Logo from "../components/logo"
 import Navigation from "../components/navigation"
 import SwitchLayout from "../components/switch-layout"
+import SwitchLanguage from "../components/switch-language"
 
 export default {
   name: "layout-basic",
@@ -30,6 +32,7 @@ export default {
     logo: Logo,
     navigation: Navigation,
     "switch-layout": SwitchLayout,
+    "switch-language": SwitchLanguage,
   },
 }
 </script>
@@ -40,6 +43,10 @@ export default {
   margin: 0 auto;
   max-width: bulma.$tablet;
   padding: 1rem;
+
+  .icon {
+    padding: 0 0.5rem;
+  }
 
   .logo {
     figure.logo {
@@ -76,6 +83,7 @@ export default {
     }
 
     .icons {
+      display: flex;
       margin-left: auto;
     }
 
