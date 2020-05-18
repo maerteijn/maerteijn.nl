@@ -48,7 +48,6 @@ export const actions = {
       // the router
       const routes = state.structure.pages.map((page) => {
         return {
-          name: page.name,
           path: page.path,
           component: getPageComponent(page.type),
         }
@@ -56,6 +55,8 @@ export const actions = {
       resetRouter(router)
       router.addRoutes(routes)
       state.loaded = true
+
+      return response.data
     })
   },
   downloadContent(path) {
