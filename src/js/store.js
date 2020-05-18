@@ -8,6 +8,7 @@ import getPageComponent from "./pages/utils"
 export const state = Vue.observable({
   structure: {
     pages: [],
+    languages: {},
   },
   content: {},
   loaded: false,
@@ -24,15 +25,29 @@ export const getters = {
     const content = state.content[path] || ""
     return content
   },
+  getPagesForLanguage(language) {
+    return state.structure.pages.filter(
+      (page) => page.settings && page.settings.language == language
+    )
+  },
   getPagesForNavigation(path) {
     const metadata = this.getPageMetaData(path)
     if (metadata.settings) {
-      const language = metadata.settings.language
-      return state.structure.pages.filter((page) => {
-        return page.settings.show_in_menu && page.settings.language == language
-      })
+      const pages = this.getPagesForLanguage(metadata.settings.language)
+      return pages.filter((page) => page.settings.show_in_menu)
     }
     return []
+  },
+  getSwitchableLanguage(path) {
+    const metadata = this.getPageMetaData(path)
+    if (metadata.settings) {
+      const language = metadata.settings.language
+      return state.structure.site_settings.languages[language]
+    }
+    return null
+  },
+  getLanguages() {
+    return state.structure.site_settings.languages || {}
   },
 }
 
