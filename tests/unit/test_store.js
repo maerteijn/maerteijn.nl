@@ -18,6 +18,11 @@ describe("Test store", () => {
       assert.isArray(store.state.structure.pages)
       assert.isEmpty(store.state.structure.pages)
 
+      // structure should have a languages property
+      assert.property(store.state.structure, "languages")
+      assert.isObject(store.state.structure.languages)
+      assert.isEmpty(store.state.structure.languages)
+
       // content
       assert.isObject(store.state.content)
       assert.isEmpty(store.state.content)
@@ -62,11 +67,34 @@ describe("Test store", () => {
       assert.equal(store.state.content["/my-path"], content)
     })
 
-    it("getPagesForNavigation only returns pages with show_in_menu = true", function () {
-      const page_links = store.state.structure.pages.filter(
-        (page) => page.show_in_menu
+    it("getPagesForLanguage only returns pages for a specific language", function () {
+      store.state.structure.pages[0].settings.language = "en"
+
+      const pages = store.state.structure.pages.filter(
+        (page) => (page.settings.language = "nl")
       )
-      assert.deepEqual(store.getters.getPagesForNavigation(), page_links)
+      assert.deepEqual(store.getters.getPagesForLanguage("nl"), pages)
+    })
+
+    it("getPagesForNavigation only returns pages with show_in_menu = true", function () {
+      store.state.structure.pages[0].settings.show_in_menu = "false"
+
+      const pages = store.state.structure.pages.filter(
+        (page) => page.settings.show_in_menu
+      )
+      assert.deepEqual(store.getters.getPagesForNavigation("/"), pages)
+    })
+
+    it("getSwitchableLanguage should return the language we can switch to", function () {
+      assert.equal(
+        store.getters.getSwitchableLanguage("/"),
+        store.state.structure.site_settings.languages["nl"]
+      )
+      store.state.structure.pages[0].settings.language = "en"
+      assert.equal(
+        store.getters.getSwitchableLanguage("/"),
+        store.state.structure.site_settings.languages["en"]
+      )
     })
   })
 
@@ -86,31 +114,27 @@ describe("Test store", () => {
     })
 
     it("loadStructure should fill the store with the site structure", function () {
-      return store.actions
-        .loadStructure("/content/structure.json")
-        .then(() => {
-          assert.deepEqual(
-            store.state.structure,
-            JSON.parse(fixtures.structure_json)
-          )
-        })
+      return store.actions.loadStructure("/content/structure.json").then(() => {
+        assert.deepEqual(
+          store.state.structure,
+          JSON.parse(fixtures.structure_json)
+        )
+      })
       assert.isTrue(store.state.loaded)
     })
 
     it("loadStructure should fill the vue router with routes", function () {
       const structure = JSON.parse(fixtures.structure_json)
 
-      return store.actions
-        .loadStructure("/content/structure.json")
-        .then(() => {
-          // all routes from the structure should be resolvable by the router
-          structure.pages.forEach((page) => {
-            assert.include(
-              modules.router.resolve(page.path).route.path,
-              page.path
-            )
-          })
+      return store.actions.loadStructure("/content/structure.json").then(() => {
+        // all routes from the structure should be resolvable by the router
+        structure.pages.forEach((page) => {
+          assert.include(
+            modules.router.resolve(page.path).route.path,
+            page.path
+          )
         })
+      })
     })
 
     it("loadStructure throws an error when axios does not return a JSON response", function () {
