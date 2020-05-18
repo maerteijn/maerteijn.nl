@@ -4,9 +4,9 @@ export const projects_content = "# projects"
 
 export const structure_json = `
 {
-  "site_info": {
+  "site_settings": {
     "title": "My site",
-    "languages": ["nl", "en"]
+    "languages": {"nl": "en", "en": "nl"}
   },
   "pages": [
     {
