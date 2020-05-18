@@ -81,13 +81,13 @@ describe("Test store", () => {
     })
 
     it("loadStructure should return a Promise", function () {
-      const promise = store.actions.loadStructure("./content/structure.json")
+      const promise = store.actions.loadStructure("/content/structure.json")
       assert.instanceOf(promise, Promise)
     })
 
     it("loadStructure should fill the store with the site structure", function () {
       return store.actions
-        .loadStructure("./content/structure.json")
+        .loadStructure("/content/structure.json")
         .then(() => {
           assert.deepEqual(
             store.state.structure,
@@ -101,7 +101,7 @@ describe("Test store", () => {
       const structure = JSON.parse(fixtures.structure_json)
 
       return store.actions
-        .loadStructure("./content/structure.json")
+        .loadStructure("/content/structure.json")
         .then(() => {
           // all routes from the structure should be resolvable by the router
           structure.pages.forEach((page) => {
@@ -117,7 +117,7 @@ describe("Test store", () => {
       this.stub = mock_axios_error()
 
       return store.actions
-        .loadStructure("./content/structure.json")
+        .loadStructure("/content/structure.json")
         .catch((error) => {
           assert.include(error, "Invalid JSON response")
         })
@@ -143,7 +143,7 @@ describe("Test store", () => {
 
     it("The downloadContent method downloads the requested content when it's not there yet", function () {
       const path = "/"
-      const url = "./content/home.md"
+      const url = "/content/nl/home.md"
       store.state.structure = JSON.parse(fixtures.structure_json)
 
       return store.actions.downloadContent(path).then((result) => {
