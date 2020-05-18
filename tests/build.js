@@ -12,6 +12,7 @@ import ContentPage from "../src/js/pages/content"
 import LastUpdated from "../src/js/components/last-updated"
 import Logo from "../src/js/components/logo"
 import SwitchLayout from "../src/js/components/switch-layout"
+import SwitchLanguage from "../src/js/components/switch-language"
 
 import router from "../src/js/router"
 import { resetRouter } from "../src/js/router"
@@ -28,6 +29,7 @@ export default {
   Logo,
   LastUpdated,
   SwitchLayout,
+  SwitchLanguage,
   router,
   resetRouter,
   store,
