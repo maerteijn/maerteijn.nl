@@ -40,6 +40,7 @@ export function createComponentWithoutRouter(component, current_route = {}) {
     mocks: {
       $state: modules.store.state,
       $route: current_route,
+      $router: sinon.createStubInstance(VueRouter),
     },
     stubs: ["router-link", "router-view"],
   })
