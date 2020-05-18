@@ -24,8 +24,15 @@ export const getters = {
     const content = state.content[path] || ""
     return content
   },
-  getPagesForNavigation() {
-    return state.structure.pages.filter((page) => page.show_in_menu)
+  getPagesForNavigation(path) {
+    const metadata = this.getPageMetaData(path)
+    if (metadata.settings) {
+      const language = metadata.settings.language
+      return state.structure.pages.filter((page) => {
+        return page.settings.show_in_menu && page.settings.language == language
+      })
+    }
+    return []
   },
 }
 
