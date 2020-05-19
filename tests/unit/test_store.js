@@ -30,6 +30,10 @@ describe("Test store", () => {
       // loaded
       assert.isBoolean(store.state.loaded)
       assert.isFalse(store.state.loaded)
+
+      // error
+      assert.property(store.state, "error")
+      assert.isNull(store.state.error)
     })
   })
 

@@ -14,6 +14,7 @@ export const state = Vue.observable({
   loaded: false,
   lastUpdated: process.env.BUILD_TIME || "unknown",
   layout: "default-layout",
+  error: null,
 })
 
 export const getters = {
@@ -86,7 +87,6 @@ export const actions = {
     if (!metadata.path) {
       return Promise.reject(`${path} can't be found in the structure`)
     }
-
     // download the content and save it in the store
     return axios.get(metadata.url).then((response) => {
       Vue.set(state.content, path, response.data)

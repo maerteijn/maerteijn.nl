@@ -92,6 +92,7 @@ export function resetState(state) {
   state.content = {}
   state.loaded = false
   state.layout = "default-layout"
+  state.error = null
 }
 
 export function waitForPromises() {
