@@ -1,12 +1,41 @@
 <template>
-  <router-view :key="$route.fullPath"></router-view>
+  <error-page
+    v-bind:key="$state.error"
+    v-bind:error="$state.error || ''"
+    v-if="$state.error"
+  ></error-page>
+  <router-view v-bind:key="$route.fullPath" v-else></router-view>
 </template>
 
 <script>
 import { actions } from "./js/store"
+import ErrorPage from "./js/pages/error"
+
 export default {
+  name: "app",
   created() {
-    actions.loadStructure("/content/structure.json").catch((e) => console.error)
+    actions
+      .loadStructure("/content/structure.json")
+      .then(() => this.resetError())
+      .catch((e) => this.handleError(e))
+    // emitted error messages from all child components  will be catched and
+    // handled by this.handleError
+    this.$root.$on("error", (e) => this.handleError(e))
+  },
+  errorCaptured(error, component, details) {
+    // capture all vue errors and handle them with handleError
+    this.handleError(error)
+  },
+  methods: {
+    resetError() {
+      this.$state.error = null
+    },
+    handleError(error) {
+      this.$state.error = error.toString()
+    },
+  },
+  components: {
+    "error-page": ErrorPage,
   },
 }
 </script>
