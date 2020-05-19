@@ -42,7 +42,7 @@ export default {
             .then(() => {
               document.title = this.page_metadata.title || ""
             })
-            .catch(console.error)
+            .catch((e) => this.$root.$emit("error", e))
         }
       },
     },
