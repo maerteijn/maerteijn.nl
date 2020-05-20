@@ -7,6 +7,7 @@
     <div class="navigation" v-if="pages">
       <div class="item" v-for="item in pages">
         <router-link
+          v-bind:id="item.name"
           v-bind:to="{ path: item.path }"
           v-html="item.name"
         ></router-link>

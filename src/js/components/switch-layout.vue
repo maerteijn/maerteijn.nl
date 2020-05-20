@@ -2,6 +2,7 @@
   <div class="switch-layout">
     <a title="Switch layout">
       <div
+        id="switch-layout"
         class="icon"
         v-html="icon('fas-adjust')"
         v-on:click="toggleLayout"
