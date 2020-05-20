@@ -1,4 +1,7 @@
 import { assert } from "chai"
+import sinon from "sinon"
+
+import { createWrapper } from "@vue/test-utils"
 
 import modules from "../../dist/test"
 
@@ -46,5 +49,15 @@ describe("App component", () => {
       assert.isTrue(wrapper.find(".error-message").exists())
       assert.include(wrapper.html(), "Invalid JSON response when requesting")
     })
+  })
+
+  it("The main App component listens for emitted error events and calls the handleError method", function () {
+    const wrapper = createComponentWithoutRouter(modules.App, { path: "/" })
+    wrapper.vm.handleError = sinon.spy(wrapper.vm.handleError)
+    wrapper.vm.$root.$emit("error", "Something went wrong!")
+    assert.isTrue(wrapper.vm.handleError.called)
+
+    const root = createWrapper(wrapper.vm.$root)
+    assert.property(root.emitted(), "error")
   })
 })
