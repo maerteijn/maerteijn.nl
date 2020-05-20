@@ -48,6 +48,11 @@ We can also run e2e tests with `playwright`:
     npm run test:e2e
 ```
 
+## Github actions
+
+All linting and tests are run automatically using [Github Actions](https://github.com/maerteijn/maerteijn.nl/actions)
+
+
 ## Deployment to Vercel
 
 Each commit will build a new version of the site (when the pipeline succeeds) on [Vercel](https://vercel.com/). That is also the platform where the site is hosted.
