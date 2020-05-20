@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "My professional website build with vue.js and bulma",
   "scripts": {
-    "dev": "parcel --hmr-port 3000 src/index.html",
+    "dev": "parcel --hmr-port 3000 src/index.html -d dist/dev",
     "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js",
     "test:unit": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js",
+    "test:coverage": "nyc npm run test:unit",
     "test": "npm run test:unit",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
@@ -14,7 +15,7 @@
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "build": "BUILD_TIME=$(date) parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting -d dist/release",
-    "build:test": "parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./"
+    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "jsdom": "^16.2.2",
     "jsdom-global": "^3.0.2",
     "mocha": "^7.1.2",
+    "nyc": "^15.0.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
     "prettier": "^2.0.5",
@@ -100,7 +102,8 @@
         true,
         {
           "ignore": [
-            "attribute", "class"
+            "attribute",
+            "class"
           ]
         }
       ]
@@ -109,5 +112,18 @@
   "prettier": {
     "semi": false,
     "vueIndentScriptAndStyle": false
+  },
+  "nyc": {
+    "cache": false,
+    "all": true,
+    "extension": [
+      ".js",
+      ".vue"
+    ],
+    "exclude": [
+      ".**js",
+      "tests/**",
+      "dist/dev/"
+    ]
   }
 }
