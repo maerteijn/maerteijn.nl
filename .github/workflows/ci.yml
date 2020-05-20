@@ -22,3 +22,9 @@ jobs:
       run: npm run test:coverage
     - name: Run the e2e tests
       run: npm run test:e2e
+    - name: Archive screenshots
+      uses: actions/upload-artifact@v1
+      with:
+        name: screenshots
+        path: dist/e2e/screenshots
+
