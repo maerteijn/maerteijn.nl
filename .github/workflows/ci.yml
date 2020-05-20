@@ -21,3 +21,5 @@ jobs:
       run: npm run prettier
     - name: Run the unittests
       run: npm run test:coverage
+    - name: Run the e2e tests
+      run: npm run test:e2e
