@@ -1,13 +1,14 @@
 import Vue from "vue"
 
 import { assert } from "chai"
-import { mount } from "@vue/test-utils"
+import { mount, createWrapper } from "@vue/test-utils"
 
 import modules from "../../../dist/test"
 
 import {
   createComponentWithoutRouter,
   mock_axios_success,
+  mock_axios_error,
   loadDefaultState,
   resetState,
   waitForPromises,
@@ -124,6 +125,19 @@ describe("Content page - extended", () => {
 
     return waitForPromises().then(() => {
       assert.equal(document.title, expectedTitle)
+    })
+  })
+
+  it("When an error occurs, an error message is emitted", function () {
+    this.stub = mock_axios_error()
+
+    // so let's go to the projects page
+    loadDefaultState(store.state)
+    this.wrapper.vm.$route = { path: "/nl/projects" }
+
+    return waitForPromises().then(() => {
+      const root = createWrapper(this.wrapper.vm.$root)
+      assert.property(root.emitted(), "error")
     })
   })
 })
