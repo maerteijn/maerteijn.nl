@@ -2,6 +2,7 @@
   <div class="switch-language" v-if="canSwitch">
     <a v-bind:title="switchTo">
       <div
+        id="switch-language"
         class="icon"
         v-html="icon('fas-flag')"
         v-on:click="switchLanguage"
