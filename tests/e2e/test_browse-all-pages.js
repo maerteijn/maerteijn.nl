@@ -45,6 +45,7 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
   })
 
   it("We are redirected to the default homepage", async function () {
+    await this.page.$(".page")
     const location = await this.page.evaluate("location.href")
     assert.isTrue(location.endsWith(default_page.path))
   })
