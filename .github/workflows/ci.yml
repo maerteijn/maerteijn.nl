@@ -1,5 +1,4 @@
-name: maerteijn.nl CI workflow
-
+name: maerteijn.nl ci
 on: [push, pull_request]
 jobs:
   run-ci-steps:
