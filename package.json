@@ -6,6 +6,7 @@
     "dev": "parcel --hmr-port 3000 src/index.html -d dist/dev",
     "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js",
     "test:unit": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js",
+    "test:e2e": "npm run build:e2e && mocha tests/e2e/test_*.js",
     "test:coverage": "nyc npm run test:unit",
     "test": "npm run test:unit",
     "eslint": "eslint src/",
@@ -15,7 +16,8 @@
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "build": "BUILD_TIME=$(date) parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting -d dist/release",
-    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./"
+    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./",
+    "build:e2e": "NODE_ENV=development parcel build src/index.html --no-minify -d dist/e2e/"
   },
   "repository": {
     "type": "git",
@@ -32,12 +34,14 @@
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "express": "^4.17.1",
     "jsdom": "^16.2.2",
     "jsdom-global": "^3.0.2",
     "mocha": "^7.1.2",
     "nyc": "^15.0.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.3.1",
+    "playwright-chromium": "^1.0.2",
     "prettier": "^2.0.5",
     "sass": "^1.26.5",
     "sinon": "^9.0.2",
@@ -123,7 +127,8 @@
     "exclude": [
       ".**js",
       "tests/**",
-      "dist/dev/"
+      "dist/dev/**",
+      "dist/e2e/**"
     ]
   }
 }
