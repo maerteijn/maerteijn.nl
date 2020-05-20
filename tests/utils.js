@@ -57,12 +57,10 @@ export function mock_axios_success() {
   )
 
   // add stubs for the content calls
-  stub
-    .withArgs("/content/nl/home.md")
-    .returns(Promise.resolve({ data: fixtures.home_content }))
+  stub.withArgs("/content/nl/home.md").resolves({ data: fixtures.home_content })
   stub
     .withArgs("/content/nl/projects.md")
-    .returns(Promise.resolve({ data: fixtures.projects_content }))
+    .resolves({ data: fixtures.projects_content })
 
   // patch the axios.get call
   axios.get = stub
@@ -73,11 +71,11 @@ export function mock_axios_success() {
 export function mock_axios_error() {
   const stub = sinon.stub()
   // returning a string means that axios could not parse the JSON
-  stub.withArgs("/content/structure.json").returns(
-    Promise.resolve({
-      data: "a string",
-    })
-  )
+  stub.withArgs("/content/structure.json").resolves({
+    data: "a string",
+  })
+  stub.withArgs("/content/nl/projects.md").rejects("Something went wrong")
+
   axios.get = stub
   return stub
 }
