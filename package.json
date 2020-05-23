@@ -15,8 +15,8 @@
     "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
-    "build": "BUILD_TIME=$(date) parcel build src/index.html --no-cache --public-url ./ --experimental-scope-hoisting -d dist/release",
-    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./",
+    "build": "BUILD_TIME=$(date) parcel build src/index.html --no-cache --experimental-scope-hoisting -d dist/release",
+    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js",
     "build:e2e": "NODE_ENV=development parcel build src/index.html --no-minify -d dist/e2e/"
   },
   "repository": {
