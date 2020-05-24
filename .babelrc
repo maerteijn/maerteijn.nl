@@ -1,0 +1,16 @@
+{
+  "plugins": ["@babel/plugin-transform-object-assign"],
+  "env": {
+    "production": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "useBuiltIns": "usage",
+            "corejs": 3
+          }
+        ]
+      ],
+    }
+  }
+}
