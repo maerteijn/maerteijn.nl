@@ -1,5 +1,5 @@
 <template>
-  <div class="switch-layout">
+  <div class="switch-layout" v-if="!isIE11()">
     <a title="Switch layout">
       <div
         id="switch-layout"
@@ -13,10 +13,12 @@
 
 <script>
 import { getIcon } from "../icons"
+import { isIE11 } from "../utils"
 
 export default {
   name: "switch-layout",
   methods: {
+    isIE11: isIE11,
     icon: getIcon,
     toggleLayout() {
       const layouts = {
