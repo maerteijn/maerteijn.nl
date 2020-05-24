@@ -9,11 +9,13 @@ const store = modules.store
 describe("Switch layout component", () => {
   afterEach(() => {
     resetState(store.state)
+    window.msCrypto = undefined
   })
 
   it("We can initialize a SwitchLayout component", () => {
     const wrapper = createComponent(modules.SwitchLayout)
     assert.equal(wrapper.name(), "switch-layout")
+    assert.isTrue(wrapper.find(".switch-layout").exists())
   })
 
   it("The toggleLayout method will update the state", () => {
@@ -36,5 +38,11 @@ describe("Switch layout component", () => {
     const wrapper = createComponent(modules.SwitchLayout)
     wrapper.find("div.icon").trigger("click")
     assert.property(wrapper.emitted(), "layout-toggled")
+  })
+
+  it("The component is not rendered when on IE11", () => {
+    window.msCrypto = "something"
+    const wrapper = createComponent(modules.SwitchLayout)
+    assert.isFalse(wrapper.find(".switch-layout").exists())
   })
 })
