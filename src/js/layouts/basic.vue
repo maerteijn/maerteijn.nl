@@ -1,5 +1,5 @@
 <template>
-  <main class="basic-layout">
+  <div class="basic-layout">
     <div class="nav">
       <div class="logo">
         <figure class="image logo">
@@ -17,7 +17,7 @@
       </div>
     </div>
     <slot name="default"></slot>
-  </main>
+  </div>
 </template>
 
 <script>

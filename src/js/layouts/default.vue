@@ -106,7 +106,7 @@ export default {
     background-color: variables.$background-color-right;
     color: variables.$font-color-right;
     grid-area: main;
-    overflow: scroll;
+    overflow-y: auto;
   }
 }
 
