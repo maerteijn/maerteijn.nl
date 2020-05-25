@@ -1,16 +1,16 @@
 import { assert } from "chai"
 
-import { isIE11 } from "../../src/js/utils"
+import { isOldBrowser } from "../../src/js/utils"
 
 describe("Test utils", () => {
   afterEach(() => {
     window.msCrypto = undefined
   })
 
-  it("Test isIE11", () => {
-    assert.isFalse(isIE11())
+  it("Test isOldBrowser - IE 11", () => {
+    assert.isFalse(isOldBrowser())
     // window.msCrypto is only defined on IE 11
     window.msCrypto = "something"
-    assert.isTrue(isIE11())
+    assert.isTrue(isOldBrowser())
   })
 })
