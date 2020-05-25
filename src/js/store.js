@@ -3,7 +3,7 @@ import axios from "axios"
 
 import router from "./router"
 import { resetRouter } from "./router"
-import { isIE11 } from "./utils"
+import { isOldBrowser } from "./utils"
 import getPageComponent from "./pages/utils"
 
 export const state = Vue.observable({
@@ -14,7 +14,7 @@ export const state = Vue.observable({
   content: {},
   loaded: false,
   lastUpdated: process.env.BUILD_TIME || "unknown",
-  layout: isIE11() ? "basic-layout" : "default-layout",
+  layout: isOldBrowser() ? "basic-layout" : "default-layout",
   error: null,
 })
 
