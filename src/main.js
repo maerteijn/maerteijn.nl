@@ -1,5 +1,4 @@
-// We add the Object.assign polyfill for IE11 to function with Vue.js
-import "core-js/stable/object/assign"
+import "./ie11"
 import Vue from "vue"
 import VueRouter from "vue-router"
 import App from "./app"
