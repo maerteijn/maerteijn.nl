@@ -1,6 +1,10 @@
 <template>
   <component v-bind:is="$state.layout">
     <div class="page">
+      <loading
+        v-bind:show="!content"
+        v-bind:spinner="$state.layout == 'default-layout' ? 'light' : 'dark'"
+      ></loading>
       <div class="content" v-html="renderedMarkdown"></div>
       <lastupdated v-bind:updated="lastUpdated"></lastupdated>
     </div>
@@ -11,6 +15,7 @@
 import axios from "axios"
 
 import LastUpdated from "../components/last-updated"
+import Loading from "../components/loading"
 
 import { renderMarkdown } from "../markdown"
 import { actions, getters } from "../store"
@@ -21,8 +26,11 @@ export default {
     lastUpdated() {
       return this.$state.lastUpdated
     },
+    content() {
+      return getters.getContent(this.$route.path)
+    },
     renderedMarkdown() {
-      const markdown = getters.getContent(this.$route.path) || ""
+      const markdown = this.content || ""
       return renderMarkdown(markdown)
     },
     loaded() {
@@ -49,6 +57,7 @@ export default {
   },
   components: {
     lastupdated: LastUpdated,
+    loading: Loading,
   },
 }
 </script>
@@ -60,7 +69,18 @@ export default {
   height: 100%;
 
   .content {
+    animation: fadeIn ease 1s;
     flex-grow: 1;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
   }
 }
 </style>
