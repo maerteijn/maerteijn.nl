@@ -52,35 +52,32 @@ describe("Navigation component - extended", () => {
     return this.wrapper.vm.$nextTick().then(() => {
       assert.isTrue(this.wrapper.find(".navigation").exists())
 
-      // all pages except one (show_in_menu = false) should be in the
-      // navigation menu
-      const pages = this.wrapper.vm.$state.structure.pages
-      const page_links = pages.filter((page) => page.settings.show_in_menu)
-
-      assert.equal(
-        this.wrapper.findAll(".navigation .item").length,
-        page_links.length
+      const pages = store.getters.getPagesForNavigation(
+        this.wrapper.vm.$route.path
       )
+
+      assert.lengthOf(this.wrapper.findAll(".navigation .item"), pages.length)
     })
   })
 
   it("The navigation component is language aware", function () {
-    // two pages have the language 'nl' per default
-    assert.lengthOf(this.wrapper.vm.pages, 2)
-
     store.state.structure.pages[0].settings.language = "en"
+    const pages = store.getters.getPagesForNavigation(
+      this.wrapper.vm.$route.path
+    )
+
     return this.wrapper.vm.$nextTick().then(() => {
       // and now it's only one
-      assert.lengthOf(this.wrapper.vm.pages, 1)
+      assert.lengthOf(this.wrapper.vm.pages, pages.length)
     })
   })
 
   it("The pages computed property returns only pages with show_in_menu = true", function () {
     return this.wrapper.vm.$nextTick().then(() => {
-      const pages = this.wrapper.vm.$state.structure.pages
-      const page_links = pages.filter((page) => page.settings.show_in_menu)
-
-      assert.equal(this.wrapper.vm.pages.length, page_links.length)
+      const pages = store.getters.getPagesForNavigation(
+        this.wrapper.vm.$route.path
+      )
+      assert.lengthOf(this.wrapper.vm.pages, pages.length)
     })
   })
 
