@@ -4,7 +4,7 @@
       <div class="logo">
         <figure class="image logo">
           <img
-            src="../../../static/images/logo-small.svg"
+            src="../../assets/images/logo-small.svg"
             alt="freelance software developer"
             title="maerteijn"
           />

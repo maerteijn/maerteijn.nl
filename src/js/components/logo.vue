@@ -3,14 +3,14 @@
     <div class="logo-container">
       <figure class="image desktop is-3by1">
         <img
-          src="../../../static/images/logo-full.svg"
+          src="../../assets/images/logo-full.svg"
           alt="freelance software developer"
           title="maerteijn"
         />
       </figure>
       <figure class="image mobile">
         <img
-          src="../../../static/images/logo-small.svg"
+          src="../../assets/images/logo-small.svg"
           alt="freelance software developer"
           title="maerteijn"
         />
