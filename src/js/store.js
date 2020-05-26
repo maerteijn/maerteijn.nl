@@ -62,7 +62,7 @@ export const actions = {
       }
       state.structure = response.data
 
-      // dynamic create routes here from the pages structure and add them to
+      // dynamic create routes here from the site pages and add them to
       // the router
       const routes = state.structure.pages.map((page) => {
         return {

@@ -9,9 +9,7 @@ import { startServer } from "./server"
 const dist = path.resolve(__dirname, "../../dist/e2e")
 const screenshots = path.join(dist, "screenshots")
 
-const structure = JSON.parse(
-  fs.readFileSync(path.join(dist, "content/site.json"))
-)
+const site = JSON.parse(fs.readFileSync(path.join(dist, "content/site.json")))
 const default_page = structure.pages[0]
 
 describe("Scenario: Go to the homepage an click all links in the navigation", () => {
