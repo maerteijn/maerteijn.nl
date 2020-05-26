@@ -17,11 +17,11 @@ describe("Switch language component", () => {
 
   afterEach(() => {
     resetState(store.state)
+    delete window.localStorage.language
   })
 
   it("We can initialize a SwitchLanguage component", () => {
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
-
     assert.equal(wrapper.name(), "switch-language")
   })
 
@@ -46,21 +46,21 @@ describe("Switch language component", () => {
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
       path: "/",
     })
-    assert.isFalse(wrapper.vm.canSwitch)
-    store.state.structure.pages[0].settings.language = "en"
     assert.isTrue(wrapper.vm.canSwitch)
+    store.state.structure.pages[2].settings.language = "nl"
+    assert.isFalse(wrapper.vm.canSwitch)
   })
 
-  it("Clicking the icon should emit the language-switched event", () => {
-    store.state.structure.pages[0].settings.language = "en"
+  it("Clicking the icon should store the new language in the localStorage", () => {
+    assert.isUndefined(window.localStorage.language)
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
       path: "/",
     })
+    wrapper.find("div.icon").trigger("click")
 
     return wrapper.vm.$nextTick().then(() => {
-      wrapper.find("div.icon").trigger("click")
-      // and the route should be changed too
-      assert.isTrue(wrapper.vm.$router.push.called)
+      assert.property(window.localStorage, "language")
+      assert.equal(window.localStorage.language, "en")
     })
   })
 })

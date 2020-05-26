@@ -23,6 +23,10 @@ describe("Test store", () => {
       assert.isObject(store.state.structure.languages)
       assert.isEmpty(store.state.structure.languages)
 
+      // default language
+      assert.property(store.state.structure, "default_language")
+      assert.isEmpty(store.state.structure.default_language)
+
       // content
       assert.isObject(store.state.content)
       assert.isEmpty(store.state.content)
@@ -81,10 +85,13 @@ describe("Test store", () => {
     })
 
     it("getPagesForNavigation only returns pages with show_in_menu = true", function () {
+      const current_language = store.state.structure.pages[0].settings.language
       store.state.structure.pages[0].settings.show_in_menu = "false"
 
       const pages = store.state.structure.pages.filter(
-        (page) => page.settings.show_in_menu
+        (page) =>
+          page.settings.show_in_menu &&
+          page.settings.language == current_language
       )
       assert.deepEqual(store.getters.getPagesForNavigation("/"), pages)
     })
