@@ -2,7 +2,7 @@ export const home_content = "# home"
 
 export const projects_content = "# projects"
 
-export const structure_json = `
+export const site_json = `
 {
   "site_settings": {
     "title": "My site",
