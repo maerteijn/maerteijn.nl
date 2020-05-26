@@ -6,6 +6,7 @@ export const structure_json = `
 {
   "site_settings": {
     "title": "My site",
+    "default_language": "nl",
     "languages": {"nl": "en", "en": "nl"}
   },
   "pages": [

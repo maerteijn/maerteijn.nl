@@ -1,6 +1,7 @@
 {
   "site_settings": {
     "title": "maerteijn - freelance software developer",
+    "default_language": "nl",
     "languages": {
       "nl": "en",
       "en": "nl"

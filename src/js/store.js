@@ -9,6 +9,7 @@ import getPageComponent from "./pages/utils"
 export const state = Vue.observable({
   structure: {
     pages: [],
+    default_language: "",
     languages: {},
   },
   content: {},

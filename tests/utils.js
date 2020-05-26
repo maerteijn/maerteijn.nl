@@ -86,7 +86,7 @@ export function loadDefaultState(state) {
 }
 
 export function resetState(state) {
-  state.structure = { pages: [], languages: {} }
+  state.structure = { pages: [], languages: {}, default_language: "" }
   state.content = {}
   state.loaded = false
   state.layout = "default-layout"
