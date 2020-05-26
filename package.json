@@ -71,7 +71,7 @@
   "mocha": {
     "require": [
       "esm",
-      "jsdom-global/register"
+      "tests/setup_dom.js"
     ],
     "recursive": true
   },
