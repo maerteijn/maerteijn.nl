@@ -32,6 +32,17 @@ export const structure_json = `
        }
     },
     {
+      "name": "another-language",
+      "title": "another language",
+      "path": "/en/another-language",
+      "type": "ContentPage",
+      "url": "/content/nl/home.md",
+      "settings": {
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
       "name": "not-found",
       "title": "maerteijn - 404",
       "path": "*",
