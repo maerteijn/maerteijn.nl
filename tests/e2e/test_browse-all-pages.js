@@ -10,7 +10,7 @@ const dist = path.resolve(__dirname, "../../dist/e2e")
 const screenshots = path.join(dist, "screenshots")
 
 const site = JSON.parse(fs.readFileSync(path.join(dist, "content/site.json")))
-const default_page = structure.pages[0]
+const default_page = site.pages[0]
 
 describe("Scenario: Go to the homepage an click all links in the navigation", () => {
   before(async function () {
@@ -68,7 +68,7 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
 
   it("The navigation container renders items and we can navigate to them", async function () {
     // retrieve all pages of the current language
-    const pages = structure.pages.filter(
+    const pages = site.pages.filter(
       (page) => page.settings.language == default_page.settings.language
     )
 
@@ -82,7 +82,7 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
       await this.page.click(`a#${id}`)
 
       const location = await this.page.evaluate("location.href")
-      const page = structure.pages.filter((page) => page.name == id)[0]
+      const page = site.pages.filter((page) => page.name == id)[0]
       assert.isTrue(location.endsWith(page.path))
     }
   })

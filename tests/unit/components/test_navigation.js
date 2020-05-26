@@ -61,7 +61,7 @@ describe("Navigation component - extended", () => {
   })
 
   it("The navigation component is language aware", function () {
-    store.state.structure.pages[0].settings.language = "en"
+    store.state.site.pages[0].settings.language = "en"
     const pages = store.getters.getPagesForNavigation(
       this.wrapper.vm.$route.path
     )
@@ -82,7 +82,7 @@ describe("Navigation component - extended", () => {
   })
 
   it("The pages computed property is immediately updated from the store", function () {
-    store.state.structure.pages = []
+    store.state.site.pages = []
     return this.wrapper.vm.$nextTick().then(() => {
       assert.equal(this.wrapper.vm.pages.length, 0)
     })

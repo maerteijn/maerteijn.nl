@@ -76,7 +76,7 @@ describe("Content page", () => {
       title: "Home",
       path: "/",
     }
-    store.state.structure.pages.push(metadata)
+    store.state.site.pages.push(metadata)
     assert.deepEqual(this.wrapper.vm.page_metadata, metadata)
   })
 })

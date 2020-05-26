@@ -49,7 +49,7 @@ export function createComponentWithoutRouter(component, current_route = {}) {
 export function mock_axios_success() {
   const stub = sinon.stub()
 
-  // return the parsed structure json
+  // return the parsed site json
   stub.withArgs("/content/site.json").returns(
     Promise.resolve({
       data: JSON.parse(fixtures.site_json),
@@ -81,12 +81,12 @@ export function mock_axios_error() {
 }
 
 export function loadDefaultState(state) {
-  state.structure = JSON.parse(fixtures.site_json)
+  state.site = JSON.parse(fixtures.site_json)
   state.loaded = true
 }
 
 export function resetState(state) {
-  state.structure = { pages: [], languages: {}, default_language: "" }
+  state.site = { pages: [], languages: {}, default_language: "" }
   state.content = {}
   state.loaded = false
   state.layout = "default-layout"
