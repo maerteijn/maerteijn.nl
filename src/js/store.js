@@ -107,7 +107,7 @@ export default {
 if (process.env.NODE_ENV === "development") {
   if (module.hot) {
     module.hot.accept(() => {
-      actions.loadStructure("/content/structure.json")
+      actions.loadStructure("/content/site.json")
     })
   }
 }

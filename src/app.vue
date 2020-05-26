@@ -15,7 +15,7 @@ export default {
   name: "app",
   created() {
     actions
-      .loadStructure("/content/structure.json")
+      .loadStructure("/content/site.json")
       .then(() => this.resetError())
       .catch((e) => this.handleError(e))
     // emitted error messages from all child components  will be catched and

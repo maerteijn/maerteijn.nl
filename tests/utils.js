@@ -50,7 +50,7 @@ export function mock_axios_success() {
   const stub = sinon.stub()
 
   // return the parsed structure json
-  stub.withArgs("/content/structure.json").returns(
+  stub.withArgs("/content/site.json").returns(
     Promise.resolve({
       data: JSON.parse(fixtures.structure_json),
     })
@@ -71,7 +71,7 @@ export function mock_axios_success() {
 export function mock_axios_error() {
   const stub = sinon.stub()
   // returning a string means that axios could not parse the JSON
-  stub.withArgs("/content/structure.json").resolves({
+  stub.withArgs("/content/site.json").resolves({
     data: "a string",
   })
   stub.withArgs("/content/nl/projects.md").rejects("Something went wrong")
