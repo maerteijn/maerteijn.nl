@@ -28,16 +28,16 @@ describe("Not found page", () => {
 
   it("It redirects to the default page of the current language", () => {
     const wrapper = createComponentWithoutRouter(modules.NotFoundPage)
-    const language = store.state.structure.site_settings.default_language
+    const language = store.state.site.site_settings.default_language
     const pages = store.getters.getPagesForLanguage(language)
     assert.isTrue(wrapper.vm.$router.push.calledWith(pages[0].path))
   })
 
   it("When we update the language, it will redirect to the page of that one", () => {
-    store.state.structure.site_settings.default_language = "en"
+    store.state.site.site_settings.default_language = "en"
 
     const wrapper = createComponentWithoutRouter(modules.NotFoundPage)
-    const language = store.state.structure.site_settings.default_language
+    const language = store.state.site.site_settings.default_language
     const pages = store.getters.getPagesForLanguage(language)
     assert.isTrue(wrapper.vm.$router.push.calledWith(pages[0].path))
   })
@@ -53,7 +53,7 @@ describe("Not found page", () => {
   })
 
   it("But it won't when only one route exists", () => {
-    store.state.structure.pages = [{ name: "a page" }]
+    store.state.site.pages = [{ name: "a page" }]
     const wrapper = createComponentWithoutRouter(modules.NotFoundPage)
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
@@ -64,7 +64,7 @@ describe("Not found page", () => {
   })
 
   it("And when no routes exist", () => {
-    store.state.structure.pages = []
+    store.state.site.pages = []
     const wrapper = createComponentWithoutRouter(modules.NotFoundPage)
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")

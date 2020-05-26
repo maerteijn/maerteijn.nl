@@ -12,20 +12,21 @@ describe("Test store", () => {
     it("The initial state is empty but usable", () => {
       resetState(store.state)
 
-      // structure should have a pages propperty
-      assert.isObject(store.state.structure)
-      assert.property(store.state.structure, "pages")
-      assert.isArray(store.state.structure.pages)
-      assert.isEmpty(store.state.structure.pages)
+      // site should have a pages propperty
+      assert.isObject(store.state.site)
+      assert.property(store.state.site, "pages")
+      assert.isArray(store.state.site.pages)
+      assert.isEmpty(store.state.site.pages)
 
-      // structure should have a languages property
-      assert.property(store.state.structure, "languages")
-      assert.isObject(store.state.structure.languages)
-      assert.isEmpty(store.state.structure.languages)
+      // site should have a site_settigs property
+      assert.isObject(store.state.site.site_settings)
+      assert.property(store.state.site.site_settings, "languages")
+      assert.isObject(store.state.site.site_settings.languages)
+      assert.isEmpty(store.state.site.site_settings.languages)
 
       // default language
-      assert.property(store.state.structure, "default_language")
-      assert.isEmpty(store.state.structure.default_language)
+      assert.property(store.state.site.site_settings, "default_language")
+      assert.isEmpty(store.state.site.site_settings.default_language)
 
       // content
       assert.isObject(store.state.content)
@@ -43,7 +44,7 @@ describe("Test store", () => {
 
   describe("Getters", () => {
     beforeEach(function () {
-      store.state.structure = JSON.parse(fixtures.site_json)
+      store.state.site = JSON.parse(fixtures.site_json)
     })
 
     afterEach(function () {
@@ -57,7 +58,7 @@ describe("Test store", () => {
     })
 
     it("getPageMetaData returns useful things with paths that do exist", function () {
-      const pages = store.state.structure.pages
+      const pages = store.state.site.pages
       const metadata = store.getters.getPageMetaData(pages[0].path)
       assert.deepEqual(metadata, pages[0])
     })
@@ -76,19 +77,19 @@ describe("Test store", () => {
     })
 
     it("getPagesForLanguage only returns pages for a specific language", function () {
-      store.state.structure.pages[0].settings.language = "en"
+      store.state.site.pages[0].settings.language = "en"
 
-      const pages = store.state.structure.pages.filter(
+      const pages = store.state.site.pages.filter(
         (page) => (page.settings.language = "nl")
       )
       assert.deepEqual(store.getters.getPagesForLanguage("nl"), pages)
     })
 
     it("getPagesForNavigation only returns pages with show_in_menu = true", function () {
-      const current_language = store.state.structure.pages[0].settings.language
-      store.state.structure.pages[0].settings.show_in_menu = "false"
+      const current_language = store.state.site.pages[0].settings.language
+      store.state.site.pages[0].settings.show_in_menu = "false"
 
-      const pages = store.state.structure.pages.filter(
+      const pages = store.state.site.pages.filter(
         (page) =>
           page.settings.show_in_menu &&
           page.settings.language == current_language
@@ -99,12 +100,12 @@ describe("Test store", () => {
     it("getSwitchableLanguage should return the language we can switch to", function () {
       assert.equal(
         store.getters.getSwitchableLanguage("/"),
-        store.state.structure.site_settings.languages["nl"]
+        store.state.site.site_settings.languages["nl"]
       )
-      store.state.structure.pages[0].settings.language = "en"
+      store.state.site.pages[0].settings.language = "en"
       assert.equal(
         store.getters.getSwitchableLanguage("/"),
-        store.state.structure.site_settings.languages["en"]
+        store.state.site.site_settings.languages["en"]
       )
     })
   })
@@ -124,9 +125,9 @@ describe("Test store", () => {
       assert.instanceOf(promise, Promise)
     })
 
-    it("loadSite should fill the store with the site structure", function () {
+    it("loadSite should fill the store with the site site", function () {
       return store.actions.loadSite("/content/site.json").then(() => {
-        assert.deepEqual(store.state.structure, JSON.parse(fixtures.site_json))
+        assert.deepEqual(store.state.site, JSON.parse(fixtures.site_json))
       })
       assert.isTrue(store.state.loaded)
     })
@@ -135,7 +136,7 @@ describe("Test store", () => {
       const site = JSON.parse(fixtures.site_json)
 
       return store.actions.loadSite("/content/site.json").then(() => {
-        // all routes from the structure should be resolvable by the router
+        // all routes from the site should be resolvable by the router
         site.pages.forEach((page) => {
           assert.include(
             modules.router.resolve(page.path).route.path,
@@ -158,7 +159,7 @@ describe("Test store", () => {
       assert.instanceOf(promise, Promise)
 
       return promise.catch((error) => {
-        assert.include(error, "undefined can't be found in the structure")
+        assert.include(error, "undefined can't be found in the site")
       })
     })
 
@@ -174,7 +175,7 @@ describe("Test store", () => {
     it("The downloadContent method downloads the requested content when it's not there yet", function () {
       const path = "/"
       const url = "/content/nl/home.md"
-      store.state.structure = JSON.parse(fixtures.site_json)
+      store.state.site = JSON.parse(fixtures.site_json)
 
       return store.actions.downloadContent(path).then((result) => {
         // the promise should resolve with the fetched content
