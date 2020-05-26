@@ -55,7 +55,7 @@ export const getters = {
 }
 
 export const actions = {
-  loadStructure(url) {
+  loadSite(url) {
     return axios.get(url).then((response) => {
       if (String(response.data) === response.data) {
         throw `Invalid JSON response when requesting ${url}`
@@ -107,7 +107,7 @@ export default {
 if (process.env.NODE_ENV === "development") {
   if (module.hot) {
     module.hot.accept(() => {
-      actions.loadStructure("/content/site.json")
+      actions.loadSite("/content/site.json")
     })
   }
 }
