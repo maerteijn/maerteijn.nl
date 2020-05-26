@@ -22,7 +22,7 @@ describe("Logo component", () => {
 describe("Logo component - extended", () => {
   beforeEach(function () {
     this.wrapper = createComponent(modules.Logo)
-    this.wrapper.vm.$state.structure = JSON.parse(fixtures.structure_json)
+    this.wrapper.vm.$state.structure = JSON.parse(fixtures.site_json)
     this.wrapper.vm.$state.loaded = true
   })
 

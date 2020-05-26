@@ -43,7 +43,7 @@ describe("Test store", () => {
 
   describe("Getters", () => {
     beforeEach(function () {
-      store.state.structure = JSON.parse(fixtures.structure_json)
+      store.state.structure = JSON.parse(fixtures.site_json)
     })
 
     afterEach(function () {
@@ -126,20 +126,17 @@ describe("Test store", () => {
 
     it("loadSite should fill the store with the site structure", function () {
       return store.actions.loadSite("/content/site.json").then(() => {
-        assert.deepEqual(
-          store.state.structure,
-          JSON.parse(fixtures.structure_json)
-        )
+        assert.deepEqual(store.state.structure, JSON.parse(fixtures.site_json))
       })
       assert.isTrue(store.state.loaded)
     })
 
     it("loadSite should fill the vue router with routes", function () {
-      const structure = JSON.parse(fixtures.structure_json)
+      const site = JSON.parse(fixtures.site_json)
 
       return store.actions.loadSite("/content/site.json").then(() => {
         // all routes from the structure should be resolvable by the router
-        structure.pages.forEach((page) => {
+        site.pages.forEach((page) => {
           assert.include(
             modules.router.resolve(page.path).route.path,
             page.path
@@ -151,11 +148,9 @@ describe("Test store", () => {
     it("loadSite throws an error when axios does not return a JSON response", function () {
       this.stub = mock_axios_error()
 
-      return store.actions
-        .loadSite("/content/site.json")
-        .catch((error) => {
-          assert.include(error, "Invalid JSON response")
-        })
+      return store.actions.loadSite("/content/site.json").catch((error) => {
+        assert.include(error, "Invalid JSON response")
+      })
     })
 
     it("The downloadContent method should return a Promise and rejects it when no path is given", function () {
@@ -179,7 +174,7 @@ describe("Test store", () => {
     it("The downloadContent method downloads the requested content when it's not there yet", function () {
       const path = "/"
       const url = "/content/nl/home.md"
-      store.state.structure = JSON.parse(fixtures.structure_json)
+      store.state.structure = JSON.parse(fixtures.site_json)
 
       return store.actions.downloadContent(path).then((result) => {
         // the promise should resolve with the fetched content

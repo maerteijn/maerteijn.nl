@@ -52,7 +52,7 @@ export function mock_axios_success() {
   // return the parsed structure json
   stub.withArgs("/content/site.json").returns(
     Promise.resolve({
-      data: JSON.parse(fixtures.structure_json),
+      data: JSON.parse(fixtures.site_json),
     })
   )
 
@@ -81,7 +81,7 @@ export function mock_axios_error() {
 }
 
 export function loadDefaultState(state) {
-  state.structure = JSON.parse(fixtures.structure_json)
+  state.structure = JSON.parse(fixtures.site_json)
   state.loaded = true
 }
 
