@@ -3,12 +3,23 @@
 </template>
 
 <script>
+import { getters } from "../store"
+
 export default {
   name: "not-found-page",
   created() {
-    if (this.$state.structure.pages.length > 1) {
-      const default_path = this.$state.structure.pages[0].path
-      this.$router.push(default_path)
+    const language =
+      window.localStorage.language ||
+      this.$state.structure.site_settings.default_language
+    const pages = getters.getPagesForLanguage(language)
+
+    if (pages.length > 0) {
+      this.$router.push(pages[0].path)
+    } else {
+      this.$root.$emit(
+        "error",
+        new Error(`Can't find any page for language ${language}`)
+      )
     }
   },
 }
