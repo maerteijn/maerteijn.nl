@@ -27,7 +27,7 @@ describe("Switch language component", () => {
 
   it("The component renders a svg icon", () => {
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
-    store.state.structure.pages[0].settings.language = "en"
+    store.state.site.pages[0].settings.language = "en"
 
     const icon = wrapper.find("div.icon")
     assert.include(icon.html(), "<svg")
@@ -47,7 +47,7 @@ describe("Switch language component", () => {
       path: "/",
     })
     assert.isTrue(wrapper.vm.canSwitch)
-    store.state.structure.pages[2].settings.language = "nl"
+    store.state.site.pages[2].settings.language = "nl"
     assert.isFalse(wrapper.vm.canSwitch)
   })
 

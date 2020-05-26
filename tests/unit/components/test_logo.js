@@ -22,7 +22,7 @@ describe("Logo component", () => {
 describe("Logo component - extended", () => {
   beforeEach(function () {
     this.wrapper = createComponent(modules.Logo)
-    this.wrapper.vm.$state.structure = JSON.parse(fixtures.site_json)
+    this.wrapper.vm.$state.site = JSON.parse(fixtures.site_json)
     this.wrapper.vm.$state.loaded = true
   })
 
@@ -35,7 +35,7 @@ describe("Logo component - extended", () => {
       assert.isTrue(this.wrapper.find(".icons").exists())
 
       // all icons loaded in the store should be rendered
-      const logo_links = this.wrapper.vm.$state.structure.logo_links
+      const logo_links = this.wrapper.vm.$state.site.logo_links
       assert.equal(
         this.wrapper.findAll(".icons .item").length,
         logo_links.length
@@ -45,13 +45,13 @@ describe("Logo component - extended", () => {
 
   it("The links computed property returns items from the store", function () {
     return this.wrapper.vm.$nextTick().then(() => {
-      const logo_links = this.wrapper.vm.$state.structure.logo_links
+      const logo_links = this.wrapper.vm.$state.site.logo_links
       assert.equal(this.wrapper.vm.links.length, logo_links.length)
     })
   })
 
   it("The links computed property is immediately updated from the store", function () {
-    this.wrapper.vm.$state.structure.logo_links = []
+    this.wrapper.vm.$state.site.logo_links = []
     return this.wrapper.vm.$nextTick().then(() => {
       assert.equal(this.wrapper.vm.links.length, 0)
     })

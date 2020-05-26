@@ -37,7 +37,7 @@ export default {
   name: "logo",
   computed: {
     links() {
-      return this.$state.loaded ? this.$state.structure.logo_links : []
+      return this.$state.loaded ? this.$state.site.logo_links : []
     },
   },
   methods: {
