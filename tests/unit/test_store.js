@@ -119,13 +119,13 @@ describe("Test store", () => {
       resetState(store.state)
     })
 
-    it("loadStructure should return a Promise", function () {
-      const promise = store.actions.loadStructure("/content/site.json")
+    it("loadSite should return a Promise", function () {
+      const promise = store.actions.loadSite("/content/site.json")
       assert.instanceOf(promise, Promise)
     })
 
-    it("loadStructure should fill the store with the site structure", function () {
-      return store.actions.loadStructure("/content/site.json").then(() => {
+    it("loadSite should fill the store with the site structure", function () {
+      return store.actions.loadSite("/content/site.json").then(() => {
         assert.deepEqual(
           store.state.structure,
           JSON.parse(fixtures.structure_json)
@@ -134,10 +134,10 @@ describe("Test store", () => {
       assert.isTrue(store.state.loaded)
     })
 
-    it("loadStructure should fill the vue router with routes", function () {
+    it("loadSite should fill the vue router with routes", function () {
       const structure = JSON.parse(fixtures.structure_json)
 
-      return store.actions.loadStructure("/content/site.json").then(() => {
+      return store.actions.loadSite("/content/site.json").then(() => {
         // all routes from the structure should be resolvable by the router
         structure.pages.forEach((page) => {
           assert.include(
@@ -148,11 +148,11 @@ describe("Test store", () => {
       })
     })
 
-    it("loadStructure throws an error when axios does not return a JSON response", function () {
+    it("loadSite throws an error when axios does not return a JSON response", function () {
       this.stub = mock_axios_error()
 
       return store.actions
-        .loadStructure("/content/site.json")
+        .loadSite("/content/site.json")
         .catch((error) => {
           assert.include(error, "Invalid JSON response")
         })
