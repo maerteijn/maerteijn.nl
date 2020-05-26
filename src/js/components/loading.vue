@@ -3,14 +3,10 @@
     <figure class="image is-64x64">
       <img
         title="Loading"
-        src="../../../static/images/spinner-light.gif"
+        src="../../assets/images/spinner-light.gif"
         v-if="spinner == 'light'"
       />
-      <img
-        title="Loading"
-        src="../../../static/images/spinner-dark.gif"
-        v-else
-      />
+      <img title="Loading" src="../../assets/images/spinner-dark.gif" v-else />
     </figure>
   </div>
 </template>
