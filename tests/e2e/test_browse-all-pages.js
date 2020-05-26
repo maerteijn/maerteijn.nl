@@ -10,7 +10,7 @@ const dist = path.resolve(__dirname, "../../dist/e2e")
 const screenshots = path.join(dist, "screenshots")
 
 const structure = JSON.parse(
-  fs.readFileSync(path.join(dist, "content/structure.json"))
+  fs.readFileSync(path.join(dist, "content/site.json"))
 )
 const default_page = structure.pages[0]
 
