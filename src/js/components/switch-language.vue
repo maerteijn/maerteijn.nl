@@ -28,8 +28,8 @@ export default {
   methods: {
     icon: getIcon,
     switchLanguage() {
+      window.localStorage.language = this.switchTo
       this.$router.push(getters.getPagesForLanguage(this.switchTo)[0].path)
-      this.$emit("language-switched", this.language)
     },
   },
 }
