@@ -10,7 +10,7 @@ export default {
   created() {
     const language =
       window.localStorage.language ||
-      this.$state.structure.site_settings.default_language
+      this.$state.site.site_settings.default_language
     const pages = getters.getPagesForLanguage(language)
 
     if (pages.length > 0) {
