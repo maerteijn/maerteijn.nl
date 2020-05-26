@@ -47,11 +47,14 @@ export default {
         if (loaded && this.$route.path) {
           actions
             .downloadContent(this.$route.path)
-            .then(() => {
-              document.title = this.page_metadata.title || ""
-            })
             .catch((e) => this.$root.$emit("error", e))
         }
+      },
+    },
+    page_metadata: {
+      immediate: true,
+      handler(metadata) {
+        document.title = metadata.title || ""
       },
     },
   },
