@@ -75,6 +75,9 @@ describe("Content page", () => {
       name: "home",
       title: "Home",
       path: "/",
+      setting: {
+        language: "nl",
+      },
     }
     store.state.site.pages.push(metadata)
     assert.deepEqual(this.wrapper.vm.page_metadata, metadata)
@@ -128,6 +131,19 @@ describe("Content page - extended", () => {
     })
   })
 
+  it("The html lang attribute should be updated as well", function () {
+    loadDefaultState(store.state)
+    const page_metadata = store.getters.getPageMetaData("/")
+
+    return waitForPromises().then(() => {
+      assert.equal(
+        document.getElementsByTagName("html")[0].getAttribute("lang"),
+        page_metadata.settings.language
+      )
+    })
+  })
+
+  document.querySelector("html")
   it("When an error occurs, an error message is emitted", function () {
     this.stub = mock_axios_error()
 
