@@ -55,6 +55,8 @@ export default {
       immediate: true,
       handler(metadata) {
         document.title = metadata.title || ""
+        const language = metadata.settings && metadata.settings.language
+        document.querySelector("html").setAttribute("lang", language)
       },
     },
   },
