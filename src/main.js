@@ -1,4 +1,4 @@
-import "./ie11"
+import "./polyfills"
 import Vue from "vue"
 import VueRouter from "vue-router"
 import App from "./app"
