@@ -34,18 +34,15 @@ describe("Content page", () => {
     assert.equal(this.wrapper.name(), "content-page")
   })
 
-  it("Default the content page will render some elements without choking", function () {
+  it("Default the content page will render the page div, but no content ", function () {
     assert.isTrue(this.wrapper.find(".page").exists())
-    assert.isTrue(this.wrapper.find(".content").exists())
-    assert.isEmpty(this.wrapper.find(".content").text())
+    assert.isFalse(this.wrapper.find(".content").exists())
   })
 
-  it("It renders correctly with another layout", function () {
+  it("It renders the page div with another layout", function () {
     store.state.layout = "basic-layout"
     return this.wrapper.vm.$nextTick().then(() => {
       assert.isTrue(this.wrapper.find(".page").exists())
-      assert.isTrue(this.wrapper.find(".content").exists())
-      assert.isEmpty(this.wrapper.find(".content").text())
     })
   })
 

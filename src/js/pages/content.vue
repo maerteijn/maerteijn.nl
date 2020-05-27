@@ -5,8 +5,8 @@
         v-bind:show="!content"
         v-bind:spinner="$state.layout == 'default-layout' ? 'light' : 'dark'"
       ></loading>
-      <div class="content" v-html="renderedMarkdown"></div>
-      <lastupdated v-bind:updated="lastUpdated"></lastupdated>
+      <div class="content" v-if="content" v-html="renderedMarkdown"></div>
+      <lastupdated v-bind:updated="lastUpdated" v-if="content"></lastupdated>
     </div>
   </component>
 </template>
