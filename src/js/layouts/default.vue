@@ -89,7 +89,6 @@ export default {
     box-shadow: 0 5px 15px 0 variables.$drop-shadow-color;
     color: variables.$font-color-left;
     grid-area: navigation;
-    z-index: 1;
 
     a {
       border-bottom: solid 1px rgba(0, 0, 0, 0);
