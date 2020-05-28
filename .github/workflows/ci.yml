@@ -18,7 +18,7 @@ jobs:
       run: npm run stylelint
     - name: Run prettier
       run: npm run prettier
-    - name: Run the unittests
+    - name: Run the unit and functional tests
       run: npm run test:coverage
     - name: Run the e2e tests
       run: npm run test:e2e

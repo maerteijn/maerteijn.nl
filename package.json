@@ -4,11 +4,9 @@
   "description": "My professional website build with vue.js and bulma",
   "scripts": {
     "dev": "parcel --hmr-port 3000 src/index.html -d dist/dev",
-    "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js",
-    "test:unit": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js",
+    "test": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
     "test:e2e": "npm run build:e2e && mocha tests/e2e/test_*.js",
-    "test:coverage": "nyc npm run test:unit",
-    "test": "npm run test:unit",
+    "test:coverage": "nyc npm run test",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
@@ -16,7 +14,7 @@
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "build": "BUILD_TIME=$(date) parcel build src/index.html --no-cache --experimental-scope-hoisting -d dist/release",
-    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js",
+    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./",
     "build:e2e": "NODE_ENV=production BUILD_TIME=$(date) parcel build src/index.html --no-minify -d dist/e2e/"
   },
   "repository": {
