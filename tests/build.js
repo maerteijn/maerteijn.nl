@@ -21,6 +21,7 @@ import router from "../src/js/router"
 import { resetRouter } from "../src/js/router"
 
 import store from "../src/js/store"
+import { state, getters, actions } from "../src/js/store"
 
 export default {
   App,
