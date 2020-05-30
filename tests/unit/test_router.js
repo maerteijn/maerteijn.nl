@@ -18,7 +18,7 @@ describe("Test router", () => {
       {
         name: "my-route",
         path: "*",
-        component: modules.NotFoundPage,
+        component: modules.RedirectPage,
       },
     ])
 
