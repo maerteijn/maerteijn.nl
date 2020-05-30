@@ -8,9 +8,9 @@ describe("Test pages utils", () => {
     assert.isUndefined(modules.getPageComponent("unknown"))
   })
 
-  it("The getPageComponent returns the NotFoundPage component", () => {
-    const component = modules.getPageComponent("NotFoundPage")
-    assert.equal(component, modules.NotFoundPage)
+  it("The getPageComponent returns the RedirectPage component", () => {
+    const component = modules.getPageComponent("RedirectPage")
+    assert.equal(component, modules.RedirectPage)
   })
 
   it("The getPageComponent returns the ContentPage component", () => {

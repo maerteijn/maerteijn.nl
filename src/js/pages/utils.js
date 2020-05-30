@@ -1,9 +1,9 @@
 import ContentPage from "./content"
-import NotFoundPage from "./notfound"
+import RedirectPage from "./redirect"
 
 const types = {
   ContentPage: ContentPage,
-  NotFoundPage: NotFoundPage,
+  RedirectPage: RedirectPage,
 }
 
 export default (name) => types[name]

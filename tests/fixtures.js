@@ -44,10 +44,10 @@ export const site_json = `
        }
     },
     {
-      "name": "not-found",
-      "title": "maerteijn - 404",
+      "name": "redirect",
+      "title": "maerteijn - redirect",
       "path": "*",
-      "type": "NotFoundPage",
+      "type": "RedirectPage",
       "settings": {}
     }
   ],
