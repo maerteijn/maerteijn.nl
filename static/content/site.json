@@ -97,9 +97,10 @@
        }
     },
     {
-      "title": "maerteijn - 404",
+      "title": "maerteijn - redirect",
+      "name": "Redirect",
       "path": "*",
-      "type": "NotFoundPage",
+      "type": "RedirectPage",
       "settings": {}
     }
   ],
