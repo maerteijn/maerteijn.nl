@@ -5,6 +5,7 @@ import router from "./router"
 import { resetRouter } from "./router"
 import { isOldBrowser } from "./utils"
 import getPageComponent from "./pages/utils"
+import { validator } from "./schema"
 
 export const state = Vue.observable({
   site: {
@@ -60,6 +61,12 @@ export const actions = {
       if (String(response.data) === response.data) {
         throw `Invalid JSON response when requesting ${url}`
       }
+
+      if (!validator(response.data)) {
+        const error = validator.errors[0]
+        throw `Site data does not validate ${error.dataPath}: ${error.message}`
+      }
+
       state.site = response.data
 
       // dynamic create routes here from the site pages and add them to
