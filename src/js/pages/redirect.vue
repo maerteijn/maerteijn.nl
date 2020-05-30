@@ -6,7 +6,7 @@
 import { getters } from "../store"
 
 export default {
-  name: "not-found-page",
+  name: "redirect-page",
   created() {
     const language =
       window.localStorage.language ||
