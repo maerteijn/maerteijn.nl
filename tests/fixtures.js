@@ -65,3 +65,10 @@ export const site_json = `
   ]
 }
 `
+
+export const site_json_invalid = `
+{
+  "site_settings": {
+  }
+}
+`

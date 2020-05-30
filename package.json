@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "parcel --hmr-port 3000 src/index.html -d dist/dev",
     "test": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
+    "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
     "test:e2e": "npm run build:e2e && mocha tests/e2e/test_*.js",
     "test:coverage": "nyc npm run test",
     "eslint": "eslint src/",
@@ -57,6 +58,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "ajv": "^6.12.2",
     "axios": "^0.19.2",
     "bulma": "^0.8.2",
     "core-js": "^3.6.5",
