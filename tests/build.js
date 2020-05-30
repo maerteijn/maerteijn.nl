@@ -6,7 +6,7 @@ import DefaultLayout from "../src/js/layouts/default"
 import BasicLayout from "../src/js/layouts/basic"
 
 import getPageComponent from "../src/js/pages/utils"
-import NotFoundPage from "../src/js/pages/notfound"
+import RedirectPage from "../src/js/pages/redirect"
 import ContentPage from "../src/js/pages/content"
 import ErrorPage from "../src/js/pages/error"
 
@@ -28,7 +28,7 @@ export default {
   DefaultLayout,
   BasicLayout,
   getPageComponent,
-  NotFoundPage,
+  RedirectPage,
   ContentPage,
   ErrorPage,
   Navigation,
