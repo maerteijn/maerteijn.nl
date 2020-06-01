@@ -34,9 +34,9 @@ The `Prettier` opinionated code formatter is used:
 ```
 
 ## Tests
-We have unittests with `mocha`:
+We have unit and functional tests with `mocha`:
 ```bash
-    npm run test:unit
+    npm run test
 ```
 Coverage report with `nyc` is possible with:
 ```bash
