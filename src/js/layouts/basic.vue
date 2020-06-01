@@ -63,6 +63,10 @@ export default {
     code {
       color: variables.$orange-color;
     }
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   .nav {
