@@ -20,15 +20,82 @@
        }
     },
     {
-      "title": "maerteijn - projecten",
-      "name": "projecten",
-      "path": "/nl/projecten",
-      "url": "/content/nl/projecten.md",
+       "title": "maerteijn - projecten",
+       "name": "projecten",
+       "path": "/nl/projecten",
+       "url": "/content/nl/projecten.md",
+       "type": "ContentPage",
+       "settings": {
+         "language": "nl",
+         "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - projecten - mijn website met vue",
+      "name": "mijn-website-met-vue",
+      "path": "/nl/projecten/mijn-website-met-vue",
+      "url": "/content/nl/projecten/mijn-website-met-vue.md",
       "type": "ContentPage",
       "settings": {
         "language": "nl",
-        "show_in_menu": true
-       }
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projecten - corporate website voor zumtobel",
+      "name": "corporate-website-voor-zumtobel",
+      "path": "/nl/projecten/corporate-website-voor-zumtobel",
+      "url": "/content/nl/projecten/corporate-website-voor-zumtobel.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projecten - high performance cluster api",
+      "name": "high-performance-cluster-api",
+      "path": "/nl/projecten/high-performance-cluster-api",
+      "url": "/content/nl/projecten/high-performance-cluster-api.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projecten - webshop en microservices api voor liander",
+      "name": "webshop-en-microservices-api-voor-liander",
+      "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
+      "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projecten - rpi saltstack deployment voor vadain",
+      "name": "rpi-saltstack-deployment-voor-vadain",
+      "path": "/nl/projecten/rpi-saltstack-deployment-voor-vadain",
+      "url": "/content/nl/projecten/rpi-saltstack-deployment-voor-vadain.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
+    },
+
+    {
+      "title": "maerteijn - projecten - e-commerce platform voor nutricia",
+      "name": "e-commerce-platform-voor-nutricia",
+      "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
+      "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
     },
     {
       "title": "maerteijn - contact",
@@ -72,7 +139,73 @@
       "settings": {
         "language": "en",
         "show_in_menu": true
-       }
+      }
+   },
+   {
+      "title": "maerteijn - projects - my personal website with vue.js",
+      "name": "my-personal-website-with-vue",
+      "path": "/en/projects/my-personal-website-with-vue",
+      "url": "/content/en/projects/my-personal-website-with-vue.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+   },
+   {
+      "title": "maerteijn - projecten - corporate website for zumtobel",
+      "name": "corporate-website-for-zumtobel",
+      "path": "/en/projects/corporate-website-for-zumtobel",
+      "url": "/content/en/projects/corporate-website-for-zumtobel.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+   },
+   {
+      "title": "maerteijn - projects - high performance cluster api",
+      "name": "high-performance-cluster-api",
+      "path": "/en/projects/high-performance-cluster-api",
+      "url": "/content/en/projects/high-performance-cluster-api.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projects - webshop and microservices api for liander",
+      "name": "webshop-and-microservices-api-for-liander",
+      "path": "/en/projects/webshop-and-microservices-api-for-liander",
+      "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projects - rpi saltstack deployment for vadain",
+      "name": "rpi-saltstack-deployment-for-vadain",
+      "path": "/en/projects/rpi-saltstack-deployment-for-vadain",
+      "url": "/content/en/projects/rpi-saltstack-deployment-for-vadain.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projects - e-commerce platform for nutricia",
+      "name": "e-commerce-platform-for-nutricia",
+      "path": "/en/projects/e-commerce-platform-for-nutricia",
+      "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
     },
     {
       "title": "maerteijn - contact",
