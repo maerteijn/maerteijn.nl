@@ -17,5 +17,6 @@ export default {
 .last-updated {
   font-size: 0.75em;
   font-style: italic;
+  padding-bottom: 1rem;
 }
 </style>
