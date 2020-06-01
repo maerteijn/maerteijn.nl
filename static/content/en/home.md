@@ -1,12 +1,25 @@
 # Home
-Hi, I'm Martijn Jacobs, a freelance software developer based in [Arnhem](https://www.google.nl/maps/place/Arnhem/), NL.
+Hi, I'm Martijn Jacobs, a freelance software developer based in [Arnhem, NL](https://www.google.nl/maps/place/Arnhem/).
 
 
 __Maerteijn__ is an "[Old Dutch spelling](https://en.wikipedia.org/wiki/Old_Dutch)" variant of my first name and also my company name.
 
 ## Profile
-![Martijn](/images/photo-small.jpg#left =150x*)
+![Martijn](/images/photo-small.jpg#left =150x*) I have 15+ years of development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org/). I like to write readable and adaptable code. In my view code turns into software when there is a test for it. QA, packaging and deployment are things I like to automate with tools as [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) or [Saltstack](https://www.saltstack.com/).
 
-I'm a web developer with +15 years of experience, mostly with (but not limited to) [Python](https://www.python.org/). I consider Open Source Software a good thing and try to contribute where I can. The last years I've mainly used the web application framework [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/). More recently I started using [Vue.js](https://vuejs.org/), but I'm curious for any platform or technology as long it's the right tool for the job.
 
-See the [Projects](./projects) page for an impression of the projects I did in the past.
+The last years I've mainly used the web application framework [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/) and I'm maintainer of [Django Oscar API](https://github.com/django-oscar/django-oscar-api/). I consider Open Source Software to be a good thing and try to contribute where I can. More recently I started using [Vue.js](https://vuejs.org/), and I'm curious for any platform or technology as long it's the right tool for the job.
+
+See the [Projects](/en/projects) page for an impression of the projects I did in the past.
+
+
+## Hire me
+
+I'm available on a project basis, (lead-)developer, code reviewer, consultant or devops engineer:
+
+- :calendar: Available up to 3 days per week
+- :office: On site or at my Arnhem office
+- :man_technologist: Independently or in a team
+- :fast_forward: Scrum and/or agile development
+
+Interested? See the [Contact](/en/contact) page how you can reach me.
