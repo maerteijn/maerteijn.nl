@@ -13,12 +13,12 @@ De laatste jaren heb ik vooral met [Django](https://www.djangoproject.com/) in c
 
 Zie [Projecten](/nl/projecten) voor een impressie van mijn projecten de laatste jaren.
 
-## Huur mij in
+## Beschikbaar
 
-Ik ben beschikbaar op projectbasis, van developer en/of code reviewer tot teamlead, consultant of devops engineer:
+Ik ben beschikbaar op projectbasis, van (senior-)developer en/of code reviewer tot consultant of devops engineer:
 
 - :calendar: Tot 3 dagen per week
-- :office: Op lokatie, of vanuit [mijn kantoor](/nl/contact) in Arnhem
+- :office: Op lokatie, en/of vanuit [mijn kantoor](/nl/contact) in Arnhem
 - :man_technologist: Alleen of in een projectteam
 - :fast_forward: Op basis van scrum en/of agile development
 
