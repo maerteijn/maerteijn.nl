@@ -7,7 +7,7 @@
     "test": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
     "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
     "test:e2e": "npm run build:e2e && mocha tests/e2e/test_*.js",
-    "test:coverage": "nyc npm run test",
+    "test:coverage": "rm -Rf dist/test && nyc npm run test",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",

@@ -1,7 +1,7 @@
 # maerteijn.nl
 ![](https://github.com/maerteijn/maerteijn.nl/workflows/maerteijn.nl%20ci/badge.svg)
 
-My personal website build with Vue.js, deployed on [https://www.maerteijn.nl](https://www.maerteijn.nl)
+My professional website build with Vue.js, deployed on [https://www.maerteijn.nl](https://www.maerteijn.nl)
 
 ## Development requirements
 
@@ -34,9 +34,9 @@ The `Prettier` opinionated code formatter is used:
 ```
 
 ## Tests
-We have unittests with `mocha`:
+We have unit and functional tests with `mocha`:
 ```bash
-    npm run test:unit
+    npm run test
 ```
 Coverage report with `nyc` is possible with:
 ```bash
