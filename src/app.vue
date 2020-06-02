@@ -4,7 +4,7 @@
     v-bind:error="$state.error || ''"
     v-if="$state.error"
   ></error-page>
-  <router-view v-bind:key="$route.fullPath" v-else></router-view>
+  <router-view v-bind:key="$route.path" v-else></router-view>
 </template>
 
 <script>
