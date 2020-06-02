@@ -16,6 +16,7 @@ import Logo from "../src/js/components/logo"
 import SwitchLayout from "../src/js/components/switch-layout"
 import SwitchLanguage from "../src/js/components/switch-language"
 import Loading from "../src/js/components/loading"
+import MarkdownViewer from "../src/js/components/markdown-viewer"
 
 import router from "../src/js/router"
 import { resetRouter } from "../src/js/router"
@@ -37,6 +38,7 @@ export default {
   SwitchLayout,
   SwitchLanguage,
   Loading,
+  MarkdownViewer,
   router,
   resetRouter,
   store,

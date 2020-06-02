@@ -5,7 +5,10 @@
         v-bind:show="!content"
         v-bind:spinner="$state.layout == 'default-layout' ? 'light' : 'dark'"
       ></loading>
-      <div class="content" v-if="content" v-html="renderedMarkdown"></div>
+      <markdown-viewer
+        v-if="content"
+        v-bind:content="content"
+      ></markdown-viewer>
       <lastupdated v-bind:updated="lastUpdated" v-if="content"></lastupdated>
     </div>
   </component>
@@ -16,6 +19,7 @@ import axios from "axios"
 
 import LastUpdated from "../components/last-updated"
 import Loading from "../components/loading"
+import MarkdownViewer from "../components/markdown-viewer"
 
 import { renderMarkdown } from "../markdown"
 import { actions, getters } from "../store"
@@ -28,10 +32,6 @@ export default {
     },
     content() {
       return getters.getContent(this.$route.path)
-    },
-    renderedMarkdown() {
-      const markdown = this.content || ""
-      return renderMarkdown(markdown)
     },
     loaded() {
       return this.$state.loaded
@@ -63,6 +63,7 @@ export default {
   components: {
     lastupdated: LastUpdated,
     loading: Loading,
+    "markdown-viewer": MarkdownViewer,
   },
 }
 </script>
