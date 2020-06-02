@@ -16,24 +16,3 @@
   src: url("../fonts/play-v11-latin-700.woff2") format("woff2"),
     url("../fonts/play-v11-latin-700.woff") format("woff");
 }
-
-.content {
-  img {
-    box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
-    margin: 0.25rem 0.75rem;
-    margin-left: 0;
-  }
-  p {
-    clear: both;
-  }
-
-  img[src*="#left"] {
-    float: left;
-    margin-left: 0;
-  }
-
-  img[src*="#right"] {
-    float: right;
-    margin-right: 0;
-  }
-}

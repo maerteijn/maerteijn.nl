@@ -14,6 +14,7 @@
       "path": "/nl/",
       "url": "/content/nl/hallo.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": true
@@ -25,6 +26,7 @@
        "path": "/nl/projecten",
        "url": "/content/nl/projecten.md",
        "type": "ContentPage",
+       "content_component": "MarkdownViewer",
        "settings": {
          "language": "nl",
          "show_in_menu": true
@@ -36,6 +38,7 @@
       "path": "/nl/projecten/mijn-website-met-vue",
       "url": "/content/nl/projecten/mijn-website-met-vue.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": false
@@ -47,6 +50,7 @@
       "path": "/nl/projecten/corporate-website-voor-zumtobel",
       "url": "/content/nl/projecten/corporate-website-voor-zumtobel.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": false
@@ -58,6 +62,7 @@
       "path": "/nl/projecten/high-performance-cluster-api",
       "url": "/content/nl/projecten/high-performance-cluster-api.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": false
@@ -69,6 +74,7 @@
       "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
       "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": false
@@ -80,6 +86,7 @@
       "path": "/nl/projecten/rpi-saltstack-deployment-voor-vadain",
       "url": "/content/nl/projecten/rpi-saltstack-deployment-voor-vadain.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": false
@@ -92,6 +99,7 @@
       "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
       "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": false
@@ -103,6 +111,7 @@
       "path": "/nl/contact",
       "url": "/content/nl/contact.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": true
@@ -114,6 +123,7 @@
       "path": "/nl/colophon",
       "url": "/content/nl/colofon.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "nl",
         "show_in_menu": true
@@ -125,6 +135,7 @@
       "path": "/en/",
       "url": "/content/en/home.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": true
@@ -136,6 +147,7 @@
       "path": "/en/projects",
       "url": "/content/en/projects.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": true
@@ -147,6 +159,7 @@
       "path": "/en/projects/my-personal-website-with-vue",
       "url": "/content/en/projects/my-personal-website-with-vue.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": false
@@ -158,6 +171,7 @@
       "path": "/en/projects/corporate-website-for-zumtobel",
       "url": "/content/en/projects/corporate-website-for-zumtobel.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": false
@@ -169,6 +183,7 @@
       "path": "/en/projects/high-performance-cluster-api",
       "url": "/content/en/projects/high-performance-cluster-api.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": false
@@ -180,6 +195,7 @@
       "path": "/en/projects/webshop-and-microservices-api-for-liander",
       "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": false
@@ -191,6 +207,7 @@
       "path": "/en/projects/rpi-saltstack-deployment-for-vadain",
       "url": "/content/en/projects/rpi-saltstack-deployment-for-vadain.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": false
@@ -202,6 +219,7 @@
       "path": "/en/projects/e-commerce-platform-for-nutricia",
       "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": false
@@ -213,6 +231,7 @@
       "path": "/en/contact",
       "url": "/content/en/contact.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": true
@@ -224,6 +243,7 @@
       "path": "/en/colophon",
       "url": "/content/en/colophon.md",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "settings": {
         "language": "en",
         "show_in_menu": true
