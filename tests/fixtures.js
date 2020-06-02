@@ -15,6 +15,7 @@ export const site_json = `
       "title": "home",
       "path": "/",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "url": "/content/nl/home.md",
       "settings": {
         "language": "nl",
@@ -26,6 +27,7 @@ export const site_json = `
       "title": "projects",
       "path": "/nl/projects",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "url": "/content/nl/projects.md",
       "settings": {
         "language": "nl",
@@ -37,6 +39,7 @@ export const site_json = `
       "title": "another language",
       "path": "/en/another-language",
       "type": "ContentPage",
+      "content_component": "MarkdownViewer",
       "url": "/content/nl/home.md",
       "settings": {
         "language": "en",
