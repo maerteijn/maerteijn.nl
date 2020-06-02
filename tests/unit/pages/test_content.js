@@ -22,6 +22,7 @@ describe("Content page", () => {
   beforeEach(function () {
     this.wrapper = createComponentWithoutRouter(modules.ContentPage, {
       path: "/",
+      meta: { content_component: modules.MarkdownViewer },
     })
   })
 
@@ -63,11 +64,6 @@ describe("Content page", () => {
     })
   })
 
-  it("The renderedMarkdown computed property works as expected", function () {
-    Vue.set(store.state.content, "/", "# Hello!")
-    assert.equal(this.wrapper.vm.renderedMarkdown, '<h1 id="hello">Hello!</h1>')
-  })
-
   it("The loaded computed property works as expected", function () {
     assert.isFalse(this.wrapper.vm.loaded)
 
@@ -96,6 +92,7 @@ describe("Content page - extended", () => {
     this.stub = mock_axios_success()
     this.wrapper = createComponentWithoutRouter(modules.ContentPage, {
       path: "/",
+      meta: { content_component: modules.MarkdownViewer },
     })
   })
 
@@ -122,7 +119,10 @@ describe("Content page - extended", () => {
 
     // so let's go to the projects page
     loadDefaultState(store.state)
-    this.wrapper.vm.$route = { path: "/nl/projects" }
+    this.wrapper.vm.$route = {
+      path: "/nl/projects",
+      meta: { content_component: modules.MarkdownViewer },
+    }
 
     return waitForPromises().then(() => {
       assert.isTrue(this.wrapper.find("h1#projects").exists())
@@ -150,7 +150,6 @@ describe("Content page - extended", () => {
     })
   })
 
-  document.querySelector("html")
   it("When an error occurs, an error message is emitted", function () {
     this.stub = mock_axios_error()
 

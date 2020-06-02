@@ -24,6 +24,9 @@ const definitionsSchema = {
         path: { $ref: "definitions.json#/definitions/path" },
         url: { $ref: "definitions.json#/definitions/path" },
         type: { $ref: "definitions.json#/definitions/non-empty-string" },
+        content_component: {
+          $ref: "definitions.json#/definitions/non-empty-string",
+        },
         settings: {
           type: "object",
           properties: {

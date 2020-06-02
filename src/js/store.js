@@ -5,6 +5,7 @@ import router from "./router"
 import { resetRouter } from "./router"
 import { isOldBrowser } from "./utils"
 import getPageComponent from "./pages/utils"
+import getContentComponent from "./components/utils"
 import { validator } from "./schema"
 
 export const state = Vue.observable({
@@ -75,6 +76,9 @@ export const actions = {
         return {
           path: page.path,
           component: getPageComponent(page.type),
+          meta: {
+            content_component: getContentComponent(page.content_component),
+          },
         }
       })
       resetRouter(router)
