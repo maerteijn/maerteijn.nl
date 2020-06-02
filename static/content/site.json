@@ -20,15 +20,48 @@
        }
     },
     {
-      "title": "maerteijn - projecten",
-      "name": "projecten",
-      "path": "/nl/projecten",
-      "url": "/content/nl/projecten.md",
+       "title": "maerteijn - projecten",
+       "name": "projecten",
+       "path": "/nl/projecten",
+       "url": "/content/nl/projecten.md",
+       "type": "ContentPage",
+       "settings": {
+         "language": "nl",
+         "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - projecten - hpc cluster api voor rijk zwaan",
+      "name": "hpc-cluster-api-voor-rijk-zwaan",
+      "path": "/nl/projecten/hpc-cluster-api-voor-rijk-zwaan",
+      "url": "/content/nl/projecten/hpc-cluster-api-voor-rijk-zwaan.md",
       "type": "ContentPage",
       "settings": {
         "language": "nl",
-        "show_in_menu": true
-       }
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projecten - webshop en microservices api voor liander",
+      "name": "webshop-en-microservices-api-voor-liander",
+      "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
+      "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projecten - e-commerce platform voor nutricia",
+      "name": "e-commerce-platform-voor-nutricia",
+      "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
+      "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "nl",
+        "show_in_menu": false
+      }
     },
     {
       "title": "maerteijn - contact",
@@ -72,7 +105,40 @@
       "settings": {
         "language": "en",
         "show_in_menu": true
-       }
+      }
+   },
+   {
+      "title": "maerteijn - projects - hpc cluster api for rijk zwaan",
+      "name": "hpc-cluster-api-for-rijk-zwaan",
+      "path": "/en/projects/hpc-cluster-api-for-rijk-zwaan",
+      "url": "/content/en/projects/hpc-cluster-api-for-rijk-zwaan.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projects - webshop and microservices api for liander",
+      "name": "webshop-and-microservices-api-for-liander",
+      "path": "/en/projects/webshop-and-microservices-api-for-liander",
+      "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
+    },
+    {
+      "title": "maerteijn - projects - e-commerce platform for nutricia",
+      "name": "e-commerce-platform-for-nutricia",
+      "path": "/en/projects/e-commerce-platform-for-nutricia",
+      "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
+      "type": "ContentPage",
+      "settings": {
+        "language": "en",
+        "show_in_menu": false
+      }
     },
     {
       "title": "maerteijn - contact",

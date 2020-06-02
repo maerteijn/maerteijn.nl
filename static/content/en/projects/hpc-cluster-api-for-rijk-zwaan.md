@@ -1,0 +1,23 @@
+# HPC Cluster API for Rijk Zwaan
+
+![HPC Cluster API](/images/hpc-cluster-api.jpg#left =200x*)Together with [Four Digits](https://www.fourdigits.nl/) we designed and developed an easy to understand and accessible REST API for a High Performance Computing Cluster, based on [Django REST Framework](https://www.django-rest-framework.org). Complex and high demanding tasks can be easily created and specific agents will deploy these on the cluster nodes available.
+
+
+The Django based task management application and the cluster agents are utilizing a message bus for reliable communication. The status of the tasks and the status of the agents running on the cluster can always be queried using the REST API.
+
+
+The REST API was developed including:
+- Microsoft ADFS authentication and token generation
+- A pluggable infrastructure for writing custom cluster agents
+- Full [Gitlab CI/CD](https://docs.gitlab.com/ee/ci/) integration including docker image registry publishing and wiki documentation
+
+
+#### Noticeable technologies
+- [x] [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/) using [PostgreSQL](https://www.postgresql.org/)
+- [x] The excellent [Dramatiq](https://dramatiq.io/) background task queuer and framework, used with [RabbitMQ](https://www.rabbitmq.com/)
+- [x] Authentication and permissions with [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)
+
+
+| :calendar: Period  | :man_technologist: Role | :office: Contractor                      | :man_office_worker: Customer               |
+| ------------------ | ----------------------- | ---------------------------------------- | ------------------------------------------ |
+| 2019               | Python Developer        | [Four Digits](https://www.fourdigits.nl) | [Rijk Zwaan](https://www.rijkzwaan.com)    |
