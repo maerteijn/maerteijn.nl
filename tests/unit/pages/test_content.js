@@ -63,11 +63,6 @@ describe("Content page", () => {
     })
   })
 
-  it("The renderedMarkdown computed property works as expected", function () {
-    Vue.set(store.state.content, "/", "# Hello!")
-    assert.equal(this.wrapper.vm.renderedMarkdown, '<h1 id="hello">Hello!</h1>')
-  })
-
   it("The loaded computed property works as expected", function () {
     assert.isFalse(this.wrapper.vm.loaded)
 
