@@ -19,9 +19,12 @@
 
 .content {
   img {
-    border-radius: 1%;
     box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
     margin: 0.25rem 0.75rem;
+    margin-left: 0;
+  }
+  p {
+    clear: both;
   }
 
   img[src*="#left"] {
