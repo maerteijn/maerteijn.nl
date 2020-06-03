@@ -106,6 +106,7 @@ export default {
     color: variables.$font-color-right;
     grid-area: main;
     overflow-y: auto;
+    scroll-behavior: smooth;
   }
 }
 
