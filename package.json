@@ -49,7 +49,7 @@
     "sass": "^1.26.7",
     "sinon": "^9.0.2",
     "sitemap": "^6.1.5",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.5.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.11"
