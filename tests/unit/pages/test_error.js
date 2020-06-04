@@ -7,7 +7,7 @@ import { createComponent } from "../../utils"
 describe("Error page", () => {
   it("We can initialize an Error page", () => {
     const wrapper = createComponent(modules.ErrorPage, { error: "" })
-    assert.equal(wrapper.name(), "error-page")
+    assert.equal(wrapper.vm.$options.name, "error-page")
   })
 
   it("The component renders as expected", () => {

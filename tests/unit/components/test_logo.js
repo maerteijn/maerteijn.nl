@@ -9,7 +9,7 @@ import * as fixtures from "../../fixtures"
 describe("Logo component", () => {
   it("We can initialize a Logo component", () => {
     const wrapper = createComponent(modules.Logo)
-    assert.equal(wrapper.name(), "logo")
+    assert.equal(wrapper.vm.$options.name, "logo")
   })
 
   it("The logo component renders a desktop and mobile version", () => {

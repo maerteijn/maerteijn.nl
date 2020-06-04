@@ -32,7 +32,7 @@ describe("Content page", () => {
   })
 
   it("We can initialize a Content page", function () {
-    assert.equal(this.wrapper.name(), "content-page")
+    assert.equal(this.wrapper.vm.$options.name, "content-page")
   })
 
   it("Default the content page will render the page div, but no content ", function () {
