@@ -14,7 +14,8 @@ const default_page = site.pages[0]
 
 describe("Scenario: Go to the homepage an click all links in the navigation", () => {
   before(async function () {
-    this.server = startServer(1234, dist)
+    this.server = startServer(0, dist)
+    this.port = this.server.address().port
     // Add {headless: false} to show the browser
     this.browser = await chromium.launch()
     if (!fs.existsSync(screenshots)) {
@@ -29,7 +30,7 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
 
   beforeEach(async function () {
     this.page = await this.browser.newPage()
-    await this.page.goto(`http://localhost:1234`)
+    await this.page.goto(`http://localhost:${this.port}`)
   })
 
   afterEach(async function () {
