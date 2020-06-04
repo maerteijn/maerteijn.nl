@@ -48,6 +48,25 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
     assert.isTrue(location.endsWith(default_page.path))
   })
 
+  it("Clicking an image will show an overlay", async function () {
+    const initial_location = await this.page.evaluate("location.href")
+
+    const image = await this.page.$(".page .content img")
+    await image.click()
+
+    const selector = await this.page.waitForSelector(".viewer-canvas", {
+      state: "visible",
+    })
+    assert.isObject(selector)
+
+    // hide the image again
+    const viewer_canvas = await this.page.$(".viewer-canvas")
+    viewer_canvas.click()
+    await this.page.waitForSelector(".viewer-viewer_canvas", {
+      state: "hidden",
+    })
+  })
+
   it("We can switch layout by clicking the layout button", async function () {
     const switch_language = await this.page.$("#switch-layout")
     await switch_language.click()

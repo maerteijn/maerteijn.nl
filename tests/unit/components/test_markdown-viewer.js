@@ -7,7 +7,7 @@ import { createComponent } from "../../utils"
 describe("Markdown viewer component", () => {
   it("We can initialize a Markdown component", () => {
     const wrapper = createComponent(modules.MarkdownViewer)
-    assert.isObject(wrapper)
+    assert.equal(wrapper.vm.$options.name, "markdown-viewer")
   })
 
   it("The renderedMarkdown computed property works as expected", function () {
