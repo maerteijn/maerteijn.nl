@@ -14,7 +14,7 @@ describe("Switch layout component", () => {
 
   it("We can initialize a SwitchLayout component", () => {
     const wrapper = createComponent(modules.SwitchLayout)
-    assert.equal(wrapper.name(), "switch-layout")
+    assert.equal(wrapper.vm.$options.name, "switch-layout")
     assert.isTrue(wrapper.find(".switch-layout").exists())
   })
 
