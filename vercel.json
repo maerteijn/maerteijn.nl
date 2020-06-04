@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "name": "vercel-maerteijn-nl-deployment",
+  "github": {
+    "enabled": false
+  },
   "routes": [
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
