@@ -7,7 +7,7 @@ import { createComponent } from "../../utils"
 describe("Last updated component", () => {
   it("We can initialize a LastUpdated component", () => {
     const wrapper = createComponent(modules.LastUpdated)
-    assert.equal(wrapper.name(), "last-updated")
+    assert.equal(wrapper.vm.$options.name, "last-updated")
   })
 
   it("The last updated component renders nothing when no updated property is given", () => {

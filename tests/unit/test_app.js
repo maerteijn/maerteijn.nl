@@ -26,7 +26,7 @@ describe("App component", () => {
 
   it("We can initialize the main App component", () => {
     const wrapper = createComponentWithoutRouter(modules.App, { path: "/" })
-    assert.equal(wrapper.name(), "app")
+    assert.equal(wrapper.vm.$options.name, "app")
   })
 
   it("The main App component renders the router view when no error exists", () => {
