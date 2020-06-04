@@ -19,7 +19,7 @@ describe("Navigation component", () => {
 
   it("We can initialize a Navigation component", () => {
     const wrapper = createComponentWithoutRouter(modules.Navigation)
-    assert.equal(wrapper.name(), "navigation")
+    assert.equal(wrapper.vm.$options.name, "navigation")
   })
 
   it("The navigation component renders a mobile menu", () => {
