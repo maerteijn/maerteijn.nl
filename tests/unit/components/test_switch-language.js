@@ -22,7 +22,7 @@ describe("Switch language component", () => {
 
   it("We can initialize a SwitchLanguage component", () => {
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
-    assert.equal(wrapper.name(), "switch-language")
+    assert.equal(wrapper.vm.$options.name, "switch-language")
   })
 
   it("The component renders a svg icon", () => {

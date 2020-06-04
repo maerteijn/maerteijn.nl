@@ -7,7 +7,7 @@ import { createComponent } from "../../utils"
 describe("Loading component", () => {
   it("We can initialize a Loading component", () => {
     const wrapper = createComponent(modules.Loading)
-    assert.equal(wrapper.name(), "loading")
+    assert.equal(wrapper.vm.$options.name, "loading")
   })
 
   it("The loading component will only render when the show property is set to true", () => {
