@@ -4,6 +4,7 @@
 
 <script>
 import { renderMarkdown } from "../markdown"
+import { createImageViewer } from "../utils"
 
 export default {
   name: "markdown-viewer",
@@ -15,6 +16,13 @@ export default {
       const markdown = this.content || ""
       return renderMarkdown(markdown)
     },
+  },
+  mounted() {
+    if (this.$el.querySelectorAll) {
+      this.$el
+        .querySelectorAll("img")
+        .forEach((image) => createImageViewer(image))
+    }
   },
 }
 </script>

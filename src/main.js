@@ -19,6 +19,7 @@ Vue.prototype.$state = state
 Vue.use(VueRouter)
 
 import "./scss/main.scss"
+import "viewerjs/dist/viewer.css"
 
 new Vue({
   router: router,
