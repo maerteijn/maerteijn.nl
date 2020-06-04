@@ -23,7 +23,7 @@ describe("Redirect page", () => {
 
   it("We can initialize a Redirect page", () => {
     const wrapper = createComponentWithoutRouter(modules.RedirectPage)
-    assert.equal(wrapper.name(), "redirect-page")
+    assert.equal(wrapper.vm.$options.name, "redirect-page")
   })
 
   it("It redirects to the default page of the current language", () => {
