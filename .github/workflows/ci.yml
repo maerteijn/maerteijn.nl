@@ -1,5 +1,5 @@
 name: maerteijn.nl ci
-on: [push, pull_request]
+on: [push]
 jobs:
   run-ci-steps:
     runs-on: ubuntu-latest
