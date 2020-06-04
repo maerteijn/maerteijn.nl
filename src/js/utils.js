@@ -1,3 +1,5 @@
+import Viewer from "viewerjs"
+
 export const isOldBrowser = () => {
   // check if browser supports grid
   const gridNotSupported =
@@ -7,4 +9,14 @@ export const isOldBrowser = () => {
   const isIE11 = !!window.msCrypto
 
   return gridNotSupported || isIE11
+}
+
+export const createImageViewer = (image) => {
+  return new Viewer(image, {
+    toolbar: false,
+    tooltip: false,
+    button: false,
+    navbar: false,
+    title: false,
+  })
 }
