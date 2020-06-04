@@ -60,10 +60,10 @@ jobs:
       run: npm install
     - name: Create a production build
       run: npm run build
-    - name: Archive release
+    - name: Archive public directory
       uses: actions/upload-artifact@v1
       with:
-        name: release
+        name: public
         path: dist/release
 
   publish-release:
@@ -72,10 +72,10 @@ jobs:
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v2
-    - name: Download release artefact
+    - name: Download public directory
       uses: actions/download-artifact@v1
       with:
-        name: release
+        name: public
     - name: Publish to Vercel
       uses: amondnet/vercel-action@v19
       with:
