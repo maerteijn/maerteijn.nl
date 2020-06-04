@@ -52,14 +52,16 @@ jobs:
     needs: build-release
     runs-on: ubuntu-latest
     steps:
-      - name: Download release artefact
-        uses: actions/download-artifact@v1
-        with:
-          name: release
-      - name: Publish to Vercel
-        uses: amondnet/vercel-action@v19
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Download release artefact
+      uses: actions/download-artifact@v1
+      with:
+        name: release
+    - name: Publish to Vercel
+      uses: amondnet/vercel-action@v19
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
