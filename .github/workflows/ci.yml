@@ -50,6 +50,7 @@ jobs:
 
   publish-release:
     needs: build-release
+    runs-on: ubuntu-latest
     steps:
       - name: Download release artefact
         uses: actions/download-artifact@v1
