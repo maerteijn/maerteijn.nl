@@ -51,7 +51,7 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
   it("Clicking an image will show an overlay", async function () {
     const initial_location = await this.page.evaluate("location.href")
 
-    const image = await this.page.$(".page .content img")
+    const image = await this.page.waitForSelector(".page .content img")
     await image.click()
 
     const selector = await this.page.waitForSelector(".viewer-canvas", {
