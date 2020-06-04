@@ -28,3 +28,37 @@ jobs:
         name: screenshots
         path: dist/e2e/screenshots
 
+  build-release:
+    needs: run-ci-steps
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Setup nodejs 12.16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.16
+    - name: Install all dependencies
+      run: npm install
+    - name: Create a production build
+      run: npm run build
+    - name: Archive release
+      uses: actions/upload-artifact@v1
+      with:
+        name: release
+        path: dist/release
+
+  publish-release:
+    needs: build-release
+    steps:
+      - name: Download release artefact
+        uses: actions/download-artifact@v1
+        with:
+          name: release
+      - name: Publish to Vercel
+        uses: amondnet/vercel-action@v19
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
