@@ -144,5 +144,9 @@
   "sitemap_settings": {
     "site_json": "static/content/site.json",
     "hostname": "https://www.maerteijn.nl"
+  },
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
   }
 }
