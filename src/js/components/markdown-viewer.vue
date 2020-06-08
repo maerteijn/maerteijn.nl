@@ -13,16 +13,28 @@ export default {
   },
   computed: {
     renderedMarkdown() {
-      const markdown = this.content || ""
-      return renderMarkdown(markdown)
+      return renderMarkdown(this.content || "")
+    },
+  },
+  methods: {
+    createImageViewer: createImageViewer,
+    createRouterLink(link) {
+      link.onclick = () => {
+        this.$router.push(link.attributes.href.nodeValue)
+        return false
+      }
     },
   },
   mounted() {
-    if (this.$el.querySelectorAll) {
-      this.$el
-        .querySelectorAll("img")
-        .forEach((image) => createImageViewer(image))
-    }
+    // create a image overlay for each image in the content
+    this.$el.querySelectorAll("img").forEach((image) => {
+      this.createImageViewer(image)
+    })
+
+    // convert all internal links in the rendered content to vue router calls
+    this.$el
+      .querySelectorAll('a[href^="/"]')
+      .forEach((link) => this.createRouterLink(link))
   },
 }
 </script>
