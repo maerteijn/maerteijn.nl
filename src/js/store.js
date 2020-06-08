@@ -3,7 +3,7 @@ import axios from "axios"
 
 import router from "./router"
 import { resetRouter } from "./router"
-import { isOldBrowser } from "./utils"
+import { isOldBrowser, normalizePath } from "./utils"
 import getPageComponent from "./pages/utils"
 import { validator } from "./schema"
 
@@ -22,10 +22,12 @@ export const state = Vue.observable({
 
 export const getters = {
   getPageMetaData(path) {
+    path = normalizePath(path)
     const pages = state.site.pages.filter((page) => page.path == path)
     return pages.length > 0 ? pages[0] : {}
   },
   getContent(path) {
+    path = normalizePath(path)
     const content = state.content[path] || ""
     return content
   },
@@ -35,6 +37,7 @@ export const getters = {
     )
   },
   getPagesForNavigation(path) {
+    path = normalizePath(path)
     const metadata = this.getPageMetaData(path)
     if (metadata.settings) {
       const pages = this.getPagesForLanguage(metadata.settings.language)
@@ -43,6 +46,7 @@ export const getters = {
     return []
   },
   getSwitchableLanguage(path) {
+    path = normalizePath(path)
     const metadata = this.getPageMetaData(path)
     if (metadata.settings) {
       const language = metadata.settings.language
@@ -85,6 +89,7 @@ export const actions = {
     })
   },
   downloadContent(path) {
+    path = normalizePath(path)
     // resolve when the requested content is already loaded
     if (path in state.content) {
       return Promise.resolve(state.content[path])

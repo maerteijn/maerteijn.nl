@@ -20,3 +20,8 @@ export const createImageViewer = (image) => {
     title: false,
   })
 }
+
+// we could use a negative lookbehind regex here but that's not supported
+// in older browsers.
+export const normalizePath = (path) =>
+  path && path != "/" ? path.replace(/\/$/, "") : path
