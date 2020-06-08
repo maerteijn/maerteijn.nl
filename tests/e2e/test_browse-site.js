@@ -89,7 +89,9 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
   it("The navigation container renders items and we can navigate to them", async function () {
     // retrieve all pages of the current language
     const pages = site.pages.filter(
-      (page) => page.settings.language == default_page.settings.language
+      (page) =>
+        page.settings.language == default_page.settings.language &&
+        page.settings.show_in_menu
     )
 
     // only navigation items of the current language should be shown
