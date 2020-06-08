@@ -11,7 +11,7 @@
     {
       "title": "maerteijn - hallo",
       "name": "hallo",
-      "path": "/nl/",
+      "path": "/nl",
       "url": "/content/nl/hallo.md",
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
@@ -132,7 +132,7 @@
     {
       "title": "maerteijn - home",
       "name": "home",
-      "path": "/en/",
+      "path": "/en",
       "url": "/content/en/home.md",
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
