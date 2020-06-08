@@ -60,7 +60,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "ajv": "^6.12.2",
     "axios": "^0.19.2",
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.0",
     "core-js": "^3.6.5",
     "esm": "^3.2.25",
     "showdown": "^1.9.1",
