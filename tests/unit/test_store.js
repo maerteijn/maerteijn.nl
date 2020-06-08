@@ -75,6 +75,13 @@ describe("Test store", () => {
       assert.equal(store.state.content["/my-path"], content)
     })
 
+    it("paths are normailzed so trailing slashes should work too", function () {
+      store.state.content["/my-path"] = fixtures.home_content
+
+      const content = store.getters.getContent("/my-path/")
+      assert.equal(store.state.content["/my-path"], content)
+    })
+
     it("getPagesForLanguage only returns pages for a specific language", function () {
       store.state.site.pages[0].settings.language = "en"
 
