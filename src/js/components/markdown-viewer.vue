@@ -48,8 +48,10 @@ export default {
     margin-left: 0;
   }
 
-  p {
+  p,
+  ul {
     clear: both;
+    text-align: justify;
   }
 
   img[src*="#left"] {
