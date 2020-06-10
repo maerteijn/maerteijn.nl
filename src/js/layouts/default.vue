@@ -40,7 +40,7 @@ export default {
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
   grid-template-areas: "navigation main";
-  grid-template-columns: minmax(375px, 35%) auto;
+  grid-template-columns: minmax(400px, 35%) auto;
   height: 100vh;
   margin: 0 auto;
   max-height: variables.$site-max-height;
