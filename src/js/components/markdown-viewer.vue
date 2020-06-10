@@ -64,7 +64,8 @@ export default {
     margin-right: 0;
   }
 
-  table thead th {
+  table thead th:not([align]) {
+    text-align: left;
     white-space: nowrap;
   }
 }
