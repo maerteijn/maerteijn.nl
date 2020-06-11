@@ -14,6 +14,7 @@ const default_page = site.pages[0]
 
 describe("Scenario: Go to the homepage an click all links in the navigation", () => {
   before(async function () {
+    this.timeout(5000)
     this.server = startServer(0, dist)
     this.port = this.server.address().port
     // Add {headless: false} to show the browser
