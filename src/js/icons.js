@@ -1,13 +1,26 @@
 import { icon } from "@fortawesome/fontawesome-svg-core"
 
-import { faBars, faAdjust, faFlag } from "@fortawesome/free-solid-svg-icons"
+import {
+  faBars,
+  faAdjust,
+  faFlag,
+  faArrowCircleLeft,
+} from "@fortawesome/free-solid-svg-icons"
 import {
   faLinkedinIn,
   faGithub,
   faGitlab,
 } from "@fortawesome/free-brands-svg-icons"
 
-const iconList = [faLinkedinIn, faGithub, faGitlab, faBars, faAdjust, faFlag]
+const iconList = [
+  faLinkedinIn,
+  faGithub,
+  faGitlab,
+  faBars,
+  faAdjust,
+  faFlag,
+  faArrowCircleLeft,
+]
 
 export const icons = Object.fromEntries(
   iconList.map((item) => [

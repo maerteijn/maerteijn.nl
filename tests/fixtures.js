@@ -33,7 +33,11 @@ export const site_json = `
       "settings": {
         "identifier": 2,
         "language": "nl",
-        "show_in_menu": true
+        "show_in_menu": true,
+        "backlink": {
+          "title": "Home",
+          "path": "/"
+        }
        }
     },
     {

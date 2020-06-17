@@ -16,6 +16,15 @@ const definitionsSchema = {
       format: "uri-reference",
       minLength: 1,
     },
+    backlink: {
+      type: "object",
+      properties: {
+        title: { $ref: "definitions.json#/definitions/non-empty-string" },
+        path: { $ref: "definitions.json#/definitions/path" },
+      },
+      required: ["title", "path"],
+      additionalProperties: false,
+    },
     page: {
       type: "object",
       properties: {
@@ -33,6 +42,7 @@ const definitionsSchema = {
             language: { $ref: "definitions.json#/definitions/language-code" },
             identifier: { type: "integer" },
             show_in_menu: { type: "boolean" },
+            backlink: { $ref: "definitions.json#/definitions/backlink" },
           },
         },
       },
