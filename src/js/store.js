@@ -51,7 +51,8 @@ export const getters = {
     const metadata = this.getPageMetaData(path)
     if (metadata.settings) {
       const language = metadata.settings.language
-      return state.site.site_settings.languages[language]
+      const languages = state.site.site_settings.languages
+      return language in languages ? languages[language] : null
     }
     return null
   },
