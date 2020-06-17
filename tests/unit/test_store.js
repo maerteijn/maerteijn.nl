@@ -115,6 +115,21 @@ describe("Test store", () => {
         store.state.site.site_settings.languages["en"]
       )
     })
+
+    it("getTranslatedPages returns pages with the same identifier in another lannguage", function () {
+      const translated_pages = store.getters.getTranslatedPages(
+        store.state.site.pages[0].path,
+        "en"
+      )
+      assert.lengthOf(translated_pages, 1)
+      assert.equal(
+        store.state.site.pages[0].settings.identifier,
+        translated_pages[0].settings.identifier
+      )
+
+      // and it won't choke when a page can't be found
+      assert.isEmpty(store.getters.getTranslatedPages("/i-do-not-exist", "de"))
+    })
   })
 
   describe("Actions", () => {
