@@ -24,6 +24,7 @@ describe("Content page", () => {
       path: "/",
       meta: { content_component: modules.MarkdownViewer },
     })
+    resetState(store.state)
   })
 
   afterEach(function () {
@@ -78,12 +79,30 @@ describe("Content page", () => {
       name: "home",
       title: "Home",
       path: "/",
-      setting: {
+      settings: {
         language: "nl",
       },
     }
     store.state.site.pages.push(metadata)
     assert.deepEqual(this.wrapper.vm.page_metadata, metadata)
+  })
+
+  it("The backlink computed property works as expected", function () {
+    const metadata = {
+      name: "home",
+      title: "Home",
+      path: "/",
+      settings: {
+        language: "nl",
+        backlink: {
+          path: "/",
+          title: "Hello",
+        },
+      },
+    }
+    store.state.site.pages.push(metadata)
+    assert.equal(this.wrapper.vm.backlink.path, "/")
+    assert.equal(this.wrapper.vm.backlink.title, "Hello")
   })
 })
 
@@ -160,6 +179,21 @@ describe("Content page - extended", () => {
     return waitForPromises().then(() => {
       const root = createWrapper(this.wrapper.vm.$root)
       assert.property(root.emitted(), "error")
+    })
+  })
+
+  it("When a backlink exists, it is rendered on the page", function () {
+    assert.isFalse(this.wrapper.find(".backlink").exists())
+
+    // we know this route has a backlink defined
+    loadDefaultState(store.state)
+    this.wrapper.vm.$route = {
+      path: "/nl/projects",
+      meta: { content_component: modules.MarkdownViewer },
+    }
+
+    return waitForPromises().then(() => {
+      assert.isTrue(this.wrapper.find(".backlink").exists())
     })
   })
 })
