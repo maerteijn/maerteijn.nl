@@ -10,6 +10,11 @@
         v-if="content"
         v-bind:content="content"
       ></component>
+      <backlink
+        v-bind:title="backlink.title"
+        v-bind:path="backlink.path"
+        v-if="backlink"
+      ></backlink>
       <lastupdated v-bind:updated="lastUpdated" v-if="content"></lastupdated>
     </div>
   </component>
@@ -20,6 +25,7 @@ import axios from "axios"
 
 import LastUpdated from "../components/last-updated"
 import Loading from "../components/loading"
+import BackLink from "../components/backlink"
 import { actions, getters } from "../store"
 
 export default {
@@ -36,6 +42,10 @@ export default {
     },
     page_metadata() {
       return getters.getPageMetaData(this.$route.path)
+    },
+    backlink() {
+      const metadata = getters.getPageMetaData(this.$route.path)
+      return metadata.settings && metadata.settings.backlink
     },
   },
   watch: {
@@ -61,6 +71,7 @@ export default {
   components: {
     lastupdated: LastUpdated,
     loading: Loading,
+    backlink: BackLink,
   },
 }
 </script>
