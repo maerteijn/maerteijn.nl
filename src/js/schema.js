@@ -31,6 +31,7 @@ const definitionsSchema = {
           type: "object",
           properties: {
             language: { $ref: "definitions.json#/definitions/language-code" },
+            identifier: { type: "integer" },
             show_in_menu: { type: "boolean" },
           },
         },

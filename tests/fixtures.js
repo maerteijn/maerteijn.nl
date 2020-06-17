@@ -18,6 +18,7 @@ export const site_json = `
       "content_component": "MarkdownViewer",
       "url": "/content/nl/home.md",
       "settings": {
+        "identifier": 1,
         "language": "nl",
         "show_in_menu": true
        }
@@ -30,6 +31,7 @@ export const site_json = `
       "content_component": "MarkdownViewer",
       "url": "/content/nl/projects.md",
       "settings": {
+        "identifier": 2,
         "language": "nl",
         "show_in_menu": true
        }
@@ -42,6 +44,7 @@ export const site_json = `
       "content_component": "MarkdownViewer",
       "url": "/content/nl/home.md",
       "settings": {
+        "identifier": 1,
         "language": "en",
         "show_in_menu": true
        }
