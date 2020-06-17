@@ -1,8 +1,9 @@
-import "./polyfills"
+import FontFaceObserver from "fontfaceobserver"
 import Vue from "vue"
 import VueRouter from "vue-router"
 import App from "./app"
 import router from "./js/router"
+import "./polyfills"
 
 // register global layouts
 import DefaultLayout from "./js/layouts/default"
@@ -18,11 +19,15 @@ Vue.prototype.$state = state
 // register the vue router plugin on the global vue instance
 Vue.use(VueRouter)
 
+// Impoort all required css files
 import "./scss/main.scss"
 import "viewerjs/dist/viewer.css"
 
-new Vue({
-  router: router,
-  el: "#app",
-  render: (h) => h(App),
+// preload the font before rendering the website
+new FontFaceObserver("Play").load().then(() => {
+  new Vue({
+    router: router,
+    el: "#app",
+    render: (h) => h(App),
+  })
 })
