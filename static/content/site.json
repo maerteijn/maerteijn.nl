@@ -16,6 +16,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 1,
         "language": "nl",
         "show_in_menu": true
        }
@@ -28,6 +29,7 @@
        "type": "ContentPage",
        "content_component": "MarkdownViewer",
        "settings": {
+         "identifier": 2,
          "language": "nl",
          "show_in_menu": true
        }
@@ -40,6 +42,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 3,
         "language": "nl",
         "show_in_menu": false
       }
@@ -52,6 +55,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 4,
         "language": "nl",
         "show_in_menu": false
       }
@@ -64,6 +68,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 5,
         "language": "nl",
         "show_in_menu": false
       }
@@ -76,6 +81,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 6,
         "language": "nl",
         "show_in_menu": false
       }
@@ -88,6 +94,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 7,
         "language": "nl",
         "show_in_menu": false
       }
@@ -101,6 +108,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 8,
         "language": "nl",
         "show_in_menu": false
       }
@@ -113,6 +121,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 9,
         "language": "nl",
         "show_in_menu": true
        }
@@ -125,6 +134,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 10,
         "language": "nl",
         "show_in_menu": true
        }
@@ -137,6 +147,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 1,
         "language": "en",
         "show_in_menu": true
        }
@@ -149,6 +160,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 2,
         "language": "en",
         "show_in_menu": true
       }
@@ -161,6 +173,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 3,
         "language": "en",
         "show_in_menu": false
       }
@@ -173,6 +186,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 4,
         "language": "en",
         "show_in_menu": false
       }
@@ -185,6 +199,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 5,
         "language": "en",
         "show_in_menu": false
       }
@@ -197,6 +212,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 6,
         "language": "en",
         "show_in_menu": false
       }
@@ -209,6 +225,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 7,
         "language": "en",
         "show_in_menu": false
       }
@@ -221,6 +238,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 8,
         "language": "en",
         "show_in_menu": false
       }
@@ -233,6 +251,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 9,
         "language": "en",
         "show_in_menu": true
        }
@@ -245,6 +264,7 @@
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
       "settings": {
+        "identifier": 10,
         "language": "en",
         "show_in_menu": true
        }

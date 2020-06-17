@@ -29,7 +29,10 @@ export default {
     icon: getIcon,
     switchLanguage() {
       window.localStorage.language = this.switchTo
-      this.$router.push(getters.getPagesForLanguage(this.switchTo)[0].path)
+      const translated_page =
+        getters.getTranslatedPages(this.$route.path, this.switchTo)[0] ||
+        getters.getPagesForLanguage(this.switchTo)[0]
+      this.$router.push(translated_page.path)
     },
   },
 }
