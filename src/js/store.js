@@ -55,6 +55,18 @@ export const getters = {
     }
     return null
   },
+  getTranslatedPages(path, language) {
+    path = normalizePath(path)
+    const metadata = this.getPageMetaData(path)
+    if (metadata.settings && metadata.settings.identifier) {
+      return state.site.pages.filter(
+        (page) =>
+          page.settings.identifier == metadata.settings.identifier &&
+          page.settings.language == language
+      )
+    }
+    return []
+  },
   getLanguages() {
     return state.site.site_settings.languages || {}
   },
