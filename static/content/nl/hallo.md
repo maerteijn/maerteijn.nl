@@ -14,6 +14,8 @@ De laatste jaren heb ik vooral met [Django](https://www.djangoproject.com/) in c
 Zie [Projecten](/nl/projecten) voor een impressie van mijn projecten de laatste jaren.
 
 ## Beschikbaar
+*Voor nieuwe projecten ben ik beschikbaar vanaf: __3 Augustus 2020__*
+
 
 Ik ben beschikbaar op projectbasis, van (senior-)developer en/of code reviewer tot consultant of devops engineer:
 

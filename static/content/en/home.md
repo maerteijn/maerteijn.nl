@@ -14,6 +14,7 @@ See the [Projects](/en/projects) page for an impression of the projects I did in
 
 
 ## Hire me
+*I will be available again for new projects from: __August 3, 2020__*
 
 I'm available on a project basis as (senior-)developer, code reviewer, consultant or devops engineer:
 
