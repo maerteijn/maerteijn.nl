@@ -7,8 +7,10 @@
 <script>
 export default {
   name: "last-updated",
-  props: {
-    updated: String,
+  computed: {
+    updated() {
+      return this.$state.lastUpdated
+    },
   },
 }
 </script>
