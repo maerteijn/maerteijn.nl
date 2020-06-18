@@ -15,6 +15,7 @@
       "url": "/content/nl/hallo.md",
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
+      "footer_component": "LastUpdated",
       "settings": {
         "identifier": 1,
         "language": "nl",
@@ -170,6 +171,7 @@
       "url": "/content/en/home.md",
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
+      "footer_component": "LastUpdated",
       "settings": {
         "identifier": 1,
         "language": "en",
