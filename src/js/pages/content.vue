@@ -15,7 +15,6 @@
         v-bind:path="backlink.path"
         v-if="backlink"
       ></backlink>
-      <lastupdated v-bind:updated="lastUpdated" v-if="content"></lastupdated>
     </div>
   </component>
 </template>
@@ -31,9 +30,6 @@ import { actions, getters } from "../store"
 export default {
   name: "content-page",
   computed: {
-    lastUpdated() {
-      return this.$state.lastUpdated
-    },
     content() {
       return getters.getContent(this.$route.path)
     },
@@ -78,22 +74,17 @@ export default {
 
 <style lang="scss">
 .page {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  animation: fadeIn ease 1s;
+  flex-grow: 1;
+  padding-bottom: 1rem;
 
-  .content {
-    animation: fadeIn ease 1s;
-    flex-grow: 1;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+    100% {
+      opacity: 1;
     }
   }
 }
