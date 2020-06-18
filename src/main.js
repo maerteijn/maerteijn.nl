@@ -1,9 +1,9 @@
+import "./polyfills"
 import FontFaceObserver from "fontfaceobserver"
 import Vue from "vue"
 import VueRouter from "vue-router"
 import App from "./app"
 import router from "./js/router"
-import "./polyfills"
 
 // register global layouts
 import DefaultLayout from "./js/layouts/default"
