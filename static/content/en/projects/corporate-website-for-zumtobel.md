@@ -13,6 +13,6 @@ Because of the huge amount of content we used [wagtail-factories](https://github
 - [APIStar](https://github.com/encode/apistar) to develop a test-client generated from an [OpenAPI](https://swagger.io/specification/) specifications
 - [Wagtail Trans](https://github.com/wagtail/wagtailtrans) to translate all wagtail based content
 
-| :calendar: Period  | :man_technologist: Role | :office: Contractor                      | :man_office_worker: Customer         |
+| :calendar: Period  | :computer: Role | :office: Contractor                      | :man: Customer         |
 | -----------------  | ----------------------- | ---------------------------------------- | ------------------------------------ |
 | 2019               | Python Developer        | [Four Digits](https://www.fourdigits.nl) | [Zumtobel Group](https://z.lighting) |

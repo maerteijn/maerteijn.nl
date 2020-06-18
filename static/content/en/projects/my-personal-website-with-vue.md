@@ -11,7 +11,7 @@ Due to the popularity of all kinds of cloud based platforms and API's there is a
 - [Microsoft Playwright](https://playwright.dev/) with [Express](https://expressjs.com/) for E2E browser-tests
 - [Github actions](https://github.com/maerteijn/maerteijn.nl/actions?query=workflow%3A%22maerteijn.nl+ci%22) for CI/CD including deployment to [Vercel](https://vercel.com/) (ZEIT)
 
-| :calendar: Period  | :man_technologist: Role  | :man_office_worker: Customer          |
+| :calendar: Period  | :computer: Role  | :man: Customer          |
 | ------------------ | ------------------------ | ------------------------------------- |
 | 2020               | Front-end Developer      | [Maerteijn](https://www.maerteijn.nl) |
 

@@ -9,7 +9,7 @@ I used [Saltstack](https://www.saltstack.com/) to implement a custom solution so
 - [SaltGIU](https://github.com/erwindon/SaltGUI) is a Front-end for Saltstack written in ES6 and runs in a browser
 - [Jenkins](https://www.jenkins.io/) CI/CD for automatic testing and packaging of the Raspberry PI software and images
 
-| :calendar: Period  | :man_technologist: Role               | :man_office_worker: Customer  |
+| :calendar: Period  | :computer: Role               | :man: Customer  |
 | ------------------ | ------------------------------------- | ----------------------------- |
 | 2017               | Devops Engineer / Front-end Developer | [Vadain](https://vadain.nl/)  |
 

@@ -10,6 +10,6 @@ Bij de aanvang van het project creëerden we ook een aantal mock microservices o
 - [Django Oscar](https://github.com/django-oscar/django-oscar) voor de producten matrix en webshop integratie
 
 
-| :calendar: Periode  | :man_technologist: Rol   | :office: Opdrachtgever                   | :man_office_worker: Klant        |
+| :calendar: Periode  | :computer: Rol   | :office: Opdrachtgever                   | :man: Klant        |
 | ------------------- | ------------------------ | ---------------------------------------- | -------------------------------- |
 | 2018                | Python Backend Developer | [Lab Digital](https://www.labdigital.nl) | [Liander](http://www.liander.nl) |

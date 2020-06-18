@@ -10,7 +10,7 @@ Met [Saltstack](https://www.saltstack.com/) heb ik ervoor gezorgd dat de Raspber
 - [Jenkins](https://www.jenkins.io/) CI/CD voor het automatisch testen en packagen van de Raspberry PI software en images
 
 
-| :calendar: Periode  | :man_technologist: Rol                 | :man_office_worker: Klant    |
+| :calendar: Periode  | :computer: Rol                 | :man: Klant    |
 | ------------------- | -------------------------------------- | ---------------------------- |
 | 2017                |  Devops Engineer / Front-end Developer | [Vadain](https://vadain.nl/) |
 
