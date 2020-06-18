@@ -155,4 +155,10 @@ export default {
     }
   }
 }
+
+@media print {
+  .default-layout {
+    grid-template-columns: 0 auto;
+  }
+}
 </style>
