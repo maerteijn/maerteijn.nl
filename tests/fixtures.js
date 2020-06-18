@@ -16,6 +16,7 @@ export const site_json = `
       "path": "/",
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
+      "footer_component": "LastUpdated",
       "url": "/content/nl/home.md",
       "settings": {
         "identifier": 1,

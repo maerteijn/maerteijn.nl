@@ -6,7 +6,7 @@
         v-bind:spinner="$state.layout == 'default-layout' ? 'light' : 'dark'"
       ></loading>
       <component
-        v-bind:is="this.$route.meta.content_component"
+        v-bind:is="content_component"
         v-if="content"
         v-bind:content="content"
       ></component>
@@ -15,6 +15,10 @@
         v-bind:path="backlink.path"
         v-if="backlink"
       ></backlink>
+      <component
+        v-bind:is="footer_component"
+        v-if="footer_component"
+      ></component>
     </div>
   </component>
 </template>
@@ -22,7 +26,7 @@
 <script>
 import axios from "axios"
 
-import LastUpdated from "../components/last-updated"
+import getComntentComponent from "../components/utils"
 import Loading from "../components/loading"
 import BackLink from "../components/backlink"
 import { actions, getters } from "../store"
@@ -38,6 +42,20 @@ export default {
     },
     page_metadata() {
       return getters.getPageMetaData(this.$route.path)
+    },
+    content_component() {
+      const metadata = getters.getPageMetaData(this.$route.path)
+      return (
+        metadata.content_component &&
+        getComntentComponent(metadata.content_component)
+      )
+    },
+    footer_component() {
+      const metadata = getters.getPageMetaData(this.$route.path)
+      return (
+        metadata.footer_component &&
+        getComntentComponent(metadata.footer_component)
+      )
     },
     backlink() {
       const metadata = getters.getPageMetaData(this.$route.path)
@@ -65,7 +83,6 @@ export default {
     },
   },
   components: {
-    lastupdated: LastUpdated,
     loading: Loading,
     backlink: BackLink,
   },
