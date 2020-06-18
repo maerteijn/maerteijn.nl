@@ -48,13 +48,6 @@ describe("Content page", () => {
     })
   })
 
-  it("The lastUpdated computed property works as expected", function () {
-    assert.equal(this.wrapper.vm.lastUpdated, "unknown")
-
-    store.state.lastUpdated = "today"
-    assert.equal(this.wrapper.vm.lastUpdated, "today")
-  })
-
   it("The content computed property works as expected", function () {
     assert.equal(this.wrapper.vm.content, "")
     const content = "# Hello!"
