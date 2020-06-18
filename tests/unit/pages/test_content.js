@@ -22,7 +22,6 @@ describe("Content page", () => {
   beforeEach(function () {
     this.wrapper = createComponentWithoutRouter(modules.ContentPage, {
       path: "/",
-      meta: { content_component: modules.MarkdownViewer },
     })
     resetState(store.state)
   })
@@ -80,6 +79,34 @@ describe("Content page", () => {
     assert.deepEqual(this.wrapper.vm.page_metadata, metadata)
   })
 
+  it("The content_component computed property works as expected", function () {
+    const metadata = {
+      name: "home",
+      title: "Home",
+      path: "/",
+      content_component: "MarkdownViewer",
+      settings: {
+        language: "nl",
+      },
+    }
+    store.state.site.pages.push(metadata)
+    assert.deepEqual(this.wrapper.vm.content_component, modules.MarkdownViewer)
+  })
+
+  it("The footer_component computed property works as expected", function () {
+    const metadata = {
+      name: "home",
+      title: "Home",
+      path: "/",
+      footer_component: "LastUpdated",
+      settings: {
+        language: "nl",
+      },
+    }
+    store.state.site.pages.push(metadata)
+    assert.deepEqual(this.wrapper.vm.footer_component, modules.LastUpdated)
+  })
+
   it("The backlink computed property works as expected", function () {
     const metadata = {
       name: "home",
@@ -104,7 +131,6 @@ describe("Content page - extended", () => {
     this.stub = mock_axios_success()
     this.wrapper = createComponentWithoutRouter(modules.ContentPage, {
       path: "/",
-      meta: { content_component: modules.MarkdownViewer },
     })
   })
 
@@ -112,6 +138,13 @@ describe("Content page - extended", () => {
     this.stub.resetBehavior()
     resetState(store.state)
     this.wrapper.vm.$destroy()
+  })
+
+  it("A content page renders a LastUpdated component when the footer_component is specified", function () {
+    loadDefaultState(store.state)
+    return waitForPromises().then(() => {
+      assert.isTrue(this.wrapper.find(".last-updated").exists())
+    })
   })
 
   it("A content page is responsive to state changes", function () {
@@ -133,7 +166,6 @@ describe("Content page - extended", () => {
     loadDefaultState(store.state)
     this.wrapper.vm.$route = {
       path: "/nl/projects",
-      meta: { content_component: modules.MarkdownViewer },
     }
 
     return waitForPromises().then(() => {
@@ -182,7 +214,6 @@ describe("Content page - extended", () => {
     loadDefaultState(store.state)
     this.wrapper.vm.$route = {
       path: "/nl/projects",
-      meta: { content_component: modules.MarkdownViewer },
     }
 
     return waitForPromises().then(() => {

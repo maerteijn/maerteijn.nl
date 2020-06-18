@@ -36,6 +36,9 @@ const definitionsSchema = {
         content_component: {
           $ref: "definitions.json#/definitions/non-empty-string",
         },
+        footer_component: {
+          $ref: "definitions.json#/definitions/non-empty-string",
+        },
         settings: {
           type: "object",
           properties: {

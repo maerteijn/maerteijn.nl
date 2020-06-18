@@ -12,4 +12,9 @@ describe("Test pages utils", () => {
     const component = modules.getContentComponent("MarkdownViewer")
     assert.equal(component, modules.MarkdownViewer)
   })
+
+  it("The getContentComponent returns the LastUpdated component", () => {
+    const component = modules.getContentComponent("LastUpdated")
+    assert.equal(component, modules.LastUpdated)
+  })
 })
