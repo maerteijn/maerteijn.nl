@@ -20,7 +20,7 @@ I'm available on a project basis as (senior-)developer, code reviewer, consultan
 
 - :calendar: Available up to 3 days per week
 - :office: On site and/or from my [Arnhem office](https://goo.gl/maps/Pr3t1pmqjMt9Y3gaA)
-- :man_technologist: Independently or in a team
+- :computer: Independently or in a team
 - :fast_forward: Scrum and/or agile development
 
 Interested? See the [Contact page](/en/contact) how you can reach me.

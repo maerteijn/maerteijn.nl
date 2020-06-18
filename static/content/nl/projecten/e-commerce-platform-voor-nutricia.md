@@ -16,7 +16,7 @@ Enkele toevoegen die ik tijdens het project heb gebouwd zijn onder andere:
 - [Django-Q](https://django-q.readthedocs.io/en/latest/) voor onderhoudsscripts, e-mail afhandeling en verzending en diverse import en export tools
 
 
-| :calendar: Periode | :man_technologist: Rol | :office: Opdrachtgever                | :man_office_worker: Klant                  |
+| :calendar: Periode | :computer: Rol | :office: Opdrachtgever                | :man: Klant                  |
 | ------------------ | -----------------------| ------------------------------------- | ------------------------------------------ |
 | 2015 - 2018        | Python ontwikkelaar    | [Lukkien](https://www.lukkien.com/)   | [Nutricia](https://www.nutriciavoorjou.nl) |
 

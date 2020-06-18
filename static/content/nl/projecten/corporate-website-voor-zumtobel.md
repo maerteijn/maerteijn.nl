@@ -14,6 +14,6 @@ Door de vele content maakten we gebruik van [wagtail-factories](https://github.c
 - [APIStar](https://github.com/encode/apistar) om een test-client te genereren op basis van een [OpenAPI](https://swagger.io/specification/) specificatie
 - [Wagtail Trans](https://github.com/wagtail/wagtailtrans) voor het vertalen van de Wagtail content
 
-| :calendar: Periode  | :man_technologist: Rol | :office: Opdrachtgever                   | :man_office_worker: Klant               |
+| :calendar: Periode  | :computer: Rol | :office: Opdrachtgever                   | :man: Klant               |
 | ------------------  | ---------------------- | ---------------------------------------- | ----------------------------------------|
 | 2019                | Python developer       | [Four Digits](https://www.fourdigits.nl) | [Zumtobel Group](https://z.lighting)    |

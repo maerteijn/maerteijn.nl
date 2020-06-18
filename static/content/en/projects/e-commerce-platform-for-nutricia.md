@@ -17,7 +17,7 @@ I've made some custom add-ons during this project by extending the E-commerce ba
 - [Django-Q](https://django-q.readthedocs.io/en/latest/) for housekeeping, email queueing and import / export
 
 
-| :calendar: Period  | :man_technologist: Role | :office: Contractor                   | :man_office_worker: Customer               |
+| :calendar: Period  | :computer: Role | :office: Contractor                   | :man: Customer               |
 | ------------------ | ----------------------- | ------------------------------------- | ------------------------------------------ |
 | 2015 - 2018        | Python Developer        | [Lukkien](https://www.lukkien.com/)   | [Nutricia](https://www.nutriciavoorjou.nl) |
 
