@@ -32,4 +32,10 @@ export default {
 .backlink {
   margin: 1rem 0;
 }
+
+@media print {
+  .backlink {
+    display: none;
+  }
+}
 </style>

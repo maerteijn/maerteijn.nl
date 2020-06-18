@@ -106,4 +106,11 @@ export default {
     }
   }
 }
+@media print {
+  .basic-layout {
+    .nav {
+      display: none;
+    }
+  }
+}
 </style>
