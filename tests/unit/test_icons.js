@@ -4,7 +4,7 @@ import { icons, getIcon } from "../../src/js/icons"
 
 describe("Test icons", () => {
   it("The icons export contains 7 icons", () => {
-    assert.lengthOf(Object.keys(icons), 7)
+    assert.lengthOf(Object.keys(icons), 6)
   })
 
   it("The icon keys are in the format 'fas-loader'", () => {

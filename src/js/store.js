@@ -11,7 +11,7 @@ export const state = Vue.observable({
   site: {
     pages: [],
     site_settings: { default_language: "", languages: {} },
-    logo_links: []
+    logo_links: [],
   },
   content: {},
   loaded: false,
@@ -45,15 +45,10 @@ export const getters = {
     }
     return []
   },
-  getSwitchableLanguage(path) {
+  getCurrentLanguage(path) {
     path = normalizePath(path)
     const metadata = this.getPageMetaData(path)
-    if (metadata.settings) {
-      const language = metadata.settings.language
-      const languages = state.site.site_settings.languages
-      return language in languages ? languages[language] : null
-    }
-    return null
+    return metadata.settings && metadata.settings.language
   },
   getTranslatedPages(path, language) {
     path = normalizePath(path)
@@ -66,9 +61,6 @@ export const getters = {
       )
     }
     return []
-  },
-  getLanguages() {
-    return state.site.site_settings.languages || {}
   },
 }
 
