@@ -25,38 +25,37 @@ describe("Switch language component", () => {
     assert.equal(wrapper.vm.$options.name, "switch-language")
   })
 
-  it("The component renders a svg icon", () => {
+  it("The availableLanguages computed property works as expected", () => {
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
-    store.state.site.pages[0].settings.language = "en"
-
-    const icon = wrapper.find("div.icon")
-    assert.include(icon.html(), "<svg")
+    assert.deepEqual(
+      wrapper.vm.availableLanguages,
+      Object.keys(store.state.site.site_settings.languages)
+    )
   })
 
-  it("The switchTo language is as defined in the site settings", () => {
+  it("The currentLanguage computed property works as expected", () => {
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
       path: "/",
     })
-    const currentLanguage = store.getters.getPageMetaData("/").settings.language
-    const expected = store.getters.getLanguages()[currentLanguage]
-    assert.equal(wrapper.vm.switchTo, expected)
+    assert.equal(
+      wrapper.vm.currentLanguage,
+      store.getters.getCurrentLanguage("/")
+    )
   })
 
-  it("The canSwitch property only return true when pages in the other language exist", () => {
-    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
-      path: "/",
-    })
+  it("The canSwitch computed property works as expected", () => {
+    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
     assert.isTrue(wrapper.vm.canSwitch)
-    store.state.site.pages[2].settings.language = "nl"
+    store.state.site.site_settings.languages = {}
     assert.isFalse(wrapper.vm.canSwitch)
   })
 
-  it("Clicking the icon should store the new language in the localStorage", () => {
+  it("Clicking the language should store the new language in the localStorage", () => {
     assert.isUndefined(window.localStorage.language)
     const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
       path: "/",
     })
-    wrapper.find("div.icon").trigger("click")
+    wrapper.find("a").trigger("click")
 
     return wrapper.vm.$nextTick().then(() => {
       assert.property(window.localStorage, "language")

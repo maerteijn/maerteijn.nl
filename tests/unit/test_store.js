@@ -104,18 +104,6 @@ describe("Test store", () => {
       assert.deepEqual(store.getters.getPagesForNavigation("/"), pages)
     })
 
-    it("getSwitchableLanguage should return the language we can switch to", function () {
-      assert.equal(
-        store.getters.getSwitchableLanguage("/"),
-        store.state.site.site_settings.languages["nl"]
-      )
-      store.state.site.pages[0].settings.language = "en"
-      assert.equal(
-        store.getters.getSwitchableLanguage("/"),
-        store.state.site.site_settings.languages["en"]
-      )
-    })
-
     it("getTranslatedPages returns pages with the same identifier in another lannguage", function () {
       const translated_pages = store.getters.getTranslatedPages(
         store.state.site.pages[0].path,

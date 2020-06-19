@@ -3,7 +3,6 @@ import { icon } from "@fortawesome/fontawesome-svg-core"
 import {
   faBars,
   faAdjust,
-  faFlag,
   faArrowCircleLeft,
 } from "@fortawesome/free-solid-svg-icons"
 import {
@@ -18,7 +17,6 @@ const iconList = [
   faGitlab,
   faBars,
   faAdjust,
-  faFlag,
   faArrowCircleLeft,
 ]
 
