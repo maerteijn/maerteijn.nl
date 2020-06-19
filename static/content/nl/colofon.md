@@ -1,6 +1,6 @@
 # Colofon
 
-![Django Con 2019](/images/djangocon-2019.jpg#left =200x*) Deze website is ontwikkeld met allerlei software, waarvan het meeste vrij aanpasbaar is, oftewel [Open Source](https://nl.wikipedia.org/wiki/Opensourcesoftware). Mijn dank gaat uit naar iedereen die er tijd en moeite instoppen om hun software vrij te geven en te onderhouden! Mocht je geïnteresseerd zijn in de details van deze website dan kun je de broncode op [Github](https://github.com/maerteijn/maerteijn.nl) terugvinden of de [projectpagina](/nl/projecten/mijn-website-met-vue) bekijken.
+![Django Con 2019](/images/djangocon-2019.jpg#left =200x150) Deze website is ontwikkeld met allerlei software, waarvan het meeste vrij aanpasbaar is, oftewel [Open Source](https://nl.wikipedia.org/wiki/Opensourcesoftware). Mijn dank gaat uit naar iedereen die er tijd en moeite instoppen om hun software vrij te geven en te onderhouden! Mocht je geïnteresseerd zijn in de details van deze website dan kun je de broncode op [Github](https://github.com/maerteijn/maerteijn.nl) terugvinden of de [projectpagina](/nl/projecten/mijn-website-met-vue) bekijken.
 
 
 #### Development

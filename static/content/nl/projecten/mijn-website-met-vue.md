@@ -1,6 +1,6 @@
 # Mijn website met Vue.js
 
-![Mijn website](/images/vue-js-based-personal-website.jpg#left =200x*)De wereld van Front-end development verandert in een razend tempo en daarom is het goed om als (backend) ontwikkelaar up-to-date te blijven en er een project mee te doen. [Vue.js](https://vuejs.org/) heb ik gebruikt als framework en is een populaire tegenhanger van [React](https://reactjs.org/) omdat het relatief makkelijk te leren is.
+![Mijn website](/images/vue-js-based-personal-website.jpg#left =200x137)De wereld van Front-end development verandert in een razend tempo en daarom is het goed om als (backend) ontwikkelaar up-to-date te blijven en er een project mee te doen. [Vue.js](https://vuejs.org/) heb ik gebruikt als framework en is een populaire tegenhanger van [React](https://reactjs.org/) omdat het relatief makkelijk te leren is.
 
 Door de komst en populariteit van allerlei Cloud platformen en API's is er met web development anno nu een duidelijke scheiding mogelijk tussen presentatie en data. Vanuit dat principe wilde ik deze website bouwen om te zien wat er nu mogelijk is. De site structuur is vanuit een [JSON bestand](https://github.com/maerteijn/maerteijn.nl/blob/master/static/content/site.json) opgebouwd en deze wordt met [Vue Router](https://router.vuejs.org/installation.html) omgezet naar URL's. De content is opgemaakt met [Markdown](https://www.markdownguide.org/) en wordt dynamisch ingeladen en dan omgezet naar HTML.
 

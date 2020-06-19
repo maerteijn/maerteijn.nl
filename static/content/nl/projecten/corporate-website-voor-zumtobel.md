@@ -1,6 +1,6 @@
 # Corporate website voor Zumtobel
 
-![Zumtobel homepage](/images/zumtobel-homepage.jpg#left =200x*)[Four Digits](https://www.fourdigits.nl/) vroeg mij om hun team tijdelijk te versterken als lead developer voor het compleet opnieuw ontwikkelen van de in Oostenrijk gevestigde [Zumtobel Group](http://z.lighting) corporate websites. De uitdaging was niet alleen technisch maar ook organisatorisch doordat de ontwikkeling plaats vond op drie verschillende continenten.
+![Zumtobel homepage](/images/zumtobel-homepage.jpg#left =200x137)[Four Digits](https://www.fourdigits.nl/) vroeg mij om hun team tijdelijk te versterken als lead developer voor het compleet opnieuw ontwikkelen van de in Oostenrijk gevestigde [Zumtobel Group](http://z.lighting) corporate websites. De uitdaging was niet alleen technisch maar ook organisatorisch doordat de ontwikkeling plaats vond op drie verschillende continenten.
 
 
 [Wagtail](https://wagtail.io/) is gekozen als CMS systeem voor het beheren van de verschillende merken van Zumtobel waarin er portfolio's per regio worden ontsloten in verschillende talen. Integratie van diverse backend systemen zoals de product informatie zijn ontsloten met [GraphQL](https://graphql.org/) en een REST API.

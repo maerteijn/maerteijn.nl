@@ -1,6 +1,6 @@
 ### E-Commerce platform voor Nutricia
 
-![Nutricia voor jou](/images/nutricia-voor-jou.jpg#left =200x*)[Lukkien](http://www.lukkien.nl) ontwikkelde een compleet E-commerce platform voor [Nutricia voor jou](https://www.nutriciavoorjou.nl) en [Nutricia voor professionals](https://www.nutriciavoorprofessionals.nl/), beide gebaseerd op [Django Oscar](https://github.com/django-oscar/django-oscar). De complete Front-end website is gebouwd met [Sitecore](https://www.sitecore.com). Voor alle E-commerce toepassingen communiceert deze front-end applicatie met de open source REST API [Django Oscar API](https://django-oscar-api.readthedocs.io/en/latest/)
+![Nutricia voor jou](/images/nutricia-voor-jou.jpg#left =200x137)[Lukkien](http://www.lukkien.nl) ontwikkelde een compleet E-commerce platform voor [Nutricia voor jou](https://www.nutriciavoorjou.nl) en [Nutricia voor professionals](https://www.nutriciavoorprofessionals.nl/), beide gebaseerd op [Django Oscar](https://github.com/django-oscar/django-oscar). De complete Front-end website is gebouwd met [Sitecore](https://www.sitecore.com). Voor alle E-commerce toepassingen communiceert deze front-end applicatie met de open source REST API [Django Oscar API](https://django-oscar-api.readthedocs.io/en/latest/)
 
 Enkele toevoegen die ik tijdens het project heb gebouwd zijn onder andere:
 - Verschillende uitbreidingen in Django Oscar API

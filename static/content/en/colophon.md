@@ -1,6 +1,6 @@
 # Colophon
 
-![Django Con 2019](/images/djangocon-2019.jpg#left =200x*) This website was built using all kinds of software, most of it available and adaptable by the general public, also known as [Open Source](https://en.wikipedia.org/wiki/Open-source_software). Thanks to all those who put effort in doing so and continuing doing it! If you're interested in the implementation details of this site then you can find the complete source code on [Github](https://github.com/maerteijn/maerteijn.nl) and more info on the dedicated [project page](/en/projects/my-personal-website-with-vue).
+![Django Con 2019](/images/djangocon-2019.jpg#left =200x150) This website was built using all kinds of software, most of it available and adaptable by the general public, also known as [Open Source](https://en.wikipedia.org/wiki/Open-source_software). Thanks to all those who put effort in doing so and continuing doing it! If you're interested in the implementation details of this site then you can find the complete source code on [Github](https://github.com/maerteijn/maerteijn.nl) and more info on the dedicated [project page](/en/projects/my-personal-website-with-vue).
 
 
 #### Development

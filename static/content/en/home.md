@@ -5,7 +5,7 @@ Hi, I'm Martijn Jacobs, a freelance software developer based in [Arnhem, NL](htt
 __Maerteijn__ is an "[Old Dutch spelling](https://en.wikipedia.org/wiki/Old_Dutch)" variant of my first name and also my company name.
 
 ## Profile
-![Martijn](/images/photo-small.jpg#left =120x*) I have 15+ years of development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org/). I like to write readable and adaptable code. In my view, code turns into software when a test is written for it. QA, packaging and deployment are things I like to automate with tools as [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) or [Saltstack](https://www.saltstack.com/).
+![Martijn](/images/photo-small.jpg#left =120x133) I have 15+ years of development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org/). I like to write readable and adaptable code. In my view, code turns into software when a test is written for it. QA, packaging and deployment are things I like to automate with tools as [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) or [Saltstack](https://www.saltstack.com/).
 
 
 I'm an independent developer who is not afraid to asks questions when necessary. It's important that the projects objectives are completely clear for myself and the customer or client. I'm feeling confident when I'm part of a project team in all kinds of roles, like (lead-) developer, MR/PR reviewer, sparring partner or technical assessor.

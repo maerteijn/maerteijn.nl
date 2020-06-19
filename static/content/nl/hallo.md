@@ -5,7 +5,7 @@ Welkom, ik ben Martijn Jacobs, freelance software developer uit [Arnhem](https:/
 __Maerteijn__ is een "[Oudnederlandse](https://nl.wikipedia.org/wiki/Oudnederlands)" spellingsvariant van mijn voornaam. Ik gebruik het ook als mijn bedrijfsnaam.
 
 ## Profiel
-![Martijn](/images/photo-small.jpg#left =120x*) Ik heb 15+ jaar ervaring als software ontwikkelaar, met name met de programmeertaal [Python](https://www.python.org/). Ik schrijf graag leesbare en aanpasbare programmacode, en in mijn visie wordt code pas software als er een test voor is. Ik automatiseer QA, packaging en deployment graag met diverse tools als [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) of [Saltstack](https://www.saltstack.com/).
+![Martijn](/images/photo-small.jpg#left =120x133) Ik heb 15+ jaar ervaring als software ontwikkelaar, met name met de programmeertaal [Python](https://www.python.org/). Ik schrijf graag leesbare en aanpasbare programmacode, en in mijn visie wordt code pas software als er een test voor is. Ik automatiseer QA, packaging en deployment graag met diverse tools als [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) of [Saltstack](https://www.saltstack.com/).
 
 Ik gedij goed als zelfstandig ontwikkelaar. Ik stel vragen waar nodig en vind het belangrijk dat er duidelijkheid bestaat over wat er ontwikkelt moet worden, zowel bij mijzelf als bij de klant of opdrachtgever. Ik kan goed uit te voeten in projectteams in allerlei rollen, zoals (lead-)developer, reviewen van code, sparringpartner of criticus van technische beslissingen.
 
