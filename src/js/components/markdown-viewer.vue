@@ -51,6 +51,9 @@ export default {
   p,
   ul {
     clear: both;
+  }
+
+  p {
     text-align: justify;
   }
 
