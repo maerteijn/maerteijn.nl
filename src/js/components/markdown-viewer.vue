@@ -46,6 +46,7 @@ export default {
     cursor: pointer;
     margin: 0.25rem 0.75rem;
     margin-left: 0;
+    min-height: 133px;
   }
 
   table {
