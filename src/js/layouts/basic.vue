@@ -80,10 +80,6 @@ export default {
 
     a {
       color: variables.$font-color-left;
-
-      &:hover {
-        color: variables.$orange-color;
-      }
     }
 
     .icons {
@@ -106,6 +102,7 @@ export default {
     }
   }
 }
+
 @media print {
   .basic-layout {
     .nav {
@@ -113,4 +110,15 @@ export default {
     }
   }
 }
+
+@media (hover: hover) {
+  .basic-layout {
+    .nav {
+      a:hover {
+        color: variables.$orange-color;
+      }
+    }
+  }
+}
+
 </style>
