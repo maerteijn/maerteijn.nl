@@ -1,5 +1,4 @@
 import "./polyfills"
-import FontFaceObserver from "fontfaceobserver"
 import Vue from "vue"
 import VueRouter from "vue-router"
 import App from "./app"
@@ -23,11 +22,8 @@ Vue.use(VueRouter)
 import "./scss/main.scss"
 import "viewerjs/dist/viewer.css"
 
-// preload the font before rendering the website
-new FontFaceObserver("Play").load().then(() => {
-  new Vue({
-    router: router,
-    el: "#app",
-    render: (h) => h(App),
-  })
+new Vue({
+  router: router,
+  el: "#app",
+  render: (h) => h(App),
 })
