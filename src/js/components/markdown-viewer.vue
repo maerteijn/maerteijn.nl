@@ -63,10 +63,6 @@ export default {
     clear: both;
   }
 
-  p {
-    text-align: justify;
-  }
-
   img[src*="#left"] {
     float: left;
     margin-left: 0;
