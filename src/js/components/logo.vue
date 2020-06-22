@@ -13,6 +13,7 @@
           src="../../assets/images/logo-small.svg"
           alt="freelance software developer"
           title="maerteijn"
+          v-on:click="goHome()"
         />
       </figure>
       <div class="icons" v-if="links">
@@ -42,6 +43,9 @@ export default {
   },
   methods: {
     icon: getIcon,
+    goHome() {
+      this.$router.push("/")
+    },
   },
 }
 </script>
@@ -52,6 +56,7 @@ export default {
     max-width: 20rem;
 
     figure.mobile {
+      cursor: pointer;
       display: none;
     }
 

@@ -7,6 +7,7 @@
             src="../../assets/images/logo-small.svg"
             alt="freelance software developer"
             title="maerteijn"
+            v-on:click="$router.push('/')"
           />
         </figure>
       </div>
@@ -50,6 +51,7 @@ export default {
 
   .logo {
     figure.logo {
+      cursor: pointer;
       margin-right: 1rem;
       width: 3rem;
     }
@@ -120,5 +122,4 @@ export default {
     }
   }
 }
-
 </style>

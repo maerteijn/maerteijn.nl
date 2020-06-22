@@ -1,19 +1,20 @@
 import { assert } from "chai"
+import sinon from "sinon"
 
 import modules from "../../../dist/test"
 
-import { createComponent } from "../../utils"
+import { createComponentWithoutRouter } from "../../utils"
 
 import * as fixtures from "../../fixtures"
 
 describe("Logo component", () => {
   it("We can initialize a Logo component", () => {
-    const wrapper = createComponent(modules.Logo)
+    const wrapper = createComponentWithoutRouter(modules.Logo)
     assert.equal(wrapper.vm.$options.name, "logo")
   })
 
   it("The logo component renders a desktop and mobile version", () => {
-    const wrapper = createComponent(modules.Logo)
+    const wrapper = createComponentWithoutRouter(modules.Logo)
     assert.isTrue(wrapper.find(".logo-container figure.desktop").exists())
     assert.isTrue(wrapper.find(".logo-container figure.mobile").exists())
   })
@@ -21,7 +22,7 @@ describe("Logo component", () => {
 
 describe("Logo component - extended", () => {
   beforeEach(function () {
-    this.wrapper = createComponent(modules.Logo)
+    this.wrapper = createComponentWithoutRouter(modules.Logo)
     this.wrapper.vm.$state.site = JSON.parse(fixtures.site_json)
     this.wrapper.vm.$state.loaded = true
   })
@@ -54,6 +55,17 @@ describe("Logo component - extended", () => {
     this.wrapper.vm.$state.site.logo_links = []
     return this.wrapper.vm.$nextTick().then(() => {
       assert.equal(this.wrapper.vm.links.length, 0)
+    })
+  })
+
+  it("Clicking the logo will navigate to the root page", function () {
+    this.wrapper.vm.goHome = sinon.spy(this.wrapper.vm.goHome)
+    const logo = this.wrapper.find("figure.mobile img")
+    logo.trigger("click")
+
+    return this.wrapper.vm.$nextTick().then(() => {
+      assert.isTrue(this.wrapper.vm.goHome.called)
+      sinon.restore()
     })
   })
 })
