@@ -1,6 +1,6 @@
 # Colofon
 
-![Django Con 2019](/images/djangocon-2019.jpg#left =200x150) Deze website is ontwikkeld met allerlei software, waarvan het meeste vrij aanpasbaar is, oftewel [Open Source](https://nl.wikipedia.org/wiki/Opensourcesoftware). Mijn dank gaat uit naar iedereen die er tijd en moeite instoppen om hun software vrij te geven en te onderhouden! Mocht je geïnteresseerd zijn in de details van deze website dan kun je de broncode op [Github](https://github.com/maerteijn/maerteijn.nl) terugvinden of de [projectpagina](/nl/projecten/mijn-website-met-vue) bekijken.
+![Django Con 2019](/images/djangocon-2019.jpg#left =200x150) Deze website is ontwikkeld met allerlei software, waarvan het meeste vrij aanpasbaar is, oftewel [Open Source](https://nl.wikipedia.org/wiki/Opensourcesoftware). Mijn dank gaat uit naar iedereen die er tijd en moeite instopt om hun software vrij te geven en te onderhouden! Mocht je geïnteresseerd zijn in de details van deze website dan kun je de broncode op [Github](https://github.com/maerteijn/maerteijn.nl) terugvinden of de [projectpagina](/nl/projecten/mijn-website-met-vue) bekijken.
 
 
 #### Development
@@ -23,7 +23,7 @@
 - [Font awesome](https://github.com/FortAwesome/Font-Awesome) - Voor de iconen en tegenwoordig ook met een JavaScript API
 - [Showdown](https://github.com/showdownjs/showdown) - Een snelle [Markdown](https://www.markdownguide.org/) renderer in JavaScript
 - [Axios](https://github.com/axios/axios) - De defacto JavaScript HTTP client
-- [Google Fonts](https://github.com/google/fonts) - Het *Play* font wat gebruikt wordt in deze website
+- [Google Fonts](https://github.com/google/fonts) - Het *Play* font dat gebruikt wordt in deze website
 
 
 #### Linting en codestyling
@@ -40,5 +40,5 @@
 - [Dependabot](https://dependabot.com/) - Autmatische updates van dependencies
 
 #### Deployment en hosting
-- [Github actions](https://github.com/maerteijn/maerteijn.nl/actions) - Voor het automatiseren van alle CI stappen bij iedere commit en het automatisch deployen van de website
+- [Github actions](https://github.com/maerteijn/maerteijn.nl/actions) - Voor het automatiseren van alle CI stappen bij iedere commit en het automatisch uitrollen van de website
 - [Vercel](https://vercel.com/) - Statische website hosting (voorheen bekend als ZEIT)

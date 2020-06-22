@@ -37,7 +37,7 @@
 - [Chai.js](https://github.com/chaijs) - Assertions how you want them
 - [Sinon](https://github.com/sinonjs/sinon) - Makes unit testing possible with all kinds of stubs and spies
 - [Playwright](https://github.com/microsoft/playwright) - A new promising browser automation library from Microsoft
-- [Dependabot](https://dependabot.com/) - Autmatic dependency updates
+- [Dependabot](https://dependabot.com/) - Automatic dependency updates
 
 #### Deployment and Hosting
 - [Github actions](https://github.com/maerteijn/maerteijn.nl/actions) - To run all CI steps for each commit and automatically deployment

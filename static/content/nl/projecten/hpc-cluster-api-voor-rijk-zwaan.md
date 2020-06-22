@@ -7,14 +7,14 @@ De op Django gebaseerde beheerapplicatie en de agents gebruiken een message bus 
 
 De REST API is ontwikkeld inclusief:
 - Microsoft ADFS authenticatie en token-beheer
-- Een makkelijk uit te breiden framework om nieuwe cluster agents te implementeren
-- Volledige [Gitlab CI/CD](https://docs.gitlab.com/ee/ci/) integratie inclusief het publiceren van Docker images in de registry en wiki documentatie
+- een makkelijk uit te breiden framework om nieuwe cluster agents te implementeren
+- volledige [Gitlab CI/CD](https://docs.gitlab.com/ee/ci/) integratie inclusief het publiceren van Docker images in de registry en wiki-documentatie
 
 
 #### Uitgelichte technologieën
 -  met [Django REST Framework](https://www.django-rest-framework.org/) gebruikmakend van [PostgreSQL](https://www.postgresql.org/)
 - Het uitmuntende [Dramatiq](https://dramatiq.io/) als communicatie-framework samen met [RabbitMQ](https://www.rabbitmq.com/)
-- Authenticatie en permissiies met [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)
+- Authenticatie en permissies met [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)
 
 
 | :calendar: Periode  | :computer: Rol | :office: Opdrachtgever                   | :man: Klant               |

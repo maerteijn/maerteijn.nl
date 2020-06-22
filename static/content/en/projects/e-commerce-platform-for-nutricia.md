@@ -1,6 +1,6 @@
 # E-Commerce platform for Nutricia
 
-![Nutricia voor jou](/images/nutricia-voor-jou.jpg#left =200x137)[Lukkien](http://www.lukkien.nl) developed a complete E-commerce platform for [Nutricia voor jou](https://www.nutriciavoorjou.nl) and [Nutricia for professionals](https://www.nutriciavoorprofessionals.nl/) based on [Django Oscar](https://github.com/django-oscar/django-oscar). The Front-end websites are built using [Sitecore](https://www.sitecore.com) which communicates with the open sourced REST API known as [Django Oscar API](https://django-oscar-api.readthedocs.io/en/latest/), which I'm still maintaining today.
+![Nutricia voor jou](/images/nutricia-voor-jou.jpg#left =200x137)[Lukkien](http://www.lukkien.nl) developed a complete E-commerce platform for [Nutricia for you](https://www.nutriciavoorjou.nl) and [Nutricia for professionals](https://www.nutriciavoorprofessionals.nl/) based on [Django Oscar](https://github.com/django-oscar/django-oscar). The Front-end websites are built using [Sitecore](https://www.sitecore.com) which communicates with the open sourced REST API known as [Django Oscar API](https://django-oscar-api.readthedocs.io/en/latest/), which I'm still maintaining today.
 
 
 I've made some custom add-ons during this project by extending the E-commerce back-end including:
@@ -14,7 +14,7 @@ I've made some custom add-ons during this project by extending the E-commerce ba
 #### Noticeable technologies
 - [Django](https://www.djangoproject.com/) with [Django Oscar](https://github.com/django-oscar/django-oscar) and [DRF](https://www.django-rest-framework.org/)
 - Hosted on [AWS](https://aws.amazon.com/) with [Terraform](https://www.terraform.io/), AWS Postgres RDS, AWS EC2 containers are bootstrapped with [Saltstack](https://www.saltstack.com/)
-- [Django-Q](https://django-q.readthedocs.io/en/latest/) for housekeeping, email queueing and import / export
+- [Django-Q](https://django-q.readthedocs.io/en/latest/) for housekeeping, email queueing and several import / export utilities
 
 
 | :calendar: Period  | :computer: Role | :office: Contractor                   | :man: Customer               |
