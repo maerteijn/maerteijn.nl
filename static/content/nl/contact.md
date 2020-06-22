@@ -5,10 +5,10 @@
 #### Contact informatie
 |                       |                                        |
 | --------------------- | -------------------------------------- |
-| E-mail                | maerteijn@gmail.com                    |
-| Linked In             | https://www.linkedin.com/in/maerteijn/ |
-| Github                | https://github.com/maerteijn/          |
-| Gitlab                | https://gitlab.com/maerteijn           |
+| **E-mail**            | maerteijn@gmail.com                    |
+| **Linked-In**         | https://www.linkedin.com/in/maerteijn  |
+| **Github**            | https://github.com/maerteijn           |
+| **Gitlab**            | https://gitlab.com/maerteijn           |
 
 
 #### Post- en bezoekadres

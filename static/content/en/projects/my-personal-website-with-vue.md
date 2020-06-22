@@ -13,8 +13,11 @@ The website structure is defined in a [JSON file](https://github.com/maerteijn/m
 - [Microsoft Playwright](https://playwright.dev/) with [Express](https://expressjs.com/) for E2E browser-tests
 - [Github actions](https://github.com/maerteijn/maerteijn.nl/actions?query=workflow%3A%22maerteijn.nl+ci%22) for CI/CD including deployment to [Vercel](https://vercel.com/) (ZEIT)
 
-| :calendar: Period  | :computer: Role  | :man: Customer          |
-| ------------------ | ------------------------ | ------------------------------------- |
-| 2020               | Front-end Developer      | [Maerteijn](https://www.maerteijn.nl) |
 
-:link: _Github repository_ : https://github.com/maerteijn/maerteijn.nl
+#### Factsheet
+|                            |                                                     |
+| -------------------------- | --------------------------------------------------- |
+| :calendar: **Period**      | 2020                                                |
+| :computer: **Role**        | (Full-stack) Front-end Developer                    |
+| :man: **Customer**         | [Maerteijn](https://www.maerteijn.nl)               |
+| :link: **Repository**      | [Github](https://github.com/maerteijn/maerteijn.nl) |
