@@ -16,8 +16,11 @@ Enkele toevoegingen die ik tijdens het project heb gebouwd zijn onder andere:
 - [Django-Q](https://django-q.readthedocs.io/en/latest/) voor onderhoudsscripts, e-mail afhandeling en verzending en diverse import en export tools
 
 
-| :calendar: Periode | :computer: Rol | :office: Opdrachtgever                | :man: Klant                  |
-| ------------------ | -----------------------| ------------------------------------- | ------------------------------------------ |
-| 2015 - 2018        | Python ontwikkelaar    | [Lukkien](https://www.lukkien.com/)   | [Nutricia](https://www.nutriciavoorjou.nl) |
-
-:link: _Github repository_ : https://github.com/django-oscar/django-oscar-api/
+#### Factsheet
+|                            |                                                             |
+| -------------------------- | ----------------------------------------------------------- |
+| :calendar: **Periode**     | 2015 - 2016                                                 |
+| :computer: **Rol**         | Python ontwikkelaar                                         |
+| :office: **Opdrachtgever** | [Lukkien](https://www.lukkien.com/)                         |
+| :man: **Klant**            | [Nutricia](https://www.nutriciavoorjou.nl)                  |
+| :link: **Repository**      | [Github](https://github.com/django-oscar/django-oscar-api/) |

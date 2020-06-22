@@ -48,6 +48,16 @@ export default {
     margin-left: 0;
   }
 
+  table {
+    th:empty {
+      display: none;
+    }
+
+    td:first-child {
+      white-space: nowrap;
+    }
+  }
+
   p,
   ul {
     clear: both;
