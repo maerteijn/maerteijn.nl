@@ -11,8 +11,11 @@ Door de komst en populariteit van allerlei Cloud platformen en API's is er met w
 - [Microsoft Playwright](https://playwright.dev/) met [Express](https://expressjs.com/) voor het schrijven van [E2E tests](https://github.com/maerteijn/maerteijn.nl/tree/master/tests/e2e)
 - [Github actions](https://github.com/maerteijn/maerteijn.nl/actions?query=workflow%3A%22maerteijn.nl+ci%22) voor CI/CD en de site wordt gehost op het [Vercel](https://vercel.com/) (ZEIT) platform
 
-| :calendar: Periode  | :computer: Rol  | :man: Klant                          |
-| ------------------- | ------------------------| ------------------------------------- |
-| 2020                | Front-end Developer     | [Maerteijn](https://www.maerteijn.nl) |
 
-:link: _Github repository_ : https://github.com/maerteijn/maerteijn.nl
+#### Factsheet
+|                            |                                                     |
+| -------------------------- | --------------------------------------------------- |
+| :calendar: **Periode**     | 2020                                                |
+| :computer: **Rol**         | (Full-stack) Front-end ontwikkelaar                 |
+| :man: **Klant**            | [Maerteijn](https://www.maerteijn.nl)               |
+| :link: **Repository**      | [Github](https://github.com/maerteijn/maerteijn.nl) |

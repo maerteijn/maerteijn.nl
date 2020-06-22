@@ -18,6 +18,10 @@ The REST API was developed including:
 - Authentication and permissions with [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)
 
 
-| :calendar: Period  | :computer: Role | :office: Contractor                      | :man: Customer               |
-| ------------------ | ----------------------- | ---------------------------------------- | ------------------------------------------ |
-| 2018 -2019         | Python Developer        | [Four Digits](https://www.fourdigits.nl) | [Rijk Zwaan](https://www.rijkzwaan.com)    |
+#### Factsheet
+|                            |                                          |
+| -------------------------- | ---------------------------------------- |
+| :calendar: **Period**      | 2018 - 2019                              |
+| :computer: **Role**        | Python Developer                         |
+| :office: **Contractor**    | [Four Digits](https://www.fourdigits.nl) |
+| :man: **Customer**         | [Rijk Zwaan](https://www.rijkzwaan.com)  |

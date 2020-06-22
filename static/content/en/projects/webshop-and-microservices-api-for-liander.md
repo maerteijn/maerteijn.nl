@@ -10,6 +10,10 @@ At the start of the project we also created several mock micro-services. These i
 - [Django Oscar](https://github.com/django-oscar/django-oscar) Product catalogue for easy web-shop integration
 
 
-| :calendar: Period  | :computer: Role          | :office: Contractor                      | :man: Customer                   |
-| ------------------ | ------------------------ | ---------------------------------------- | -------------------------------- |
-| 2018               | Python Backend Developer | [Lab Digital](https://www.labdigital.nl) | [Liander](http://www.liander.nl) |
+#### Factsheet
+|                            |                                          |
+| -------------------------- | ---------------------------------------- |
+| :calendar: **Period**      | 2018                                     |
+| :computer: **Role**        | Python Backend Developer                 |
+| :office: **Contractor**    | [Lab Digital](https://www.labdigital.nl) |
+| :man: **Customer**         | [Liander](http://www.liander.nl)         |

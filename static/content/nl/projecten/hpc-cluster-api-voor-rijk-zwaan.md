@@ -12,11 +12,15 @@ De REST API is ontwikkeld inclusief:
 
 
 #### Uitgelichte technologieën
--  met [Django REST Framework](https://www.django-rest-framework.org/) gebruikmakend van [PostgreSQL](https://www.postgresql.org/)
+- [Django REST Framework](https://www.django-rest-framework.org/) gebruikmakend van [PostgreSQL](https://www.postgresql.org/)
 - Het uitmuntende [Dramatiq](https://dramatiq.io/) als communicatie-framework samen met [RabbitMQ](https://www.rabbitmq.com/)
 - Authenticatie en permissies met [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)
 
 
-| :calendar: Periode  | :computer: Rol | :office: Opdrachtgever                   | :man: Klant               |
-| ------------------  | ---------------------- | ---------------------------------------- | ----------------------------------------|
-| 2018 - 2019         | Python developer       | [Four Digits](https://www.fourdigits.nl) | [Rijk Zwaan](https://www.rijkzwaan.com) |
+#### Factsheet
+|                            |                                          |
+| -------------------------- | ---------------------------------------- |
+| :calendar: **Periode**     | 2018 - 2019                              |
+| :computer: **Rol**         | Python ontwikkelaar                      |
+| :office: **Opdrachtgever** | [Four Digits](https://www.fourdigits.nl) |
+| :man: **Klant**            | [Rijk Zwaan](https://www.rijkzwaan.com)  |

@@ -17,9 +17,11 @@ I've made some custom add-ons during this project by extending the E-commerce ba
 - [Django-Q](https://django-q.readthedocs.io/en/latest/) for housekeeping, email queueing and several import / export utilities
 
 
-| :calendar: Period  | :computer: Role | :office: Contractor                   | :man: Customer               |
-| ------------------ | ----------------------- | ------------------------------------- | ------------------------------------------ |
-| 2015 - 2018        | Python Developer        | [Lukkien](https://www.lukkien.com/)   | [Nutricia](https://www.nutriciavoorjou.nl) |
-
-
- :link: _Github repository_ : https://github.com/django-oscar/django-oscar-api/
+#### Factsheet
+|                            |                                                             |
+| -------------------------- | ----------------------------------------------------------- |
+| :calendar: **Period**      | 2015 - 2016                                                 |
+| :computer: **Role**        | Python Developer                                            |
+| :office: **Contractor**    | [Lukkien](https://www.lukkien.com/)                         |
+| :man: **Customer**         | [Nutricia](https://www.nutriciavoorjou.nl)                  |
+| :link: **Repository**      | [Github](https://github.com/django-oscar/django-oscar-api/) |
