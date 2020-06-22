@@ -93,11 +93,6 @@ export default {
     a {
       border-bottom: solid 1px rgba(0, 0, 0, 0);
       color: variables.$font-color-left;
-
-      &:hover {
-        border-bottom: solid 1px variables.$font-color-left;
-        color: variables.$font-color-left;
-      }
     }
   }
 
@@ -159,6 +154,16 @@ export default {
 @media print {
   .default-layout {
     grid-template-columns: 0 auto;
+  }
+}
+@media (hover: hover) {
+  .default-layout {
+    .left {
+      a:hover {
+        border-bottom: solid 1px variables.$font-color-left;
+        color: variables.$font-color-left;
+      }
+    }
   }
 }
 </style>
