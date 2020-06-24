@@ -6,6 +6,7 @@
           src="../../assets/images/logo-full.svg"
           alt="freelance software developer"
           title="maerteijn"
+          v-on:click="goHome()"
         />
       </figure>
       <figure class="image mobile">
@@ -55,8 +56,12 @@ export default {
   .logo-container {
     max-width: 20rem;
 
-    figure.mobile {
+    figure.mobile,
+    figure.desktop {
       cursor: pointer;
+    }
+
+    figure.mobile {
       display: none;
     }
 
