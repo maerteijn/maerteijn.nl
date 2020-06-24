@@ -1,0 +1,153 @@
+{
+  "name": "maerteijn.nl",
+  "version": "1.0.0",
+  "description": "My professional website build with vue.js and bulma",
+  "scripts": {
+    "dev": "parcel --hmr-port 3000 src/index.html -d dist/dev",
+    "test": "npm run build:test && mocha tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
+    "test:debug": "npm run build:test && mocha inspect tests/unit/test_*.js tests/unit/**/test_*.js tests/functional/test_*.js",
+    "test:e2e": "npm run build:e2e && mocha --exit tests/e2e/test_*.js",
+    "test:coverage": "rm -Rf dist/test && nyc npm run test",
+    "eslint": "eslint src/",
+    "eslint:fix": "eslint src/ --fix",
+    "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
+    "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
+    "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
+    "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
+    "build": "BUILD_TIME=$(TZ=Europe/Amsterdam date) parcel build src/index.html --no-cache --experimental-scope-hoisting -d dist/release",
+    "build:test": "rm -Rf dist/test && parcel build ./tests/build.js --target node --no-minify -d dist/test/ -o index.js --public-url ./",
+    "build:e2e": "NODE_ENV=production BUILD_TIME=$(TZ=Europe/Amsterdam date) parcel build src/index.html --no-minify -d dist/e2e/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maerteijn/maerteijn.github.io.git"
+  },
+  "keywords": [],
+  "author": "Martijn Jacobs",
+  "license": "SEE LICENSE IN LICENCE",
+  "homepage": "https://github.com/maerteijn/maerteijn.github.io",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-object-assign": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@vue/component-compiler-utils": "^3.1.2",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "express": "^4.17.1",
+    "jsdom": "^16.2.2",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-local-plugins": "0.0.3",
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "playwright-chromium": "^1.1.1",
+    "prettier": "^2.0.5",
+    "regenerator-runtime": "^0.13.5",
+    "sass": "^1.26.9",
+    "sinon": "^9.0.2",
+    "sitemap": "^6.1.6",
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "ajv": "^6.12.2",
+    "axios": "^0.19.2",
+    "bulma": "^0.9.0",
+    "core-js": "^3.6.5",
+    "esm": "^3.2.25",
+    "showdown": "^1.9.1",
+    "viewerjs": "^1.6.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.3.4"
+  },
+  "esm": {
+    "cache": false
+  },
+  "mocha": {
+    "require": [
+      "esm",
+      "tests/setup_dom.js"
+    ],
+    "recursive": true
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "max-nesting-depth": 4,
+      "selector-max-compound-selectors": 4,
+      "string-quotes": "double",
+      "scss/at-import-no-partial-leading-underscore": null,
+      "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": [
+            "attribute",
+            "class"
+          ]
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "vueIndentScriptAndStyle": false
+  },
+  "nyc": {
+    "cache": false,
+    "all": true,
+    "extension": [
+      ".js",
+      ".vue"
+    ],
+    "exclude": [
+      ".**js",
+      "tests/**",
+      "dist/dev/**",
+      "dist/e2e/**"
+    ]
+  },
+  "parcel-plugin-local-plugins": [
+    "./src/parcel-plugin"
+  ],
+  "sitemap_settings": {
+    "site_json": "static/content/site.json",
+    "hostname": "https://www.maerteijn.nl"
+  },
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
+  }
+}

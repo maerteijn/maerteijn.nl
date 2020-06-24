@@ -1,0 +1,77 @@
+name: maerteijn.nl ci
+on: [push]
+jobs:
+  run-ci-steps:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Setup nodejs 12.16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.16
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+    - name: Install all dependencies
+      run: npm ci
+    - name: Run eslint
+      run: npm run eslint
+    - name: Run stylelint
+      run: npm run stylelint
+    - name: Run prettier
+      run: npm run prettier
+    - name: Run the unit and functional tests
+      run: npm run test:coverage
+    - name: Run the e2e tests
+      run: npm run test:e2e
+    - name: Archive screenshots
+      uses: actions/upload-artifact@v1
+      with:
+        name: screenshots
+        path: dist/e2e/screenshots
+
+  build-release:
+    needs: run-ci-steps
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Setup nodejs 12.16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.16
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+    - name: Install all dependencies
+      run: npm install
+    - name: Create a production build
+      run: npm run build
+    - name: Archive public directory
+      uses: actions/upload-artifact@v1
+      with:
+        name: public
+        path: dist/release
+
+  publish-release:
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Download public directory
+      uses: actions/download-artifact@v1
+      with:
+        name: public
+    - name: Publish to Vercel
+      uses: amondnet/vercel-action@v19
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}

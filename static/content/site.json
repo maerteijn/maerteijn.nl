@@ -1,0 +1,347 @@
+{
+  "site_settings": {
+    "title": "maerteijn - freelance software developer",
+    "default_language": "nl",
+    "languages": {
+      "nl": "en",
+      "en": "nl"
+    }
+  },
+  "pages": [
+    {
+      "title": "maerteijn - hallo",
+      "name": "hallo",
+      "path": "/nl",
+      "url": "/content/nl/hallo.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "footer_component": "LastUpdated",
+      "settings": {
+        "identifier": 1,
+        "language": "nl",
+        "show_in_menu": true
+       }
+    },
+    {
+       "title": "maerteijn - projecten",
+       "name": "projecten",
+       "path": "/nl/projecten",
+       "url": "/content/nl/projecten.md",
+       "type": "ContentPage",
+       "content_component": "MarkdownViewer",
+       "settings": {
+         "identifier": 2,
+         "language": "nl",
+         "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - projecten - mijn website met vue",
+      "name": "mijn-website-met-vue",
+      "path": "/nl/projecten/mijn-website-met-vue",
+      "url": "/content/nl/projecten/mijn-website-met-vue.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 3,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projecten - corporate website voor zumtobel",
+      "name": "corporate-website-voor-zumtobel",
+      "path": "/nl/projecten/corporate-website-voor-zumtobel",
+      "url": "/content/nl/projecten/corporate-website-voor-zumtobel.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 4,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projecten - high performance cluster api",
+      "name": "high-performance-cluster-api",
+      "path": "/nl/projecten/high-performance-cluster-api",
+      "url": "/content/nl/projecten/high-performance-cluster-api.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 5,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projecten - webshop en microservices api voor liander",
+      "name": "webshop-en-microservices-api-voor-liander",
+      "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
+      "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 6,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projecten - rpi saltstack deployment voor vadain",
+      "name": "rpi-saltstack-deployment-voor-vadain",
+      "path": "/nl/projecten/rpi-saltstack-deployment-voor-vadain",
+      "url": "/content/nl/projecten/rpi-saltstack-deployment-voor-vadain.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 7,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+
+    {
+      "title": "maerteijn - projecten - e-commerce platform voor nutricia",
+      "name": "e-commerce-platform-voor-nutricia",
+      "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
+      "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 8,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - contact",
+      "name": "contact",
+      "path": "/nl/contact",
+      "url": "/content/nl/contact.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 9,
+        "language": "nl",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - colofon",
+      "name": "colofon",
+      "path": "/nl/colophon",
+      "url": "/content/nl/colofon.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 10,
+        "language": "nl",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - home",
+      "name": "home",
+      "path": "/en",
+      "url": "/content/en/home.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "footer_component": "LastUpdated",
+      "settings": {
+        "identifier": 1,
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - projects",
+      "name": "projects",
+      "path": "/en/projects",
+      "url": "/content/en/projects.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 2,
+        "language": "en",
+        "show_in_menu": true
+      }
+   },
+   {
+      "title": "maerteijn - projects - my personal website with vue.js",
+      "name": "my-personal-website-with-vue",
+      "path": "/en/projects/my-personal-website-with-vue",
+      "url": "/content/en/projects/my-personal-website-with-vue.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 3,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+   },
+   {
+      "title": "maerteijn - projecten - corporate website for zumtobel",
+      "name": "corporate-website-for-zumtobel",
+      "path": "/en/projects/corporate-website-for-zumtobel",
+      "url": "/content/en/projects/corporate-website-for-zumtobel.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 4,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+   },
+   {
+      "title": "maerteijn - projects - high performance cluster api",
+      "name": "high-performance-cluster-api",
+      "path": "/en/projects/high-performance-cluster-api",
+      "url": "/content/en/projects/high-performance-cluster-api.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 5,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projects - webshop and microservices api for liander",
+      "name": "webshop-and-microservices-api-for-liander",
+      "path": "/en/projects/webshop-and-microservices-api-for-liander",
+      "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 6,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projects - rpi saltstack deployment for vadain",
+      "name": "rpi-saltstack-deployment-for-vadain",
+      "path": "/en/projects/rpi-saltstack-deployment-for-vadain",
+      "url": "/content/en/projects/rpi-saltstack-deployment-for-vadain.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 7,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - projects - e-commerce platform for nutricia",
+      "name": "e-commerce-platform-for-nutricia",
+      "path": "/en/projects/e-commerce-platform-for-nutricia",
+      "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 8,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+    },
+    {
+      "title": "maerteijn - contact",
+      "name": "contact",
+      "path": "/en/contact",
+      "url": "/content/en/contact.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 9,
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - colophon",
+      "name": "colophon",
+      "path": "/en/colophon",
+      "url": "/content/en/colophon.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 10,
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - redirect",
+      "name": "Redirect",
+      "path": "*",
+      "type": "RedirectPage",
+      "settings": {}
+    }
+  ],
+  "logo_links": [
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/in/maerteijn/",
+      "font_awesome_icon": "fab-linkedin-in"
+    },
+    {
+      "title": "Github",
+      "url": "https://www.github.com/maerteijn/",
+      "font_awesome_icon": "fab-github"
+    },
+    {
+      "title": "Gitlab",
+      "url": "https://www.gitlab.com/maerteijn/",
+      "font_awesome_icon": "fab-gitlab"
+    }
+  ]
+}
