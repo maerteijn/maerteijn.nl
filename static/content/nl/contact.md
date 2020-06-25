@@ -1,6 +1,6 @@
 # Contact
 
-![Office Door](/images/office-door.jpg#left =200x150) Neem vrijblijvend contact met me op als je denkt dat ik geschikt ben voor je volgende project of als versterking van een lopend project. Zie hieronder hoe je mij kunt bereiken via diverse kanalen. Vermeld bij projectaanvragen s.v.p. de naam van het betreffende bedrijf en een korte samenvatting van het project of opdracht. Alvast bedankt!
+![Deur van mijn kantoor](/images/office-door.jpg#left =200x150) Neem vrijblijvend contact met me op als je denkt dat ik geschikt ben voor je volgende project of als versterking van een lopend project. Zie hieronder hoe je mij kunt bereiken via diverse kanalen. Vermeld bij projectaanvragen s.v.p. de naam van het betreffende bedrijf en een korte samenvatting van het project of opdracht. Alvast bedankt!
 
 #### Contact informatie
 |                       |                                        |
