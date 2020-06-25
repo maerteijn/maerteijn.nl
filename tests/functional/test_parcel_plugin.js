@@ -8,8 +8,8 @@ describe("Test parcel plugin", () => {
       .readFile("./dist/test/sitemap.xml", { encoding: "utf-8" })
       .then((data) => {
         assert.include(data, '<?xml version="1.0" encoding="UTF-8"?>')
-        // there should be 8 url tags in the sitemap
-        assert.lengthOf(data.match(/\<url\>/g) || [], 8)
+        // there should be 20 url tags in the sitemap
+        assert.lengthOf(data.match(/\<url\>/g) || [], 20)
       })
   })
 })

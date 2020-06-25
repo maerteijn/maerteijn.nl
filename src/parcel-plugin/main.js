@@ -39,7 +39,7 @@ export default (bundler) => {
 
       const sitemap_xml = await generate_sitemap(
         package_json.sitemap_settings.hostname,
-        site_json.pages.filter((page) => page.settings.show_in_menu)
+        site_json.pages.filter((page) => page.type == "ContentPage")
       )
 
       const dest_path = path.join(path.dirname(bundle.name), "sitemap.xml")
