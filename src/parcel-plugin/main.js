@@ -19,7 +19,13 @@ const loadJSON = async (json_path) => {
 
 const generate_sitemap = (hostname, pages) => {
   const stream = new SitemapStream({ hostname: hostname })
-  pages.forEach((page) => stream.write({ url: page.path, changefreq: "daily" }))
+  pages.forEach((page) =>
+    stream.write({
+      url: page.path,
+      changefreq: "daily",
+      lastmod: new Date().toISOString(),
+    })
+  )
   stream.end()
   return streamToPromise(stream).then((data) => data.toString())
 }
