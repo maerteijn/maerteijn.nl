@@ -53,7 +53,7 @@ export default {
     figure.logo {
       cursor: pointer;
       margin-right: 1rem;
-      width: 3rem;
+      width: 2.5rem;
     }
   }
 
@@ -91,16 +91,6 @@ export default {
 
     .item {
       padding-right: 1rem;
-    }
-  }
-}
-
-@media screen and (max-width: variables.$mobile) {
-  .basic-layout {
-    .logo {
-      figure.logo {
-        width: 2.2rem;
-      }
     }
   }
 }

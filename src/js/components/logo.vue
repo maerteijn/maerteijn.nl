@@ -88,7 +88,7 @@ export default {
 
       figure.mobile {
         display: block;
-        width: 2.25rem;
+        width: 2.5rem;
       }
 
       figure.desktop {
