@@ -79,6 +79,8 @@ export default {
         document.title = metadata.title || ""
         const language = metadata.settings && metadata.settings.language
         document.querySelector("html").setAttribute("lang", language)
+        document.getElementsByTagName("meta")["description"].content =
+          metadata.description
       },
     },
   },

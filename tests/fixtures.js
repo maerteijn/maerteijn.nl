@@ -12,6 +12,7 @@ export const site_json = `
   "pages": [
     {
       "name": "home",
+      "description": "My description",
       "title": "home",
       "path": "/",
       "type": "ContentPage",
@@ -26,6 +27,7 @@ export const site_json = `
     },
     {
       "name": "projects",
+      "description": "My description",
       "title": "projects",
       "path": "/nl/projects",
       "type": "ContentPage",
@@ -43,6 +45,7 @@ export const site_json = `
     },
     {
       "name": "another-language",
+      "description": "My description",
       "title": "another language",
       "path": "/en/another-language",
       "type": "ContentPage",

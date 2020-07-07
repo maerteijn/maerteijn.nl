@@ -182,6 +182,20 @@ describe("Content page - extended", () => {
     })
   })
 
+  it("The description of the document should be updated as well", function () {
+    loadDefaultState(store.state)
+    const expectedDescription = store.getters.getPageMetaData("/").description
+
+    return waitForPromises().then(() => {
+      assert.equal(
+        document
+          .querySelector('meta[name="description"]')
+          .getAttribute("content"),
+        expectedDescription
+      )
+    })
+  })
+
   it("The html lang attribute should be updated as well", function () {
     loadDefaultState(store.state)
     const page_metadata = store.getters.getPageMetaData("/")

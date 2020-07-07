@@ -29,6 +29,7 @@ const definitionsSchema = {
       type: "object",
       properties: {
         title: { $ref: "definitions.json#/definitions/non-empty-string" },
+        description: { $ref: "definitions.json#/definitions/non-empty-string" },
         name: { $ref: "definitions.json#/definitions/non-empty-string" },
         path: { $ref: "definitions.json#/definitions/path" },
         url: { $ref: "definitions.json#/definitions/path" },

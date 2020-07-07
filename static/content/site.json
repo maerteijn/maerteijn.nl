@@ -10,6 +10,7 @@
   "pages": [
     {
       "title": "maerteijn - hallo",
+      "description": "Welkom, ik ben Martijn Jacobs, freelance software developer uit Arnhem",
       "name": "hallo",
       "path": "/nl",
       "url": "/content/nl/hallo.md",
@@ -24,6 +25,7 @@
     },
     {
        "title": "maerteijn - projecten",
+       "description": "Een overzicht van alle projecten die ik heb gedaan",
        "name": "projecten",
        "path": "/nl/projecten",
        "url": "/content/nl/projecten.md",
@@ -37,6 +39,7 @@
     },
     {
       "title": "maerteijn - projecten - mijn website met vue",
+      "description": "Mijn eigen website, gebouwd met Vue.js",
       "name": "mijn-website-met-vue",
       "path": "/nl/projecten/mijn-website-met-vue",
       "url": "/content/nl/projecten/mijn-website-met-vue.md",
@@ -54,6 +57,7 @@
     },
     {
       "title": "maerteijn - projecten - corporate website voor zumtobel",
+      "description": "De corporate website van Zumtobel, hebouwd met Wagtail",
       "name": "corporate-website-voor-zumtobel",
       "path": "/nl/projecten/corporate-website-voor-zumtobel",
       "url": "/content/nl/projecten/corporate-website-voor-zumtobel.md",
@@ -71,6 +75,7 @@
     },
     {
       "title": "maerteijn - projecten - high performance cluster api",
+      "description": "Een API voor een High Performance Cluster, gebouwd met Django REST Framework",
       "name": "high-performance-cluster-api",
       "path": "/nl/projecten/high-performance-cluster-api",
       "url": "/content/nl/projecten/high-performance-cluster-api.md",
@@ -88,6 +93,7 @@
     },
     {
       "title": "maerteijn - projecten - webshop en microservices api voor liander",
+      "description": "Een SPA applicatie voor Liander, gebouwd met React en Django REST Framework",
       "name": "webshop-en-microservices-api-voor-liander",
       "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
       "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
@@ -105,6 +111,7 @@
     },
     {
       "title": "maerteijn - projecten - rpi saltstack deployment voor vadain",
+      "description": "Raspberry Pi automatisering met Saltstack",
       "name": "rpi-saltstack-deployment-voor-vadain",
       "path": "/nl/projecten/rpi-saltstack-deployment-voor-vadain",
       "url": "/content/nl/projecten/rpi-saltstack-deployment-voor-vadain.md",
@@ -123,6 +130,7 @@
 
     {
       "title": "maerteijn - projecten - e-commerce platform voor nutricia",
+      "description": "E-Commerce API, gebouwd met Django Oscar API en Django REST Framework",
       "name": "e-commerce-platform-voor-nutricia",
       "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
       "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
@@ -140,6 +148,7 @@
     },
     {
       "title": "maerteijn - contact",
+      "description": "Een overzicht van kanalen hoe je mij kunt bereiken",
       "name": "contact",
       "path": "/nl/contact",
       "url": "/content/nl/contact.md",
@@ -153,6 +162,7 @@
     },
     {
       "title": "maerteijn - colofon",
+      "description": "Een overzicht van alle technieken en tools die ik heb gebruikt voor deze website",
       "name": "colofon",
       "path": "/nl/colophon",
       "url": "/content/nl/colofon.md",
@@ -167,6 +177,7 @@
     {
       "title": "maerteijn - home",
       "name": "home",
+      "description": "Hi, I'm Martijn Jacobs, a freelance software developer based in Arnhem, NL",
       "path": "/en",
       "url": "/content/en/home.md",
       "type": "ContentPage",
@@ -180,6 +191,7 @@
     },
     {
       "title": "maerteijn - projects",
+      "description": "An overview of the projects I did in the past",
       "name": "projects",
       "path": "/en/projects",
       "url": "/content/en/projects.md",
@@ -193,6 +205,7 @@
    },
    {
       "title": "maerteijn - projects - my personal website with vue.js",
+      "description": "My personal website, built with Vue.js",
       "name": "my-personal-website-with-vue",
       "path": "/en/projects/my-personal-website-with-vue",
       "url": "/content/en/projects/my-personal-website-with-vue.md",
@@ -210,6 +223,7 @@
    },
    {
       "title": "maerteijn - projects - corporate website for zumtobel",
+      "description": "The Zumtobel corporate website, built with Wagtail",
       "name": "corporate-website-for-zumtobel",
       "path": "/en/projects/corporate-website-for-zumtobel",
       "url": "/content/en/projects/corporate-website-for-zumtobel.md",
@@ -228,6 +242,7 @@
    {
       "title": "maerteijn - projects - high performance cluster api",
       "name": "high-performance-cluster-api",
+      "description": "A High Performance Cluster API, built with Django REST Framework",
       "path": "/en/projects/high-performance-cluster-api",
       "url": "/content/en/projects/high-performance-cluster-api.md",
       "type": "ContentPage",
@@ -245,6 +260,7 @@
     {
       "title": "maerteijn - projects - webshop and microservices api for liander",
       "name": "webshop-and-microservices-api-for-liander",
+      "description": "A SPA application for Liander, built with React and Django REST Framework",
       "path": "/en/projects/webshop-and-microservices-api-for-liander",
       "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
       "type": "ContentPage",
@@ -261,6 +277,7 @@
     },
     {
       "title": "maerteijn - projects - rpi saltstack deployment for vadain",
+      "description": "Raspberry Pi automated deployment with Saltstack",
       "name": "rpi-saltstack-deployment-for-vadain",
       "path": "/en/projects/rpi-saltstack-deployment-for-vadain",
       "url": "/content/en/projects/rpi-saltstack-deployment-for-vadain.md",
@@ -278,6 +295,7 @@
     },
     {
       "title": "maerteijn - projects - e-commerce platform for nutricia",
+      "description": "E-Commerce API built with Django Oscar API and Django REST Framework",
       "name": "e-commerce-platform-for-nutricia",
       "path": "/en/projects/e-commerce-platform-for-nutricia",
       "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
@@ -295,6 +313,7 @@
     },
     {
       "title": "maerteijn - contact",
+      "description": "An overview how you can reach me",
       "name": "contact",
       "path": "/en/contact",
       "url": "/content/en/contact.md",
@@ -308,6 +327,7 @@
     },
     {
       "title": "maerteijn - colophon",
+      "description": "An overview of all technologies and tools I used for this website",
       "name": "colophon",
       "path": "/en/colophon",
       "url": "/content/en/colophon.md",
