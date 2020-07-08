@@ -144,7 +144,9 @@
   ],
   "sitemap_settings": {
     "site_json": "static/content/site.json",
-    "hostname": "https://www.maerteijn.nl"
+    "hostname": "https://www.maerteijn.nl",
+    "base_language": "nl",
+    "translated_language": "en"
   },
   "staticFiles": {
     "staticPath": "static",
