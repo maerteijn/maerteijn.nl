@@ -9,7 +9,7 @@ describe("Test parcel plugin", () => {
       .then((data) => {
         assert.include(data, '<?xml version="1.0" encoding="UTF-8"?>')
         // there should be 10 url tags in the sitemap
-        assert.lengthOf(data.match(/\<url\>/g) || [], 10)
+        assert.lengthOf(data.match(/\<url\>/g) || [], 20)
       })
   })
 })
