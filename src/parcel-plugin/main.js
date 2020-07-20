@@ -17,37 +17,15 @@ const loadJSON = async (json_path) => {
   return parsed
 }
 
-const generate_sitemap = (
-  hostname,
-  pages,
-  base_language,
-  translated_language
-) => {
+const generate_sitemap = (hostname, pages) => {
   const stream = new SitemapStream({ hostname: hostname })
-  const base_pages = pages.filter(
-    (page) => page.settings.language == base_language
-  )
-
-  base_pages.forEach((page) => {
-    const [translated_page] = pages.filter(
-      (candidate) =>
-        candidate.settings.identifier == page.settings.identifier &&
-        candidate.settings.language == translated_language
-    )
-
-    const sitemap_record = {
+  pages.forEach((page) =>
+    stream.write({
       url: page.path,
+      changefreq: "daily",
       lastmod: new Date().toISOString(),
-    }
-
-    if (translated_page) {
-      sitemap_record["links"] = [
-        { lang: base_language, url: page.path },
-        { lang: translated_language, url: translated_page.path },
-      ]
-    }
-    stream.write(sitemap_record)
-  })
+    })
+  )
   stream.end()
   return streamToPromise(stream).then((data) => data.toString())
 }
@@ -67,9 +45,7 @@ export default (bundler) => {
 
       const sitemap_xml = await generate_sitemap(
         package_json.sitemap_settings.hostname,
-        site_json.pages.filter((page) => page.type == "ContentPage"),
-        package_json.sitemap_settings.base_language,
-        package_json.sitemap_settings.translated_language
+        site_json.pages.filter((page) => page.type == "ContentPage")
       )
 
       const dest_path = path.join(path.dirname(bundle.name), "sitemap.xml")
