@@ -45,7 +45,7 @@
     "parcel-plugin-static-files-copy": "^2.4.3",
     "playwright-chromium": "^1.2.1",
     "prettier": "^2.0.5",
-    "regenerator-runtime": "^0.13.5",
+    "regenerator-runtime": "^0.13.6",
     "sass": "^1.26.10",
     "sinon": "^9.0.2",
     "sitemap": "^6.2.0",
