@@ -5,9 +5,7 @@
   },
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/nl", "status": 308, "headers": { "Location": "/" } },
     { "src": "/.*", "dest": "/index.html" }
-  ],
-  "redirects": [
-    { "source": "/nl", "destination": "/" }
   ]
  }
