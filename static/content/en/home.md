@@ -17,8 +17,6 @@ See the [Projects](/en/projects) page for an impression of the projects I did in
 
 
 ## Hire me
-*For new projects I'm available from: __September 28, 2020__*
-
 You can hire me on a "per-project" basis as (senior-)developer, code reviewer, consultant or devops engineer:
 
 - :calendar: Available up to 3 days per week
