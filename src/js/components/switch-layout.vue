@@ -1,6 +1,6 @@
 <template>
   <div class="switch-layout" v-if="!isOldBrowser()">
-    <a title="Switch layout">
+    <a title="Switch layout" href="/" onclick="return false;">
       <div
         id="switch-layout"
         class="icon"

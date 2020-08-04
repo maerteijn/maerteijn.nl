@@ -21,6 +21,7 @@
         <div class="item" v-for="item in links">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             v-bind:href="item.url"
             v-bind:title="item.title"
             v-html="icon(item.font_awesome_icon)"
