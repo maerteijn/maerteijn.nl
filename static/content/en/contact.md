@@ -17,6 +17,7 @@ Jansbinnensingel 26
 6811 AL
 Arnhem, NL
 
+#### Company details
 CoC: [53073231](https://www.kvk.nl/zoeken/?source=all&q=maerteijn)
 VAT: NL001916128B66
 
