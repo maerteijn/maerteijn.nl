@@ -38,7 +38,7 @@
     "express": "^4.17.1",
     "jsdom": "^16.4.0",
     "jsdom-global": "^3.0.2",
-    "mocha": "^8.1.1",
+    "mocha": "^8.1.3",
     "nyc": "^15.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-local-plugins": "0.0.3",
