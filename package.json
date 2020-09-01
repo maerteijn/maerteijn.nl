@@ -27,7 +27,7 @@
   "license": "SEE LICENSE IN LICENCE",
   "homepage": "https://github.com/maerteijn/maerteijn.github.io",
   "devDependencies": {
-    "@babel/core": "^7.11.4",
+    "@babel/core": "^7.11.5",
     "@babel/plugin-transform-object-assign": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@vue/component-compiler-utils": "^3.2.0",
