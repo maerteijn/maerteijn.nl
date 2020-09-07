@@ -84,36 +84,12 @@ export default {
   }
 
   .left {
-    background-image: -moz-radial-gradient(
-      30% 50%,
-      circle farthest-corner,
-      variables.$background-color-left-first,
-      variables.$background-color-left-second 100%
-    );
-    background-image: -webkit-radial-gradient(
-      30% 50%,
-      circle farthest-corner,
-      variables.$background-color-left-first,
-      variables.$background-color-left-second 100%
-    );
-    background-image: -o-radial-gradient(
-      30% 50%,
-      circle farthest-corner,
-      variables.$background-color-left-first,
-      variables.$background-color-left-second 100%
-    );
-    background-image: -ms-radial-gradient(
-      30% 50%,
-      circle farthest-corner,
-      variables.$background-color-left-first,
-      variables.$background-color-left-second 100%
-    );
     background-image: radial-gradient(
-      30% 50%,
-      circle farthest-corner,
+      farthest-corner at 30% 50%,
       variables.$background-color-left-first,
       variables.$background-color-left-second 100%
     );
+
     border-right: solid 1px variables.$orange-color;
     box-shadow: 0 5px 15px 0 variables.$drop-shadow-color;
     color: variables.$font-color-left;
