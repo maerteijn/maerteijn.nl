@@ -8,10 +8,11 @@ __Maerteijn__ is an "[Old Dutch spelling](https://en.wikipedia.org/wiki/Old_Dutc
 ![Martijn](/images/photo-small.jpg#left =120x133) I have 15+ years of development experience, mostly with (but not limited to) the programming language [Python](https://www.python.org/). I like to write readable and adaptable code. In my view, code only turns into software when a test is written for it. QA, packaging and deployment are things I like to automate with tools as [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) or [Saltstack](https://www.saltstack.com/).
 
 
-I'm not afraid to ask questions when necessary. I think it's really important that the project objectives are completely clear for myself and the customer or client. I feel confident in all kinds of roles when I'm part of a project team, such as lead- developer / developer, MR/PR reviewer, sparring partner or technical assessor. I'm perfectly fine to work completely independent as well.
+I'm not afraid to ask questions when necessary. I think it's really important that the project objectives are completely clear for myself and the customer or client. I feel confident in all kinds of roles when I'm part of a project team, such as (lead-)developer, MR/PR reviewer or technical assessor. I'm perfectly fine to work completely independent as well.
 
 
-The last years I've mainly used the web application framework [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/). I'm also maintaining [Django Oscar API](https://github.com/django-oscar/django-oscar-api/). I consider Open Source Software to be a good thing and try to contribute where I can. More recently I started using [Vue.js](https://vuejs.org/) and I'm curious about any platform or technology as long it's the right tool for the job.
+The last years I've mainly used the web application framework [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/). I'm also maintaining [Django Oscar API](https://github.com/django-oscar/django-oscar-api/).
+
 
 See the [Projects](/en/projects) page for an impression of the projects I did in the past.
 
