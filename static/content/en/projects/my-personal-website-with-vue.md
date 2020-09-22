@@ -1,6 +1,6 @@
 # My Personal Website with Vue.js
 
-![My personal website](/images/vue-js-based-personal-website.jpg#left =200x137) Front-end development is still changing rapidly so I found it useful to do a project with the current technologies to stay up-to-date as a (back-end) developer. I used [Vue.js](https://vuejs.org/) as a framework to build my personal website as it's easy to learn. Vue.js is considered a good alternative for the very popular [React](https://reactjs.org/) framework.
+![My personal website](/images/vue-js-based-personal-website.jpg#left =215x147) Front-end development is still changing rapidly so I found it useful to do a project with the current technologies to stay up-to-date as a (back-end) developer. I used [Vue.js](https://vuejs.org/) as a framework to build my personal website as it's easy to learn. Vue.js is considered a good alternative for the very popular [React](https://reactjs.org/) framework.
 
 Due to the popularity of all kinds of cloud based platforms and API's there is a more clear separation possible between presentation and data with nowadays web-development, also on the Front-end. From that point of view I wanted to build this website to explore the possibilities.
 

@@ -1,6 +1,6 @@
 # Mijn website met Vue.js
 
-![Mijn website](/images/vue-js-based-personal-website.jpg#left =200x137)De wereld van Front-end development verandert in een razend tempo en daarom is het goed om als (backend) ontwikkelaar up-to-date te blijven en er een project mee te doen. [Vue.js](https://vuejs.org/) heb ik gebruikt als framework omdat het relatief makkelijk te leren is. Vue.js is een een populaire tegenhanger van het veel gebruikte [React](https://reactjs.org/).
+![Mijn website](/images/vue-js-based-personal-website.jpg#left =215x147)De wereld van Front-end development verandert in een razend tempo en daarom is het goed om als (backend) ontwikkelaar up-to-date te blijven en er een project mee te doen. [Vue.js](https://vuejs.org/) heb ik gebruikt als framework omdat het relatief makkelijk te leren is. Vue.js is een een populaire tegenhanger van het veel gebruikte [React](https://reactjs.org/).
 
 Door de komst en populariteit van allerlei Cloud platformen en API's is er met web-development anno nu een duidelijke scheiding mogelijk tussen presentatie en data, ook op de Front-end. Deze website wilde ik bouwen om te zien wat er nu mogelijk is vanuit dat principe.
 

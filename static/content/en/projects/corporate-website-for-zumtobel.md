@@ -1,6 +1,6 @@
 # Corporate website for Zumtobel
 
-![Zumtobel homepage](/images/zumtobel-homepage.jpg#left =200x137)[Four Digits](https://www.fourdigits.nl/) asked me to join their team as a developer for the complete redevelopment of several corporate websites on behalf of the Austria based [Zumtobel Group](http://z.lighting). It was challenging on multiple levels: technical, but also on a organisational level as development took place on three different continents.
+![Zumtobel homepage](/images/zumtobel-homepage.jpg#left =215x147)[Four Digits](https://www.fourdigits.nl/) asked me to join their team as a developer for the complete redevelopment of several corporate websites on behalf of the Austria based [Zumtobel Group](http://z.lighting). It was challenging on multiple levels: technical, but also on a organisational level as development took place on three different continents.
 
 
 [Wagtail](https://wagtail.io/) was chosen as the CMS platform to manage all content for the different brands. The existing back-end systems of Zumtobel, containing all the product information details, are exposed on the websites with [GraphQL](https://graphql.org/) and a REST API. This way, specific portfolio's for each region were made accessible in different languages.

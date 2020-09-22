@@ -1,6 +1,6 @@
 # High Performance Cluster API
 
-![HPC Cluster API](/images/hpc-cluster-api.jpg#left =200x137)In opdracht van [Four Digits](https://www.fourdigits.nl/) ontwierpen én ontwikkelden we met [Django REST Framework](https://www.django-rest-framework.org) een makkelijk te begrijpen en toegankelijke REST API om een High Performance Computing Cluster te ontsluiten. Complexe en veeleisende taken kunnen zo makkelijk op het cluster worden afgevuurd door specifieke agents die op het cluster draaien.
+![HPC Cluster API](/images/hpc-cluster-api.jpg#left =215x147)In opdracht van [Four Digits](https://www.fourdigits.nl/) ontwierpen én ontwikkelden we met [Django REST Framework](https://www.django-rest-framework.org) een makkelijk te begrijpen en toegankelijke REST API om een High Performance Computing Cluster te ontsluiten. Complexe en veeleisende taken kunnen zo makkelijk op het cluster worden afgevuurd door specifieke agents die op het cluster draaien.
 
 De op Django gebaseerde beheerapplicatie en de agents gebruiken een [RabbitMQ](https://www.rabbitmq.com/) message bus voor betrouwbare communicatie tussen het cluster en de clients. De status van de taken die op het cluster draaien en de status van de agents kunnen altijd via de REST API worden opgevraagd.
 

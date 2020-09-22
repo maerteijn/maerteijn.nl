@@ -1,6 +1,6 @@
 # Projects
 
-![My office desk](/images/my-office-desk.jpg#left =210x157) An overview of some of my projects I did it the past can be found here. You can see a complete list of all the projects on my [LinkedIn profile](https://www.linkedin.com/in/maerteijn/). None of these projects I could have done without the awesome efforts of my colleagues and co-workers, and all those talented people who open sourced their fantastic software!
+![My office desk](/images/my-office-desk.jpg#left =200x150) An overview of some of my projects I did it the past can be found here. You can see a complete list of all the projects on my [LinkedIn profile](https://www.linkedin.com/in/maerteijn/). None of these projects I could have done without the awesome efforts of my colleagues and co-workers, and all those talented people who open sourced their fantastic software!
 
 #### Overview
 
