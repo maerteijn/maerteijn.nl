@@ -20,7 +20,7 @@
 #### Front-end
 - [Vue.js](https://github.com/vuejs/vue) - Uitgebreide en makkelijk te leren Component Framework
 - [Bulma](https://github.com/jgthms/bulma) - Moderne CSS library en makkelijk aanpasbaar
-- [Font awesome](https://github.com/FortAwesome/Font-Awesome) - Voor de iconen en tegenwoordig ook met een JavaScript API
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome) - Voor de iconen en tegenwoordig ook met een JavaScript API
 - [Showdown](https://github.com/showdownjs/showdown) - Een snelle [Markdown](https://www.markdownguide.org/) renderer in JavaScript
 - [Axios](https://github.com/axios/axios) - De defacto JavaScript HTTP client
 - [Google Fonts](https://github.com/google/fonts) - Het *Play* font dat gebruikt wordt in deze website
