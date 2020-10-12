@@ -58,7 +58,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.15.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.0",
-    "ajv": "^6.12.5",
+    "ajv": "^6.12.6",
     "axios": "^0.20.0",
     "bulma": "^0.9.0",
     "core-js": "^3.6.5",
