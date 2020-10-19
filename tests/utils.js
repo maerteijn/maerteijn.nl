@@ -4,7 +4,10 @@ import sinon from "sinon"
 
 import { mount, createLocalVue } from "@vue/test-utils"
 
-import modules from "../dist/test"
+import DefaultLayout from "@/js/layouts/default"
+import BasicLayout from "@/js/layouts/basic"
+import store from "@/js/store"
+import router from "@/js/router"
 
 import * as fixtures from "./fixtures"
 
@@ -17,8 +20,8 @@ export function createVueInstance(withRouter = true) {
   }
 
   // And let the local vue instance have the global layout components available
-  localVue.component("default-layout", modules.DefaultLayout)
-  localVue.component("basic-layout", modules.BasicLayout)
+  localVue.component("default-layout", DefaultLayout)
+  localVue.component("basic-layout", BasicLayout)
 
   return localVue
 }
@@ -26,10 +29,10 @@ export function createVueInstance(withRouter = true) {
 export function createComponent(component, propsData = {}) {
   return mount(component, {
     localVue: createVueInstance(),
-    router: modules.router,
+    router: router,
     propsData: propsData,
     mocks: {
-      $state: modules.store.state,
+      $state: store.state,
     },
   })
 }
@@ -38,7 +41,7 @@ export function createComponentWithoutRouter(component, current_route = {}) {
   return mount(component, {
     localVue: createVueInstance(false),
     mocks: {
-      $state: modules.store.state,
+      $state: store.state,
       $route: current_route,
       $router: sinon.createStubInstance(VueRouter),
     },

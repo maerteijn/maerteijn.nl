@@ -6,16 +6,17 @@ import { chromium } from "playwright-chromium"
 
 import { startServer } from "./server"
 
-const dist = path.resolve(__dirname, "../../dist/e2e")
+const dist = path.resolve(__dirname, "../../dist/")
+const build = path.join(dist, "release")
 const screenshots = path.join(dist, "screenshots")
 
-const site = JSON.parse(fs.readFileSync(path.join(dist, "content/site.json")))
+const site = JSON.parse(fs.readFileSync(path.join(build, "content/site.json")))
 const default_page = site.pages[0]
 
-describe("Scenario: Go to the homepage an click all links in the navigation", () => {
+describe("Test browsing the website", () => {
   before(async function () {
     this.timeout(5000)
-    this.server = startServer(0, dist)
+    this.server = startServer(0, build)
     this.port = this.server.address().port
     // Add {headless: false} to show the browser
     this.browser = await chromium.launch()
@@ -108,5 +109,12 @@ describe("Scenario: Go to the homepage an click all links in the navigation", ()
       const page = site.pages.filter((page) => page.name == id)[0]
       assert.isTrue(location.endsWith(page.path))
     }
+  })
+
+  it("There is also a sitemap available", async function () {
+    const response = await this.page.goto(
+      `http://localhost:${this.port}/sitemap.xml`
+    )
+    assert.equal(response.status(), 200)
   })
 })

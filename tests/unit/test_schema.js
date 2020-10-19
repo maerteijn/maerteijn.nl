@@ -1,6 +1,6 @@
 import { assert } from "chai"
 
-import { validator } from "../../src/js/schema.js"
+import { validator } from "@/js/schema"
 import * as fixtures from "../fixtures"
 
 describe("JSON Schema", () => {

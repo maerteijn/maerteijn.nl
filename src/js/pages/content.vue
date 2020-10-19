@@ -26,7 +26,7 @@
 <script>
 import axios from "axios"
 
-import getComntentComponent from "../components/utils"
+import getContentComponent from "../components/utils"
 import Loading from "../components/loading"
 import BackLink from "../components/backlink"
 import { actions, getters } from "../store"
@@ -47,14 +47,14 @@ export default {
       const metadata = getters.getPageMetaData(this.$route.path)
       return (
         metadata.content_component &&
-        getComntentComponent(metadata.content_component)
+        getContentComponent(metadata.content_component)
       )
     },
     footer_component() {
       const metadata = getters.getPageMetaData(this.$route.path)
       return (
         metadata.footer_component &&
-        getComntentComponent(metadata.footer_component)
+        getContentComponent(metadata.footer_component)
       )
     },
     backlink() {
@@ -79,8 +79,9 @@ export default {
         document.title = metadata.title || ""
         const language = metadata.settings && metadata.settings.language
         document.querySelector("html").setAttribute("lang", language)
-        document.getElementsByTagName("meta")["description"].content =
-          metadata.description
+        document
+          .getElementsByTagName("meta")
+          ["description"].setAttribute("content", metadata.description)
       },
     },
   },

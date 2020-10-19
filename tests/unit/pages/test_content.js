@@ -3,8 +3,6 @@ import Vue from "vue"
 import { assert } from "chai"
 import { mount, createWrapper } from "@vue/test-utils"
 
-import modules from "../../../dist/test"
-
 import {
   createComponentWithoutRouter,
   mock_axios_success,
@@ -14,13 +12,17 @@ import {
   waitForPromises,
 } from "../../utils"
 
+import ContentPage from "@/js/pages/content"
+import LastUpdated from "@/js/components/last-updated"
+import MarkdownViewer from "@/js/components/markdown-viewer"
+
 import * as fixtures from "../../fixtures"
 
-const store = modules.store
+import store from "@/js/store"
 
 describe("Content page", () => {
   beforeEach(function () {
-    this.wrapper = createComponentWithoutRouter(modules.ContentPage, {
+    this.wrapper = createComponentWithoutRouter(ContentPage, {
       path: "/",
     })
     resetState(store.state)
@@ -90,7 +92,7 @@ describe("Content page", () => {
       },
     }
     store.state.site.pages.push(metadata)
-    assert.deepEqual(this.wrapper.vm.content_component, modules.MarkdownViewer)
+    assert.deepEqual(this.wrapper.vm.content_component, MarkdownViewer)
   })
 
   it("The footer_component computed property works as expected", function () {
@@ -104,7 +106,7 @@ describe("Content page", () => {
       },
     }
     store.state.site.pages.push(metadata)
-    assert.deepEqual(this.wrapper.vm.footer_component, modules.LastUpdated)
+    assert.deepEqual(this.wrapper.vm.footer_component, LastUpdated)
   })
 
   it("The backlink computed property works as expected", function () {
@@ -129,7 +131,7 @@ describe("Content page", () => {
 describe("Content page - extended", () => {
   beforeEach(function () {
     this.stub = mock_axios_success()
-    this.wrapper = createComponentWithoutRouter(modules.ContentPage, {
+    this.wrapper = createComponentWithoutRouter(ContentPage, {
       path: "/",
     })
   })

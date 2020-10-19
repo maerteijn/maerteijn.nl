@@ -23,15 +23,15 @@ jobs:
       run: npm run stylelint
     - name: Run prettier
       run: npm run prettier
-    - name: Run the unit and functional tests
-      run: npm run test:coverage
+    - name: Run the unittests
+      run: npm run test:unit
     - name: Run the e2e tests
       run: npm run test:e2e
     - name: Archive screenshots
       uses: actions/upload-artifact@v1
       with:
         name: screenshots
-        path: dist/e2e/screenshots
+        path: dist/screenshots
 
   build-release:
     needs: run-ci-steps
