@@ -6,6 +6,8 @@
           src="../../assets/images/logo-full.svg"
           alt="freelance software developer"
           title="maerteijn"
+          width="320"
+          height="107"
           v-on:click="goHome()"
         />
       </figure>
@@ -14,6 +16,8 @@
           src="../../assets/images/logo-small.svg"
           alt="freelance software developer"
           title="maerteijn"
+          width="40"
+          height="18"
           v-on:click="goHome()"
         />
       </figure>
