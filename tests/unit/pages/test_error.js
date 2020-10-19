@@ -1,17 +1,17 @@
 import { assert } from "chai"
 
-import modules from "../../../dist/test"
-
 import { createComponent } from "../../utils"
+
+import ErrorPage from "@/js/pages/error"
 
 describe("Error page", () => {
   it("We can initialize an Error page", () => {
-    const wrapper = createComponent(modules.ErrorPage, { error: "" })
+    const wrapper = createComponent(ErrorPage, { error: "" })
     assert.equal(wrapper.vm.$options.name, "error-page")
   })
 
   it("The component renders as expected", () => {
-    const wrapper = createComponent(modules.ErrorPage, { error: "" })
+    const wrapper = createComponent(ErrorPage, { error: "" })
     assert.isFalse(wrapper.find(".error-message").exists())
 
     // now update the message

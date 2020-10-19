@@ -1,6 +1,6 @@
 import { assert } from "chai"
 
-import { renderMarkdown } from "../../src/js/markdown"
+import { renderMarkdown } from "@/js/markdown"
 
 const markdown = `
 # Header

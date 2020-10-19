@@ -8,7 +8,7 @@ The website structure is defined in a [JSON file](https://github.com/maerteijn/m
 
 
 #### Noticeable technologies
-- [Parcel](https://parceljs.org/) web application bundler with a custom [plugin](https://github.com/maerteijn/maerteijn.nl/blob/master/src/parcel-plugin/main.js) to generate a XML site-map
+- [Vue CLI](https://cli.vuejs.org/) - A convenient command line tool for developing and releasing Vue applications including an optimized webpack configuration and testing utilities
 - [Vue Single File Components](https://vuejs.org/v2/guide/single-file-components.html), the template, JavaScript and styling (CSS and [SASS](https://sass-lang.com/) for each component are contained in a single *.vue* file
 - [Microsoft Playwright](https://playwright.dev/) with [Express](https://expressjs.com/) for E2E browser-tests
 - [Github actions](https://github.com/maerteijn/maerteijn.nl/actions?query=workflow%3A%22maerteijn.nl+ci%22) for CI/CD including deployment to [Vercel](https://vercel.com/) (ZEIT)

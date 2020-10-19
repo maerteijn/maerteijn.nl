@@ -13,7 +13,7 @@
 #### JS development
 *I've used many tools, see the [package.json](https://github.com/maerteijn/maerteijn.nl/blob/master/package.json) file for all of them, but to mention a few:*
 - [Node.js](https://github.com/nodejs) - You can't do JS development without it
-- [Parcel](https://github.com/parcel-bundler) - A fast and extendable bundler including a development server and support for all kinds of assets, including *.vue* files
+- [Vue CLI](https://cli.vuejs.org/) - A convenient command line tool for developing and releasing Vue applications including an optimized webpack configuration and testing utilities
 - [Sass](https://github.com/sass/sass) - For the CSS in this website
 
 

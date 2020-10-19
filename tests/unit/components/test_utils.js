@@ -1,20 +1,20 @@
 import { assert } from "chai"
 import Vue from "vue"
 
-import modules from "../../../dist/test"
+// import getContentComponent from "@/js/components/utils"
+// import MarkdownViewer from "@/js/components/markdown-viewer"
+// import LastUpdated from "@/js/components/last-updated"
 
-describe("Test pages utils", () => {
-  it("The getContentComponent returns undefined when the contentcomponent is not known", () => {
-    assert.isUndefined(modules.getContentComponent("unknown"))
-  })
-
-  it("The getContentComponent returns the MarkdownViewer component", () => {
-    const component = modules.getContentComponent("MarkdownViewer")
-    assert.equal(component, modules.MarkdownViewer)
-  })
-
-  it("The getContentComponent returns the LastUpdated component", () => {
-    const component = modules.getContentComponent("LastUpdated")
-    assert.equal(component, modules.LastUpdated)
-  })
+describe("Test component utils", () => {
+  // it("The getContentComponent returns undefined when the contentcomponent is not known", () => {
+  //   assert.isUndefined(getContentComponent("unknown"))
+  // })
+  // it("The getContentComponent returns the MarkdownViewer component", () => {
+  //   const component = getContentComponent("MarkdownViewer")
+  //   assert.equal(component, MarkdownViewer)
+  // })
+  // it("The getContentComponent returns the LastUpdated component", () => {
+  //   const component = getContentComponent("LastUpdated")
+  //   assert.equal(component, LastUpdated)
+  // })
 })

@@ -1,14 +1,13 @@
 import { assert } from "chai"
 
-import modules from "../../../dist/test"
-
 import {
   createComponentWithoutRouter,
   loadDefaultState,
   resetState,
 } from "../../utils"
 
-const store = modules.store
+import store from "@/js/store"
+import SwitchLanguage from "@/js/components/switch-language"
 
 describe("Switch language component", () => {
   beforeEach(() => {
@@ -21,12 +20,12 @@ describe("Switch language component", () => {
   })
 
   it("We can initialize a SwitchLanguage component", () => {
-    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
+    const wrapper = createComponentWithoutRouter(SwitchLanguage)
     assert.equal(wrapper.vm.$options.name, "switch-language")
   })
 
   it("The availableLanguages computed property works as expected", () => {
-    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
+    const wrapper = createComponentWithoutRouter(SwitchLanguage)
     assert.deepEqual(
       wrapper.vm.availableLanguages,
       Object.keys(store.state.site.site_settings.languages)
@@ -34,7 +33,7 @@ describe("Switch language component", () => {
   })
 
   it("The currentLanguage computed property works as expected", () => {
-    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
+    const wrapper = createComponentWithoutRouter(SwitchLanguage, {
       path: "/",
     })
     assert.equal(
@@ -44,7 +43,7 @@ describe("Switch language component", () => {
   })
 
   it("The canSwitch computed property works as expected", () => {
-    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage)
+    const wrapper = createComponentWithoutRouter(SwitchLanguage)
     assert.isTrue(wrapper.vm.canSwitch)
     store.state.site.site_settings.languages = {}
     assert.isFalse(wrapper.vm.canSwitch)
@@ -52,7 +51,7 @@ describe("Switch language component", () => {
 
   it("Clicking the language should store the new language in the localStorage", () => {
     assert.isUndefined(window.localStorage.language)
-    const wrapper = createComponentWithoutRouter(modules.SwitchLanguage, {
+    const wrapper = createComponentWithoutRouter(SwitchLanguage, {
       path: "/",
     })
     wrapper.find("a").trigger("click")

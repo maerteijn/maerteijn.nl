@@ -1,20 +1,22 @@
 import { assert } from "chai"
 import Vue from "vue"
 
-import modules from "../../../dist/test"
+import getPageComponent from "@/js/pages/utils"
+import ContentPage from "@/js/pages/content"
+import RedirectPage from "@/js/pages/redirect"
 
 describe("Test pages utils", () => {
   it("The getPageComponent returns undefined when the page component is not known", () => {
-    assert.isUndefined(modules.getPageComponent("unknown"))
+    assert.isUndefined(getPageComponent("unknown"))
   })
 
   it("The getPageComponent returns the RedirectPage component", () => {
-    const component = modules.getPageComponent("RedirectPage")
-    assert.equal(component, modules.RedirectPage)
+    const component = getPageComponent("RedirectPage")
+    assert.equal(component, RedirectPage)
   })
 
   it("The getPageComponent returns the ContentPage component", () => {
-    const component = modules.getPageComponent("ContentPage")
-    assert.equal(component, modules.ContentPage)
+    const component = getPageComponent("ContentPage")
+    assert.equal(component, ContentPage)
   })
 })

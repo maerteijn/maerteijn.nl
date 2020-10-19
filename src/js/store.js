@@ -15,7 +15,7 @@ export const state = Vue.observable({
   },
   content: {},
   loaded: false,
-  lastUpdated: process.env.BUILD_TIME || "unknown",
+  lastUpdated: process.env.VUE_APP_BUILD_TIME || "unknown",
   layout: isOldBrowser() ? "basic-layout" : "default-layout",
   error: null,
 })
@@ -118,13 +118,4 @@ export default {
   state,
   getters,
   actions,
-}
-
-// Let parcel hot reload the current site when developing
-if (process.env.NODE_ENV === "development") {
-  if (module.hot) {
-    module.hot.accept(() => {
-      actions.loadSite("/content/site.json")
-    })
-  }
 }

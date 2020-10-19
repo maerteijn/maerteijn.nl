@@ -1,6 +1,6 @@
 import { assert } from "chai"
 
-import { isOldBrowser, normalizePath } from "../../src/js/utils"
+import { isOldBrowser, normalizePath } from "@/js/utils"
 
 describe("Test utils", () => {
   afterEach(() => {

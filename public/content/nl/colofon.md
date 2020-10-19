@@ -13,7 +13,7 @@
 #### JS development
 *Ik heb vele tools en utility's gebruikt, zie het [package.json](https://github.com/maerteijn/maerteijn.nl/blob/master/package.json) bestand om te allemaal terug te vinden, maar enkele voorbeelden zijn:*
 - [Node.js](https://github.com/nodejs) - De defacto JS ontwikkelomgeving
-- [Parcel](https://github.com/parcel-bundler) - Een snelle en makkelijk uitbreidbare bundler inclusief een development server. Ondersteunt allerlei "assets", waaronder *.vue* bestanden
+- [Vue CLI](https://cli.vuejs.org/) - Handige tool voor het ontwikkelen en releasen van Vue applicaties, inclusief webpack configuratie en testing tools
 - [Sass](https://github.com/sass/sass) - Gebruikt voor alle stylesheets in deze website
 
 

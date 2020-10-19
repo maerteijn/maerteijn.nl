@@ -1,12 +1,11 @@
 import { assert } from "chai"
 
-import modules from "../../dist/test"
-
-const router = modules.router
+import router, { resetRouter } from "@/js/router"
+import RedirectPage from "@/js/pages/redirect"
 
 describe("Test router", () => {
   beforeEach(() => {
-    modules.resetRouter(router)
+    resetRouter(router)
   })
   it("The router includes 0 routes as we load all routes dynamically", () => {
     assert.equal(router.options.routes.length, 0)
@@ -18,7 +17,7 @@ describe("Test router", () => {
       {
         name: "my-route",
         path: "*",
-        component: modules.RedirectPage,
+        component: RedirectPage,
       },
     ])
 
@@ -26,7 +25,7 @@ describe("Test router", () => {
     assert.equal(router.resolve("*").route.name, "my-route")
 
     // let's reset the router
-    modules.resetRouter(router)
+    resetRouter(router)
     assert.isNull(router.resolve("*").route.name)
   })
 })

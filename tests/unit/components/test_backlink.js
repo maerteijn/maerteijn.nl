@@ -1,12 +1,12 @@
 import { assert } from "chai"
 
-import modules from "../../../dist/test"
-
 import { createComponent } from "../../utils"
+
+import BackLink from "@/js/components/backlink"
 
 describe("BackLink component", () => {
   it("We can initialize a LastUpdated component", () => {
-    const wrapper = createComponent(modules.BackLink, {
+    const wrapper = createComponent(BackLink, {
       title: "Hello",
       path: "/is/it/me",
     })
@@ -14,7 +14,7 @@ describe("BackLink component", () => {
   })
 
   it("The last updated component renders a link when path and title are given", () => {
-    const wrapper = createComponent(modules.BackLink, {
+    const wrapper = createComponent(BackLink, {
       title: "Hello",
       path: "/is/it/me",
     })

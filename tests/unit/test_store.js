@@ -1,11 +1,11 @@
 import { assert } from "chai"
 
-import modules from "../../dist/test"
 import { mock_axios_success, mock_axios_error, resetState } from "../utils"
 
-import * as fixtures from "../fixtures"
+import store from "@/js/store"
+import router from "@/js/router"
 
-const store = modules.store
+import * as fixtures from "../fixtures"
 
 describe("Test store", () => {
   describe("Initial state", () => {
@@ -148,10 +148,7 @@ describe("Test store", () => {
       return store.actions.loadSite("/content/site.json").then(() => {
         // all routes from the site should be resolvable by the router
         site.pages.forEach((page) => {
-          assert.include(
-            modules.router.resolve(page.path).route.path,
-            page.path
-          )
+          assert.include(router.resolve(page.path).route.path, page.path)
         })
       })
     })

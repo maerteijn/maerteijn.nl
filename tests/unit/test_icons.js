@@ -1,6 +1,6 @@
 import { assert } from "chai"
 
-import { icons, getIcon } from "../../src/js/icons"
+import { icons, getIcon } from "@/js/icons"
 
 describe("Test icons", () => {
   it("The icons export contains 7 icons", () => {
