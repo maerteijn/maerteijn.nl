@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: screenshots
-        path: dist/e2e/screenshots
+        path: dist/screenshots
 
   build-release:
     needs: run-ci-steps

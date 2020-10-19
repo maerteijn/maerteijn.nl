@@ -6,16 +6,17 @@ import { chromium } from "playwright-chromium"
 
 import { startServer } from "./server"
 
-const dist = path.resolve(__dirname, "../../dist/release")
+const dist = path.resolve(__dirname, "../../dist/")
+const build = path.join(dist, "release")
 const screenshots = path.join(dist, "screenshots")
 
-const site = JSON.parse(fs.readFileSync(path.join(dist, "content/site.json")))
+const site = JSON.parse(fs.readFileSync(path.join(build, "content/site.json")))
 const default_page = site.pages[0]
 
 describe("Test browsing the website", () => {
   before(async function () {
     this.timeout(5000)
-    this.server = startServer(0, dist)
+    this.server = startServer(0, build)
     this.port = this.server.address().port
     // Add {headless: false} to show the browser
     this.browser = await chromium.launch()
