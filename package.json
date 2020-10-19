@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --port 1234",
-    "build": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/release && node src/sitemap/index.js",
-    "build:e2e": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/e2e",
+    "build:sitemap": " node src/sitemap/index.js",
+    "build": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/release && npm run build:sitemap",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
@@ -13,7 +13,7 @@
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
-    "test:e2e": "npm run build:e2e && mocha --exit tests/e2e/test_*.js"
+    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
