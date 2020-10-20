@@ -5,14 +5,11 @@ Welkom, ik ben Martijn Jacobs, freelance software ontwikkelaar uit [Arnhem](http
 __Maerteijn__ is een "[Oudnederlandse](https://nl.wikipedia.org/wiki/Oudnederlands)" spellingsvariant van mijn voornaam. Ik gebruik het ook als mijn bedrijfsnaam.
 
 ## Profiel
-![Martijn](/images/photo-small.jpg#left =130x150) Ik heb 15+ jaar ervaring als software ontwikkelaar, met name met de programmeertaal [Python](https://www.python.org/). Ik schrijf graag leesbare en aanpasbare programmacode en ik ben van mening dat code pas software wordt als er een test voor is. Ik automatiseer QA, Devops, packaging en deployment met diverse tools als [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) of [Saltstack](https://www.saltstack.com/).
+![Martijn](/images/photo-small.jpg#left =130x150) Ik heb 15+ jaar ervaring als software ontwikkelaar, met name met de programmeertaal [Python](https://www.python.org/). Ik schrijf graag leesbare en aanpasbare programmacode en ik ben van mening dat code pas software wordt als er een test voor is. Ik automatiseer en voorzie QA, Devops, packaging en deployment graag met diverse tools als [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) of [Saltstack](https://www.saltstack.com/).
 
+De laatste jaren heb ik vooral met [Django](https://www.djangoproject.com/) in combinatie met [Django REST Framework](https://www.django-rest-framework.org/) gewerkt. Ik ben ook maintainer van [Django Oscar API](https://github.com/django-oscar/django-oscar-api/). Front-end ontwikkeling met bijvoorbeeld [Vue.js](https://vuejs.org/) vind ik ook interessant.
 
-Ik stel vragen waar nodig en vind het belangrijk dat er duidelijkheid bestaat over wat er ontwikkeld moet worden, zowel bij mijzelf als bij de klant of opdrachtgever. Ik kan goed uit de voeten in projectteams in allerlei rollen, zoals (lead-)developer, reviewer van code of criticus van technische beslissingen. Ik kan daarnaast ook prima zelfstandig aan een project of opdracht werken.
-
-
-De laatste jaren heb ik vooral met [Django](https://www.djangoproject.com/) in combinatie met [Django REST Framework](https://www.django-rest-framework.org/) gewerkt. Ik ben ook maintainer van [Django Oscar API](https://github.com/django-oscar/django-oscar-api/).
-
+Ik kan goed uit de voeten in projectteams in allerlei rollen, zoals (lead-)developer, reviewer van code of criticus van technische beslissingen. Ik kan daarnaast ook prima zelfstandig aan een project of opdracht werken.
 
 Zie [Projecten](/nl/projecten) voor een impressie van mijn projecten de laatste jaren.
 
