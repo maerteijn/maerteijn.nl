@@ -38,6 +38,25 @@
        }
     },
     {
+      "title": "maerteijn - projecten - groothandel ecommerce voor highbiza",
+      "description": "Groothandel E-cCmmerce voor Highbiza, gebouwd met Django Oscar",
+      "name": "groothandel-ecommerce-voor-highbiza",
+      "path": "/nl/projecten/groothandel-ecommerce-voor-highbiza",
+      "url": "/content/nl/projecten/groothandel-ecommerce-voor-highbiza.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 11,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+
+    {
       "title": "maerteijn - projecten - mijn website met vue",
       "description": "Mijn eigen website, gebouwd met Vue.js",
       "name": "mijn-website-met-vue",
@@ -127,10 +146,9 @@
         }
       }
     },
-
     {
       "title": "maerteijn - projecten - e-commerce platform voor nutricia",
-      "description": "E-Commerce API, gebouwd met Django Oscar API en Django REST Framework",
+      "description": "E-commerce API, gebouwd met Django Oscar API en Django REST Framework",
       "name": "e-commerce-platform-voor-nutricia",
       "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
       "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
@@ -204,6 +222,24 @@
       }
    },
    {
+      "title": "maerteijn - projects - wholesale ecommerce for highbiza",
+      "description": "Wholesale E-commerce for Highbiza, built with Django Oscar",
+      "name": "wholesale-ecommerce-for-highbiza",
+      "path": "/en/projects/wholesale-ecommerce-for-highbiza",
+      "url": "/content/en/projects/wholesale-ecommerce-for-highbiza.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 11,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+    },
+    {
       "title": "maerteijn - projects - my personal website with vue.js",
       "description": "My personal website, built with Vue.js",
       "name": "my-personal-website-with-vue",
@@ -295,7 +331,7 @@
     },
     {
       "title": "maerteijn - projects - e-commerce platform for nutricia",
-      "description": "E-Commerce API built with Django Oscar API and Django REST Framework",
+      "description": "E-commerce API built with Django Oscar API and Django REST Framework",
       "name": "e-commerce-platform-for-nutricia",
       "path": "/en/projects/e-commerce-platform-for-nutricia",
       "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",

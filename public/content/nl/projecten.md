@@ -6,9 +6,10 @@
 
 | :calendar: Periode  | :file_folder: Project                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------- |
+| 2020                | [Groothandel E-commerce voor Highbiza](/nl/projecten/groothandel-ecommerce-voor-highbiza)            |
 | 2020                | [Mijn website met Vue.js](/nl/projecten/mijn-website-met-vue)                                        |
 | 2019                | [Corporate website voor Zumtobel](/nl/projecten/corporate-website-voor-zumtobel)                     |
-| 2018 - 2019         | [High Performance Cluster API](/nl/projecten/high-performance-cluster-api)                          |
+| 2018 - 2019         | [High Performance Cluster API](/nl/projecten/high-performance-cluster-api)                           |
 | 2018                | [Webshop en Microservices API voor Liander](/nl/projecten/webshop-en-microservices-api-voor-liander) |
 | 2017                | [Raspberry PI Saltstack deployment voor Vadain](/nl/projecten/rpi-saltstack-deployment-voor-vadain)  |
-| 2015 - 2016         | [E-Commerce platform voor Nutricia](/nl/projecten/e-commerce-platform-voor-nutricia)                 |
+| 2015 - 2016         | [E-commerce platform voor Nutricia](/nl/projecten/e-commerce-platform-voor-nutricia)                 |
