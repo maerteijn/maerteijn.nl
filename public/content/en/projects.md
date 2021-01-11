@@ -6,9 +6,10 @@
 
 | :calendar: Period  | :file_folder: Project                                                                                |
 | ------------------ | ---------------------------------------------------------------------------------------------------- |
+| 2020               | [Wholesale E-commerce for Highbiza](/en/projects/wholesale-ecommerce-for-highbiza)                   |
 | 2020               | [My Personal Website with Vue.js](/en/projects/my-personal-website-with-vue)                         |
 | 2019               | [Corporate website for Zumtobel](/en/projects/corporate-website-for-zumtobel)                        |
-| 2018 - 2019        | [High Performance Cluster API](/en/projects/high-performance-cluster-api)                           |
+| 2018 - 2019        | [High Performance Cluster API](/en/projects/high-performance-cluster-api)                            |
 | 2018               | [Web-shop and Microservices API for Liander](/en/projects/webshop-and-microservices-api-for-liander) |
 | 2017               | [Raspberry PI Saltstack deployment for Vadain](/en/projects/rpi-saltstack-deployment-for-vadain)     |
-| 2015 - 2016        | [E-Commerce platform for Nutricia](/en/projects/e-commerce-platform-for-nutricia)                    |
+| 2015 - 2016        | [E-commerce platform for Nutricia](/en/projects/e-commerce-platform-for-nutricia)                    |
