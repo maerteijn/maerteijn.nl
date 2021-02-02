@@ -34,7 +34,7 @@
     "@babel/preset-env": "^7.12.11",
     "@vue/cli-plugin-babel": "~4.5.11",
     "@vue/cli-plugin-router": "~4.5.11",
-    "@vue/cli-plugin-unit-mocha": "~4.5.10",
+    "@vue/cli-plugin-unit-mocha": "~4.5.11",
     "@vue/cli-service": "~4.5.11",
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "@vue/component-compiler-utils": "^3.2.0",
