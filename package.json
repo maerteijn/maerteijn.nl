@@ -51,7 +51,7 @@
     "playwright-chromium": "^1.8.0",
     "prettier": "^2.2.1",
     "regenerator-runtime": "^0.13.7",
-    "sass": "^1.32.4",
+    "sass": "^1.32.6",
     "sass-loader": "^10.1.1",
     "sinon": "^9.2.3",
     "sitemap": "^6.3.5",
