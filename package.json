@@ -56,7 +56,7 @@
     "sinon": "^9.2.4",
     "sitemap": "^6.3.6",
     "style-resources-loader": "^1.4.1",
-    "stylelint": "^13.10.0",
+    "stylelint": "^13.11.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.12"
