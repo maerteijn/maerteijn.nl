@@ -6,7 +6,7 @@
 [Wagtail](https://wagtail.io/) was chosen as the CMS platform to manage all content for the different brands. The existing back-end systems of Zumtobel, containing all the product information details, are exposed on the websites with [GraphQL](https://graphql.org/) and a REST API. This way, specific portfolio's for each region were made accessible in different languages.
 
 
-Because of the huge amount of content we used [wagtail-factories](https://github.com/mvantellingen/wagtail-factories) to generate dummy content during development. Not only very useful for writing tests but also needed to demonstrate the newly developed functionalities in each sprint demo. The Front-end (developed by an external design agency) is tightly integrated into the Wagtail CMS so content editors can see the result of their work immediately in the correct design.
+Because of the huge amount of content we used [wagtail-factories](https://github.com/wagtail/wagtail-factories) to generate dummy content during development. Not only very useful for writing tests but also needed to demonstrate the newly developed functionalities in each sprint demo. The Front-end (developed by an external design agency) is tightly integrated into the Wagtail CMS so content editors can see the result of their work immediately in the correct design.
 
 
 #### Noticeable technologies

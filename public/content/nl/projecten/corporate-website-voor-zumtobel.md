@@ -6,7 +6,7 @@
 [Wagtail](https://wagtail.io/) is gekozen als CMS systeem voor het beheren van de verschillende merken van Zumtobel. De diverse backend systemen, zoals het product informatie systeem van Zumtobel, zijn ontsloten met [GraphQL](https://graphql.org/) en een REST API. Hierdoor konden we al hun productportfolio's per regio beschikbaar maken in verschillende talen.
 
 
-Door de vele content maakten we gebruik van [wagtail-factories](https://github.com/mvantellingen/wagtail-factories) om de content te genereren tijdens de ontwikkelfase. Dat was niet alleen nuttig voor de testsuite; Ook voor de sprint demos was dit nodig om in een vroeg stadium van het project de gevraagde functionaliteit te kunnen tonen. De Front-end, die is ontwikkeld door een extern bureau, is nauw geïntegreerd in het CMS zodat de contentbeheerders direct het resultaat kunnen zien.
+Door de vele content maakten we gebruik van [wagtail-factories](https://github.com/wagtail/wagtail-factories) om de content te genereren tijdens de ontwikkelfase. Dat was niet alleen nuttig voor de testsuite; Ook voor de sprint demos was dit nodig om in een vroeg stadium van het project de gevraagde functionaliteit te kunnen tonen. De Front-end, die is ontwikkeld door een extern bureau, is nauw geïntegreerd in het CMS zodat de contentbeheerders direct het resultaat kunnen zien.
 
 
 #### Uitgelichte technologieën
