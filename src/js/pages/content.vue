@@ -93,11 +93,8 @@ export default {
 </script>
 
 <style lang="scss">
-.page {
-  animation: fadeIn ease 1s;
-  flex-grow: 1;
-  padding-bottom: 1rem;
-
+@mixin animation($seconds) {
+  animation: fadeIn ease $seconds;
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -105,6 +102,23 @@ export default {
 
     100% {
       opacity: 1;
+    }
+  }
+}
+
+.page {
+  flex-grow: 1;
+  padding-bottom: 1rem;
+
+  div.content {
+    @include animation(1s);
+
+    img {
+      @include animation(2s);
+    }
+
+    table {
+      @include animation(1.5s);
     }
   }
 }
