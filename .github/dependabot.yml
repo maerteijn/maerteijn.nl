@@ -5,6 +5,9 @@ updates:
   schedule:
     interval: daily
     timezone: Europe/Amsterdam
+  allowed_updates:
+    - match:
+        update_type: "security"
   pull-request-branch-name:
     separator: "-"
   open-pull-requests-limit: 10
