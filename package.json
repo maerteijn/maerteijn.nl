@@ -16,7 +16,7 @@
     "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "ajv": "^6.12.5",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
-    "@babel/plugin-transform-object-assign": "^7.12.13",
+    "@babel/plugin-transform-object-assign": "^7.14.5",
     "@babel/preset-env": "^7.12.17",
     "@vue/cli-plugin-babel": "~4.5.11",
     "@vue/cli-plugin-router": "~4.5.11",
