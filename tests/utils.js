@@ -1,8 +1,9 @@
 import axios from "axios"
 import VueRouter from "vue-router"
 import sinon from "sinon"
+import { createApp } from "vue"
 
-import { mount, createLocalVue } from "@vue/test-utils"
+import { mount } from "@vue/test-utils"
 
 import DefaultLayout from "@/js/layouts/default"
 import BasicLayout from "@/js/layouts/basic"
@@ -12,40 +13,42 @@ import router from "@/js/router"
 import * as fixtures from "./fixtures"
 
 export function createVueInstance(withRouter = true) {
-  const localVue = createLocalVue()
+  const app = createApp({})
 
   if (withRouter) {
     // Let the local vue instance use Vuerouter
-    localVue.use(VueRouter)
+    app.use(VueRouter)
   }
 
-  // And let the local vue instance have the global layout components available
-  localVue.component("default-layout", DefaultLayout)
-  localVue.component("basic-layout", BasicLayout)
+  // And let the  vue instance have the global layout components available
+  app.component("default-layout", DefaultLayout)
+  app.component("basic-layout", BasicLayout)
 
-  return localVue
+  return app
 }
 
-export function createComponent(component, propsData = {}) {
+export function createComponent(component, props = {}) {
   return mount(component, {
-    localVue: createVueInstance(),
-    router: router,
-    propsData: propsData,
-    mocks: {
-      $state: store.state,
+    props: props,
+    global: {
+      plugins: [router],
+      mocks: {
+        $state: store.state,
+      },
     },
   })
 }
 
 export function createComponentWithoutRouter(component, current_route = {}) {
   return mount(component, {
-    localVue: createVueInstance(false),
-    mocks: {
-      $state: store.state,
-      $route: current_route,
-      $router: sinon.createStubInstance(VueRouter),
+    global: {
+      mocks: {
+        $state: store.state,
+        $route: current_route,
+        $router: sinon.createStubInstance(VueRouter),
+      },
+      stubs: ["router-link", "router-view"],
     },
-    stubs: ["router-link", "router-view"],
   })
 }
 
