@@ -210,19 +210,6 @@ describe("Content page - extended", () => {
     })
   })
 
-  it("When an error occurs, an error message is emitted", function () {
-    this.stub = mock_axios_error()
-
-    // so let's go to the projects page
-    loadDefaultState(store.state)
-    this.wrapper.vm.$route = { path: "/nl/projects" }
-
-    return waitForPromises().then(() => {
-      const root = createWrapper(this.wrapper.vm.$root)
-      assert.property(root.emitted(), "error")
-    })
-  })
-
   it("When a backlink exists, it is rendered on the page", function () {
     assert.isFalse(this.wrapper.find(".backlink").exists())
 

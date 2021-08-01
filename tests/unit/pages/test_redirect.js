@@ -1,5 +1,4 @@
 import { assert } from "chai"
-import { createWrapper } from "@vue/test-utils"
 
 import {
   createComponentWithoutRouter,
@@ -57,10 +56,6 @@ describe("Redirect page", () => {
     const wrapper = createComponentWithoutRouter(RedirectPage)
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
-
-    // an error object should be emitted as well
-    const root = createWrapper(wrapper.vm.$root)
-    assert.property(root.emitted(), "error")
   })
 
   it("And when no routes exist", () => {
@@ -68,9 +63,5 @@ describe("Redirect page", () => {
     const wrapper = createComponentWithoutRouter(RedirectPage)
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
-
-    // an error object should be emitted as well
-    const root = createWrapper(wrapper.vm.$root)
-    assert.property(root.emitted(), "error")
   })
 })
