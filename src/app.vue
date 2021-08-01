@@ -18,9 +18,6 @@ export default {
       .loadSite("/content/site.json")
       .then(() => this.resetError())
       .catch((e) => this.handleError(e))
-    // emitted error messages from all child components  will be catched and
-    // handled by this.handleError
-    this.$root.$on("error", (e) => this.handleError(e))
   },
   errorCaptured(error, component, details) {
     // capture all vue errors and handle them with handleError

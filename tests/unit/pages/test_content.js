@@ -4,7 +4,7 @@ import { assert } from "chai"
 import { mount, createWrapper } from "@vue/test-utils"
 
 import {
-  createComponentWithoutRouter,
+  createWrapperForComponent,
   mock_axios_success,
   mock_axios_error,
   loadDefaultState,
@@ -22,9 +22,13 @@ import store from "@/js/store"
 
 describe("Content page", () => {
   beforeEach(function () {
-    this.wrapper = createComponentWithoutRouter(ContentPage, {
-      path: "/",
-    })
+    this.wrapper = createWrapperForComponent(
+      ContentPage,
+      {},
+      {
+        path: "/",
+      }
+    )
     resetState(store.state)
   })
 
@@ -131,9 +135,13 @@ describe("Content page", () => {
 describe("Content page - extended", () => {
   beforeEach(function () {
     this.stub = mock_axios_success()
-    this.wrapper = createComponentWithoutRouter(ContentPage, {
-      path: "/",
-    })
+    this.wrapper = createWrapperForComponent(
+      ContentPage,
+      {},
+      {
+        path: "/",
+      }
+    )
   })
 
   afterEach(function () {
@@ -207,19 +215,6 @@ describe("Content page - extended", () => {
         document.getElementsByTagName("html")[0].getAttribute("lang"),
         page_metadata.settings.language
       )
-    })
-  })
-
-  it("When an error occurs, an error message is emitted", function () {
-    this.stub = mock_axios_error()
-
-    // so let's go to the projects page
-    loadDefaultState(store.state)
-    this.wrapper.vm.$route = { path: "/nl/projects" }
-
-    return waitForPromises().then(() => {
-      const root = createWrapper(this.wrapper.vm.$root)
-      assert.property(root.emitted(), "error")
     })
   })
 

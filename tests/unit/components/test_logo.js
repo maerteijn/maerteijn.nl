@@ -1,7 +1,7 @@
 import { assert } from "chai"
 import sinon from "sinon"
 
-import { createComponentWithoutRouter } from "../../utils"
+import { createWrapperForComponent } from "../../utils"
 
 import * as fixtures from "../../fixtures"
 
@@ -9,12 +9,12 @@ import Logo from "@/js/components/logo"
 
 describe("Logo component", () => {
   it("We can initialize a Logo component", () => {
-    const wrapper = createComponentWithoutRouter(Logo)
+    const wrapper = createWrapperForComponent(Logo)
     assert.equal(wrapper.vm.$options.name, "logo")
   })
 
   it("The logo component renders a desktop and mobile version", () => {
-    const wrapper = createComponentWithoutRouter(Logo)
+    const wrapper = createWrapperForComponent(Logo)
     assert.isTrue(wrapper.find(".logo-container figure.desktop").exists())
     assert.isTrue(wrapper.find(".logo-container figure.mobile").exists())
   })
@@ -22,7 +22,7 @@ describe("Logo component", () => {
 
 describe("Logo component - extended", () => {
   beforeEach(function () {
-    this.wrapper = createComponentWithoutRouter(Logo)
+    this.wrapper = createWrapperForComponent(Logo)
     this.wrapper.vm.$state.site = JSON.parse(fixtures.site_json)
     this.wrapper.vm.$state.loaded = true
   })
