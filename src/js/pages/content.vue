@@ -67,9 +67,7 @@ export default {
       immediate: true,
       handler(loaded) {
         if (loaded && this.$route.path) {
-          actions
-            .downloadContent(this.$route.path)
-            .catch((e) => this.$root.$emit("error", e))
+          actions.downloadContent(this.$route.path)
         }
       },
     },

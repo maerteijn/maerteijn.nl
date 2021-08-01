@@ -25,7 +25,8 @@
     "core-js": "^3.16.0",
     "showdown": "^1.9.1",
     "viewerjs": "^1.10.0",
-    "vue": "^2.6.14",
+    "vue": "^3.1.0",
+    "@vue/compat": "^3.1.0",
     "vue-router": "^3.5.2"
   },
   "devDependencies": {
@@ -37,7 +38,7 @@
     "@vue/cli-plugin-unit-mocha": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
     "@vue/component-compiler-utils": "^3.2.2",
-    "@vue/test-utils": "^1.2.2",
+    "@vue/test-utils": "^2.0.0-rc.12",
     "chai": "^4.3.4",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.15.0",
@@ -59,7 +60,7 @@
     "stylelint-config-sass-guidelines": "^7.1.0",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
     "vue-hot-reload-api": "^2.3.4",
-    "vue-template-compiler": "^2.6.14"
+    "@vue/compiler-sfc": "^3.1.0"
   },
   "eslintConfig": {
     "root": true,

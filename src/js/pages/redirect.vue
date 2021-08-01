@@ -16,10 +16,7 @@ export default {
     if (pages.length > 0) {
       this.$router.push(pages[0].path)
     } else {
-      this.$root.$emit(
-        "error",
-        new Error(`Can't find any page for language ${language}`)
-      )
+      this.$state.error = `Can't find any page for language ${language}`
     }
   },
 }
