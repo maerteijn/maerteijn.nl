@@ -378,7 +378,7 @@
     {
       "title": "maerteijn - redirect",
       "name": "Redirect",
-      "path": "*",
+      "path": "/:pathMatch(.*)*",
       "type": "RedirectPage",
       "settings": {}
     }
