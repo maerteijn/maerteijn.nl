@@ -12,35 +12,13 @@ import router from "@/js/router"
 
 import * as fixtures from "./fixtures"
 
-export function createVueInstance(withRouter = true) {
-  const app = createApp({})
-
-  if (withRouter) {
-    // Let the local vue instance use Vuerouter
-    app.use(VueRouter)
-  }
-
-  // And let the  vue instance have the global layout components available
-  app.component("default-layout", DefaultLayout)
-  app.component("basic-layout", BasicLayout)
-
-  return app
-}
-
-export function createComponent(component, props = {}) {
+export function createWrapperForComponent(
+  component,
+  props = {},
+  current_route = {}
+) {
   return mount(component, {
     props: props,
-    global: {
-      plugins: [router],
-      mocks: {
-        $state: store.state,
-      },
-    },
-  })
-}
-
-export function createComponentWithoutRouter(component, current_route = {}) {
-  return mount(component, {
     global: {
       mocks: {
         $state: store.state,

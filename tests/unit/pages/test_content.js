@@ -4,7 +4,7 @@ import { assert } from "chai"
 import { mount, createWrapper } from "@vue/test-utils"
 
 import {
-  createComponentWithoutRouter,
+  createWrapperForComponent,
   mock_axios_success,
   mock_axios_error,
   loadDefaultState,
@@ -22,9 +22,13 @@ import store from "@/js/store"
 
 describe("Content page", () => {
   beforeEach(function () {
-    this.wrapper = createComponentWithoutRouter(ContentPage, {
-      path: "/",
-    })
+    this.wrapper = createWrapperForComponent(
+      ContentPage,
+      {},
+      {
+        path: "/",
+      }
+    )
     resetState(store.state)
   })
 
@@ -131,9 +135,13 @@ describe("Content page", () => {
 describe("Content page - extended", () => {
   beforeEach(function () {
     this.stub = mock_axios_success()
-    this.wrapper = createComponentWithoutRouter(ContentPage, {
-      path: "/",
-    })
+    this.wrapper = createWrapperForComponent(
+      ContentPage,
+      {},
+      {
+        path: "/",
+      }
+    )
   })
 
   afterEach(function () {

@@ -1,7 +1,7 @@
 import { assert } from "chai"
 
 import {
-  createComponentWithoutRouter,
+  createWrapperForComponent,
   loadDefaultState,
   resetState,
 } from "../../utils"
@@ -17,28 +17,32 @@ describe("Navigation component", () => {
   })
 
   it("We can initialize a Navigation component", () => {
-    const wrapper = createComponentWithoutRouter(Navigation)
+    const wrapper = createWrapperForComponent(Navigation)
     assert.equal(wrapper.vm.$options.name, "navigation")
   })
 
   it("The navigation component renders a mobile menu", () => {
-    const wrapper = createComponentWithoutRouter(Navigation)
+    const wrapper = createWrapperForComponent(Navigation)
     assert.isTrue(wrapper.find("svg").exists())
     assert.isTrue(wrapper.find(".menu-button").exists())
     assert.isTrue(wrapper.find(".menu-icon").exists())
   })
 
   it("And a navigation container with no items", () => {
-    const wrapper = createComponentWithoutRouter(Navigation)
+    const wrapper = createWrapperForComponent(Navigation)
     assert.isFalse(wrapper.find(".navigation .item").exists())
   })
 })
 
 describe("Navigation component - extended", () => {
   beforeEach(function () {
-    this.wrapper = createComponentWithoutRouter(Navigation, {
-      path: "/",
-    })
+    this.wrapper = createWrapperForComponent(
+      Navigation,
+      {},
+      {
+        path: "/",
+      }
+    )
     loadDefaultState(store.state)
   })
 
