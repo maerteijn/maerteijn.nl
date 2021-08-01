@@ -2,7 +2,6 @@ import Vue from "vue"
 import axios from "axios"
 
 import router from "./router"
-import { resetRouter } from "./router"
 import { isOldBrowser, normalizePath } from "./utils"
 import getPageComponent from "./pages/utils"
 import { validator } from "./schema"
@@ -86,9 +85,13 @@ export const actions = {
           component: getPageComponent(page.type),
         }
       })
-      resetRouter(router)
-      router.addRoutes(routes)
+      routes.forEach((route) => {
+        router.addRoute(route)
+      })
       state.loaded = true
+
+      // go to the default route
+      router.push("/")
 
       return response.data
     })
