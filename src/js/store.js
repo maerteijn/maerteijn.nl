@@ -90,8 +90,8 @@ export const actions = {
       })
       state.loaded = true
 
-      // go to the default route
-      router.push("/")
+      // trigger the catch all page
+      router.push("/detect-language")
 
       return response.data
     })
