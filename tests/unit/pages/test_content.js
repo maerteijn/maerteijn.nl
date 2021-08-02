@@ -1,7 +1,7 @@
 import Vue from "vue"
 
 import { assert } from "chai"
-import { mount, createWrapper } from "@vue/test-utils"
+import { mount } from "@vue/test-utils"
 
 import {
   createWrapperForComponent,
@@ -33,7 +33,7 @@ describe("Content page", () => {
   })
 
   afterEach(function () {
-    this.wrapper.vm.$destroy()
+    this.wrapper.unmount()
     resetState(store.state)
   })
 
@@ -147,7 +147,7 @@ describe("Content page - extended", () => {
   afterEach(function () {
     this.stub.resetBehavior()
     resetState(store.state)
-    this.wrapper.vm.$destroy()
+    this.wrapper.unmount()
   })
 
   it("A content page renders a LastUpdated component when the footer_component is specified", function () {

@@ -16,6 +16,7 @@ describe("Last updated component", () => {
     store.state.lastUpdated = undefined
     const wrapper = createWrapperForComponent(LastUpdated)
     assert.notInclude(wrapper.html(), '<div class="last-updated">')
+    wrapper.unmount()
   })
 
   it("The lastUpdated computed property works as expected", function () {
@@ -27,6 +28,7 @@ describe("Last updated component", () => {
     assert.equal(wrapper.vm.updated, "today")
     return wrapper.vm.$nextTick().then(() => {
       assert.include(wrapper.html(), "<span>today</span>")
+      wrapper.unmount()
     })
   })
 })

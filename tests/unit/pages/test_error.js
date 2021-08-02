@@ -8,6 +8,7 @@ describe("Error page", () => {
   it("We can initialize an Error page", () => {
     const wrapper = createWrapperForComponent(ErrorPage, { error: "" })
     assert.equal(wrapper.vm.$options.name, "error-page")
+    wrapper.unmount()
   })
 
   it("The component renders as expected", () => {
@@ -18,6 +19,7 @@ describe("Error page", () => {
     wrapper.setProps({ error: "Oh no!" })
     return wrapper.vm.$nextTick().then(() => {
       assert.isTrue(wrapper.find(".error-message").exists())
+      wrapper.unmount()
     })
   })
 })

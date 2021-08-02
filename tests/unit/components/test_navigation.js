@@ -19,6 +19,7 @@ describe("Navigation component", () => {
   it("We can initialize a Navigation component", () => {
     const wrapper = createWrapperForComponent(Navigation)
     assert.equal(wrapper.vm.$options.name, "navigation")
+    wrapper.unmount()
   })
 
   it("The navigation component renders a mobile menu", () => {
@@ -26,11 +27,13 @@ describe("Navigation component", () => {
     assert.isTrue(wrapper.find("svg").exists())
     assert.isTrue(wrapper.find(".menu-button").exists())
     assert.isTrue(wrapper.find(".menu-icon").exists())
+    wrapper.unmount()
   })
 
   it("And a navigation container with no items", () => {
     const wrapper = createWrapperForComponent(Navigation)
     assert.isFalse(wrapper.find(".navigation .item").exists())
+    wrapper.unmount()
   })
 })
 
@@ -47,7 +50,7 @@ describe("Navigation component - extended", () => {
   })
 
   afterEach(function () {
-    this.wrapper.vm.$destroy()
+    this.wrapper.unmount()
     resetState(store.state)
   })
 

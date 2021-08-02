@@ -22,6 +22,7 @@ describe("Switch language component", () => {
   it("We can initialize a SwitchLanguage component", () => {
     const wrapper = createWrapperForComponent(SwitchLanguage)
     assert.equal(wrapper.vm.$options.name, "switch-language")
+    wrapper.unmount()
   })
 
   it("The availableLanguages computed property works as expected", () => {
@@ -30,6 +31,7 @@ describe("Switch language component", () => {
       wrapper.vm.availableLanguages,
       Object.keys(store.state.site.site_settings.languages)
     )
+    wrapper.unmount()
   })
 
   it("The currentLanguage computed property works as expected", () => {
@@ -44,6 +46,7 @@ describe("Switch language component", () => {
       wrapper.vm.currentLanguage,
       store.getters.getCurrentLanguage("/")
     )
+    wrapper.unmount()
   })
 
   it("The canSwitch computed property works as expected", () => {
@@ -51,6 +54,7 @@ describe("Switch language component", () => {
     assert.isTrue(wrapper.vm.canSwitch)
     store.state.site.site_settings.languages = {}
     assert.isFalse(wrapper.vm.canSwitch)
+    wrapper.unmount()
   })
 
   it("Clicking the language should store the new language in the localStorage", () => {
@@ -67,6 +71,7 @@ describe("Switch language component", () => {
     return wrapper.vm.$nextTick().then(() => {
       assert.property(window.localStorage, "language")
       assert.equal(window.localStorage.language, "en")
+      wrapper.unmount()
     })
   })
 })

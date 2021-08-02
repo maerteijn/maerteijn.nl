@@ -15,6 +15,7 @@ describe("Switch layout component", () => {
     const wrapper = createWrapperForComponent(SwitchLayout)
     assert.equal(wrapper.vm.$options.name, "switch-layout")
     assert.isTrue(wrapper.find(".switch-layout").exists())
+    wrapper.unmount()
   })
 
   it("The toggleLayout method will update the state", () => {
@@ -24,6 +25,7 @@ describe("Switch layout component", () => {
     assert.equal(store.state.layout, "basic-layout")
     wrapper.vm.toggleLayout()
     assert.equal(store.state.layout, "default-layout")
+    wrapper.unmount()
   })
 
   it("The component renders a svg icon", () => {
@@ -31,17 +33,20 @@ describe("Switch layout component", () => {
 
     const icon = wrapper.find("div.icon")
     assert.include(icon.html(), "<svg")
+    wrapper.unmount()
   })
 
   it("Clicking the icon should emit the layout-toggled event", () => {
     const wrapper = createWrapperForComponent(SwitchLayout)
     wrapper.find("div.icon").trigger("click")
     assert.property(wrapper.emitted(), "layout-toggled")
+    wrapper.unmount()
   })
 
   it("The component is not rendered when on IE11", () => {
     window.msCrypto = "something"
     const wrapper = createWrapperForComponent(SwitchLayout)
     assert.isFalse(wrapper.find(".switch-layout").exists())
+    wrapper.unmount()
   })
 })

@@ -11,6 +11,7 @@ describe("BackLink component", () => {
       path: "/is/it/me",
     })
     assert.equal(wrapper.vm.$options.name, "backlink")
+    wrapper.unmount()
   })
 
   it("The BackLink component renders a link when path and title are given", () => {
@@ -20,5 +21,6 @@ describe("BackLink component", () => {
     })
     assert.isTrue(wrapper.find(".backlink").exists())
     assert.equal(wrapper.find("router-link-stub").attributes("to"), "/is/it/me")
+    wrapper.unmount()
   })
 })
