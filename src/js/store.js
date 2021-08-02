@@ -92,6 +92,7 @@ export const actions = {
 
       // trigger the catch all page
       router.push("/detect-language")
+
       return response.data
     })
   },
