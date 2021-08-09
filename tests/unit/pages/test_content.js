@@ -169,20 +169,6 @@ describe("Content page - extended", () => {
     })
   })
 
-  it("Changing the route should reload the page", function () {
-    assert.isFalse(this.wrapper.find("h1#projects").exists())
-
-    // so let's go to the projects page
-    loadDefaultState(store.state)
-    this.wrapper.vm.$route = {
-      path: "/nl/projects",
-    }
-
-    return waitForPromises().then(() => {
-      assert.isTrue(this.wrapper.find("h1#projects").exists())
-    })
-  })
-
   it("The title of the document should be updated as well", function () {
     loadDefaultState(store.state)
     const expectedTitle = store.getters.getPageMetaData("/").title
