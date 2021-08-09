@@ -12,6 +12,13 @@ import router from "@/js/router"
 
 import * as fixtures from "./fixtures"
 
+export function waitForPromises() {
+  // A trick to wait for all promises to be resolved due to the scheduler nature
+  // of javascript. See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+  // and https://github.com/testing-library/react-testing-library/issues/11
+  return new Promise((resolve) => setImmediate(resolve))
+}
+
 export function createWrapperForComponent(
   component,
   props = {},
@@ -30,6 +37,18 @@ export function createWrapperForComponent(
         $router: mockrouter,
       },
       stubs: ["router-link", "router-view"],
+    },
+  })
+}
+
+export function createWrapperForApp(app, props = {}) {
+  return mount(app, {
+    props,
+    global: {
+      mocks: {
+        $state: store.state,
+      },
+      plugins: [router],
     },
   })
 }
@@ -83,11 +102,4 @@ export function resetState(state) {
   state.loaded = false
   state.layout = "default-layout"
   state.error = null
-}
-
-export function waitForPromises() {
-  // A trick to wait for all promises to be resolved due to the scheduler nature
-  // of javascript. See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
-  // and https://github.com/testing-library/react-testing-library/issues/11
-  return new Promise((resolve) => setImmediate(resolve))
 }
