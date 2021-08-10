@@ -1,5 +1,3 @@
-import Vue from "vue"
-
 import { assert } from "chai"
 import { mount } from "@vue/test-utils"
 
@@ -57,7 +55,7 @@ describe("Content page", () => {
     assert.equal(this.wrapper.vm.content, "")
     const content = "# Hello!"
 
-    Vue.set(store.state.content, "/", content)
+    store.state.content["/"] = content
     return this.wrapper.vm.$nextTick().then(() => {
       assert.equal(this.wrapper.vm.content, content)
     })
@@ -67,7 +65,7 @@ describe("Content page", () => {
     assert.isFalse(this.wrapper.vm.loaded)
 
     // set the content here so the loadContent method will return gracefully
-    Vue.set(store.state.content, "/", "Hello!")
+    store.state.content["/"] = "Hello!"
     store.state.loaded = true
     assert.isTrue(this.wrapper.vm.loaded)
   })
