@@ -70,6 +70,7 @@ export default {
           actions.downloadContent(this.$route.path)
         }
       },
+      deep: true,
     },
     page_metadata: {
       immediate: true,
@@ -81,6 +82,7 @@ export default {
           .getElementsByTagName("meta")
           ["description"].setAttribute("content", metadata.description)
       },
+      deep: true,
     },
   },
   components: {

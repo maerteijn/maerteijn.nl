@@ -102,11 +102,10 @@ describe("Test browsing the website", () => {
 
     // check if clicking them will result in the correct route
     for (const item of navigation_items) {
-      let id = await item.getAttribute("id")
-      await this.page.click(`a#${id}`)
-
+      const title = await item.getAttribute("title")
+      await this.page.click(`a[title=${title}]`)
       const location = await this.page.evaluate("location.href")
-      const page = site.pages.filter((page) => page.name == id)[0]
+      const page = site.pages.filter((page) => page.name == title)[0]
       assert.isTrue(location.endsWith(page.path))
     }
   })

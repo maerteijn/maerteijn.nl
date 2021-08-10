@@ -5,7 +5,7 @@
         ><a
           id="switch-language"
           title="Switch language"
-          href="/"
+          href="#"
           onclick="return false;"
           v-on:click="switchLanguage(language)"
           >{{ language }}</a
