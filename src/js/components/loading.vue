@@ -29,5 +29,6 @@ export default {
 
 <style lang="scss">
 .loading-component {
+  @include animation(2s);
 }
 </style>
