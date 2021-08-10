@@ -25,6 +25,7 @@ describe("Redirect page", () => {
   it("We can initialize a Redirect page", () => {
     const wrapper = createWrapperForComponent(RedirectPage)
     assert.equal(wrapper.vm.$options.name, "redirect-page")
+    wrapper.unmount()
   })
 
   it("It redirects to the default page of the current language", () => {
@@ -32,6 +33,7 @@ describe("Redirect page", () => {
     const language = store.state.site.site_settings.default_language
     const pages = store.getters.getPagesForLanguage(language)
     assert.isTrue(wrapper.vm.$router.push.calledWith(pages[0].path))
+    wrapper.unmount()
   })
 
   it("When we update the language, it will redirect to the page of that one", () => {
@@ -41,6 +43,7 @@ describe("Redirect page", () => {
     const language = store.state.site.site_settings.default_language
     const pages = store.getters.getPagesForLanguage(language)
     assert.isTrue(wrapper.vm.$router.push.calledWith(pages[0].path))
+    wrapper.unmount()
   })
 
   it("When the localStorage.language property is set, it will have precedence", () => {
@@ -51,6 +54,7 @@ describe("Redirect page", () => {
       window.localStorage.language
     )
     assert.isTrue(wrapper.vm.$router.push.calledWith(pages[0].path))
+    wrapper.unmount()
   })
 
   it("But it won't when only one route exists", () => {
@@ -59,6 +63,7 @@ describe("Redirect page", () => {
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
     assert.include(store.state.error, "Can't find any page for language")
+    wrapper.unmount()
   })
 
   it("And when no routes exist", () => {
@@ -67,5 +72,6 @@ describe("Redirect page", () => {
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
     assert.include(store.state.error, "Can't find any page for language")
+    wrapper.unmount()
   })
 })

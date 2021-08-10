@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     switchLanguage(language) {
-      console.log
       window.localStorage.language = language
       const translated_page =
         getters.getTranslatedPages(this.$route.path, language)[0] ||

@@ -11,6 +11,7 @@ describe("Markdown viewer component", () => {
       content: "hi!",
     })
     assert.equal(wrapper.vm.$options.name, "markdown-viewer")
+    wrapper.unmount()
   })
 
   it("The renderedMarkdown computed property works as expected", function () {
@@ -18,6 +19,7 @@ describe("Markdown viewer component", () => {
       content: "# Hello!",
     })
     assert.equal(wrapper.vm.renderedMarkdown, '<h1 id="hello">Hello!</h1>')
+    wrapper.unmount()
   })
 
   it("And it renders the markdown in the template", function () {
@@ -25,6 +27,7 @@ describe("Markdown viewer component", () => {
       content: "# Hello!",
     })
     assert.include(wrapper.html(), '<h1 id="hello">Hello!</h1>')
+    wrapper.unmount()
   })
 
   it("The component should call the createImageViewer method", function () {
@@ -33,15 +36,17 @@ describe("Markdown viewer component", () => {
     )
 
     // no image? then the image viewer should not be called
-    createWrapperForComponent(MarkdownViewer, { content: "#Hi!" })
+    let wrapper = createWrapperForComponent(MarkdownViewer, { content: "#Hi!" })
     assert.isFalse(MarkdownViewer.methods.createImageViewer.called)
+    wrapper.unmount()
 
     // when there is, it should cal it
-    const wrapper = createWrapperForComponent(MarkdownViewer, {
+    wrapper = createWrapperForComponent(MarkdownViewer, {
       content: "![Photo](/images/photo-small.jpg#left =120x*)",
     })
     assert.isTrue(MarkdownViewer.methods.createImageViewer.called)
     sinon.restore()
+    wrapper.unmount()
   })
 
   it("The component calls the createRouterLink function for internal links", function () {
@@ -50,14 +55,16 @@ describe("Markdown viewer component", () => {
     )
 
     // no link? then the create router link method should not be called
-    createWrapperForComponent(MarkdownViewer, { content: "#Hi!" })
+    let wrapper = createWrapperForComponent(MarkdownViewer, { content: "#Hi!" })
     assert.isFalse(MarkdownViewer.methods.createRouterLink.called)
+    wrapper.unmount()
 
     // when there is, it should cal it
-    const wrapper = createWrapperForComponent(MarkdownViewer, {
+    wrapper = createWrapperForComponent(MarkdownViewer, {
       content: "[My link](/to/an/internal/link)",
     })
     assert.isTrue(MarkdownViewer.methods.createRouterLink.called)
     sinon.restore()
+    wrapper.unmount()
   })
 })
