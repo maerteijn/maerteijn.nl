@@ -61,7 +61,7 @@ describe("Redirect page", () => {
     store.state.site.pages = [{ name: "a page" }]
     const wrapper = createWrapperForComponent(RedirectPage)
     assert.isFalse(wrapper.vm.$router.push.called)
-    assert.include(wrapper.text(), "404")
+    assert.include(wrapper.text(), "")
     assert.include(store.state.error, "Can't find any page for language")
     wrapper.unmount()
   })
@@ -70,7 +70,7 @@ describe("Redirect page", () => {
     store.state.site.pages = []
     const wrapper = createWrapperForComponent(RedirectPage)
     assert.isFalse(wrapper.vm.$router.push.called)
-    assert.include(wrapper.text(), "404")
+    assert.include(wrapper.text(), "")
     assert.include(store.state.error, "Can't find any page for language")
     wrapper.unmount()
   })
