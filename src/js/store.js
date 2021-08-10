@@ -1,4 +1,4 @@
-import Vue from "vue"
+import { reactive } from "vue"
 import axios from "axios"
 
 import router from "./router"
@@ -6,7 +6,7 @@ import { isOldBrowser, normalizePath } from "./utils"
 import getPageComponent from "./pages/utils"
 import { validator } from "./schema"
 
-export const state = Vue.observable({
+export const state = reactive({
   site: {
     pages: [],
     site_settings: { default_language: "", languages: {} },
@@ -111,7 +111,7 @@ export const actions = {
     }
     // download the content and save it in the store
     return axios.get(metadata.url).then((response) => {
-      Vue.set(state.content, path, response.data)
+      state.content[path] = response.data
       return response.data
     })
   },
