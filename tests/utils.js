@@ -17,13 +17,17 @@ export function createWrapperForComponent(
   props = {},
   current_route = {}
 ) {
+  const mockrouter = {
+    push: sinon.stub(),
+  }
+
   return mount(component, {
     props: props,
     global: {
       mocks: {
         $state: store.state,
         $route: current_route,
-        $router: sinon.createStubInstance(VueRouter),
+        $router: mockrouter,
       },
       stubs: ["router-link", "router-view"],
     },

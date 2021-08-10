@@ -1,17 +1,11 @@
-import VueRouter from "vue-router"
+import { createRouter, createWebHistory } from "vue-router"
 
-const createRouter = () =>
-  new VueRouter({
-    mode: "history",
+export const initRouter = () =>
+  createRouter({
+    history: createWebHistory(),
     routes: [],
   })
 
-export const resetRouter = (router) => {
-  const newRouter = createRouter()
-  router.matcher = newRouter.matcher
-  router.options.routes = []
-}
-
-const router = createRouter()
+const router = initRouter()
 
 export default router

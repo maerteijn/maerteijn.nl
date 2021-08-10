@@ -19,6 +19,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@vue/compat": "^3.1.0",
     "ajv": "^6.12.5",
     "axios": "^0.21.1",
     "bulma": "^0.9.3",
@@ -26,8 +27,7 @@
     "showdown": "^1.9.1",
     "viewerjs": "^1.10.0",
     "vue": "^3.1.0",
-    "@vue/compat": "^3.1.0",
-    "vue-router": "^3.5.2"
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -37,6 +37,7 @@
     "@vue/cli-plugin-router": "^4.5.13",
     "@vue/cli-plugin-unit-mocha": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.1.0",
     "@vue/component-compiler-utils": "^3.2.2",
     "@vue/test-utils": "^2.0.0-rc.12",
     "chai": "^4.3.4",
@@ -59,8 +60,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "vue-cli-plugin-style-resources-loader": "^0.1.5",
-    "vue-hot-reload-api": "^2.3.4",
-    "@vue/compiler-sfc": "^3.1.0"
+    "vue-hot-reload-api": "^2.3.4"
   },
   "eslintConfig": {
     "root": true,
