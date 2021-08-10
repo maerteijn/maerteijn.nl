@@ -148,7 +148,7 @@ describe("Test store", () => {
       return store.actions.loadSite("/content/site.json").then(() => {
         // all routes from the site should be resolvable by the router
         site.pages.forEach((page) => {
-          assert.include(router.resolve(page.path).route.path, page.path)
+          assert.include(router.resolve(page.path).path, page.path)
         })
       })
     })

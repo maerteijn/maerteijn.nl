@@ -60,7 +60,7 @@ export const site_json = `
     {
       "name": "redirect",
       "title": "maerteijn - redirect",
-      "path": "*",
+      "path": "/:pathMatch(.*)*",
       "type": "RedirectPage",
       "settings": {}
     }

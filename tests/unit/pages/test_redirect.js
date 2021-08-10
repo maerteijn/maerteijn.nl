@@ -4,6 +4,7 @@ import {
   createWrapperForComponent,
   loadDefaultState,
   resetState,
+  mock_axios_success,
 } from "../../utils"
 
 import RedirectPage from "@/js/pages/redirect"
@@ -11,13 +12,14 @@ import RedirectPage from "@/js/pages/redirect"
 import store from "@/js/store"
 
 describe("Redirect page", () => {
-  beforeEach(() => {
+  beforeEach(function () {
+    this.stub = mock_axios_success()
     loadDefaultState(store.state)
   })
 
-  afterEach(() => {
-    resetState(store.state)
+  afterEach(function () {
     delete window.localStorage.language
+    this.stub.resetBehavior()
   })
 
   it("We can initialize a Redirect page", () => {
@@ -56,6 +58,7 @@ describe("Redirect page", () => {
     const wrapper = createWrapperForComponent(RedirectPage)
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
+    assert.include(store.state.error, "Can't find any page for language")
   })
 
   it("And when no routes exist", () => {
@@ -63,5 +66,6 @@ describe("Redirect page", () => {
     const wrapper = createWrapperForComponent(RedirectPage)
     assert.isFalse(wrapper.vm.$router.push.called)
     assert.include(wrapper.text(), "404")
+    assert.include(store.state.error, "Can't find any page for language")
   })
 })
