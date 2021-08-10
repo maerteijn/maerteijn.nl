@@ -11,12 +11,14 @@ describe("Logo component", () => {
   it("We can initialize a Logo component", () => {
     const wrapper = createWrapperForComponent(Logo)
     assert.equal(wrapper.vm.$options.name, "logo")
+    wrapper.unmount()
   })
 
   it("The logo component renders a desktop and mobile version", () => {
     const wrapper = createWrapperForComponent(Logo)
     assert.isTrue(wrapper.find(".logo-container figure.desktop").exists())
     assert.isTrue(wrapper.find(".logo-container figure.mobile").exists())
+    wrapper.unmount()
   })
 })
 
@@ -28,7 +30,7 @@ describe("Logo component - extended", () => {
   })
 
   afterEach(function () {
-    this.wrapper.vm.$destroy()
+    this.wrapper.unmount()
   })
 
   it("The logo component renders icons from the store correctly", function () {

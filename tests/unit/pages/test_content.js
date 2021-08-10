@@ -1,7 +1,7 @@
 import Vue from "vue"
 
 import { assert } from "chai"
-import { mount, createWrapper } from "@vue/test-utils"
+import { mount } from "@vue/test-utils"
 
 import {
   createWrapperForComponent,
@@ -33,7 +33,7 @@ describe("Content page", () => {
   })
 
   afterEach(function () {
-    this.wrapper.vm.$destroy()
+    this.wrapper.unmount()
     resetState(store.state)
   })
 
@@ -147,7 +147,7 @@ describe("Content page - extended", () => {
   afterEach(function () {
     this.stub.resetBehavior()
     resetState(store.state)
-    this.wrapper.vm.$destroy()
+    this.wrapper.unmount()
   })
 
   it("A content page renders a LastUpdated component when the footer_component is specified", function () {
@@ -166,20 +166,6 @@ describe("Content page - extended", () => {
     // we will wait for all promises to be resolved first
     return waitForPromises().then(() => {
       assert.isTrue(this.wrapper.find("h1#home").exists())
-    })
-  })
-
-  it("Changing the route should reload the page", function () {
-    assert.isFalse(this.wrapper.find("h1#projects").exists())
-
-    // so let's go to the projects page
-    loadDefaultState(store.state)
-    this.wrapper.vm.$route = {
-      path: "/nl/projects",
-    }
-
-    return waitForPromises().then(() => {
-      assert.isTrue(this.wrapper.find("h1#projects").exists())
     })
   })
 
