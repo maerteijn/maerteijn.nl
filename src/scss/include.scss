@@ -1,2 +1,15 @@
 @use "~bulma/sass/utilities/initial-variables.sass" as bulma;
 @use "./src/scss/variables.scss" as variables;
+
+@mixin animation($seconds) {
+  animation: fadeIn ease $seconds;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
