@@ -98,14 +98,14 @@ export default {
   padding-bottom: 1rem;
 
   div.content {
-    @include animation(1s);
+    @include animation(0.5s);
 
     img {
-      @include animation(2s);
+      @include animation(0.75s);
     }
 
     table {
-      @include animation(1.5s);
+      @include animation(1s);
     }
   }
 }
