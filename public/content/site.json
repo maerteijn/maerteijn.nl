@@ -38,8 +38,26 @@
        }
     },
     {
+      "title": "maerteijn - projecten - wagtail gorilla forms voor techonomy",
+      "description": "Django / Wagtail integratie van een React applicatie",
+      "name": "wagtail-gorilla-forms-voor-techonomy",
+      "path": "/nl/projecten/wagtail-gorilla-forms-voor-techonomy",
+      "url": "/content/nl/projecten/wagtail-gorilla-forms-voor-techonomy.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 12,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
       "title": "maerteijn - projecten - groothandel ecommerce voor highbiza",
-      "description": "Groothandel E-cCmmerce voor Highbiza, gebouwd met Django Oscar",
+      "description": "Groothandel E-Commmerce voor Highbiza, gebouwd met Django Oscar",
       "name": "groothandel-ecommerce-voor-highbiza",
       "path": "/nl/projecten/groothandel-ecommerce-voor-highbiza",
       "url": "/content/nl/projecten/groothandel-ecommerce-voor-highbiza.md",
@@ -55,7 +73,6 @@
         }
       }
     },
-
     {
       "title": "maerteijn - projecten - mijn website met vue",
       "description": "Mijn eigen website, gebouwd met Vue.js",
@@ -219,6 +236,24 @@
         "identifier": 2,
         "language": "en",
         "show_in_menu": true
+      }
+   },
+   {
+      "title": "maerteijn - projects - wagtail gorilla forms fors techonomy",
+      "description": "Django / Wagtail integration of an React application",
+      "name": "wagtail-gorilla-forms-for-techonomy",
+      "path": "/en/projects/wagtail-gorilla-forms-for-techonomy",
+      "url": "/content/en/projects/wagtail-gorilla-forms-for-techonomy.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 12,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
       }
    },
    {
