@@ -142,17 +142,6 @@ describe("Test store", () => {
       assert.isTrue(store.state.loaded)
     })
 
-    it("loadSite should fill the vue router with routes", function () {
-      const site = JSON.parse(fixtures.site_json)
-
-      return store.actions.loadSite("/content/site.json").then(() => {
-        // all routes from the site should be resolvable by the router
-        site.pages.forEach((page) => {
-          assert.include(router.resolve(page.path).path, page.path)
-        })
-      })
-    })
-
     it("loadSite throws an error when axios does not return a JSON response", function () {
       this.stub = mock_axios_error()
 

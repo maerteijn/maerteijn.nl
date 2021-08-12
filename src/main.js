@@ -2,8 +2,8 @@ import "./polyfills"
 import { createApp } from "vue"
 import App from "./app"
 
-import router from "./js/router"
-import { state } from "./js/store"
+import { initRouter } from "./js/router"
+import { state, actions, getters } from "./js/store"
 
 import DefaultLayout from "./js/layouts/default"
 import BasicLayout from "./js/layouts/basic"
@@ -12,14 +12,23 @@ import BasicLayout from "./js/layouts/basic"
 import "./scss/main.scss"
 import "viewerjs/dist/viewer.css"
 
-const app = createApp(App)
-  // register global layouts
-  .component("default-layout", DefaultLayout)
-  .component("basic-layout", BasicLayout)
-  // register the vue router on the app instance
-  .use(router)
+actions
+  .loadSite("/content/site.json")
+  .then(() => actions.resetError())
+  .catch((e) => actions.handleError(e))
+  .then(() => {
+    // add the routes loaded from the site.json
+    const router = initRouter(getters.getRoutes())
 
-// register state as a global property
-app.config.globalProperties.$state = state
+    const app = createApp(App)
+      // register global layouts
+      .component("default-layout", DefaultLayout)
+      .component("basic-layout", BasicLayout)
+      // register the vue router on the app instance
+      .use(router)
 
-app.mount("#app")
+    // register state as a global property
+    app.config.globalProperties.$state = state
+
+    router.isReady().then(() => app.mount("#app"))
+  })

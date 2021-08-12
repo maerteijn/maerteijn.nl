@@ -41,7 +41,7 @@ export function createWrapperForComponent(
   })
 }
 
-export function createWrapperForApp(app, props = {}) {
+export function createWrapperForApp(app, props = {}, router) {
   return mount(app, {
     props,
     global: {

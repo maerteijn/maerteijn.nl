@@ -40,13 +40,4 @@ describe("App component", () => {
       assert.isTrue(wrapper.find(".error-message").exists())
     })
   })
-
-  it("The main App component renders an error message when axios returns an error", function () {
-    this.stub = mock_axios_error()
-    const wrapper = createWrapperForComponent(App, {}, { path: "/" })
-    return waitForPromises().then(() => {
-      assert.isTrue(wrapper.find(".error-message").exists())
-      assert.include(wrapper.html(), "Invalid JSON response when requesting")
-    })
-  })
 })

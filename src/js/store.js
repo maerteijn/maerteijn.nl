@@ -1,7 +1,6 @@
 import { reactive } from "vue"
 import axios from "axios"
 
-import router from "./router"
 import { isOldBrowser, normalizePath } from "./utils"
 import getPageComponent from "./pages/utils"
 import { validator } from "./schema"
@@ -61,6 +60,14 @@ export const getters = {
     }
     return []
   },
+  getRoutes() {
+    return state.site.pages.map((page) => {
+      return {
+        path: page.path,
+        component: getPageComponent(page.type),
+      }
+    })
+  },
 }
 
 export const actions = {
@@ -76,22 +83,7 @@ export const actions = {
       }
 
       state.site = response.data
-
-      // dynamic create routes here from the site pages and add them to
-      // the router
-      const routes = state.site.pages.map((page) => {
-        return {
-          path: page.path,
-          component: getPageComponent(page.type),
-        }
-      })
-      routes.forEach((route) => {
-        router.addRoute(route)
-      })
       state.loaded = true
-
-      // trigger the catch all page
-      router.push("/detect-language")
 
       return response.data
     })
@@ -114,6 +106,14 @@ export const actions = {
       state.content[path] = response.data
       return response.data
     })
+  },
+  resetError() {
+    state.error = null
+    return Promise.resolve()
+  },
+  handleError(error) {
+    state.error = error.toString()
+    return Promise.resolve(error)
   },
 }
 
