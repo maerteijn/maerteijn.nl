@@ -29,6 +29,8 @@ actions
 
     // register state as a global property
     app.config.globalProperties.$state = state
-
-    router.isReady().then(() => app.mount("#app"))
+    return router.isReady().then(() => app.mount("#app"))
+  })
+  .catch((e) => {
+    actions.handleError(e)
   })
