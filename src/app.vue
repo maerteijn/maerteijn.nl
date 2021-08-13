@@ -15,7 +15,7 @@ export default {
   name: "app",
   errorCaptured(error, component, details) {
     // capture all vue errors and handle them with handleError
-    this.$state.handleError(error)
+    actions.handleError(error)
   },
   components: {
     "error-page": ErrorPage,

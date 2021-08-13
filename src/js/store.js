@@ -102,10 +102,13 @@ export const actions = {
       return Promise.reject(`${path} can't be found in the site`)
     }
     // download the content and save it in the store
-    return axios.get(metadata.url).then((response) => {
-      state.content[path] = response.data
-      return response.data
-    })
+    return axios
+      .get(metadata.url)
+      .then((response) => {
+        state.content[path] = response.data
+        return response.data
+      })
+      .catch((error) => this.handleError(error))
   },
   resetError() {
     state.error = null
