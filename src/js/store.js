@@ -113,6 +113,7 @@ export const actions = {
   },
   handleError(error) {
     state.error = error.toString()
+    console.error(error)
     return Promise.resolve(error)
   },
 }
