@@ -99,7 +99,7 @@ export default {
   flex-grow: 1;
   padding-bottom: 1rem;
 
-  div.content {
+  .content {
     @include animation(0.5s);
 
     img {
@@ -108,6 +108,18 @@ export default {
 
     table {
       @include animation(1s);
+    }
+
+    p {
+      clear: both;
+      padding-top: 0.25rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+      clear: both;
+      padding-top: 0.5rem;
     }
   }
 }
