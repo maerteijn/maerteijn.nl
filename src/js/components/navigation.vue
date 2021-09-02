@@ -1,6 +1,11 @@
 <template>
   <div class="navigation-component">
-    <input class="menu-button" type="checkbox" id="menu-btn" />
+    <input
+      class="menu-button"
+      type="checkbox"
+      id="menu-btn"
+      v-model="checked"
+    />
     <label class="menu-icon" for="menu-btn"
       ><span v-html="icon('fas-bars')"></span
     ></label>
@@ -22,6 +27,11 @@ import store from "../store"
 
 export default {
   name: "navigation",
+  data() {
+    return {
+      checked: false,
+    }
+  },
   computed: {
     pages() {
       return store.getters.getPagesForNavigation(this.$route.path)

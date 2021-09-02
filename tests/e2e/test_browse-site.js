@@ -107,6 +107,8 @@ describe("Test browsing the website", () => {
       const location = await this.page.evaluate("location.href")
       const page = site.pages.filter((page) => page.name == title)[0]
       assert.isTrue(location.endsWith(page.path))
+      // make sure the menu checkbox is false after navigation (so the menu is hidden)
+      assert.isFalse(await this.page.isChecked("#menu-btn"))
     }
   })
 
