@@ -6,6 +6,7 @@
 
 | :calendar: Periode  | :file_folder: Project                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------- |
+| 2021                | [Wagtail Gorilla Forms voor Techonomy](/nl/projecten/wagtail-gorilla-forms-voor-techonomy)           |
 | 2020                | [Groothandel E-commerce voor Highbiza](/nl/projecten/groothandel-ecommerce-voor-highbiza)            |
 | 2020                | [Mijn website met Vue.js](/nl/projecten/mijn-website-met-vue)                                        |
 | 2019                | [Corporate website voor Zumtobel](/nl/projecten/corporate-website-voor-zumtobel)                     |
