@@ -9,7 +9,7 @@ De site structuur is vanuit een [JSON bestand](https://github.com/maerteijn/maer
 
 #### Uitgelichte technologieën
 - [Vue CLI](https://cli.vuejs.org/) - Handige tool voor het ontwikkelen en releasen van Vue applicaties, inclusief webpack configuratie en testing tools
-- [Vue Single File Components](https://vuejs.org/v2/guide/single-file-components.html), ieder *.vue* bestand bevat de template, JavaScript en styling (zowel CSS als [SASS](https://sass-lang.com/) van het component
+- [Vue Single File Components](https://vuejs.org/v2/guide/single-file-components.html), ieder *.vue* bestand bevat de template, JavaScript en styling (zowel CSS als [SASS](https://sass-lang.com/)) van het component
 - [Microsoft Playwright](https://playwright.dev/) met [Express](https://expressjs.com/) voor het schrijven van [E2E tests](https://github.com/maerteijn/maerteijn.nl/tree/master/tests/e2e)
 - [Github actions](https://github.com/maerteijn/maerteijn.nl/actions?query=workflow%3A%22maerteijn.nl+ci%22) voor CI/CD en de site wordt gehost op het [Vercel](https://vercel.com/) (ZEIT) platform
 
