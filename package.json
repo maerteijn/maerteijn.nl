@@ -14,7 +14,8 @@
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
     "test:functional": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/functional/",
-    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.js"
+    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.js",
+    "ui": "vue ui"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -33,10 +34,11 @@
     "@babel/core": "^7.14.8",
     "@babel/plugin-transform-object-assign": "^7.14.5",
     "@babel/preset-env": "^7.14.8",
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-router": "^4.5.13",
-    "@vue/cli-plugin-unit-mocha": "^4.5.13",
-    "@vue/cli-service": "^4.5.13",
+    "@vue/cli-plugin-babel": "^4.5.14",
+    "@vue/cli-plugin-router": "^4.5.14",
+    "@vue/cli-plugin-unit-mocha": "^4.5.14",
+    "@vue/cli-service": "^4.5.14",
+    "@vue/cli":  "^4.5.14",
     "@vue/compiler-sfc": "^3.2.1",
     "@vue/component-compiler-utils": "^3.2.2",
     "@vue/test-utils": "^2.0.0-rc.12",
