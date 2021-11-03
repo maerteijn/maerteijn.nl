@@ -1,10 +1,14 @@
 import path from "path"
 import { promises as fs } from "fs"
+import { readFile } from 'fs/promises';
 import { SitemapStream, streamToPromise } from "sitemap"
 
-import { validator } from "../js/schema"
-import package_json from "../../package.json"
-
+import { validator } from "../js/schema.mjs"
+const package_json = JSON.parse(
+  await readFile(
+    new URL("../../package.json", import.meta.url)
+  )
+)
 const current_path = process.cwd()
 const build_path = "dist/release"
 

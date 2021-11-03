@@ -110,3 +110,5 @@ const siteSchema = {
 
 const ajv = new Ajv({ schemas: [definitionsSchema, siteSchema] })
 export const validator = ajv.getSchema("siteschema.json")
+
+export default { validator }
