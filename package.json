@@ -13,6 +13,7 @@
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
+    "test:unit:debug": "vue-cli-service test:unit --inspect-brk --require tests/setup_dom.js --colors tests/unit/",
     "test:functional": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/functional/",
     "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.js",
     "ui": "vue ui"

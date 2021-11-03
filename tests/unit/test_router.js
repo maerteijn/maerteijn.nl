@@ -10,6 +10,7 @@ describe("Test router", () => {
   it("The router includes 0 routes as we load all routes dynamically", function () {
     assert.equal(this.router.options.routes.length, 0)
     assert.equal(this.router.getRoutes().length, 0)
+    debugger
   })
 
   it("When we add a route we can resolve the new route", function () {
