@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --port 1234",
-    "build:sitemap": " node src/sitemap/index.js",
+    "build:sitemap": "node src/sitemap/index.mjs",
     "build": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/release && npm run build:sitemap",
     "eslint": "eslint src/",
     "eslint:fix": "eslint src/ --fix",
@@ -15,7 +15,7 @@
     "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
     "test:unit:debug": "vue-cli-service test:unit --inspect-brk --require tests/setup_dom.js --colors tests/unit/",
     "test:functional": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/functional/",
-    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.js",
+    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.mjs",
     "ui": "vue ui"
   },
   "dependencies": {
@@ -44,9 +44,9 @@
     "@vue/component-compiler-utils": "^3.2.2",
     "@vue/test-utils": "^2.0.0-rc.12",
     "chai": "^4.3.4",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^7.15.0",
-    "esm": "^3.2.25",
+    "mocha": "~9",
+    "eslint": "^8.1",
+    "eslint-plugin-vue": "^8.0.3",
     "express": "^4.17.1",
     "jsdom": "^16.7.0",
     "jsdom-global": "^3.0.2",
@@ -95,9 +95,6 @@
     "last 2 versions",
     "not dead"
   ],
-  "esm": {
-    "cache": false
-  },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
     "rules": {
@@ -120,12 +117,6 @@
   "prettier": {
     "semi": false,
     "vueIndentScriptAndStyle": false
-  },
-  "mocha": {
-    "require": [
-      "esm"
-    ],
-    "recursive": true
   },
   "nyc": {
     "cache": false,
