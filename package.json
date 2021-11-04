@@ -32,16 +32,11 @@
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.16",
-    "@babel/plugin-transform-object-assign": "^7.16",
-    "@babel/preset-env": "^7.16",
     "@vue/cli": "^4.5.15",
     "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-router": "^4.5.15",
     "@vue/cli-plugin-unit-mocha": "^4.5.15",
     "@vue/cli-service": "^4.5.15",
-    "@vue/compiler-sfc": "^3.2.21",
-    "@vue/component-compiler-utils": "^3.3",
     "@vue/test-utils": "^2.0.0-rc.16",
     "chai": "^4.3.4",
     "mocha": "~9",
@@ -61,8 +56,7 @@
     "style-resources-loader": "^1.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
-    "vue-cli-plugin-style-resources-loader": "^0.1.5",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue-cli-plugin-style-resources-loader": "^0.1.5"
   },
   "eslintConfig": {
     "root": true,
