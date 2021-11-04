@@ -6,11 +6,10 @@ import { chromium } from "playwright-chromium"
 
 import { startServer } from "./server.mjs"
 
-import { fileURLToPath } from 'url';
+import { URL } from 'url';
 import { dirname } from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = new URL('.', import.meta.url).pathname;
 
 
 const dist = path.resolve(__dirname, "../../dist/")
