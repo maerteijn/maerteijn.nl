@@ -12,7 +12,7 @@
       "title": "maerteijn - hallo",
       "description": "Welkom, ik ben Martijn Jacobs, freelance software ontwikkelaar uit Arnhem",
       "name": "hallo",
-      "path": "/",
+      "path": "/nl",
       "url": "/content/nl/hallo.md",
       "type": "ContentPage",
       "content_component": "MarkdownViewer",
