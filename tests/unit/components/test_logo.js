@@ -20,6 +20,20 @@ describe("Logo component", () => {
     assert.isTrue(wrapper.find(".logo-container figure.mobile").exists())
     wrapper.unmount()
   })
+
+  it("We can initialize a simplified Logo component", () => {
+    const wrapper = createWrapperForComponent(Logo, { mode: "small" })
+    assert.equal(wrapper.vm.$options.name, "logo")
+    assert.isTrue(wrapper.find(".logo figure.logo").exists())
+    wrapper.unmount()
+  })
+
+  it("The Logo component just has two modes: 'full' and 'small'", () => {
+    const validator = Logo.props.mode.validator
+    assert.isTrue(validator("full"))
+    assert.isTrue(validator("small"))
+    assert.isFalse(validator("non-existant"))
+  })
 })
 
 describe("Logo component - extended", () => {

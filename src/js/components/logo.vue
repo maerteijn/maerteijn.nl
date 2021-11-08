@@ -1,6 +1,6 @@
 <template>
   <div class="logo-component">
-    <div class="logo-container">
+    <div class="logo-container" v-if="mode == 'full'">
       <figure class="image desktop is-3by1">
         <img
           src="../../assets/images/logo-full.svg"
@@ -22,7 +22,7 @@
         />
       </figure>
       <div class="icons" v-if="links">
-        <div class="item" v-for="item in links">
+        <div class="item" v-for="item in links" v-bind:key="item">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -33,15 +33,33 @@
         </div>
       </div>
     </div>
+    <div class="logo" v-if="mode == 'small'">
+      <figure class="image logo">
+        <img
+          src="../../assets/images/logo-small.svg"
+          alt="freelance software developer"
+          title="maerteijn"
+          v-on:click="goHome()"
+        />
+      </figure>
+    </div>
   </div>
 </template>
 
 <script>
 import { getIcon } from "../icons"
-import SwitchLayout from "../components/switch-layout"
 
 export default {
   name: "logo",
+  props: {
+    mode: {
+      type: String,
+      default: "full",
+      validator: function (value) {
+        return ["full", "small"].includes(value)
+      },
+    },
+  },
   computed: {
     links() {
       return this.$state.loaded ? this.$state.site.logo_links : []
