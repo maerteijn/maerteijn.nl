@@ -4,18 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --port 1234",
-    "build:sitemap": "node src/sitemap/index.mjs",
     "build": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/release && npm run build:sitemap",
-    "eslint": "eslint src/",
-    "eslint:fix": "eslint src/ --fix",
-    "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
-    "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
+    "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
+    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.mjs",
+    "lint": "vue-cli-service lint",
+    "build:sitemap": "node src/sitemap/index.mjs",
+    "eslint": " vue-cli-service lint --no-fix src/",
+    "eslint:fix": " vue-cli-service lint src/ ",
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
-    "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
-    "test:unit:debug": "vue-cli-service test:unit --inspect-brk --require tests/setup_dom.js --colors tests/unit/",
+    "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
+    "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
     "test:functional": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/functional/",
-    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.mjs",
+    "test:unit:debug": "vue-cli-service test:unit --inspect-brk --require tests/setup_dom.js --colors tests/unit/",
     "ui": "vue ui"
   },
   "dependencies": {
@@ -32,15 +33,18 @@
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
-    "@vue/cli": "^4.5.15",
-    "@vue/cli-plugin-babel": "^4.5.15",
-    "@vue/cli-plugin-router": "^4.5.15",
-    "@vue/cli-plugin-unit-mocha": "^4.5.15",
-    "@vue/cli-service": "^4.5.15",
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli": "^5.0.0-rc.0",
+    "@vue/cli-plugin-babel": "^5.0.0-rc.0",
+    "@vue/cli-plugin-eslint": "^5.0.0-rc.0",
+    "@vue/cli-plugin-router": "^5.0.0-rc.0",
+    "@vue/cli-plugin-unit-mocha": "^5.0.0-rc.0",
+    "@vue/cli-service": "^5.0.0-rc.0",
     "@vue/test-utils": "^2.0.0-rc.16",
     "chai": "^4.3.4",
-    "mocha": "~9",
     "eslint": "^8.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^8.0.3",
     "express": "^4.17.1",
     "jsdom": "^16.7.0",
@@ -50,7 +54,7 @@
     "prettier": "^2.4.1",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.43.4",
-    "sass-loader": "^10.2.0",
+    "sass-loader": "^12.3.0",
     "sinon": "^9.2.4",
     "sitemap": "^6.4.0",
     "style-resources-loader": "^1.4.1",
@@ -61,56 +65,34 @@
   "eslintConfig": {
     "root": true,
     "env": {
+      "mocha": true,
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "prettier"
     ],
     "rules": {
-      "no-console": [
-        "error",
-        {
-          "allow": [
-            "warn",
-            "error"
-          ]
-        }
-      ],
       "semi": [
         "error",
         "never"
-      ]
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "stylelint": {
-    "extends": "stylelint-config-sass-guidelines",
-    "rules": {
-      "max-nesting-depth": 4,
-      "selector-max-compound-selectors": 4,
-      "string-quotes": "double",
-      "scss/at-import-no-partial-leading-underscore": null,
-      "function-parentheses-space-inside": "never-single-line",
-      "selector-no-qualifying-type": [
-        true,
-        {
-          "ignore": [
-            "attribute",
-            "class"
-          ]
-        }
-      ]
+      ],
+      "vue/multi-word-component-names": "off"
+    },
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
     }
   },
   "prettier": {
     "semi": false,
     "vueIndentScriptAndStyle": false
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "nyc": {
     "cache": false,
     "all": true,
@@ -130,5 +112,24 @@
     "hostname": "https://www.maerteijn.nl",
     "base_language": "nl",
     "translated_language": "en"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "max-nesting-depth": 4,
+      "selector-max-compound-selectors": 4,
+      "string-quotes": "double",
+      "scss/at-import-no-partial-leading-underscore": null,
+      "function-parentheses-space-inside": "never-single-line",
+      "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": [
+            "attribute",
+            "class"
+          ]
+        }
+      ]
+    }
   }
 }

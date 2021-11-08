@@ -1,6 +1,6 @@
 <template>
   <div class="switch-language" v-if="canSwitch">
-    <template v-for="language in availableLanguages">
+    <template v-for="language in availableLanguages" v-bind:key="language">
       <span v-if="language != currentLanguage"
         ><a
           id="switch-language"
