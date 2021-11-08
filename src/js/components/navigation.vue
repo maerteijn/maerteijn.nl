@@ -10,7 +10,7 @@
       ><span v-html="icon('fas-bars')"></span
     ></label>
     <div class="navigation" v-if="pages">
-      <div class="item" v-for="item in pages">
+      <div class="item" v-for="item in pages" v-bind:key="item">
         <router-link
           v-bind:to="{ path: item.path }"
           v-html="item.name"

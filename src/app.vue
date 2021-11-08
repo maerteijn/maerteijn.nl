@@ -13,7 +13,7 @@ import ErrorPage from "./js/pages/error"
 
 export default {
   name: "app",
-  errorCaptured(error, component, details) {
+  errorCaptured(error) {
     // capture all vue errors and handle them with handleError
     actions.handleError(error)
   },

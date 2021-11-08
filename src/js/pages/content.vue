@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import axios from "axios"
-
 import getContentComponent from "../components/utils"
 import Loading from "../components/loading"
 import BackLink from "../components/backlink"
