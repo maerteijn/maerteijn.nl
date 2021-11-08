@@ -1,16 +1,7 @@
 <template>
   <div class="basic-layout">
     <div class="nav">
-      <div class="logo">
-        <figure class="image logo">
-          <img
-            src="../../assets/images/logo-small.svg"
-            alt="freelance software developer"
-            title="maerteijn"
-            v-on:click="$router.push('/')"
-          />
-        </figure>
-      </div>
+      <logo mode="small"></logo>
       <navigation></navigation>
       <div class="icons">
         <switch-layout></switch-layout>
