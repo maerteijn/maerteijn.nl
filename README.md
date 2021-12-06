@@ -38,11 +38,6 @@ We have unit and functional tests with `mocha`:
 ```bash
     npm run test
 ```
-Coverage report with `nyc` is possible with:
-```bash
-    npm run test:coverage
-```
-
 We can also run e2e tests with `playwright`:
 ```bash
     npm run test:e2e
