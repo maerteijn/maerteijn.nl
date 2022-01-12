@@ -3,7 +3,7 @@ import { mount } from "@vue/test-utils"
 
 import {
   createWrapperForApp,
-  mock_axios_success,
+  mock_fetch_success,
   loadDefaultState,
   resetState,
   waitForPromises,
@@ -16,7 +16,7 @@ import App from "@/app"
 
 describe("Test routing from one page to another", () => {
   beforeEach(function () {
-    this.stub = mock_axios_success()
+    this.stub = mock_fetch_success()
     loadDefaultState(store.state)
     return store.actions.loadSite("/content/site.json").then(() => {
       const router = initRouter(store.getters.getRoutes())

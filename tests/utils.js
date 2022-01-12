@@ -1,4 +1,3 @@
-import axios from "axios"
 import VueRouter from "vue-router"
 import sinon from "sinon"
 import { createApp } from "vue"
@@ -53,37 +52,41 @@ export function createWrapperForApp(app, props = {}, router) {
   })
 }
 
-export function mock_axios_success() {
+export function mock_fetch_success() {
   const stub = sinon.stub()
 
   // return the parsed site json
-  stub.withArgs("/content/site.json").returns(
-    Promise.resolve({
-      data: JSON.parse(fixtures.site_json),
-    })
-  )
+  stub.withArgs("/content/site.json").resolves({
+    json: () => Promise.resolve(JSON.parse(fixtures.site_json)),
+  })
 
   // add stubs for the content calls
-  stub.withArgs("/content/nl/home.md").resolves({ data: fixtures.home_content })
-  stub
-    .withArgs("/content/nl/projects.md")
-    .resolves({ data: fixtures.projects_content })
+  stub.withArgs("/content/nl/home.md").resolves({
+    text: () => Promise.resolve(fixtures.home_content),
+  })
 
-  // patch the axios.get call
-  axios.get = stub
+  // add stubs for the content calls
+  stub.withArgs("/content/nl/projects.md").resolves({
+    text: () => Promise.resolve(fixtures.projects_content),
+  })
 
+  // patch the window.fetch call
+  window.fetch = stub
   return stub
 }
 
-export function mock_axios_error() {
+export function mock_fetch_error() {
   const stub = sinon.stub()
-  // returning a string means that axios could not parse the JSON
+
+  // returning a string means that fetch could not parse the JSON
   stub.withArgs("/content/site.json").resolves({
-    data: "a string",
+    json: () => Promise.resolve("A string"),
   })
+
   stub.withArgs("/content/nl/projects.md").rejects("Something went wrong")
 
-  axios.get = stub
+  // patch the window.fetch call
+  window.fetch = stub
   return stub
 }
 

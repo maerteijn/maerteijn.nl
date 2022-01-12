@@ -3,8 +3,8 @@ import { mount } from "@vue/test-utils"
 
 import {
   createWrapperForComponent,
-  mock_axios_success,
-  mock_axios_error,
+  mock_fetch_success,
+  mock_fetch_error,
   loadDefaultState,
   resetState,
   waitForPromises,
@@ -132,7 +132,7 @@ describe("Content page", () => {
 
 describe("Content page - extended", () => {
   beforeEach(function () {
-    this.stub = mock_axios_success()
+    this.stub = mock_fetch_success()
     this.wrapper = createWrapperForComponent(
       ContentPage,
       {},
