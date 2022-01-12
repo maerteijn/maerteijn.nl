@@ -7,8 +7,8 @@ import App from "@/app"
 import {
   createWrapperForComponent,
   resetState,
-  mock_axios_success,
-  mock_axios_error,
+  mock_fetch_success,
+  mock_fetch_error,
   waitForPromises,
 } from "../utils"
 
@@ -16,7 +16,7 @@ import store from "@/js/store"
 
 describe("App component", () => {
   beforeEach(function () {
-    this.stub = mock_axios_success()
+    this.stub = mock_fetch_success()
   })
   afterEach(function () {
     this.stub.resetBehavior()

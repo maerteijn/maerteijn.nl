@@ -24,7 +24,6 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "ajv": "^6.12.5",
-    "axios": "^0.21.1",
     "bulma": "^0.9.3",
     "core-js": "^3.16.0",
     "showdown": "^1.9.1",

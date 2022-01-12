@@ -4,7 +4,7 @@ import {
   createWrapperForComponent,
   loadDefaultState,
   resetState,
-  mock_axios_success,
+  mock_fetch_success,
 } from "../../utils"
 
 import RedirectPage from "@/js/pages/redirect"
@@ -13,7 +13,7 @@ import store from "@/js/store"
 
 describe("Redirect page", () => {
   beforeEach(function () {
-    this.stub = mock_axios_success()
+    this.stub = mock_fetch_success()
     loadDefaultState(store.state)
   })
 

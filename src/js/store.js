@@ -1,5 +1,4 @@
 import { reactive } from "vue"
-import axios from "axios"
 
 import { isOldBrowser, normalizePath } from "./utils"
 import getPageComponent from "./pages/utils"
@@ -72,21 +71,23 @@ export const getters = {
 
 export const actions = {
   loadSite(url) {
-    return axios.get(url).then((response) => {
-      if (String(response.data) === response.data) {
-        throw `Invalid JSON response when requesting ${url}`
-      }
+    return window
+      .fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (String(data) === data) {
+          throw `Invalid JSON response when requesting ${url}`
+        }
+        if (!validator(data)) {
+          const error = validator.errors[0]
+          throw `Site data does not validate ${error.dataPath}: ${error.message}`
+        }
 
-      if (!validator(response.data)) {
-        const error = validator.errors[0]
-        throw `Site data does not validate ${error.dataPath}: ${error.message}`
-      }
+        state.site = data
+        state.loaded = true
 
-      state.site = response.data
-      state.loaded = true
-
-      return response.data
-    })
+        return data
+      })
   },
   downloadContent(path) {
     path = normalizePath(path)
@@ -102,11 +103,12 @@ export const actions = {
       return Promise.reject(`${path} can't be found in the site`)
     }
     // download the content and save it in the store
-    return axios
-      .get(metadata.url)
-      .then((response) => {
-        state.content[path] = response.data
-        return response.data
+    return window
+      .fetch(metadata.url)
+      .then((response) => response.text())
+      .then((data) => {
+        state.content[path] = data
+        return data
       })
       .catch((error) => this.handleError(error))
   },

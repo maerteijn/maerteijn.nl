@@ -1,6 +1,6 @@
 import { assert } from "chai"
 
-import { mock_axios_success, mock_axios_error, resetState } from "../utils"
+import { mock_fetch_success, mock_fetch_error, resetState } from "../utils"
 
 import store from "@/js/store"
 import router from "@/js/router"
@@ -122,7 +122,7 @@ describe("Test store", () => {
 
   describe("Actions", () => {
     beforeEach(function () {
-      this.stub = mock_axios_success()
+      this.stub = mock_fetch_success()
     })
 
     afterEach(function () {
@@ -143,7 +143,7 @@ describe("Test store", () => {
     })
 
     it("loadSite throws an error when axios does not return a JSON response", function () {
-      this.stub = mock_axios_error()
+      this.stub = mock_fetch_error()
 
       return store.actions.loadSite("/content/site.json").catch((error) => {
         assert.include(error, "Invalid JSON response")
