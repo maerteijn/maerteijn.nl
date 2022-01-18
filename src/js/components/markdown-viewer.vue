@@ -42,6 +42,7 @@ export default {
 <style lang="scss">
 .content {
   img {
+    border: solid 2px bulma.$white;
     box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
     cursor: pointer;
     margin: 0.25rem 0.75rem;
