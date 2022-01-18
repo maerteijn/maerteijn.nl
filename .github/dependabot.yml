@@ -7,6 +7,6 @@ updates:
     timezone: Europe/Amsterdam
   pull-request-branch-name:
     separator: "-"
-  open-pull-requests-limit: 0 # in case you don't want to enable version updates
+  open-pull-requests-limit: 2 # in case you don't want to enable version updates
   allow:
     - dependency-type: "production"
