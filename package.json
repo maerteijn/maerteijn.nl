@@ -23,7 +23,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "ajv": "^6.12.5",
+    "ajv": "^8.9.0",
     "bulma": "^0.9.3",
     "core-js": "^3.16.0",
     "showdown": "^1.9.1",
