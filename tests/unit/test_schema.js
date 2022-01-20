@@ -18,7 +18,6 @@ describe("JSON Schema", () => {
 
     assert.lengthOf(validator.errors, 1)
     const error = validator.errors[0]
-    assert.include(error.dataPath, "site_settings")
-    assert.include(error.message, "should have required property")
+    assert.include(error.message, "must have required property")
   })
 })
