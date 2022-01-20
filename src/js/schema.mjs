@@ -1,4 +1,5 @@
 import Ajv from "ajv"
+import addFormats from "ajv-formats"
 
 const definitionsSchema = {
   $id: "definitions.json",
@@ -109,6 +110,8 @@ const siteSchema = {
 }
 
 const ajv = new Ajv({ schemas: [definitionsSchema, siteSchema] })
+addFormats(ajv)
+
 export const validator = ajv.getSchema("siteschema.json")
 
 export default { validator }
