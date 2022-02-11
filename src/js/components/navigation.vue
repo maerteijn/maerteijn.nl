@@ -99,6 +99,7 @@ export default {
 
     .menu-button:checked ~ .navigation {
       max-height: 500px;
+      transition: max-height 1s;
     }
 
     .menu-button:checked ~ .menu-icon {
