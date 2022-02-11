@@ -2,8 +2,8 @@
   <div class="basic-layout">
     <div class="nav">
       <logo mode="small"></logo>
-      <navigation></navigation>
       <div class="icons">
+        <navigation></navigation>
         <switch-layout></switch-layout>
         <switch-language></switch-language>
       </div>
@@ -66,6 +66,10 @@ export default {
     align-items: center;
     display: flex;
     padding: 0 0 1rem;
+
+    .navigation-component {
+      padding-right: 1rem;
+    }
 
     .navigation {
       background-color: variables.$background-color-left-second;
