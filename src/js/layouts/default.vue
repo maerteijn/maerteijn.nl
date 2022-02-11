@@ -32,6 +32,25 @@ export default {
     "switch-layout": SwitchLayout,
     "switch-language": SwitchLanguage,
   },
+  created() {
+    window.addEventListener("resize", this.setHeightLayoutContainer)
+  },
+  mounted() {
+    this.setHeightLayoutContainer()
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.setHeightLayoutContainer)
+  },
+  methods: {
+    setHeightLayoutContainer() {
+      // safari ios and 100vh is not doing what it should be doing
+      const elem = document.querySelector("main.default-layout")
+      const newHeight = window.innerHeight + "px"
+      if (elem.style.height != newHeight) {
+        elem.style.height = newHeight
+      }
+    },
+  },
 }
 </script>
 
@@ -161,6 +180,7 @@ export default {
     grid-template-columns: 0 auto;
   }
 }
+
 @media (hover: hover) {
   .default-layout {
     .left {

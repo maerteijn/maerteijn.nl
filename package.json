@@ -119,6 +119,8 @@
       "max-nesting-depth": 4,
       "selector-max-compound-selectors": 4,
       "string-quotes": "double",
+      "value-no-vendor-prefix": null,
+      "media-feature-name-no-vendor-prefix": null,
       "scss/at-import-no-partial-leading-underscore": null,
       "function-parentheses-space-inside": "never-single-line",
       "selector-no-qualifying-type": [
