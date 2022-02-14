@@ -7,6 +7,8 @@ My professional website build with Vue.js, deployed on [https://www.maerteijn.nl
 
 A recent LTS version of `NodeJS` (tested with v14.15.4).
 
+I'm adjusted with something
+
 ## Development server
 
 Setting up a development server is as simple as:
