@@ -61,7 +61,7 @@ jobs:
         path: dist/release
 
   publish-release-preview:
-    if: github.repository != 'master'
+    if: ${{ github.ref != 'refs/heads/master' }}
     needs: build-release
     runs-on: ubuntu-latest
     steps:
@@ -83,7 +83,7 @@ jobs:
           {SHA}.maerteijn.nl
 
   publish-release-prd:
-    if: github.repository == 'master'
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: build-release
     runs-on: ubuntu-latest
     steps:
