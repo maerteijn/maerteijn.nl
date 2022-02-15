@@ -60,7 +60,8 @@ jobs:
         name: public
         path: dist/release
 
-  publish-release:
+  publish-release-preview:
+    if: github.repository != 'master'
     needs: build-release
     runs-on: ubuntu-latest
     steps:
@@ -77,5 +78,28 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        PRODUCTION: false
         ALIAS_DOMAINS: |
           {SHA}.maerteijn.nl
+
+  publish-release-prd:
+    if: github.repository == 'master'
+    needs: build-release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+    - name: Download public directory
+      uses: actions/download-artifact@v1
+      with:
+        name: public
+    - name: Deploy to Vercel Action
+      uses: BetaHuhn/deploy-to-vercel-action@v1
+      with:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        PRODUCTION: true
+        ALIAS_DOMAINS: |
+          maerteijn.nl
