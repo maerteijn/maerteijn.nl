@@ -1,0 +1,13 @@
+name: Tag with Production deployment
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  ci-and-build:
+    uses: ./.github/workflows/template.yml
+    with:
+      production_build: true
+      trigger_deployment: true
+

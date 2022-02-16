@@ -1,0 +1,11 @@
+name: Push PR / Branch CI
+on:
+  push:
+    branches-ignore:
+      - 'master'
+
+jobs:
+  ci-and-build:
+    uses: ./.github/workflows/template.yml
+    with:
+      trigger_deployment: false

@@ -1,0 +1,11 @@
+name: Master with Preview deployment
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  ci-and-build:
+    uses: ./.github/workflows/template.yml
+    with:
+      trigger_deployment: true
