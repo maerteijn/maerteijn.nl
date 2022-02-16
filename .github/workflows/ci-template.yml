@@ -96,7 +96,7 @@ jobs:
         VERCEL_TOKEN: ${{ secrets.vercel-token }}
         VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
         VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
-        PRODUCTION: {{ inputs.production-deployment }}}
+        PRODUCTION: ${{ inputs.production-deployment }}}
         ALIAS_DOMAINS: |
           {SHA}.maerteijn.nl
 
