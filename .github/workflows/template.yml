@@ -1,5 +1,21 @@
-name: maerteijn.nl ci
-on: [push]
+name: maerteijn.nl workflow template
+on:
+  workflow_call:
+    inputs:
+      trigger_deployment:
+        type: boolean
+        default: false
+      production_build:
+        type: boolean
+        default: false
+    secrets:
+      vercel_token:
+        required: false
+      vercel_org_id:
+        required: false
+      vercel_project_id:
+        required: false
+
 jobs:
   run-ci-steps:
     runs-on: ubuntu-latest
@@ -60,7 +76,8 @@ jobs:
         name: public
         path: dist/release
 
-  publish-release:
+  deploy-release:
+    if: ${{ inputs.trigger_deployment == true }}
     needs: build-release
     runs-on: ubuntu-latest
     steps:
@@ -71,10 +88,12 @@ jobs:
       with:
         name: public
     - name: Publish to Vercel
-      uses: amondnet/vercel-action@v20
+      uses: BetaHuhn/deploy-to-vercel-action@v1
       with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        vercel-args: '--prod'
+        VERCEL_TOKEN: ${{ secrets.vercel_token }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VERCEL_ORG_ID: ${{ secrets.vercel_org_id }}
+        VERCEL_PROJECT_ID: ${{ secrets.vercel_project_id }}
+        PRODUCTION: ${{ inputs.production_build }}
+        ALIAS_DOMAINS: |
+          {SHA}.maerteijn.nl

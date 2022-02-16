@@ -1,0 +1,15 @@
+name: Master with Preview deployment
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  ci-and-build:
+    uses: ./.github/workflows/template.yml
+    with:
+      trigger_deployment: true
+    secrets:
+      vercel_token: ${{ secrets.VERCEL_TOKEN }}
+      vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+      vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID }}
