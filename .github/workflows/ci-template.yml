@@ -1,5 +1,23 @@
-name: maerteijn.nl ci
-on: [push]
+name: maerteijn.nl ci, build and deploy template
+on:
+  workflow_call:
+    inputs:
+      with-depployment:
+        required: true
+        type: boolean
+        default: false
+      production-deployment:
+        required: false
+        type: boolean
+        default: false
+    secrets:
+      vercel-token:
+        required: false
+      vercel-org-id:
+        required: false
+      vercel-project-id:
+        required: false
+
 jobs:
   run-ci-steps:
     runs-on: ubuntu-latest
@@ -60,8 +78,8 @@ jobs:
         name: public
         path: dist/release
 
-  publish-release-preview:
-    if: ${{ github.ref != 'refs/heads/master' }}
+  publish-to-vervel:
+    if: ${{ inputs.with-depployment == true }}
     needs: build-release
     runs-on: ubuntu-latest
     steps:
@@ -74,33 +92,11 @@ jobs:
     - name: Deploy to Vercel Action
       uses: BetaHuhn/deploy-to-vercel-action@v1
       with:
-        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        PRODUCTION: false
-        DEPLOY_PR_FROM_FORK: true
+        VERCEL_TOKEN: ${{ secrets.vercel-token }}
+        VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
+        VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
+        PRODUCTION: {{ inputs.production-deployment }}}
         ALIAS_DOMAINS: |
           {SHA}.maerteijn.nl
 
-  publish-release-prd:
-    if: ${{ github.ref == 'refs/heads/master' }}
-    needs: build-release
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v2
-    - name: Download public directory
-      uses: actions/download-artifact@v1
-      with:
-        name: public
-    - name: Deploy to Vercel Action
-      uses: BetaHuhn/deploy-to-vercel-action@v1
-      with:
-        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        PRODUCTION: true
-        ALIAS_DOMAINS: |
-          maerteijn.nl

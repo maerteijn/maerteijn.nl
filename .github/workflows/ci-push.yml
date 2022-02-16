@@ -1,0 +1,11 @@
+name: maerteijn.nl ci
+on: [push]
+jobs:
+  ci-and-build:
+    uses: ./.github/workflows/ci-template.yml
+    with:
+      production: false
+   secrets:
+      vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
