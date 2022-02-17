@@ -1,21 +1,5 @@
-name: maerteijn.nl workflow template
-on:
-  workflow_call:
-    inputs:
-      trigger_deployment:
-        type: boolean
-        default: false
-      production_build:
-        type: boolean
-        default: false
-    secrets:
-      vercel_token:
-        required: false
-      vercel_org_id:
-        required: false
-      vercel_project_id:
-        required: false
-
+name: CI template
+on: [workflow_call]
 jobs:
   run-ci-steps:
     runs-on: ubuntu-latest
@@ -75,25 +59,3 @@ jobs:
       with:
         name: public
         path: dist/release
-
-  deploy-release:
-    if: ${{ inputs.trigger_deployment == true }}
-    needs: build-release
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v2
-    - name: Download public directory
-      uses: actions/download-artifact@v1
-      with:
-        name: public
-    - name: Publish to Vercel
-      uses: BetaHuhn/deploy-to-vercel-action@v1
-      with:
-        VERCEL_TOKEN: ${{ secrets.vercel_token }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        VERCEL_ORG_ID: ${{ secrets.vercel_org_id }}
-        VERCEL_PROJECT_ID: ${{ secrets.vercel_project_id }}
-        PRODUCTION: ${{ inputs.production_build }}
-        ALIAS_DOMAINS: |
-          {SHA}.maerteijn.nl

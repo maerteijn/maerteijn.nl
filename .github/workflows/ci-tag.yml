@@ -6,12 +6,14 @@ on:
 
 jobs:
   ci-and-build:
-    uses: ./.github/workflows/template.yml
+    uses: ./.github/workflows/_tpl-ci.yml
+
+  deploy:
+    needs: ci-and-build
+    uses: ./.github/workflows/_tpl-deployment.yml
     with:
       production_build: true
-      trigger_deployment: true
     secrets:
-        vercel_token: ${{ secrets.VERCEL_TOKEN }}
-        vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID }}
-
+      vercel_token: ${{ secrets.VERCEL_TOKEN }}
+      vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+      vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID }}

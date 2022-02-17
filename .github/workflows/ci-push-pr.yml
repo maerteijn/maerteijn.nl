@@ -6,6 +6,4 @@ on:
 
 jobs:
   ci-and-build:
-    uses: ./.github/workflows/template.yml
-    with:
-      trigger_deployment: false
+    uses: ./.github/workflows/_tpl-ci.yml
