@@ -4,7 +4,7 @@
       <div
         id="switch-layout"
         class="icon"
-        v-html="icon('fas-adjust')"
+        v-html="icon('fas-circle-half-stroke')"
         v-on:click="toggleLayout"
       ></div>
     </a>
