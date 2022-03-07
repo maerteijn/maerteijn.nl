@@ -27,7 +27,7 @@
     "ajv-formats": "^2.1.1",
     "bulma": "^0.9.3",
     "core-js": "^3.21.1",
-    "showdown": "^2.0.0",
+    "showdown": "^2.0.2",
     "viewerjs": "^1.10.4",
     "vue": "^3.2.31",
     "vue-router": "^4.0.13"
