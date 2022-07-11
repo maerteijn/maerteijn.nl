@@ -30,7 +30,7 @@
     "showdown": "^2.1.0",
     "viewerjs": "^1.10.5",
     "vue": "^3.2.37",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
