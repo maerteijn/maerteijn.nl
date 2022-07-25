@@ -11,4 +11,4 @@ const html = `
   </body>
 </html>
 `
-require("global-jsdom")(html, { url: "http://localhost" })
+require("jsdom-global")(html, { url: "http://localhost" })
