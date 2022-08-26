@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog post</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h3 id="introduction">Introduction</h3>
+<p>Python has been designed to be a very readable and compact programming language since the language was born in 1991. Indentation is required, semicolons are not needed, readability and elegance are highly promoted and sometimes I’m sometimes still stunned how complex use-cases can be implemented so cleanly and simple with just a few lines of Python.</p>
+<p>But one of the things that has been controversial in the language (and a hot topic in the Python community) for <a href="https://peps.python.org/pep-0275/">more than 20 years</a>  has been the lack of a <code>switch</code> or <code>case</code> statement.</p>
+<p>The <a href="https://docs.python.org/3.9/faq/design.html#why-isn-t-there-a-switch-or-case-statement-in-python">Python official FAQ</a> wrote about this:<br>
+<em>You can do this easily enough with a sequence of</em> <code>if... elif... elif... else</code>.</p>
+<h3 id="some-history-regarding-the-switch-statement">Some history regarding the <code>switch</code> statement</h3>
+<ul>
+<li>
+<p>In 2001, <a href="https://peps.python.org/pep-0275/">PEP-275</a> was submitted<br>
+for Python 2 to introduce a <code>switch</code> statement in the language, but<br>
+this was never accepted.</p>
+</li>
+<li>
+<p>In 2006, <a href="https://peps.python.org/pep-3103/">Guido himself submitted the<br>
+introduction</a> of a <code>case</code><br>
+statement for Python 3, but this was also rejected (by himself)<br>
+because this proposal did not have <em>“popular support”</em>.</p>
+</li>
+<li>
+<p>It did take up to 2020 for a new <a href="https://peps.python.org/pep-0635/">PEP to be<br>
+proposed</a> to introduce a   <code>case</code><br>
+statement, including advanced structural pattern matching as found in<br>
+Haskell and Ruby. In Python 3.10, this was <em>finally</em> introduced.</p>
+</li>
+</ul>
+<p>Let’s see how it looks like with some examples:</p>
+<h3 id="http-response-handler-example">HTTP response handler example</h3>
+<p>So for the following examples, we’ll use a <code>Response</code> class which has two properties, a <code>status_code</code> (like <code>200</code> or <code>404</code>) and an <code>error_code</code>, such as <code>"invalid-credentials"</code>:</p>
+<pre class=" language-python"><code class="prism  language-python">@dataclass
+<span class="token keyword">class</span> <span class="token class-name">Response</span><span class="token punctuation">:</span>
+    status_code<span class="token punctuation">:</span> <span class="token builtin">int</span>
+    error_code<span class="token punctuation">:</span> <span class="token builtin">str</span>
+</code></pre>
+<h4 id="if---elif--else">if  / elif / else</h4>
+<p>if we would make a handler to react to a specific response, we would traditionally write it like this:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">handle_response</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">400</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> BadRequestHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">403</span><span class="token punctuation">:</span>
+        error_message <span class="token operator">=</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">"message"</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> UnauthorizedHandler<span class="token punctuation">(</span>response<span class="token punctuation">,</span> message<span class="token operator">=</span>error_message<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> response<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">500</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> ServerErrorHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> UnknownStatusCodeHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+</code></pre>
+<p>It does the job, but still if looks a bit messy due to the different spacing, and this kind of code just screams for a better alternative.</p>
+<h4 id="dictionary-mapping">Dictionary mapping</h4>
+<p>For a simple handling mechanism, you could use a dictionary to map the <code>status_code</code> to a specific handler:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">handle_response</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    handler_mapping <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token number">400</span><span class="token punctuation">:</span> BadRequestHandler<span class="token punctuation">,</span>
+        <span class="token number">403</span><span class="token punctuation">:</span> UnauthorizedHandler<span class="token punctuation">,</span>
+        <span class="token number">500</span><span class="token punctuation">:</span> ServerErrorHandler<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    handler <span class="token operator">=</span> handler_mapping<span class="token punctuation">.</span>get<span class="token punctuation">(</span>
+        response<span class="token punctuation">.</span>status_code<span class="token punctuation">,</span> UnknownStatusCodeHandler<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> handler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+</code></pre>
+<p>Although this looks already much cleaner compared to the <code>if... elif... else</code> example above, it has some limitations:</p>
+<ul>
+<li>If you need to write some extra code before returning the correct<br>
+handler (like extracting a message from the response) you’ll need to<br>
+add extra helper methods, which makes things more messy.</li>
+<li>You are limited to dictionary keys, no complex data structures or extra conditions are possible.</li>
+</ul>
+<h4 id="matching-statements">Matching statements</h4>
+<p>Rewriting the first example with the new <a href="https://peps.python.org/pep-0622/">structural matching statement</a> will look like this:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">handle_response_match</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    match response<span class="token punctuation">.</span>status_code<span class="token punctuation">:</span>
+        case <span class="token number">400</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> BadRequestHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        case <span class="token number">403</span><span class="token punctuation">:</span>
+            error_message <span class="token operator">=</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">"message"</span><span class="token punctuation">]</span>
+            <span class="token keyword">return</span> UnauthorizedHandler<span class="token punctuation">(</span>response<span class="token punctuation">,</span> message<span class="token operator">=</span>error_message<span class="token punctuation">)</span>
+        case <span class="token number">500</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> ServerErrorHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        case _<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> UnknownStatusCodeHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+</code></pre>
+<p>Wow, it’s almost impossible to realise that this hasn’t been added to the language earlier! It’s much more readable as the alternatives we were used too, and makes the implementation of these kind of conditional handlers so much easier.</p>
+<p>And there is even more, as the <code>match</code> statement can do some advanced matching like this:</p>
+<pre class=" language-python"><code class="prism  language-python">response <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"status_code"</span><span class="token punctuation">:</span> <span class="token number">403</span><span class="token punctuation">,</span>
+    <span class="token string">"error_code"</span><span class="token punctuation">:</span> <span class="token string">"invalid-credentials"</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">def</span> <span class="token function">handle_response</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    match response<span class="token punctuation">:</span>
+        case <span class="token punctuation">{</span><span class="token string">"status_code"</span><span class="token punctuation">:</span> <span class="token number">403</span><span class="token punctuation">,</span> <span class="token string">"error_code"</span><span class="token punctuation">:</span> <span class="token string">"invalid-credentials"</span><span class="token punctuation">}</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> InvalidCredentialsHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        case <span class="token punctuation">{</span><span class="token string">"status_code"</span><span class="token punctuation">:</span> <span class="token number">403</span><span class="token punctuation">,</span> <span class="token string">"error_code"</span><span class="token punctuation">:</span> error_code<span class="token punctuation">}</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> BadRequestHandler<span class="token punctuation">(</span>response<span class="token punctuation">,</span> error_code<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>or even like this:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">handle_response</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    match response<span class="token punctuation">:</span>
+        case Response<span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> error_code<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> NotFoundHandler<span class="token punctuation">(</span>error_code<span class="token punctuation">)</span>
+        case Response<span class="token punctuation">(</span><span class="token number">403</span><span class="token punctuation">,</span> <span class="token string">"invalid-credentials"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> InvalidCredentialsHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>and you can also unpack values like this:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">handle_response</span><span class="token punctuation">(</span>status_code<span class="token punctuation">,</span> error_code<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    match status_code<span class="token punctuation">,</span> error_code<span class="token punctuation">:</span>
+        case <span class="token number">404</span><span class="token punctuation">,</span> error_code<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> NotFoundHandler<span class="token punctuation">(</span>error_code<span class="token punctuation">)</span>
+        case <span class="token number">403</span><span class="token punctuation">,</span> <span class="token string">"invalid-credentials"</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> InvalidCredentialsHandler<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+        case <span class="token number">403</span><span class="token punctuation">,</span> error_code<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> UnauthorizedHandler<span class="token punctuation">(</span>response<span class="token punctuation">,</span> error_code<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<h3 id="final-notes">Final notes</h3>
+<p>Go and check out <a href="https://peps.python.org/pep-0636/">PEP-636</a>, which contains even more examples what you can do with structural pattern matching in Python.</p>
+<p>If you didn’t find a good reason to update to Python 3.10 before, there is one now!</p>
+</div>
+</body>
+
+</html>
