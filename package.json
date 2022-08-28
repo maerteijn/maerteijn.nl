@@ -28,6 +28,7 @@
     "bulma": "^0.9.4",
     "core-js": "^3.24.1",
     "showdown": "^2.1.0",
+    "showdown-highlight": "^3.0.0",
     "viewerjs": "^1.10.5",
     "vue": "^3.2.37",
     "vue-router": "^4.1.3"
