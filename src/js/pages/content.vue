@@ -99,6 +99,15 @@ export default {
 
   .content {
     @include animation(0.5s);
+    // 'blockquote' is now used to display a small header like a date on top of the page
+    blockquote {
+      background-color: transparent;
+      border: 0;
+      font-size: 0.95rem;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+    }
 
     img {
       @include animation(0.75s);
