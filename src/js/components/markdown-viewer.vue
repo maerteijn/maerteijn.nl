@@ -79,5 +79,14 @@ export default {
     text-align: left;
     white-space: nowrap;
   }
+
+  pre {
+    background-color: variables.$background-color-left-first;
+    box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
+
+    .hljs {
+      background-color: variables.$background-color-left-first;
+    }
+  }
 }
 </style>

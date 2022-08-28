@@ -49,15 +49,33 @@ export default {
   }
 
   .page {
-    * {
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a,
+    th,
+    td,
+    strong {
       color: variables.$font-color-left;
     }
 
     code {
-      color: variables.$orange-color;
+      background-color: variables.$background-color-left-first;
+    }
+
+    pre {
+      background-color: variables.$background-color-left-second;
+      box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
+
+      .hljs {
+        background-color: variables.$background-color-left-second;
+      }
     }
 
     a {
+      background-color: variables.$background-color-left-second;
       text-decoration: underline;
     }
   }
