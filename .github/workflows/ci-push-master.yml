@@ -1,4 +1,4 @@
-name: Master with Preview deployment
+name: Main branch with Preview deployment
 on:
   push:
     branches:
