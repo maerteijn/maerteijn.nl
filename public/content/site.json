@@ -20,7 +20,7 @@
       "settings": {
         "identifier": 1,
         "language": "nl",
-        "show_in_menu": true
+        "show_in_menu": false
        }
     },
     {
@@ -196,6 +196,20 @@
        }
     },
     {
+      "title": "maerteijn - blog",
+      "description": "Een overzicht van de blog artikelen",
+      "name": "blog",
+      "path": "/nl/blog",
+      "url": "/content/nl/blog.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 13,
+        "language": "nl",
+        "show_in_menu": true
+       }
+    },
+    {
       "title": "maerteijn - colofon",
       "description": "Een overzicht van alle technieken en tools die ik heb gebruikt voor deze website",
       "name": "colofon",
@@ -221,7 +235,7 @@
       "settings": {
         "identifier": 1,
         "language": "en",
-        "show_in_menu": true
+        "show_in_menu": false
        }
     },
     {
@@ -396,6 +410,39 @@
         "show_in_menu": true
        }
     },
+    {
+      "title": "maerteijn - blog",
+      "description": "An overview of all blog articles",
+      "name": "blog",
+      "path": "/en/blog",
+      "url": "/content/en/blog.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 13,
+        "language": "en",
+        "show_in_menu": true
+       }
+    },
+    {
+      "title": "maerteijn - blog - structural pattern matching with python",
+      "description": "Structural Pattern matching with Python",
+      "name": "structural-pattern-matching-with-python",
+      "path": "/en/blog/structural-pattern-matching-with-python",
+      "url": "/content/en/blog/structural-pattern-matching-with-python.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 14,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All blog articles",
+          "path": "/en/blog"
+        }
+      }
+    },
+
     {
       "title": "maerteijn - colophon",
       "description": "An overview of all technologies and tools I used for this website",

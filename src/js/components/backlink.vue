@@ -1,7 +1,7 @@
 <template>
   <div class="backlink">
     <router-link v-bind:to="path"
-      ><span v-html="icon('fas-arrow-circle-left')"></span>
+      ><span v-html="icon('fas-circle-arrow-left')"></span>
       {{ title }}</router-link
     >
   </div>
