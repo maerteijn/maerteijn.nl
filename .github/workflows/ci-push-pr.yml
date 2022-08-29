@@ -2,7 +2,7 @@ name: Push PR / Branch CI
 on:
   push:
     branches-ignore:
-      - 'master'
+      - 'main'
 
 jobs:
   ci-and-build:

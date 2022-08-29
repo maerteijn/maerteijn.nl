@@ -2,7 +2,7 @@ name: Master with Preview deployment
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   ci-and-build:
