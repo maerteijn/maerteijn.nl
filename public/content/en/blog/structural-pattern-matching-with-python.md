@@ -10,13 +10,13 @@ The [Python official FAQ](https://docs.python.org/3.9/faq/design.html#why-isn-t-
 
 ### Some history regarding the `switch` statement
 
-- In *2001*, [PEP-275](https://peps.python.org/pep-0275/) was submitted for Python 2 to introduce a `switch` statement in the language, but this was never accepted.
+- In **2001**, [PEP-275](https://peps.python.org/pep-0275/) was submitted for Python 2 to introduce a `switch` statement in the language, but this was never accepted.
 
-- In *2006*, Guido himself submitted the introduction of a `case` statement in [PEP-3103](https://peps.python.org/pep-3103/), but this was also rejected (by himself) because this proposal did not have *"popular support"*.
+- In **2006**, Guido himself submitted the introduction of a `case` statement in [PEP-3103](https://peps.python.org/pep-3103/), but this was also rejected (by himself) because this proposal did not have *"popular support"*.
 
-- It did take up to *2020* for [PEP-634](https://peps.python.org/pep-0634/) and [PEP-635](https://peps.python.org/pep-0635/) to be proposed which introduces a `case` statement, including advanced structural pattern matching as found in Haskell and Ruby.
+- It did take up to **2020** for [PEP-634](https://peps.python.org/pep-0634/) and [PEP-635](https://peps.python.org/pep-0635/) to be proposed which introduces a `case` statement, including advanced structural pattern matching as found in Haskell and Ruby.
 
-- In October 2021, a `match...case` statement was *finally* introduced in [Python 3.10](https://docs.python.org/3/whatsnew/3.10.html).
+- In October **2021**, a `match...case` statement was *finally* introduced in [Python 3.10](https://docs.python.org/3/whatsnew/3.10.html).
 
 Let's see how it looks like with some examples:
 
