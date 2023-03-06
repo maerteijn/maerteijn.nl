@@ -29,7 +29,7 @@
     "core-js": "^3.29.0",
     "showdown": "^2.1.0",
     "showdown-highlight": "^3.1.0",
-    "viewerjs": "^1.11.2",
+    "viewerjs": "^1.11.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
