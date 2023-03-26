@@ -5,7 +5,7 @@ My professional website build with Vue.js, deployed on [https://www.maerteijn.nl
 
 ## Development requirements
 
-A recent LTS version of `NodeJS` (tested with v16.14).
+A recent LTS version of `NodeJS` (tested with v18).
 
 ## Development server
 
