@@ -17,8 +17,6 @@ jobs:
   deploy-release:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v3
     - name: Download public directory
       uses: actions/download-artifact@v3
       with:
