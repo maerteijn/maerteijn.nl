@@ -6,6 +6,7 @@
 
 #### Overzicht
 
-| :calendar: Datum  | :file_folder: Artikel                                                                              |
-| ------------------| ---------------------------------------------------------------------------------------------------|
-| 29 augustus 2022  | [Structural Pattern matching with Python](/en/blog/structural-pattern-matching-with-python)        |
+| :calendar: Datum  | :file_folder: Artikel                                                                                      |
+| ------------------| -----------------------------------------------------------------------------------------------------------|
+| 27 maart 2023     | [Beautiful asserts with your Django Test Client](/en/blog/beautiful-asserts-with-your-django-test-client)  |
+| 29 augustus 2022  | [Structural Pattern matching with Python](/en/blog/structural-pattern-matching-with-python)                |

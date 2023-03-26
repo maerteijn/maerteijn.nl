@@ -425,6 +425,25 @@
        }
     },
     {
+      "title": "maerteijn - blog - beautiful asserts with your django test client",
+      "description": "Beatiful asserts with your Django Test Client",
+      "name": "beautiful-asserts-with-your-django-test-client",
+      "path": "/en/blog/beautiful-asserts-with-your-django-test-client",
+      "url": "/content/en/blog/beautiful-asserts-with-your-django-test-client.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 15,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All blog articles",
+          "path": "/en/blog"
+        }
+      }
+    },
+
+    {
       "title": "maerteijn - blog - structural pattern matching with python",
       "description": "Structural Pattern matching with Python",
       "name": "structural-pattern-matching-with-python",
@@ -442,7 +461,6 @@
         }
       }
     },
-
     {
       "title": "maerteijn - colophon",
       "description": "An overview of all technologies and tools I used for this website",
