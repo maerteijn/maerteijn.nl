@@ -38,6 +38,25 @@
        }
     },
     {
+      "title": "maerteijn - projecten - kompas planner voor clever sports",
+      "description": "Kompas Planner: Volledige web applicatie",
+      "name": "kompas-planner-voor-clever-sports",
+      "path": "/nl/projecten/kompas-planner-voor-clever-sports",
+      "url": "/content/nl/projecten/kompas-planner-voor-clever-sports.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 13,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+
+    {
       "title": "maerteijn - projecten - wagtail gorilla forms voor techonomy",
       "description": "Django / Wagtail integratie van een React applicatie",
       "name": "wagtail-gorilla-forms-voor-techonomy",
@@ -250,6 +269,24 @@
         "identifier": 2,
         "language": "en",
         "show_in_menu": true
+      }
+   },
+   {
+      "title": "maerteijn - projects - kompas planner for clever sports",
+      "description": "Kompas Planner: Full web application",
+      "name": "kompas-planner-for-clever-sports",
+      "path": "/en/projects/kompas-planner-for-clever-sports",
+      "url": "/content/en/projects/kompas-planner-for-clever-sports.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 13,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
       }
    },
    {
