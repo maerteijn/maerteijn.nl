@@ -1,4 +1,5 @@
 const path = require("path")
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   pluginOptions: {
@@ -7,7 +8,6 @@ module.exports = {
       patterns: [path.resolve(__dirname, "./src/scss/include.scss")],
     },
   },
-
   chainWebpack: (config) => {
     // no scss when running unittests
     if (process.env.NODE_ENV === "test") {
@@ -15,6 +15,12 @@ module.exports = {
       scssRule.uses.clear()
       scssRule.use("null-loader").loader("null-loader")
     }
+    config.plugin('copy').tap(args => {
+      args[0].patterns.push(
+        { from: path.resolve(__dirname, "vercel.json"), to: path.resolve(__dirname, config.output.get('path'), "vercel.json") }
+      )
+      return args
+    })
   },
 
   lintOnSave: false,
