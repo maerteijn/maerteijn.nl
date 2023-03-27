@@ -10,7 +10,7 @@ Let's first demonstrate how you would test a simple Django form and view with a 
 
 We will use [pytest](https://docs.pytest.org/en/7.2.x/) with [pytest-django](https://github.com/pytest-dev/pytest-django) in this article, but the same principles apply if you use the default Django testrunner.
 
-Based on Adam Johnson's excellect [How to Unit Test a Django Form](https://adamj.eu/tech/2020/06/15/how-to-unit-test-a-django-form/), the basic principles of this article are: Write unit tests to test the form troughoughly, write functional tests to check if the view which uses the form is functioning properly, without detailed testing of the form.
+Based on Adam Johnson's excellent [How to Unit Test a Django Form](https://adamj.eu/tech/2020/06/15/how-to-unit-test-a-django-form/), the basic principles of this article are: Write unit tests to test the form thoroughly, write functional tests to check if the view which uses the form is functioning properly, without detailed testing of the form.
 
 In any case you would like to see the full source code including all the tests, or if you want to play around with the project you can find it here: https://github.com/maerteijn/beautiful-asserts
 
@@ -91,7 +91,7 @@ Now we know that the form is tested thoroughly, we want to make sure that the vi
 - Show error messages in case of an error
 - Redirect to an overview page when all is fine
 
-let's first start to check if the form is rendered correctly. The test is exagerated a bit here for demonstration purposes:
+let's first start to check if the form is rendered correctly. The test is exaggerated a bit here for demonstration purposes:
 ```python
 @pytest.mark.django_db
 def test_article_create__get__assertContains(client):
@@ -127,7 +127,7 @@ But this makes things even more itchy and using regular expressions for parsing 
 This makes you wonder if there is an alternative that isn't itchy. For E2E tests you could use [Playwright](https://github.com/microsoft/playwright-pytest), then you can use the [document.querySelector API](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) with CSS selectors. What if you could do that in your Django tests with the Django Test Client?....
 
 
-### Soupsieve
+### Soup Sieve
 
 Meet [Soup Sieve](https://github.com/facelessuser/soupsieve), an excellent selector add-on for [BeatifulSoup4](https://www.crummy.com/software/BeautifulSoup/). It comes preinstalled with BeatifulSoup4 4.7.0 and above and uses the *CSS selector API* to query your document. A basic example:
 
@@ -195,9 +195,9 @@ def test_article_create__post_error__select(client):
     assert error_messages[0].text == "Should start with an uppercase letter."
 ```
 
-It became much easier now to query for specific elements, and even how many error message are shown. You could even check the specific error message if you want to.
+It became much easier now to query for specific elements, and we can even check easily how many error message are shown. You could even check the specific error message if you want to.
 
-Even more examples:
+More examples:
 ```python
 # Check if the save button is present
 assert response.select("form .buttonHolder button[name=save]")
@@ -212,7 +212,7 @@ assert links[0].attrs["href"] == reverse("my-view", kwargs={"pk": article.pk})
 
 ### Final notes
 
-Although [BeatifulSoup](https://www.crummy.com/software/BeautifulSoup/) has been around for a long time, ([since 2004!](https://bazaar.launchpad.net/%7Eleonardr/beautifulsoup/bs4/view/head:/CHANGELOG#L1703)), the [Soup Sieve](https://github.com/facelessuser/soupsieve) add-on released in 2018 makes it really powerful and easy to query a HTML document. Integrating thi into your Django Test Client requires just a few lines of code and makes writing tests much more convenient and robust.
+Although [BeatifulSoup](https://www.crummy.com/software/BeautifulSoup/) has been around for a long time, ([since 2004!](https://bazaar.launchpad.net/%7Eleonardr/beautifulsoup/bs4/view/head:/CHANGELOG#L1703)), it is the [Soup Sieve](https://github.com/facelessuser/soupsieve) add-on released in 2018 that makes it really powerful and easy to query a HTML document. Integrating this into your Django Test Client requires just a few lines of code and makes writing tests much more convenient and robust.
 
 #### Links
 
