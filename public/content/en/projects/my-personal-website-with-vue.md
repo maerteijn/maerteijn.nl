@@ -7,7 +7,7 @@ Due to the popularity of all kinds of cloud based platforms and API's there is a
 The website structure is defined in a [JSON file](https://github.com/maerteijn/maerteijn.nl/blob/master/static/content/site.json) (which could be served from a REST API) and transformed with [Vue Router](https://router.vuejs.org/installation.html) to usable URL's. The website content is formatted with [Markdown](https://www.markdownguide.org/) and dynamically loaded and converted to HTML when you browse the pages.
 
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Vue CLI](https://cli.vuejs.org/) - A convenient command line tool for developing and releasing Vue applications including an optimized webpack configuration and testing utilities
 - [Vue Single File Components](https://vuejs.org/v2/guide/single-file-components.html), the template, JavaScript and styling (CSS and [SASS](https://sass-lang.com/) for each component are contained in a single *.vue* file
 - [Microsoft Playwright](https://playwright.dev/) with [Express](https://expressjs.com/) for E2E browser-tests

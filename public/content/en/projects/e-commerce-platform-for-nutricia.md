@@ -11,7 +11,7 @@ I've made some custom add-ons during this project by extending the E-commerce ba
 - Automatic product synchronisation from an external PIM system
 
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Django](https://www.djangoproject.com/) with [Django Oscar](https://github.com/django-oscar/django-oscar) and [DRF](https://www.django-rest-framework.org/)
 - Hosted on [AWS](https://aws.amazon.com/) with [Terraform](https://www.terraform.io/), AWS Postgres RDS, AWS EC2 containers are bootstrapped with [Saltstack](https://www.saltstack.com/)
 - [Django-Q](https://django-q.readthedocs.io/en/latest/) for housekeeping, email queueing and several import / export utilities
