@@ -3,7 +3,6 @@ import { assert } from "chai"
 import {
   createWrapperForComponent,
   loadDefaultState,
-  resetState,
   mock_fetch_success,
 } from "../../utils"
 

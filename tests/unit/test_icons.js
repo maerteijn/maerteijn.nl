@@ -9,7 +9,7 @@ describe("Test icons", () => {
 
   it("The icon keys are in the format 'fas-loader'", () => {
     Object.keys(icons).forEach((key) => {
-      assert.match(key, /^[a-z\-]+$/)
+      assert.match(key, /^[a-z-]+$/)
     })
   })
 

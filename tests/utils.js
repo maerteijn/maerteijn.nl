@@ -1,13 +1,8 @@
-import VueRouter from "vue-router"
 import sinon from "sinon"
-import { createApp } from "vue"
 
 import { mount } from "@vue/test-utils"
 
-import DefaultLayout from "@/js/layouts/default"
-import BasicLayout from "@/js/layouts/basic"
 import store from "@/js/store"
-import router from "@/js/router"
 
 import * as fixtures from "./fixtures"
 

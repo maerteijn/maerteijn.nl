@@ -1,11 +1,9 @@
 import { assert } from "chai"
-import { mount } from "@vue/test-utils"
 
 import {
   createWrapperForApp,
   mock_fetch_success,
   loadDefaultState,
-  resetState,
   waitForPromises,
 } from "../utils"
 

@@ -1,5 +1,4 @@
 import { assert } from "chai"
-import Vue from "vue"
 
 import getPageComponent from "@/js/pages/utils"
 import ContentPage from "@/js/pages/content"

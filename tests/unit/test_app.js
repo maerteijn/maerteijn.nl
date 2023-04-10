@@ -1,15 +1,11 @@
 import { assert } from "chai"
-import sinon from "sinon"
 
-import { mount } from "@vue/test-utils"
 import App from "@/app"
 
 import {
   createWrapperForComponent,
   resetState,
   mock_fetch_success,
-  mock_fetch_error,
-  waitForPromises,
 } from "../utils"
 
 import store from "@/js/store"

@@ -1,10 +1,8 @@
 import { assert } from "chai"
-import { mount } from "@vue/test-utils"
 
 import {
   createWrapperForComponent,
   mock_fetch_success,
-  mock_fetch_error,
   loadDefaultState,
   resetState,
   waitForPromises,
@@ -13,8 +11,6 @@ import {
 import ContentPage from "@/js/pages/content"
 import LastUpdated from "@/js/components/last-updated"
 import MarkdownViewer from "@/js/components/markdown-viewer"
-
-import * as fixtures from "../../fixtures"
 
 import store from "@/js/store"
 

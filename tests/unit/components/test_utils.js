@@ -1,5 +1,4 @@
 import { assert } from "chai"
-import Vue from "vue"
 
 import getContentComponent from "@/js/components/utils"
 import MarkdownViewer from "@/js/components/markdown-viewer"

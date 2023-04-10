@@ -3,7 +3,6 @@ import { assert } from "chai"
 import { mock_fetch_success, mock_fetch_error, resetState } from "../utils"
 
 import store from "@/js/store"
-import router from "@/js/router"
 
 import * as fixtures from "../fixtures"
 
@@ -138,8 +137,8 @@ describe("Test store", () => {
     it("loadSite should fill the store with the site site", function () {
       return store.actions.loadSite("/content/site.json").then(() => {
         assert.deepEqual(store.state.site, JSON.parse(fixtures.site_json))
+        assert.isTrue(store.state.loaded)
       })
-      assert.isTrue(store.state.loaded)
     })
 
     it("loadSite throws an error when axios does not return a JSON response", function () {

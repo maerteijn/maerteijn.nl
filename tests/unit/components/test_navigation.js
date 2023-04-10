@@ -6,8 +6,6 @@ import {
   resetState,
 } from "../../utils"
 
-import * as fixtures from "../../fixtures"
-
 import store from "@/js/store"
 import Navigation from "@/js/components/navigation"
 
