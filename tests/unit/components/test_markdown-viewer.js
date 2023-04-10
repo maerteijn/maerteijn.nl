@@ -49,6 +49,25 @@ describe("Markdown viewer component", () => {
     wrapper.unmount()
   })
 
+  it("The component should call the createImageSrc method", function () {
+    MarkdownViewer.methods.createImageSrc = sinon.spy(
+      MarkdownViewer.methods.createImageSrc
+    )
+
+    // no image? then the image viewer should not be called
+    let wrapper = createWrapperForComponent(MarkdownViewer, { content: "#Hi!" })
+    assert.isFalse(MarkdownViewer.methods.createImageSrc.called)
+    wrapper.unmount()
+
+    // when there is, it should cal it
+    wrapper = createWrapperForComponent(MarkdownViewer, {
+      content: "![Photo](/images/photo-small.jpg#left =120x*)",
+    })
+    assert.isTrue(MarkdownViewer.methods.createImageSrc.called)
+    sinon.restore()
+    wrapper.unmount()
+  })
+
   it("The component calls the createRouterLink function for internal links", function () {
     MarkdownViewer.methods.createRouterLink = sinon.spy(
       MarkdownViewer.methods.createRouterLink

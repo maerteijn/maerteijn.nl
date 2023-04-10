@@ -24,10 +24,20 @@ export default {
         return false
       }
     },
+    createImageSrc(href) {
+      let element = document.createElement("link")
+      element.setAttribute("rel", "image_src")
+      element.setAttribute("href", href)
+      return element
+    },
   },
   mounted() {
     // create a image overlay for each image in the content
-    this.$el.querySelectorAll("img").forEach((image) => {
+    this.$el.querySelectorAll("img").forEach((image, index) => {
+      if (index === 0) {
+        // Add a <link rel="image_src"> tag after the first image
+        image.after(this.createImageSrc(image.src))
+      }
       this.createImageViewer(image)
     })
 
