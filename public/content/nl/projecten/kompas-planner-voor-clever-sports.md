@@ -1,10 +1,10 @@
 # Kompas Planner
 
-![Kompas Planner](/images/buurtsportcoach-planner.jpg#left =215x147)Buurtsportcoaches spelen in Nederland een belangrijke rol als het gaat om het actief begeleiden en stimuleren van sporten in de wijk. Sportmakelaars zorgen er voor dat sportaanbieders en buurtsportcoaches worden gekoppeld aan de juiste doelgroepen en activiteiten. Dat vergt veel organisatie, met name in grote gemeentes zoals Amsterdam.
+![Kompas Planner](/images/buurtsportcoach-planner.jpg#left =215x147)Buurtsportcoaches spelen in Nederland een belangrijke rol als het gaat om het actief begeleiden en stimuleren van sporten in de wijk. Sportmakelaars zorgen ervoor dat sportaanbieders en buurtsportcoaches worden gekoppeld aan de juiste doelgroepen en activiteiten. Dat vergt accurate planning, met name in grote gemeentes zoals Amsterdam.
 
-Waar [Buurtsportcoach Kompas](https://buurtsportcoach-kompas.nl/) zich vooral richt op het monitoren van het gehele proces is de [Kompas Planner](https://cleversports.nl/cases/kompas-planner/) er met name op gericht om activiteiten te koppelen aan coaches, locaties en aanbieders.
+Waar [Buurtsportcoach Kompas](https://buurtsportcoach-kompas.nl/) zich vooral richt op het monitoren van het gehele proces is de [Kompas Planner](https://cleversports.nl/cases/kompas-planner/) er met name op gericht om activiteiten te plannen en te koppelen aan coaches, trainers, locaties en aanbieders.
 
-Doordat er via REST direct gecommuniceerd kan worden met [Buurtsportcoach Kompas](https://buurtsportcoach-kompas.nl/) en de achterliggende [AFAS systemen](https://www.afas.nl/software/connector) wordt het plannen van activiteiten een stuk simpeler. Planners zien direct welke buurtsportcoaches en trainers van externe aanbieders geschikt zijn voor een bepaalde activiteit.
+Doordat er via een REST API direct gecommuniceerd kan worden met [Buurtsportcoach Kompas](https://buurtsportcoach-kompas.nl/) en de achterliggende [AFAS systemen](https://www.afas.nl/software/connector) wordt het plannen van activiteiten een stuk simpeler. Planners zien direct welke buurtsportcoaches en trainers geschikt en beschikbaar zijn voor bepaalde activiteiten.
 
 Ook kunnen de planners de agenda's van de buurtsportcoaches inzien en worden de geplande activiteiten direct ingeschoten in de agenda's van de buurtsportcoaches.
 
