@@ -12,7 +12,7 @@ The REST API was developed including:
 - Full [Gitlab CI/CD](https://docs.gitlab.com/ee/ci/) integration including docker image registry publishing and wiki documentation
 
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/) using [PostgreSQL](https://www.postgresql.org/)
 - The excellent [Dramatiq](https://dramatiq.io/) background task queuer and framework, used with [RabbitMQ](https://www.rabbitmq.com/)
 - Authentication and permissions with [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)

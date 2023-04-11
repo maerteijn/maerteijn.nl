@@ -13,7 +13,7 @@ As [querying JSON keys](https://docs.djangoproject.com/en/3.1/topics/db/queries/
 By making the Survey model [abstract](https://docs.djangoproject.com/en/3.2/topics/db/models/#abstract-base-classes), the model can be overriden and extended in any project.
 
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Wagtail ModelAdmin](https://docs.wagtail.io/en/stable/reference/contrib/modeladmin/index.html), a nice Wagtail contrib application so you can create and edit plain Django models with the Wagtail UI
 - [Microsoft Playwright](https://playwright.dev/) with [Express](https://expressjs.com/) for writing E2E browser-tests, so we can test if the React components are loaded correctly
 - [Webpack Output](https://webpack.js.org/configuration/output/#outputlibrarytype), by specifying the `output.library.type` to `var`, we can export the React components as plain javascript variables, so it becomes very easy to integrate the components in the Wagtail UI

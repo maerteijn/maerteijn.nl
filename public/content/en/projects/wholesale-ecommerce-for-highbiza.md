@@ -6,7 +6,7 @@ A custom REST API was developed, helped by defining several database views speci
 
 A [Netcore C# client](https://openapi-generator.tech/docs/generators/csharp-netcore) was generated from an [OpenAPI schema](https://swagger.io/specification/) which made the integration for the customer fast and reliable.
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Django](https://www.djangoproject.com/) with [Django Oscar](https://github.com/django-oscar/django-oscar) and [DRF](https://www.django-rest-framework.org/)
 -  [MS SQL Server](https://www.microsoft.com/en-us/sql-server) with the [MS SQL docker images](https://hub.docker.com/_/microsoft-mssql-server) for developing on Mac OS
 - [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio) to manage and adjust the database views

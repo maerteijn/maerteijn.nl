@@ -4,7 +4,7 @@
 
 I used [Saltstack](https://www.saltstack.com/) to implement a custom solution so all Raspberry PI's in the workshops are remotely manageable and configurable. Performing automatic updates of the software was now possible and I used and customized the Open Source Front-end [SaltGUI](https://github.com/erwindon/SaltGUI) so it became much easier to track down and fix problems. This Front-end is still used today and is currently being maintained by [Erwin Dondorp](https://github.com/erwindon/).
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Saltstack] is an configuration management tool written in [Python](http://www.python.org) and uses [ZeroMQ](https://zeromq.org/) as a communication message-bus
 - [SaltGUI](https://github.com/erwindon/SaltGUI) is a Front-end for Saltstack written in ES6 and runs in a browser
 - [Jenkins](https://www.jenkins.io/) CI/CD for automatic testing and packaging of the Raspberry PI software and images

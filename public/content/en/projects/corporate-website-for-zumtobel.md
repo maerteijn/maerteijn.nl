@@ -9,7 +9,7 @@
 Because of the huge amount of content we used [wagtail-factories](https://github.com/wagtail/wagtail-factories) to generate dummy content during development. Not only very useful for writing tests but also needed to demonstrate the newly developed functionalities in each sprint demo. The Front-end (developed by an external design agency) is tightly integrated into the Wagtail CMS so content editors can see the result of their work immediately in the correct design.
 
 
-#### Noticeable technologies
+#### Highlighted technologies
 - [Wagtail](https://wagtail.io/), a very user friendly CMS based on [Django](https://www.djangoproject.com/)
 - [APIStar](https://github.com/encode/apistar) to develop a test-client generated from an [OpenAPI](https://swagger.io/specification/) specifications
 - [Wagtail Trans](https://github.com/wagtail/wagtailtrans) to translate all wagtail based content
