@@ -13,8 +13,8 @@
 
 #### Post- en bezoekadres
 [**Maerteijn - Freelance Software Developer**](https://goo.gl/maps/Pr3t1pmqjMt9Y3gaA)
-Jansbinnensingel 26
-6811 AL
+Laurens Jansz. Costerstraat 5
+6827 AR
 Arnhem, NL
 
 #### Bedrijfsgegevens
