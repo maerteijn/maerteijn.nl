@@ -1,6 +1,6 @@
 # Projecten
 
-![Mijn bureau](/images/my-office-desk.jpg#left =200x150) Een greep uit de projecten die ik heb gedaan staan hieronder opgesomd. Een complete lijst kun je terugvinden op mijn [LinkedIn profiel](https://www.linkedin.com/in/maerteijn/). Ik had geen enkel project kunnen doen zonder de hulp van alle collega's / mede-ontwikkelaars en al die getalenteerde mensen die hun software open source beschikbaar hebben gemaakt!
+![Hallway](/images/hallway.jpg#left =200x150) Een greep uit de projecten die ik heb gedaan staan hieronder opgesomd. Een complete lijst kun je terugvinden op mijn [LinkedIn profiel](https://www.linkedin.com/in/maerteijn/). Ik had geen enkel project kunnen doen zonder de hulp van alle collega's / mede-ontwikkelaars en al die getalenteerde mensen die hun software open source beschikbaar hebben gemaakt!
 
 #### Overzicht
 

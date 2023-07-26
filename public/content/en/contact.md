@@ -1,6 +1,6 @@
 # Contact
 
-![Office Door](/images/office-door.jpg#left =200x150) If you think I would be suitable for your next project or when you need a reinforcement for a running project please feel free to contact me! You can see below how you can reach me in various ways. For project inquiries, please mention the company name and send me some project details when contacting me. Thank you in advance!
+![My Office](/images/office-outside.jpg#left =200x150) If you think I would be suitable for your next project or when you need a reinforcement for a running project please feel free to contact me! You can see below how you can reach me in various ways. For project inquiries, please mention the company name and send me some project details when contacting me. Thank you in advance!
 
 #### Contact information
 |                       |                                                                     |
