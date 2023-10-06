@@ -1,5 +1,5 @@
 # maerteijn.nl
-![](https://github.com/maerteijn/maerteijn.nl/workflows/maerteijn.nl%20ci/badge.svg)
+![](https://github.com/maerteijn/maerteijn.nl/actions/workflows/ci-push-main.yml/badge.svg)
 
 My professional website build with Vue.js, deployed on [https://www.maerteijn.nl](https://www.maerteijn.nl)
 
