@@ -74,9 +74,8 @@ export default {
       }
     }
 
-    a {
-      background-color: variables.$background-color-left-second;
-      text-decoration: underline;
+    a:hover {
+      color: variables.$orange-color;
     }
   }
 
