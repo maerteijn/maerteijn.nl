@@ -74,8 +74,12 @@ export default {
       }
     }
 
-    a:hover {
-      color: variables.$orange-color;
+    a {
+      text-decoration-line: underline;
+      text-decoration-thickness: 0.5px; // This is fun, isn't it
+      &:hover {
+        color: variables.$orange-color;
+      }
     }
   }
 
