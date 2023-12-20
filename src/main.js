@@ -8,7 +8,7 @@ import { state, actions, getters } from "./js/store"
 import DefaultLayout from "./js/layouts/default"
 import BasicLayout from "./js/layouts/basic"
 
-// Impoort all required css files
+// Import all required css files
 import "./scss/main.scss"
 import "viewerjs/dist/viewer.css"
 
