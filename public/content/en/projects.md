@@ -6,6 +6,7 @@
 
 | :calendar: Period  | :file_folder: Project                                                                                |
 | ------------------ | ---------------------------------------------------------------------------------------------------- |
+| 2023               | [AWS CodeArtifact for Techonomy](/en/projects/aws-codeartifact-for-techonomy)                        |
 | 2022               | [Kompas Planner for Clever Sports](/en/projects/kompas-planner-for-clever-sports)                    |
 | 2021               | [Wagtail Gorilla Forms for Techonomy](/en/projects/wagtail-gorilla-forms-for-techonomy)              |
 | 2020               | [Wholesale E-commerce for Highbiza](/en/projects/wholesale-ecommerce-for-highbiza)                   |

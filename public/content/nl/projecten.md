@@ -6,6 +6,7 @@
 
 | :calendar: Periode  | :file_folder: Project                                                                                  |
 | ------------------- | ------------------------------------------------------------------------------------------------------ |
+| 2023                | [AWS CodeArtifact voor Techonomy](/nl/projecten/aws-codeartifact-voor-techonomy)                       |
 | 2022                | [Kompas Planner voor Clever Sports](/nl/projecten/kompas-planner-voor-clever-sports)                   |
 | 2021                | [Wagtail Gorilla Forms voor Techonomy](/nl/projecten/wagtail-gorilla-forms-voor-techonomy)             |
 | 2020                | [Groothandel E-commerce voor Highbiza](/nl/projecten/groothandel-ecommerce-voor-highbiza)              |
