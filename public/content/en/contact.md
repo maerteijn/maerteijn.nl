@@ -13,7 +13,7 @@
 
 ####  Postal + Office Address
 [**Maerteijn - Freelance Software Developer**](https://maps.app.goo.gl/aWsRqKz9qv3fsDLV9)
-Kantoorgebouwe De Enk
+Kantoorgebouw De Enk
 Tivolilaan 205
 6824 BV
 Arnhem, NL
