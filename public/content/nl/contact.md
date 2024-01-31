@@ -12,9 +12,10 @@
 
 
 #### Post- en bezoekadres
-[**Maerteijn - Freelance Software Developer**](https://goo.gl/maps/Pr3t1pmqjMt9Y3gaA)
-Laurens Jansz. Costerstraat 5
-6827 AR
+[**Maerteijn - Freelance Software Developer**](https://maps.app.goo.gl/aWsRqKz9qv3fsDLV9)
+Kantoorgebouwe De Enk
+Tivolilaan 205
+6824 BV
 Arnhem, NL
 
 #### Bedrijfsgegevens

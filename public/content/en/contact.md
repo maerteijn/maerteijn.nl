@@ -12,9 +12,10 @@
 
 
 ####  Postal + Office Address
-[**Maerteijn - Freelance Software Developer**](https://goo.gl/maps/Pr3t1pmqjMt9Y3gaA)
-Jansbinnensingel 26
-6811 AL
+[**Maerteijn - Freelance Software Developer**](https://maps.app.goo.gl/aWsRqKz9qv3fsDLV9)
+Kantoorgebouwe De Enk
+Tivolilaan 205
+6824 BV
 Arnhem, NL
 
 #### Company details
