@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import { mock_fetch_success, mock_fetch_error, resetState } from "../utils"
 
@@ -42,11 +42,11 @@ describe("Test store", () => {
   })
 
   describe("Getters", () => {
-    beforeEach(function () {
+    beforeEach(() => {
       store.state.site = JSON.parse(fixtures.site_json)
     })
 
-    afterEach(function () {
+    afterEach(() => {
       resetState(store.state)
     })
 
@@ -120,12 +120,14 @@ describe("Test store", () => {
   })
 
   describe("Actions", () => {
-    beforeEach(function () {
-      this.stub = mock_fetch_success()
+    let stub
+
+    beforeEach(() => {
+      stub = mock_fetch_success()
     })
 
-    afterEach(function () {
-      this.stub.resetBehavior()
+    afterEach(() => {
+      stub.resetBehavior()
       resetState(store.state)
     })
 
@@ -142,7 +144,7 @@ describe("Test store", () => {
     })
 
     it("loadSite throws an error when axios does not return a JSON response", function () {
-      this.stub = mock_fetch_error()
+      stub = mock_fetch_error()
 
       return store.actions.loadSite("/content/site.json").catch((error) => {
         assert.include(error, "Invalid JSON response")
@@ -163,7 +165,7 @@ describe("Test store", () => {
       return store.actions.downloadContent("my-path").then((result) => {
         assert.equal(result, fixtures.home_content)
         // no http request with axios should have been made
-        assert.isTrue(this.stub.notCalled)
+        assert.isTrue(stub.notCalled)
       })
     })
 
@@ -176,7 +178,7 @@ describe("Test store", () => {
         // the promise should resolve with the fetched content
         assert.equal(result, fixtures.home_content)
         // and axios is called with the expected url
-        assert.isTrue(this.stub.calledWith(url))
+        assert.isTrue(stub.calledWith(url))
         // and the content is available in the store
         assert.include(store.state.content[path], fixtures.home_content)
       })

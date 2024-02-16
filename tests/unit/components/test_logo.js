@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 import sinon from "sinon"
 
 import { createWrapperForComponent } from "../../utils"
@@ -37,50 +37,49 @@ describe("Logo component", () => {
 })
 
 describe("Logo component - extended", () => {
-  beforeEach(function () {
-    this.wrapper = createWrapperForComponent(Logo)
-    this.wrapper.vm.$state.site = JSON.parse(fixtures.site_json)
-    this.wrapper.vm.$state.loaded = true
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = createWrapperForComponent(Logo)
+    wrapper.vm.$state.site = JSON.parse(fixtures.site_json)
+    wrapper.vm.$state.loaded = true
   })
 
   afterEach(function () {
-    this.wrapper.unmount()
+    wrapper.unmount()
   })
 
   it("The logo component renders icons from the store correctly", function () {
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.isTrue(this.wrapper.find(".icons").exists())
+    return wrapper.vm.$nextTick().then(() => {
+      assert.isTrue(wrapper.find(".icons").exists())
 
       // all icons loaded in the store should be rendered
-      const logo_links = this.wrapper.vm.$state.site.logo_links
-      assert.equal(
-        this.wrapper.findAll(".icons .item").length,
-        logo_links.length
-      )
+      const logo_links = wrapper.vm.$state.site.logo_links
+      assert.equal(wrapper.findAll(".icons .item").length, logo_links.length)
     })
   })
 
   it("The links computed property returns items from the store", function () {
-    return this.wrapper.vm.$nextTick().then(() => {
-      const logo_links = this.wrapper.vm.$state.site.logo_links
-      assert.equal(this.wrapper.vm.links.length, logo_links.length)
+    return wrapper.vm.$nextTick().then(() => {
+      const logo_links = wrapper.vm.$state.site.logo_links
+      assert.equal(wrapper.vm.links.length, logo_links.length)
     })
   })
 
   it("The links computed property is immediately updated from the store", function () {
-    this.wrapper.vm.$state.site.logo_links = []
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.equal(this.wrapper.vm.links.length, 0)
+    wrapper.vm.$state.site.logo_links = []
+    return wrapper.vm.$nextTick().then(() => {
+      assert.equal(wrapper.vm.links.length, 0)
     })
   })
 
   it("Clicking the logo will navigate to the root page", function () {
-    this.wrapper.vm.goHome = sinon.spy(this.wrapper.vm.goHome)
-    const logo = this.wrapper.find("figure.mobile img")
+    wrapper.vm.goHome = sinon.spy(wrapper.vm.goHome)
+    const logo = wrapper.find("figure.mobile img")
     logo.trigger("click")
 
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.isTrue(this.wrapper.vm.goHome.called)
+    return wrapper.vm.$nextTick().then(() => {
+      assert.isTrue(wrapper.vm.goHome.called)
       sinon.restore()
     })
   })

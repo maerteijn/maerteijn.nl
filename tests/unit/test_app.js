@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import App from "@/app"
 
@@ -11,11 +11,13 @@ import {
 import store from "@/js/store"
 
 describe("App component", () => {
-  beforeEach(function () {
-    this.stub = mock_fetch_success()
+  let stub
+
+  beforeEach(() => {
+    stub = mock_fetch_success()
   })
-  afterEach(function () {
-    this.stub.resetBehavior()
+  afterEach(() => {
+    stub.resetBehavior()
     resetState(store.state)
   })
 

@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import { validator } from "@/js/schema"
 import * as fixtures from "../fixtures"
