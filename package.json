@@ -2,11 +2,11 @@
   "name": "maerteijn.nl",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "vue-cli-service serve --port 1234",
-    "build": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/release && npm run build:sitemap",
-    "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
-    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.mjs",
+    "dev": "vite",
+    "build": "VITE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vite build && npm run build:sitemap",
+    "serve": "vite preview",
     "lint": "vue-cli-service lint",
     "build:sitemap": "node src/sitemap/index.mjs",
     "eslint": " vue-cli-service lint --no-fix src/",
@@ -27,7 +27,7 @@
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "bulma": "^0.9.4",
-    "core-js": "^3.33.0",
+    "highlight.js": "^11.9.0",
     "showdown": "^2.1.0",
     "showdown-highlight": "^3.1.0",
     "viewerjs": "^1.11.6",
@@ -35,14 +35,7 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli": "^5.0.8",
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-plugin-unit-mocha": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
+    "@vitejs/plugin-vue": "^5.0.3",
     "@vue/test-utils": "^2.0.2",
     "chai": "^4.3.4",
     "eslint": "^8.1",
@@ -54,19 +47,20 @@
     "prettier": "^2.4.1",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.53.0",
-    "sass-loader": "^13.0.2",
     "sinon": "^9.2.4",
     "sitemap": "^6.4.0",
     "style-resources-loader": "^1.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
+    "vite": "^5.1.0",
     "vue-cli-plugin-style-resources-loader": "^0.1.5"
   },
   "eslintConfig": {
     "root": true,
     "env": {
       "mocha": true,
-      "node": true
+      "node": true,
+      "es2022": true
     },
     "extends": [
       "plugin:vue/vue3-essential",
@@ -79,9 +73,6 @@
         "never"
       ],
       "vue/multi-word-component-names": "off"
-    },
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
     }
   },
   "prettier": {
