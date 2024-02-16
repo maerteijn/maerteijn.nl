@@ -17,8 +17,7 @@
     "lint": "npm run eslint && npm run prettier && npm run stylelint",
     "format": "npm run eslint:fix && npm run prettier:fix && npm run stylelint:fix",
     "test:unit": "vitest run tests/unit/",
-    "test:functional": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/functional/",
-    "test:unit:debug": "vue-cli-service test:unit --inspect-brk --require tests/setup_dom.js --colors tests/unit/"
+    "test:functional": "vitest run tests/functional/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4",
@@ -54,8 +53,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "vite": "^5.1.0",
-    "vitest": "^1.2.2",
-    "vue-cli-plugin-style-resources-loader": "^0.1.5"
+    "vitest": "^1.2.2"
   },
   "eslintConfig": {
     "root": true,
