@@ -43,6 +43,12 @@ We can also run e2e tests with `playwright`:
     npm run test:e2e
 ```
 
+## Bundle size
+See how much javascript / assets are bundled:
+```bash
+    npm run visualize
+```
+
 ## Github actions
 
 All linting and tests are run automatically using [Github Actions](https://github.com/maerteijn/maerteijn.nl/actions)

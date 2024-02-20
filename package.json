@@ -18,7 +18,8 @@
     "format": "npm run eslint:fix && npm run prettier:fix && npm run stylelint:fix",
     "test:unit": "vitest run tests/unit/",
     "test:functional": "vitest run tests/functional/",
-    "test:e2e": "npm run build && vitest run tests/e2e/test_*.js"
+    "test:e2e": "npm run build && vitest run tests/e2e/test_*.js",
+    "visualize": "vite-bundle-visualizer -c vite.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4",
@@ -53,6 +54,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "vite": "^5.1.0",
+    "vite-bundle-visualizer": "^1.0.1",
     "vitest": "^1.3.0"
   },
   "eslintConfig": {

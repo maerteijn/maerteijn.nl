@@ -46,8 +46,8 @@ export default {
       .querySelectorAll('a[href^="/"]')
       .forEach((link) => this.createRouterLink(link))
 
-   // apply code formatting
-   applyHighlight()
+    // apply code formatting
+    applyHighlight()
   },
 }
 </script>
