@@ -13,7 +13,8 @@
 #### JS development
 *I've used many tools, see the [package.json](https://github.com/maerteijn/maerteijn.nl/blob/master/package.json) file for all of them, but to mention a few:*
 - [Node.js](https://github.com/nodejs) - You can't do JS development without it
-- [Vue CLI](https://cli.vuejs.org/) - A convenient command line tool for developing and releasing Vue applications including an optimized webpack configuration and testing utilities
+- [Create Vue](https://github.com/vuejs/create-vue) - The latest and greatest tool for creating / managing Vue projects
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
 - [Sass](https://github.com/sass/sass) - For the CSS in this website
 
 
@@ -32,7 +33,7 @@
 
 
 #### Testing and CI
-- [Mocha](https://github.com/mochajs/mocha) - A very flexible test-runner in JavaScript
+- [Vitest](https://vitest.dev/) - The new testing framework for Vite / Vue build projects
 - [Chai.js](https://github.com/chaijs) - Assertions how you want them
 - [Sinon](https://github.com/sinonjs/sinon) - Makes unit testing possible with all kinds of stubs and spies
 - [Playwright](https://github.com/microsoft/playwright) - A new promising browser automation library from Microsoft
