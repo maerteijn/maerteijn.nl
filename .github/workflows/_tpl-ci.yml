@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v3
-    - name: Setup nodejs 18
-      uses: actions/setup-node@v3
+      uses: actions/checkout@v4
+    - name: Setup nodejs 20
+      uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 20
     - name: Cache node modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
@@ -32,7 +32,7 @@ jobs:
     - name: Run the e2e tests
       run: npm run test:e2e
     - name: Archive screenshots
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: screenshots
         path: dist/screenshots
@@ -42,13 +42,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v3
-    - name: Setup nodejs 18
-      uses: actions/setup-node@v3
+      uses: actions/checkout@v4
+    - name: Setup nodejs 20
+      uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 20
     - name: Cache node modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
@@ -57,7 +57,7 @@ jobs:
     - name: Create a production build
       run: npm run build
     - name: Archive public directory
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: public
-        path: dist/release
+        path: dist

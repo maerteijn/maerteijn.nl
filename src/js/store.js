@@ -12,7 +12,7 @@ export const state = reactive({
   },
   content: {},
   loaded: false,
-  lastUpdated: process.env.VUE_APP_BUILD_TIME || "unknown",
+  lastUpdated: import.meta.env.VITE_APP_BUILD_TIME || "unknown",
   layout: isOldBrowser() ? "basic-layout" : "default-layout",
   error: null,
 })

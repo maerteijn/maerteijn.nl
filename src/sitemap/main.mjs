@@ -3,14 +3,14 @@ import { promises as fs } from "fs"
 import { readFile } from 'fs/promises';
 import { SitemapStream, streamToPromise } from "sitemap"
 
-import { validator } from "../js/schema.mjs"
+import { validator } from "../js/schema.js"
 const package_json = JSON.parse(
   await readFile(
     new URL("../../package.json", import.meta.url)
   )
 )
 const current_path = process.cwd()
-const build_path = "dist/release"
+const build_path = "dist"
 
 const loadJSON = async (json_path) => {
   const json = await fs.readFile(json_path)

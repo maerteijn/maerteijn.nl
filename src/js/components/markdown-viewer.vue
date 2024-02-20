@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { renderMarkdown } from "../markdown"
+import { renderMarkdown, applyHighlight } from "../markdown"
 import { createImageViewer } from "../utils"
 
 export default {
@@ -45,6 +45,9 @@ export default {
     this.$el
       .querySelectorAll('a[href^="/"]')
       .forEach((link) => this.createRouterLink(link))
+
+    // apply code formatting
+    applyHighlight()
   },
 }
 </script>

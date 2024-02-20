@@ -2,23 +2,24 @@
   "name": "maerteijn.nl",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "vue-cli-service serve --port 1234",
-    "build": "VUE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vue-cli-service build --dest dist/release && npm run build:sitemap",
-    "test:unit": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/unit/",
-    "test:e2e": "npm run build && mocha --exit tests/e2e/test_*.mjs",
-    "lint": "vue-cli-service lint",
+    "dev": "vite",
+    "build": "VITE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vite build && npm run build:sitemap",
+    "serve": "vite preview",
     "build:sitemap": "node src/sitemap/index.mjs",
-    "eslint": " vue-cli-service lint --no-fix src/",
-    "eslint:fix": " vue-cli-service lint src/ ",
+    "eslint": "eslint --no-fix src/",
+    "eslint:fix": "eslint src/ ",
     "prettier": "prettier --check \"{tests,src}/**/*.{js,vue}\"",
     "prettier:fix": "prettier --write \"{tests,src}/**/*.{js,vue}\"",
     "stylelint": "stylelint 'src/**/*.scss' 'src/**/*.vue'",
     "stylelint:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix",
-    "format": "yarn run eslint:fix && yarn run prettier:fix && yarn run stylelint:fix",
-    "test:functional": "vue-cli-service test:unit --require tests/setup_dom.js --colors tests/functional/",
-    "test:unit:debug": "vue-cli-service test:unit --inspect-brk --require tests/setup_dom.js --colors tests/unit/",
-    "ui": "vue ui"
+    "lint": "npm run eslint && npm run prettier && npm run stylelint",
+    "format": "npm run eslint:fix && npm run prettier:fix && npm run stylelint:fix",
+    "test:unit": "vitest run tests/unit/",
+    "test:functional": "vitest run tests/functional/",
+    "test:e2e": "npm run build && vitest run tests/e2e/test_*.js",
+    "visualize": "vite-bundle-visualizer -c vite.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4",
@@ -27,46 +28,41 @@
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "bulma": "^0.9.4",
-    "core-js": "^3.33.0",
+    "highlight.js": "^11.9.0",
     "showdown": "^2.1.0",
-    "showdown-highlight": "^3.1.0",
     "viewerjs": "^1.11.6",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli": "^5.0.8",
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-plugin-unit-mocha": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
+    "@vitejs/plugin-vue": "^5.0.3",
     "@vue/test-utils": "^2.0.2",
     "chai": "^4.3.4",
     "eslint": "^8.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^8.0.3",
     "express": "^4.17.1",
+    "jsdom": "^24.0.0",
     "null-loader": "^4.0.1",
     "playwright-chromium": "^1.13.1",
     "prettier": "^2.4.1",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.53.0",
-    "sass-loader": "^13.0.2",
     "sinon": "^9.2.4",
     "sitemap": "^6.4.0",
     "style-resources-loader": "^1.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
-    "vue-cli-plugin-style-resources-loader": "^0.1.5"
+    "vite": "^5.1.0",
+    "vite-bundle-visualizer": "^1.0.1",
+    "vitest": "^1.3.0"
   },
   "eslintConfig": {
     "root": true,
     "env": {
       "mocha": true,
-      "node": true
+      "node": true,
+      "es2022": true
     },
     "extends": [
       "plugin:vue/vue3-essential",
@@ -79,9 +75,6 @@
         "never"
       ],
       "vue/multi-word-component-names": "off"
-    },
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
     }
   },
   "prettier": {

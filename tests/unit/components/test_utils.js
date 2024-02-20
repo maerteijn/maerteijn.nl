@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import getContentComponent from "@/js/components/utils"
 import MarkdownViewer from "@/js/components/markdown-viewer"

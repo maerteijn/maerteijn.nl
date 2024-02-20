@@ -7,10 +7,10 @@ $body-weight: 400;
 $body-font-size: 1.1em;
 $link-hover: variables.$orange-color;
 
-@import "~bulma/sass/utilities/_all";
-@import "~bulma/sass/base/_all";
-@import "~bulma/sass/elements/content";
-@import "~bulma/sass/elements/image";
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/base/_all";
+@import "bulma/sass/elements/content";
+@import "bulma/sass/elements/image";
 
 // Overrides which are not customizable with variables
 .content h1 {

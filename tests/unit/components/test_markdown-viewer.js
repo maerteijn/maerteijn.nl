@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 import sinon from "sinon"
 
 import { createWrapperForComponent } from "../../utils"

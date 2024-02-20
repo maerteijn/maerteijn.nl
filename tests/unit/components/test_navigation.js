@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import {
   createWrapperForComponent,
@@ -36,8 +36,10 @@ describe("Navigation component", () => {
 })
 
 describe("Navigation component - extended", () => {
-  beforeEach(function () {
-    this.wrapper = createWrapperForComponent(
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = createWrapperForComponent(
       Navigation,
       {},
       {
@@ -48,47 +50,41 @@ describe("Navigation component - extended", () => {
   })
 
   afterEach(function () {
-    this.wrapper.unmount()
+    wrapper.unmount()
     resetState(store.state)
   })
 
   it("The navigations component renders page links from the store correctly", function () {
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.isTrue(this.wrapper.find(".navigation").exists())
+    return wrapper.vm.$nextTick().then(() => {
+      assert.isTrue(wrapper.find(".navigation").exists())
 
-      const pages = store.getters.getPagesForNavigation(
-        this.wrapper.vm.$route.path
-      )
+      const pages = store.getters.getPagesForNavigation(wrapper.vm.$route.path)
 
-      assert.lengthOf(this.wrapper.findAll(".navigation .item"), pages.length)
+      assert.lengthOf(wrapper.findAll(".navigation .item"), pages.length)
     })
   })
 
   it("The navigation component is language aware", function () {
     store.state.site.pages[0].settings.language = "en"
-    const pages = store.getters.getPagesForNavigation(
-      this.wrapper.vm.$route.path
-    )
+    const pages = store.getters.getPagesForNavigation(wrapper.vm.$route.path)
 
-    return this.wrapper.vm.$nextTick().then(() => {
+    return wrapper.vm.$nextTick().then(() => {
       // and now it's only one
-      assert.lengthOf(this.wrapper.vm.pages, pages.length)
+      assert.lengthOf(wrapper.vm.pages, pages.length)
     })
   })
 
   it("The pages computed property returns only pages with show_in_menu = true", function () {
-    return this.wrapper.vm.$nextTick().then(() => {
-      const pages = store.getters.getPagesForNavigation(
-        this.wrapper.vm.$route.path
-      )
-      assert.lengthOf(this.wrapper.vm.pages, pages.length)
+    return wrapper.vm.$nextTick().then(() => {
+      const pages = store.getters.getPagesForNavigation(wrapper.vm.$route.path)
+      assert.lengthOf(wrapper.vm.pages, pages.length)
     })
   })
 
   it("The pages computed property is immediately updated from the store", function () {
     store.state.site.pages = []
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.equal(this.wrapper.vm.pages.length, 0)
+    return wrapper.vm.$nextTick().then(() => {
+      assert.equal(wrapper.vm.pages.length, 0)
     })
   })
 })

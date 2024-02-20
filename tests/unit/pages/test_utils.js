@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import getPageComponent from "@/js/pages/utils"
 import ContentPage from "@/js/pages/content"

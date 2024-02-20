@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import {
   createWrapperForComponent,
@@ -11,14 +11,16 @@ import RedirectPage from "@/js/pages/redirect"
 import store from "@/js/store"
 
 describe("Redirect page", () => {
+  let stub
+
   beforeEach(function () {
-    this.stub = mock_fetch_success()
+    stub = mock_fetch_success()
     loadDefaultState(store.state)
   })
 
   afterEach(function () {
     delete window.localStorage.language
-    this.stub.resetBehavior()
+    stub.resetBehavior()
   })
 
   it("We can initialize a Redirect page", () => {

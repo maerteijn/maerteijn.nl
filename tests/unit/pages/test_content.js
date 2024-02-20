@@ -1,4 +1,4 @@
-import { assert } from "chai"
+import { assert } from "vitest"
 
 import {
   createWrapperForComponent,
@@ -15,8 +15,10 @@ import MarkdownViewer from "@/js/components/markdown-viewer"
 import store from "@/js/store"
 
 describe("Content page", () => {
+  let wrapper
+
   beforeEach(function () {
-    this.wrapper = createWrapperForComponent(
+    wrapper = createWrapperForComponent(
       ContentPage,
       {},
       {
@@ -27,43 +29,43 @@ describe("Content page", () => {
   })
 
   afterEach(function () {
-    this.wrapper.unmount()
+    wrapper.unmount()
     resetState(store.state)
   })
 
   it("We can initialize a Content page", function () {
-    assert.equal(this.wrapper.vm.$options.name, "content-page")
+    assert.equal(wrapper.vm.$options.name, "content-page")
   })
 
   it("Default the content page will render the page div, but no content ", function () {
-    assert.isTrue(this.wrapper.find(".page").exists())
-    assert.isFalse(this.wrapper.find(".content").exists())
+    assert.isTrue(wrapper.find(".page").exists())
+    assert.isFalse(wrapper.find(".content").exists())
   })
 
   it("It renders the page div with another layout", function () {
     store.state.layout = "basic-layout"
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.isTrue(this.wrapper.find(".page").exists())
+    return wrapper.vm.$nextTick().then(() => {
+      assert.isTrue(wrapper.find(".page").exists())
     })
   })
 
   it("The content computed property works as expected", function () {
-    assert.equal(this.wrapper.vm.content, "")
+    assert.equal(wrapper.vm.content, "")
     const content = "# Hello!"
 
     store.state.content["/"] = content
-    return this.wrapper.vm.$nextTick().then(() => {
-      assert.equal(this.wrapper.vm.content, content)
+    return wrapper.vm.$nextTick().then(() => {
+      assert.equal(wrapper.vm.content, content)
     })
   })
 
   it("The loaded computed property works as expected", function () {
-    assert.isFalse(this.wrapper.vm.loaded)
+    assert.isFalse(wrapper.vm.loaded)
 
     // set the content here so the loadContent method will return gracefully
     store.state.content["/"] = "Hello!"
     store.state.loaded = true
-    assert.isTrue(this.wrapper.vm.loaded)
+    assert.isTrue(wrapper.vm.loaded)
   })
 
   it("The page_metadata computed property works as expected", function () {
@@ -76,7 +78,7 @@ describe("Content page", () => {
       },
     }
     store.state.site.pages.push(metadata)
-    assert.deepEqual(this.wrapper.vm.page_metadata, metadata)
+    assert.deepEqual(wrapper.vm.page_metadata, metadata)
   })
 
   it("The content_component computed property works as expected", function () {
@@ -90,7 +92,7 @@ describe("Content page", () => {
       },
     }
     store.state.site.pages.push(metadata)
-    assert.deepEqual(this.wrapper.vm.content_component, MarkdownViewer)
+    assert.deepEqual(wrapper.vm.content_component, MarkdownViewer)
   })
 
   it("The footer_component computed property works as expected", function () {
@@ -104,7 +106,7 @@ describe("Content page", () => {
       },
     }
     store.state.site.pages.push(metadata)
-    assert.deepEqual(this.wrapper.vm.footer_component, LastUpdated)
+    assert.deepEqual(wrapper.vm.footer_component, LastUpdated)
   })
 
   it("The backlink computed property works as expected", function () {
@@ -121,15 +123,18 @@ describe("Content page", () => {
       },
     }
     store.state.site.pages.push(metadata)
-    assert.equal(this.wrapper.vm.backlink.path, "/")
-    assert.equal(this.wrapper.vm.backlink.title, "Hello")
+    assert.equal(wrapper.vm.backlink.path, "/")
+    assert.equal(wrapper.vm.backlink.title, "Hello")
   })
 })
 
 describe("Content page - extended", () => {
-  beforeEach(function () {
-    this.stub = mock_fetch_success()
-    this.wrapper = createWrapperForComponent(
+  let stub
+  let wrapper
+
+  beforeEach(() => {
+    stub = mock_fetch_success()
+    wrapper = createWrapperForComponent(
       ContentPage,
       {},
       {
@@ -138,28 +143,28 @@ describe("Content page - extended", () => {
     )
   })
 
-  afterEach(function () {
-    this.stub.resetBehavior()
+  afterEach(() => {
+    stub.resetBehavior()
     resetState(store.state)
-    this.wrapper.unmount()
+    wrapper.unmount()
   })
 
   it("A content page renders a LastUpdated component when the footer_component is specified", function () {
     loadDefaultState(store.state)
     return waitForPromises().then(() => {
-      assert.isTrue(this.wrapper.find(".last-updated").exists())
+      assert.isTrue(wrapper.find(".last-updated").exists())
     })
   })
 
   it("A content page is responsive to state changes", function () {
-    assert.isFalse(this.wrapper.find("h1#home").exists())
+    assert.isFalse(wrapper.find("h1#home").exists())
 
     // now the state is changed and the content can be fetched
     loadDefaultState(store.state)
 
     // we will wait for all promises to be resolved first
     return waitForPromises().then(() => {
-      assert.isTrue(this.wrapper.find("h1#home").exists())
+      assert.isTrue(wrapper.find("h1#home").exists())
     })
   })
 
@@ -199,16 +204,16 @@ describe("Content page - extended", () => {
   })
 
   it("When a backlink exists, it is rendered on the page", function () {
-    assert.isFalse(this.wrapper.find(".backlink").exists())
+    assert.isFalse(wrapper.find(".backlink").exists())
 
     // we know this route has a backlink defined
     loadDefaultState(store.state)
-    this.wrapper.vm.$route = {
+    wrapper.vm.$route = {
       path: "/nl/projects",
     }
 
     return waitForPromises().then(() => {
-      assert.isTrue(this.wrapper.find(".backlink").exists())
+      assert.isTrue(wrapper.find(".backlink").exists())
     })
   })
 })

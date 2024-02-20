@@ -13,7 +13,8 @@
 #### JS development
 *Ik heb vele tools en utility's gebruikt, zie het [package.json](https://github.com/maerteijn/maerteijn.nl/blob/master/package.json) bestand om te allemaal terug te vinden, maar enkele voorbeelden zijn:*
 - [Node.js](https://github.com/nodejs) - De defacto JS ontwikkelomgeving
-- [Vue CLI](https://cli.vuejs.org/) - Handige tool voor het ontwikkelen en releasen van Vue applicaties, inclusief webpack configuratie en testing tools
+- [Create Vue](https://github.com/vuejs/create-vue) - De nieuwe manier van het aanmaken van Vue projecten
+- [Vite](https://vitejs.dev/) - De nieuwe defacto frontend builder / development tool
 - [Sass](https://github.com/sass/sass) - Gebruikt voor alle stylesheets in deze website
 
 
@@ -32,7 +33,7 @@
 
 
 #### Testen en CI
-- [Mocha](https://github.com/mochajs/mocha) - Flexibele testrunner voor JavaScript
+- [Vitest](https://vitest.dev/) - Het nieuwe test framework voor Vite / Vue projecten
 - [Chai.js](https://github.com/chaijs) - Assertion library in verschillende vormen
 - [Sinon](https://github.com/sinonjs/sinon) - Maakt het unit testen zeer makkelijk door functionele isolatie
 - [Playwright](https://github.com/microsoft/playwright) - Een library om geautomatiseerd browsertests uit te kunnen voeren
