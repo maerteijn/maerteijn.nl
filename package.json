@@ -29,7 +29,6 @@
     "bulma": "^0.9.4",
     "highlight.js": "^11.9.0",
     "showdown": "^2.1.0",
-    "showdown-highlight": "^3.1.0",
     "viewerjs": "^1.11.6",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
