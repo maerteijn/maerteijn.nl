@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download public directory
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: public
     - name: Publish to Vercel
