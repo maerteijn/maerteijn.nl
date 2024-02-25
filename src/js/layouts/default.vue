@@ -59,11 +59,10 @@ export default {
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
   grid-template-areas: "navigation main";
-  grid-template-columns: minmax(400px, 35%) auto;
+  grid-template-columns: minmax(400px, 20%) auto;
   height: 100vh;
   margin: 0 auto;
-  max-height: variables.$site-max-height;
-  max-width: bulma.$widescreen;
+  max-width: bulma.$fullhd;
   overflow: hidden;
 
   .icon {
@@ -129,7 +128,7 @@ export default {
   }
 }
 
-@media screen and (max-width: bulma.$tablet),
+@media screen and (max-width: bulma.$desktop),
   screen and (max-height: variables.$site-min-height) {
   .default-layout {
     grid-template-areas:

@@ -78,6 +78,7 @@ export default {
 .logo-component {
   .logo-container {
     max-width: 20rem;
+    margin: auto;
 
     figure.mobile,
     figure.desktop {
@@ -102,7 +103,7 @@ export default {
   }
 }
 
-@media screen and (max-width: bulma.$tablet),
+@media screen and (max-width: bulma.$desktop),
   screen and (max-height: variables.$site-min-height) {
   .logo-component {
     .logo-container {
