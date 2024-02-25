@@ -33,7 +33,7 @@ export default {
 .basic-layout {
   color: variables.$font-color-left;
   margin: 0 auto;
-  max-width: bulma.$tablet;
+  max-width: bulma.$desktop;
   padding: 1rem;
 
   .icon {
