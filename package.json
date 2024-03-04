@@ -31,7 +31,7 @@
     "highlight.js": "^11.9.0",
     "showdown": "^2.1.0",
     "viewerjs": "^1.11.6",
-    "vue": "^3.3.13",
+    "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
