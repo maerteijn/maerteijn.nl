@@ -24,5 +24,5 @@ By making the Survey model [abstract](https://docs.djangoproject.com/en/3.2/topi
 | -------------------------- | ---------------------------------------- |
 | :calendar: **Period**      | 2021                                     |
 | :computer: **Role**        | Python and Front-end Developer           |
-| :office: **Contractor**    | [Vicktor](https://www.vicktor.nl)        |
 | :man: **Customer**         | [Techonomy](https://www.techonomy.nl)    |
+| :office: **Contractor**    | [Vicktor](https://www.vicktor.nl)        |
