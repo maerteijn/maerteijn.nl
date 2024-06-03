@@ -7,5 +7,6 @@
 
 | :calendar: Date    | :file_folder: Article                                                                                      |
 | -------------------| -----------------------------------------------------------------------------------------------------------|
+| June 2, 2024       | [A private PyPI server with AWS CodeArtifact](/en/blog/private-pypi-with-aws-codeartifact)                 |
 | March 27, 2023     | [Beautiful asserts with your Django Test Client](/en/blog/beautiful-asserts-with-your-django-test-client)  |
 | August 29, 2022    | [Structural Pattern matching with Python](/en/blog/structural-pattern-matching-with-python)                |
