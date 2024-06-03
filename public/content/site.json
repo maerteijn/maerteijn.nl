@@ -38,6 +38,24 @@
        }
     },
     {
+      "title": "maerteijn - projecten - aws codeartifact voor techonomy",
+      "description": "AWS CodeArtifact Private PYPI Server",
+      "name": "aws-codeartifact-voor-techonomy",
+      "path": "/nl/projecten/aws-codeartifact-voor-techonomy",
+      "url": "/content/nl/projecten/aws-codeartifact-voor-techonomy.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 19,
+        "language": "nl",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "Alle projecten",
+          "path": "/nl/projecten"
+        }
+      }
+    },
+    {
       "title": "maerteijn - projecten - kompas planner voor clever sports",
       "description": "Kompas Planner: Volledige web applicatie",
       "name": "kompas-planner-voor-clever-sports",
@@ -55,7 +73,6 @@
         }
       }
     },
-
     {
       "title": "maerteijn - projecten - wagtail gorilla forms voor techonomy",
       "description": "Django / Wagtail integratie van een React applicatie",
@@ -271,6 +288,25 @@
         "show_in_menu": true
       }
    },
+    {
+      "title": "maerteijn - projecten - aws codeartifact for techonomy",
+      "description": "AWS CodeArtifact Private PYPI Server",
+      "name": "aws-codeartifact-for-techonomy",
+      "path": "/en/projects/aws-codeartifact-for-techonomy",
+      "url": "/content/en/projects/aws-codeartifact-for-techonomy.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 19,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All projects",
+          "path": "/en/projects"
+        }
+      }
+    },
+
    {
       "title": "maerteijn - projects - kompas planner for clever sports",
       "description": "Kompas Planner: Full web application",
@@ -462,6 +498,24 @@
        }
     },
     {
+      "title": "maerteijn - blog - a private pypi server with aws codeartifact",
+      "description": "A private PyPI server with AWS CodeArtifact",
+      "name": "private-pypi-with-aws-codeartifact",
+      "path": "/en/blog/private-pypi-with-aws-codeartifact",
+      "url": "/content/en/blog/private-pypi-with-aws-codeartifact.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 39,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All blog articles",
+          "path": "/en/blog"
+        }
+      }
+    },
+    {
       "title": "maerteijn - blog - beautiful asserts with your django test client",
       "description": "Beatiful asserts with your Django Test Client",
       "name": "beautiful-asserts-with-your-django-test-client",
@@ -479,7 +533,6 @@
         }
       }
     },
-
     {
       "title": "maerteijn - blog - structural pattern matching with python",
       "description": "Structural Pattern matching with Python",
