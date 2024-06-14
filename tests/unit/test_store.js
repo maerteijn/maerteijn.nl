@@ -11,7 +11,7 @@ describe("Test store", () => {
     it("The initial state is empty but usable", () => {
       resetState(store.state)
 
-      // site should have a pages propperty
+      // site should have a pages property
       assert.isObject(store.state.site)
       assert.property(store.state.site, "pages")
       assert.isArray(store.state.site.pages)
