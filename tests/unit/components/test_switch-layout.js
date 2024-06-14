@@ -6,6 +6,9 @@ import store from "@/js/store"
 import SwitchLayout from "@/js/components/switch-layout"
 
 describe("Switch layout component", () => {
+  beforeEach(() => {
+    resetState(store.state)
+  })
   afterEach(() => {
     resetState(store.state)
     window.msCrypto = undefined
@@ -48,5 +51,23 @@ describe("Switch layout component", () => {
     const wrapper = createWrapperForComponent(SwitchLayout)
     assert.isFalse(wrapper.find(".switch-layout").exists())
     wrapper.unmount()
+  })
+
+  it("Clicking the toggleLayout button store the new layout in the localStorage", () => {
+    store.state.layout = "default-layout"
+    const wrapper = createWrapperForComponent(
+      SwitchLayout,
+      {},
+      {
+        path: "/",
+      }
+    )
+    wrapper.find("a").trigger("click")
+
+    return wrapper.vm.$nextTick().then(() => {
+      assert.property(window.localStorage, "layout")
+      assert.equal(window.localStorage.layout, "basic-layout")
+      wrapper.unmount()
+    })
   })
 })

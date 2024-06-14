@@ -26,6 +26,7 @@ export default {
         "default-layout": "basic-layout",
       }
       this.$state.layout = layouts[this.$state.layout]
+      window.localStorage.layout = this.$state.layout
       this.$emit("layout-toggled", this.$state.layout)
     },
   },
