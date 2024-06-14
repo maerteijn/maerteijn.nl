@@ -1,6 +1,6 @@
 import { reactive } from "vue"
 
-import { isOldBrowser, normalizePath } from "./utils"
+import { normalizePath, getLayout } from "./utils"
 import getPageComponent from "./pages/utils"
 import { validator } from "./schema"
 
@@ -13,7 +13,7 @@ export const state = reactive({
   content: {},
   loaded: false,
   lastUpdated: import.meta.env.VITE_APP_BUILD_TIME || "unknown",
-  layout: isOldBrowser() ? "basic-layout" : "default-layout",
+  layout: getLayout(),
   error: null,
 })
 

@@ -11,6 +11,13 @@ export const isOldBrowser = () => {
   return gridNotSupported || isIE11
 }
 
+export const getLayout = () => {
+  if (isOldBrowser()) {
+    return "basic-layout"
+  }
+  return window.localStorage.layout || "default-layout"
+}
+
 export const createImageViewer = (image) => {
   return new Viewer(image, {
     toolbar: false,
