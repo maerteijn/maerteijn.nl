@@ -125,6 +125,14 @@ export default {
     grid-area: main;
     overflow-y: auto;
     scroll-behavior: smooth;
+
+    a {
+      color: variables.$link-color-right;
+      text-decoration-line: none;
+      &:hover {
+        color: variables.$orange-color;
+      }
+    }
   }
 }
 
