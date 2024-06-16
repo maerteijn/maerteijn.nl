@@ -2,9 +2,11 @@
 $body-family: "Play";
 
 $body-overflow-y: auto;
-$body-background-color: #171a21;
+$body-background-color: variables.$background-color-left-second;
+
 $body-weight: 400;
 $body-font-size: 1.1em;
+$text: variables.$font-color-right;
 
 @import "bulma/sass/utilities/";
 @import "bulma/sass/base/";

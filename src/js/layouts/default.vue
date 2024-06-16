@@ -56,6 +56,7 @@ export default {
 
 <style lang="scss">
 .default-layout {
+  background-color: variables.$background-color-right;
   box-shadow: 0 5px 5px 0 variables.$drop-shadow-color;
   display: grid;
   grid-template-areas: "navigation main";
@@ -120,8 +121,6 @@ export default {
   }
 
   .right {
-    background-color: variables.$background-color-right;
-    color: variables.$font-color-right;
     grid-area: main;
     overflow-y: auto;
     scroll-behavior: smooth;
