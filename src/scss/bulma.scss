@@ -5,10 +5,10 @@ $body-overflow-y: auto;
 $body-background-color: #171a21;
 $body-weight: 400;
 $body-font-size: 1.1em;
-$link-hover: variables.$orange-color;
 
-@import "bulma/sass/utilities/_all";
-@import "bulma/sass/base/_all";
+@import "bulma/sass/utilities/";
+@import "bulma/sass/base/";
+@import "bulma/sass/themes/";
 @import "bulma/sass/elements/content";
 @import "bulma/sass/elements/image";
 
