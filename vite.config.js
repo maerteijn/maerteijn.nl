@@ -20,7 +20,6 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "bulma/sass/utilities/initial-variables.scss" as bulma;
           @use "./src/scss/variables.scss" as variables;
           @use "./src/scss/animation.scss" as *;
           `,
