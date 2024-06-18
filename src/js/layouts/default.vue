@@ -63,7 +63,7 @@ export default {
   grid-template-columns: minmax(400px, 20%) auto;
   height: 100vh;
   margin: 0 auto;
-  max-width: bulma.$fullhd;
+  max-width: variables.$fullhd;
   overflow: hidden;
 
   .icon {
@@ -135,7 +135,7 @@ export default {
   }
 }
 
-@media screen and (max-width: bulma.$desktop),
+@media screen and (max-width: variables.$desktop),
   screen and (max-height: variables.$site-min-height) {
   .default-layout {
     grid-template-areas:

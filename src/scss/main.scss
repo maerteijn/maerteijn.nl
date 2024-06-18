@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "./src/scss/bulma";
+@use "./src/scss/bulma";
 
 @font-face {
   font-display: block;
@@ -20,5 +20,5 @@
 }
 
 img.viewer-move {
-  border: solid 2px bulma.$white;
+  border: solid 2px white;
 }

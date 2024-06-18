@@ -103,7 +103,7 @@ export default {
   }
 }
 
-@media screen and (max-width: bulma.$desktop),
+@media screen and (max-width: variables.$desktop),
   screen and (max-height: variables.$site-min-height) {
   .logo-component {
     .logo-container {
