@@ -1,14 +1,5 @@
 @forward "bulma/sass/utilities/";
 @forward "bulma/sass/base/";
-@forward "bulma/sass/themes/";
 @forward "bulma/sass/elements/content";
 @forward "bulma/sass/elements/image";
-
-// Overrides which are not customizable with setting Bulma variables
-.content h1 {
-  font-size: 1.9em;
-}
-
-.content table {
-  width: 100%;
-}
+@forward "themes";

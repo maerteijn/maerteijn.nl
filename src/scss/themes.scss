@@ -1,0 +1,51 @@
+@use "bulma/sass/utilities/css-variables" as cv;
+
+@use "bulma/sass/themes/setup";
+@use "bulma/sass/themes/light";
+@use "bulma/sass/themes/dark";
+
+$primary-dark: #00008b; // dark blue
+
+@mixin light-theme-config {
+  @include light.light-theme;
+
+  // Add some non-configurable css here
+  .content {
+    h1 {
+      font-size: 1.9em;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    a:hover {
+      color: var(--bulma-orange);
+    }
+  }
+}
+
+@mixin dark-theme-config {
+
+  // Make link text just a bit lighter;
+  --bulma-link-on-scheme-l: 80%;
+  @include dark.dark-theme;
+  dark.$text-l: 100%;
+}
+
+// Setup the light theme as the default theme
+:root {
+  @include light-theme-config;
+  @include setup.setup-theme;
+}
+
+// Include the prefers-color-scheme: dark and [data-theme=dark], .theme-dark sections for our dark theme
+@include cv.system-theme($name: "dark") {
+  @include dark-theme-config;
+}
+
+@include cv.bulma-theme($name: "dark") {
+  @include dark-theme-config;
+  @include setup.setup-theme;
+}
+

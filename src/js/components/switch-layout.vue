@@ -13,7 +13,7 @@
 
 <script>
 import { getIcon } from "../icons"
-import { isOldBrowser } from "../utils"
+import { isOldBrowser, updateTheme } from "../utils"
 
 export default {
   name: "switch-layout",
@@ -28,6 +28,7 @@ export default {
       this.$state.layout = layouts[this.$state.layout]
       window.localStorage.layout = this.$state.layout
       this.$emit("layout-toggled", this.$state.layout)
+      updateTheme(this.$state)
     },
   },
 }
