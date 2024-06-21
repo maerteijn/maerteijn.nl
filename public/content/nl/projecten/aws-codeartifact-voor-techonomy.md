@@ -9,7 +9,7 @@ AWS CodeArtifact is a een hosted dienst van Amazon dat verschillende package for
 
 #### Hoe hebben we AWS CodeArtifact gebruikt
 
-Ik heb een [blog artikel](/en/blog/private-pypi-with-aws-codeartifact)) geschreven hoe we de repository hebben opgezet en hoe je deze kunt gebruiken met pip en/of poetry.
+Ik heb een [blog artikel](/en/blog/private-pypi-with-aws-codeartifact) geschreven hoe we de repository hebben opgezet en hoe je deze kunt gebruiken met pip en/of poetry.
 
 
 #### Uitgelichte technologieën
