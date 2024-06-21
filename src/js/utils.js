@@ -11,11 +11,23 @@ export const isOldBrowser = () => {
   return gridNotSupported || isIE11
 }
 
+const checkIsDarkSchemePreferred = () =>
+  window?.matchMedia?.("(prefers-color-scheme:dark)")?.matches ?? false
+
 export const getLayout = () => {
   if (isOldBrowser()) {
     return "basic-layout"
   }
-  return window.localStorage.layout || "default-layout"
+  return (
+    window.localStorage.layout ||
+    (checkIsDarkSchemePreferred() && "basic-layout") ||
+    "default-layout"
+  )
+}
+
+export const updateTheme = (state) => {
+  document.documentElement.className =
+    state.layout == "default-layout" ? "theme-light" : "theme-dark"
 }
 
 export const createImageViewer = (image) => {

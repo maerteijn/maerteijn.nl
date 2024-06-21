@@ -31,7 +31,6 @@ export default {
 
 <style lang="scss">
 .basic-layout {
-  color: variables.$font-color-left;
   margin: 0 auto;
   max-width: variables.$desktop;
   padding: 1rem;
@@ -48,41 +47,6 @@ export default {
     }
   }
 
-  .page {
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    a,
-    th,
-    td,
-    strong {
-      color: variables.$font-color-left;
-    }
-
-    code {
-      background-color: variables.$background-color-left-first;
-    }
-
-    pre {
-      background-color: variables.$background-color-left-second;
-      box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
-
-      .hljs {
-        background-color: variables.$background-color-left-second;
-      }
-    }
-
-    a {
-      text-decoration-line: underline;
-      text-decoration-thickness: 0.5px; // This is fun, isn't it
-      &:hover {
-        color: variables.$orange-color;
-      }
-    }
-  }
-
   .nav {
     align-items: center;
     display: flex;
@@ -92,12 +56,8 @@ export default {
       padding-right: 1rem;
     }
 
-    .navigation {
-      background-color: variables.$background-color-left-second;
-    }
-
     a {
-      color: variables.$font-color-left;
+      color: variables.$white;
     }
 
     .icons {
@@ -108,6 +68,10 @@ export default {
     .item {
       padding-right: 1rem;
     }
+  }
+
+  .backlink a {
+    color: variables.$white;
   }
 }
 
@@ -121,10 +85,8 @@ export default {
 
 @media (hover: hover) {
   .basic-layout {
-    .nav {
-      a:hover {
-        color: variables.$orange-color;
-      }
+    a:hover {
+      color: var(--bulma-orange);
     }
   }
 }

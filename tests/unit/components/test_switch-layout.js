@@ -53,7 +53,7 @@ describe("Switch layout component", () => {
     wrapper.unmount()
   })
 
-  it("Clicking the toggleLayout button store the new layout in the localStorage", () => {
+  it("Clicking the toggleLayout button store the new layout in the localStorage, and should add the theme-dark class to the html", () => {
     store.state.layout = "default-layout"
     const wrapper = createWrapperForComponent(
       SwitchLayout,
@@ -67,6 +67,7 @@ describe("Switch layout component", () => {
     return wrapper.vm.$nextTick().then(() => {
       assert.property(window.localStorage, "layout")
       assert.equal(window.localStorage.layout, "basic-layout")
+      assert.isTrue(document.documentElement.className == "theme-dark")
       wrapper.unmount()
     })
   })

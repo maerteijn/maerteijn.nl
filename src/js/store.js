@@ -1,6 +1,6 @@
 import { reactive } from "vue"
 
-import { normalizePath, getLayout } from "./utils"
+import { normalizePath, getLayout, updateTheme } from "./utils"
 import getPageComponent from "./pages/utils"
 import { validator } from "./schema"
 
@@ -85,7 +85,8 @@ export const actions = {
 
         state.site = data
         state.loaded = true
-
+        // Set the correct Bulma theme based on the selected layout
+        updateTheme(state)
         return data
       })
   },

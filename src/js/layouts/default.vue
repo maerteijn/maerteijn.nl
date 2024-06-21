@@ -109,7 +109,7 @@ export default {
       variables.$background-color-left-second 100%
     );
 
-    border-right: solid 1px variables.$orange-color;
+    border-right: solid 1px var(--bulma-orange);
     box-shadow: 0 5px 15px 0 variables.$drop-shadow-color;
     color: variables.$font-color-left;
     grid-area: navigation;
@@ -124,14 +124,6 @@ export default {
     grid-area: main;
     overflow-y: auto;
     scroll-behavior: smooth;
-
-    a {
-      color: variables.$link-color-right;
-      text-decoration-line: none;
-      &:hover {
-        color: variables.$orange-color;
-      }
-    }
   }
 }
 
@@ -169,7 +161,7 @@ export default {
     }
 
     .left {
-      border-bottom: solid 1px variables.$orange-color;
+      border-bottom: solid 1px var(--bulma-orange);
       border-right: 0;
       box-shadow: 0 -2px 15px 0 variables.$drop-shadow-color;
       position: relative;

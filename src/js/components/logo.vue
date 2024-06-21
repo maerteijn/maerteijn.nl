@@ -77,8 +77,8 @@ export default {
 <style lang="scss">
 .logo-component {
   .logo-container {
-    max-width: 20rem;
     margin: auto;
+    max-width: 20rem;
 
     figure.mobile,
     figure.desktop {
