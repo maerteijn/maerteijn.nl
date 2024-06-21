@@ -22,7 +22,7 @@ jobs:
       with:
         name: public
     - name: Publish to Vercel
-      uses: BetaHuhn/deploy-to-vercel-action@v1
+      uses: BetaHuhn/deploy-to-vercel-action@latest
       with:
         VERCEL_TOKEN: ${{ secrets.vercel_token }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -30,4 +30,6 @@ jobs:
         VERCEL_PROJECT_ID: ${{ secrets.vercel_project_id }}
         PRODUCTION: ${{ inputs.production_build }}
         ALIAS_DOMAINS: |
-          {SHA}.maerteijn.nl
+          preview.maerteijn.nl
+        PR_PREVIEW_DOMAIN: preview.maerteijn.nl
+        VERCEL_SCOPE: 'maerteijns-projects'
