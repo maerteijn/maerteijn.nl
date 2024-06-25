@@ -46,6 +46,13 @@ export default {
       .querySelectorAll('a[href^="/"]')
       .forEach((link) => this.createRouterLink(link))
 
+    // update image meta tag
+    const img = this.$el.querySelector("img")
+    img &&
+      document
+        .getElementsByTagName("meta")
+        ["image"].setAttribute("content", img.src)
+
     // apply code formatting
     applyHighlight()
   },

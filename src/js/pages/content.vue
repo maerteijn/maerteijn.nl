@@ -78,6 +78,12 @@ export default {
         document.title = metadata.title || ""
         const language = metadata.settings && metadata.settings.language
         document.querySelector("html").setAttribute("lang", language)
+
+        // Update meta tags:
+        document
+          .getElementsByTagName("meta")
+          ["title"].setAttribute("content", metadata.title)
+
         document
           .getElementsByTagName("meta")
           ["description"].setAttribute("content", metadata.description)
