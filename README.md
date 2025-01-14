@@ -21,22 +21,19 @@ Then browse to [http://localhost:1234/](http://localhost:1234/)
 
 The js, templates and scss are linted with the following commands:
 ```bash
-    npm run eslint
-    npm run eslint:fix
-    npm run stylelint
-    npm run stylelint:fix
+    npm run lint
 ```
 
 The `Prettier` opinionated code formatter is used:
 ```bash
-    npm run prettier
-    npm run prettier:fix
+    npm run format
 ```
 
 ## Tests
 We have unit and functional tests with `mocha`:
 ```bash
-    npm run test
+    npm run test:unit
+    npm run test:functional
 ```
 We can also run e2e tests with `playwright`:
 ```bash
