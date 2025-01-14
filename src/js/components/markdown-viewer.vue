@@ -60,10 +60,13 @@ export default {
 </script>
 
 <style lang="scss">
+.theme-dark .content img {
+  box-shadow: none;
+}
+
 .content {
   img {
-    border: solid 2px variables.$white;
-    box-shadow: 2px 3px 5px 0 variables.$drop-shadow-color;
+    box-shadow: 2px 3px 5px 2px variables.$drop-shadow-color;
     cursor: pointer;
     margin: 0.25rem 0.75rem;
     margin-left: 0;

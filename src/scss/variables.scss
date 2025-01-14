@@ -9,7 +9,7 @@ $top-bar-size: 60px;
 $background-color-left-first: #1b2838;
 $background-color-left-second: #171a21;
 $background-color-right: #f8f9fa;
-$drop-shadow-color: rgba(0, 0, 0, 0.25);
+$drop-shadow-color: rgba(0, 0, 0, 0.15);
 $orange: #fb7516;
 $font-color-left: #f8f9fa;
 $font-color-right: #1a1a1a;
@@ -25,7 +25,7 @@ $mobile: 500px;
 );
 
 @forward "bulma/sass/utilities/derived-variables" with (
-  $custom-colors: ("orange": $orange)
+  $custom-colors: ("orange": $orange, "dark-blue": $background-color-left-second)
 );
 
 @forward "bulma/sass/base/" with (

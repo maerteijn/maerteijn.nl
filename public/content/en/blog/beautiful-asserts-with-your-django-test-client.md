@@ -1,5 +1,5 @@
 # Beautiful asserts with your Django Test Client
-> March 27, 2023
+*March 27, 2023*
 
 ![Soup](/images/max-griss-unsplash-soup.jpg#left =194x147 "Photo by Max Griss on Unsplash") When you write tests using the [Django Test Client](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#the-test-client) you often want to check for error messages being displayed correctly, or if a page renders specific HTML elements. Although [assertHTMLEqual](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#django.test.SimpleTestCase.assertHTMLEqual) or [assertContains](https://docs.djangoproject.com/en/4.1/topics/testing/tools/#django.test.SimpleTestCase.assertContains) with the `html` parameter are useful for this, it doesn't feel very elegant to write asserts with HTML markup. Could there be a more sophisticated way?
 

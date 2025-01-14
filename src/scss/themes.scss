@@ -7,6 +7,7 @@
 $primary-dark: #00008b; // dark blue
 
 @mixin light-theme-config {
+  --popup-background-color: var(--bulma-white);
   @include light.light-theme;
 
   // Add some non-configurable css here
@@ -26,9 +27,10 @@ $primary-dark: #00008b; // dark blue
 }
 
 @mixin dark-theme-config {
-
   // Make link text just a bit lighter;
   --bulma-link-on-scheme-l: 80%;
+  --bulma-link-s: 100%;
+  --popup-background-color: var(--bulma-dark-blue);
   @include dark.dark-theme;
   dark.$text-l: 100%;
 }

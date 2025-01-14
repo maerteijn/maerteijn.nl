@@ -1,9 +1,10 @@
 # Structural Pattern matching with Python
-> August 29, 2022
+*August 29, 2022*
 
 ![Structural Pattern Matching with Python](/images/python-structural-pattern-matching.jpg#left =194x147)Python has been designed to be a very readable and compact programming language [since the language was born in 1991](https://en.wikipedia.org/wiki/Python_(programming_language)). Indentation is required, semicolons are not needed, readability and elegance are highly promoted and I'm sometimes still stunned how complex use-cases can be implemented so clean and simple with just a few lines of Python.
 
-But one of the things that has been controversial in the language, and a hot topic in the Python community for more than 30 (!) years, is the lack of a `switch` or `case` statement.
+### Controverse
+One of the things that has been controversial in the language for more than 30 (!) years (and a hot topic in the Python community), was the lack of a `switch` or `case` statement.
 
 The [Python official FAQ](https://docs.python.org/3.9/faq/design.html#why-isn-t-there-a-switch-or-case-statement-in-python) wrote about this:
 *You can do this easily enough with a sequence of* `if... elif... elif... else`.

@@ -1,5 +1,5 @@
 # A Private PyPI server with AWS CodeArtifact
-> June 22, 2024
+*June 22, 2024*
 
 ![AWS Codeartifact](/images/private-pypi-codeartifact.jpg#left =215x147)When you develop a variety of reusable Python packages or apps you soon will be facing the limits of git dependencies. And you don't want to release company / project specific packages to the public PyPI. Setting up a private PyPI server can be very time consuming and maintenance / backups are required. Can we use AWS CodeaArtifact to create our own package index?
 
