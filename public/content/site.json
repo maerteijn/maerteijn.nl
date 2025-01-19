@@ -498,6 +498,24 @@
        }
     },
     {
+      "title": "maerteijn - blog - django sync or async",
+      "description": "Django sync or async, that's the question",
+      "name": "django-sync-or-async",
+      "path": "/en/blog/django-sync-or-async",
+      "url": "/content/en/blog/django-sync-or-async.md",
+      "type": "ContentPage",
+      "content_component": "MarkdownViewer",
+      "settings": {
+        "identifier": 38,
+        "language": "en",
+        "show_in_menu": false,
+        "backlink": {
+          "title": "All blog articles",
+          "path": "/en/blog"
+        }
+      }
+    },
+    {
       "title": "maerteijn - blog - a private pypi server with aws codeartifact",
       "description": "A private PyPI server with AWS CodeArtifact",
       "name": "private-pypi-with-aws-codeartifact",
