@@ -21,6 +21,8 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: public
+    - name: Install Vercel CLI
+      run: npm install -g vercel@22.0.1
     - name: Publish to Vercel
       uses: BetaHuhn/deploy-to-vercel-action@latest
       with:
