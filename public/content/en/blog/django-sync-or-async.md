@@ -43,18 +43,18 @@ With async programming, you are aware of concurrency in the application layer. I
 `WSGI` was not suitable for async due to its blocking nature, therefore a new standard was developed for Python applications: [ASGI](https://asgi.readthedocs.io/en/latest/).
 
 > **Django channels**
-> [Django channels](https://channels.readthedocs.io/en/latest/introduction.html) is an add-on package for Django for handling [WebSockets](https://en.wikipedia.org/wiki/WebSocket) and other protocols which are not HTTP (although it can). It is depending on [Daphne](https://github.com/django/daphne), the first ASGI server, based on [Twisted](https://twisted.org/). The first version of Django channels in 2016 did not make use of `asyncio`, nor did the first version of Daphne. With the releae  [Daphne 2.0.0](https://github.com/django/daphne/blob/main/CHANGELOG.txt#L282) and Channels [2.0.0](https://channels.readthedocs.io/en/stable/releases/2.0.0.html) (2018, both were rewritten to use `asyncio` and `async` / `await`.
+> [Django channels](https://channels.readthedocs.io/en/latest/introduction.html) is an add-on package for Django for handling [WebSockets](https://en.wikipedia.org/wiki/WebSocket) and other protocols which are not HTTP (although it can). It is depending on [Daphne](https://github.com/django/daphne), the first ASGI server, based on [Twisted](https://twisted.org/). The first version of Django channels in 2016 did not make use of `asyncio`, nor did the first version of Daphne. With the releae  [Daphne 2.0.0](https://github.com/django/daphne/blob/main/CHANGELOG.txt#L282) and Channels [2.0.0](https://channels.readthedocs.io/en/stable/releases/2.0.0.html) (2018), both were rewritten to use `asyncio` and `async` / `await`.
 
 
 ##### Implicit and explicit coroutines
-When you are writing "sync" code and use a library like [Gevent](https://www.gevent.org/) (with, or without monkey patching), you are using coroutines in an *implicit* manner. In the case of monkey patching, you are not even aware of the fact coroutines are scheduled on an event loop. So while Gevent can be a terrific solution, it can also be very hard to tell when and why things go wrong. When you are using the `async` / `await` keywords, you are using coroutines *explicitly*, as you can exactly see on which places in your codebase this happens
+When you are writing "sync" code and use a library like [Gevent](https://www.gevent.org/) (with, or without monkey patching), you are using coroutines in an *implicit* manner. In the case of monkey patching, you are not even aware of the fact coroutines are scheduled on an event loop. So while Gevent can be a terrific solution, it can also be very hard to tell when and why things go wrong. Especially when you are running threads which have no IO at all (so no suspend, which can make your whole application block). When you are using the `async` / `await` keywords in conjuction with `asyncio` (or any other event loop engine), you are using coroutines *explicitly*, as you can exactly see on which places in your codebase the coroutine will suspend. This makes it easier to spot problems, and of course more obvious to see what is going on.
 
 > **asyncio**
 > Asyncio was [not only received with applause](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) when it was released, and still [receives a lot of criticism](https://charlesleifer.com/blog/asyncio/). The package was added to the standard library before the `async` / `await` keywords were added, so it had backward compatibility issues since the start. The package itself was heavily improved (and changed) in newer Python versions, as of [3.8](https://docs.python.org/3/whatsnew/3.8.html#asyncio), [3.9](https://docs.python.org/3/whatsnew/3.9.html#asyncio), [3.11](https://docs.python.org/3/whatsnew/3.11.html#asyncio) and [3.13](https://docs.python.org/3/whatsnew/3.13.html#asyncio). A lot of improvements has been added because of development in alternative async libraries like [Trio](https://trio.readthedocs.io/en/stable/) (and [Curio](https://curio.readthedocs.io/en/latest/)). [AnyIO](https://anyio.readthedocs.io/en/stable/) is now a popular library as it exposes a single API to work both with the `asyncio` and `trio` libraries.
 
 
-## Let's do some benchmarks
-So now we know a bit about all the technology and how they work, let's do some benchmarks on how the different stacks respond. Note that these are not *100% the truth scientific benchmarks*, the benchmarks mostly show the characteristics of the different stacks.
+## Benchmarks
+So now we know a bit about all the technology and how they work, let's do some benchmarks on how the different stacks respond. Note that these are not *100% the truth scientific benchmarks*, the benchmarks mostly show the characteristics of the different stacks in the context of a particular setup.
 
 
 ### The test application
@@ -73,7 +73,7 @@ async def api(request, ms=300):
     return JsonResponse(random.choice(exampledata))
 ```
 
-*The "sync" view, used with WSGI ([uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) and [Gunicorn](https://gunicorn.org/)):*
+*The "sync" view which consumes the API, deployed with WSGI ([uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) and [Gunicorn](https://gunicorn.org/)):*
 ```python
 def sync_view(request, ms=300):
     api_urls = (
@@ -96,7 +96,11 @@ def sync_view(request, ms=300):
     )
 ```
 
-*The "async" view, used with ASGI ([Uvicorn](https://www.uvicorn.org/)):*
+> **ThreadPoolExecutor**
+> The standard `ThreadPoolExecutor` with actual system threads is used for making the API requests parallel. When using Gevent, [threads are monkey patched to be cooperative](https://www.gevent.org/api/gevent.monkey.html), so new greenlets will be spawned when using the `ThreadPoolExecutor`, without any code change.
+
+
+*The "async" view view which consumes the API, deployed with ASGI ([Uvicorn](https://www.uvicorn.org/)):*
 ```python
 async def async_view(request, ms=300):
     api_urls = (
@@ -123,85 +127,89 @@ Both views will call the API three times, and with the following "delays":
 - 600ms
 - 150ms
 
-So the minimum response time will be **600ms**, as we call the external API with these calls in parallel + extra overhead for rendering the view.
+So the minimum response time will (should) be **600ms**, as we call the external API with these calls in parallel + extra overhead for rendering the view.
 
 
 ### Locust
+
 The benchmarks are done with [Locust](https://locust.io/), a simple and Python friendly (open source) benchmark tool. We are starting with 10 concurrent users which will be slowly increased until 100. We measure the response times of the view and also how many concurrent requests (RPS) the selected configuration can handle.
 
 The benchmarks are performed on an Apple Macbook Air with an M2 processor.
 
-#### The benchmarks
-
-##### uWSGI, 1 process, 2 threads
+#### uWSGI, 1 process, 2 threads
 ![uWSGI, 1 process, 2 threads](/images/benchmarks/uwsgi-1-process-2-threads.png)
 
-
-##### uWSGI, 1 process, 100 threads
+#### uWSGI, 1 process, 100 threads
 ![uWSGI, 1 process, 100 threads](/images/benchmarks/uwsgi-1-process-100-threads.png)
 
-
-##### uWSGI, 1 process, gevent
+#### uWSGI, 1 process, gevent
 ![uWSGI, 1 process, gevent](/images/benchmarks/uwsgi-gevent.png)
 
-##### Gunicorn, 1 process, 100 threads
+#### Gunicorn, 1 process, 100 threads
 ![Gunicorn, 1 process, 100 threads](/images/benchmarks/gunicorn-1-process-100-threads.png)
 
-
-##### Gunicorn, 1 process, gevent
+#### Gunicorn, 1 process, gevent
 ![Gunicorn, 1 process, 100 threads](/images/benchmarks/gunicorn-gevent.png)
 
-
-
-##### Uvicorn, 1 process, async
+#### Uvicorn, 1 process, async
 ![Uvicorn, 1 process, async](/images/benchmarks/uvicorn-async.png)
 
 
-#### The results
+### Results
 
 So let's put all benchmark results in a single overview:
 
-| Configuration                     | Min(ms)  | 95%ile(ms)  | Average(ms) | Max RPS   |
-| --------------------------------- | -------- | ----------- | ----------  | --------- |
-| uWSGI, 1 process, 2 threads       | 783      | 22000       | 12107.87    | 3         |
-| uWSGI, 1 process, 100 threads     | 613      | **950**     | 782.45      | 131       |
-| uWSGI, 1 process, gevent          | 669      | 1000        | 866.16      | 112       |
-| Gunicorn, 1 process, 100 threads  | **612**  | 1000        | **716.69**  | **140**   |
-| Gunicorn, 1 process, gevent       | 635      | 1200        | 911.45      | 109       |
-| Uvicorn, 1 process, async         | 616      | 1000        | 853.56      | 115       |
+| Configuration                         | Min(ms)  | 95%-ile(ms) | Average(ms) | Max RPS  |
+| ------------------------------------- | -------- | ----------- | ----------  | -------- |
+| uWSGI, 1 process, 2 threads           | 783      | 22000       | 12107.87    | 3        |
+| uWSGI, 1 process, 100 threads         | 613      | **950**     | 782.45      | 131      |
+| uWSGI, 1 process, gevent              | 614      | 1100        | 857.1       | 110      |
+| **Gunicorn, 1 process, 100 threads**  | **612**  | 1000        | **716.69**  | **140**  |
+| Gunicorn, 1 process, gevent           | 619      | 1400        | 1038.78     | 91       |
+| Uvicorn, 1 process, async             | 616      | 1000        | 853.56      | 115      |
 
 Some things that stand out (also by looking at the graphs):
 
-- As expected, the performance with uWSGI configured to use 1 process and 2 threads is very bad, with response times over 22 seconds and only 3 RPS, due to the slow API
-- Gunicorn with 1 process and 100 threads has the best overall performing configuration with the test application. Something I wouldn't have expected up front. uWSGI with 1 process and 100 threads is not far behind though
-- uWSGI with Gevent performs is slightly faster compared to Gunicorn with uWSGI
-- Uvicorn performs not as fast as the threaded counterparts, but it is pretty much on par. ASGI is mostly about handling many connections efficiently, not about pure throughput.
+- As expected, the performance with uWSGI configured with 1 process and 2 threads is very bad, with response times over 22 seconds and only 3 RPS, due to the slow API.
+- *Gunicorn with 1 process and 100 threads* has the best overall performing configuration with the test application. Something I wouldn't have expected up front. uWSGI with 1 process and 100 threads is not far behind though.
+- uWSGI with Gevent performs faster compared to *Gunicorn with uWSGI*.
+- I'm pretty impressed by Gevent, without *any* code change, all IO is performed using cooperative multitasking and it performs pretty well.
+- Uvicorn performs not as fast as the threaded counterparts, but it is slightly faster as the implicit gevent coroutine counterparts. It has a very reasonable performance. ASGI / async is mostly about handling many connections efficiently, not about pure throughput.
+
+> **Running benchmarks**
+> Performance characteristics do really differ on each environment. Are you deploying in the cloud (probably yes), then the CPU time can be much less as compared to a "bare metal" machine. Containerized applications also have other characteristics on different platforms, so if you are optimising the configuration for your setup, do not just copy / paste the "recommended" setups, run benchmarks for your own situation too.
+
+## Final notes
+
+So how can we answer the question: "Django sync or async" when we want to integrate an external service?
+
+I think the answer is **it depends**. There are many ways of making your application asynchronous. Using the [explicit coroutine code style (or "coloured functions")](https://lukasa.co.uk/2016/07/The_Function_Colour_Myth/) in combination with `asyncio` is not required *per se*, as we already have seen with Gevent, or by using a `ThreadPoolExecutor`. Being very explicit about *when* task switching will happen in your code using `async` / `await` can be beneficial for some applications, but certainly not all.
+
+Note that concurrency always will be [**difficult**, no matter how you program it](https://glyph.twistedmatrix.com/2014/02/unyielding.html). For CRUD applications or any other Django project where you're not trying to build the next social media platform with millions of users, using "sync Django" (and the availability of the many libraries out there) is just perfectly fine. uWSGI or Gunicorn with many workers and threads are excellent options to make it perform at a smaller scale, just as Gevent is.
+
+ Use `asyncio` with native `async` views in Django when you really expect thousands of concurrent users, combined with a lot of slow IO. Or when you use WebSockets or streaming or the like, or when you are building networking applications. Be prepared to take the "burden" as with `async`, you'll not be able to use the enormous library of existing "sync coloured" functions (well, [technically you *can* but not without performance penalties](https://docs.djangoproject.com/en/5.1/topics/async/#asgiref.sync.async_to_sync)). All the [generic views in Django](https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-display/) do not have async variants either, so you'll need to build your own.
+
+ The world of async is not black and white, but full of colours :rainbow:.
 
 
-### Final notes
-
-So how can we answer the question Django sync or async? I think the answer is **both**: Use `async` when you really expect thousands of concurrent users, combined with a lot of slow IO. Or when you use WebSockets or streaming or the like.
-
-Note that concurrency always will be [**difficult**, no matter how you program it](https://glyph.twistedmatrix.com/2014/02/unyielding.html). For CRUD applications or any other Django project where you're not trying to build the next social media platform, using "sync Django" (and the availability of the many libraries out there) is just perfectly fine. uWSGI or Gunicorn with many workers and threads are excellent options to make it perform at a smaller scale.
-
-
-#### Links
+### Links
 
 - [:link: Full source code repository](https://github.com/maerteijn/django-sync-or-async), in case you want to checkout the code used in this article and/or run the performance tests yourself.
 - [:speech_balloon: Discussion page on Github](https://github.com/maerteijn/django-sync-or-async/discussions/categories/blog-post-discussion), any questions or remarks are welcome!
 
 ### If you want to read more
-Many great Pythonista's have been writing about this subject, some already a while ago, but most of it is still relevant today and where used for writing this article:
+Many great Pythonista's have been writing about this subject, some already a while ago, but most of it is still relevant today. Most of it has been of important value while writing this blogpost:
 
+- [What Color is Your Function? ](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
+- [The Function Colour Myth](https://lukasa.co.uk/2016/07/The_Function_Colour_Myth/)
 - [asyncio: We Did It Wrong](https://www.roguelynn.com/words/asyncio-we-did-it-wrong/)
 - [Asyncio, twisted, tornado, gevent walk into a bar...](https://www.bitecode.dev/p/asyncio-twisted-tornado-gevent-walk)
 - [Think twice before using asyncio in Python](https://mecha-mind.medium.com/think-twice-before-using-asyncio-in-python-7683472cb7a3)
+- [Unyielding](https://glyph.twistedmatrix.com/2014/02/unyielding.html)
 - [Notes on structured concurrency, or: Go statement considered harmful](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/)
 - [Python 3.10 native coroutine asyncio in practice](https://www.sobyte.net/post/2022-08/py-coroutine/)
 - [Python Asyncio: The Complete Guide](https://superfastpython.com/python-asyncio/)
 - [Some thoughts on asynchronous API design in a post-async/await world](https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/)
-- [Why Taskgroup and Timeout Are so Crucial in Python 3.11 Asyncio](https://towardsdatascience.com/)
-why-taskgroup-and-timeout-are-so-crucial-in-python-3-11-asyncio-c424bcc88b89)
-
-- [What Color is Your Function? ](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
-- [Unyielding](https://glyph.twistedmatrix.com/2014/02/unyielding.html)
+- [How to fit triangles into squares – run blocking functions in the event loop](https://codilime.com/blog/how-fit-triangles-into-squares-run-blocking-functions-event-loop/)
+- [Why Taskgroup and Timeout Are so Crucial in Python 3.11](https://towardsdatascience.com/why-taskgroup-and-timeout-are-so-crucial-in-python-3-11-asyncio-c424bcc88b89)
+- [Save the day with gevent](https://iximiuz.com/en/posts/save-the-day-with-gevent/)
