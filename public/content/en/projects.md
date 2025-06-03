@@ -6,7 +6,7 @@
 
 | :calendar: Period  | :file_folder: Project                                                                                        |
 | ------------------ | -------------------------------------------------------------------------------------------------------------|
-| 2025               | [Customer support web application for Beep for Help](/en/projects/customer-support-web-application-for-beep-for-help)
+| 2025               | [Customer support application for Beep for Help](/en/projects/customer-support-web-application-for-beep-for-help)
 | 2024               | [Machine learning Portal for Track 32](/en/projects/machine-learning-portal-for-track32)                    |
 | 2023               | [AWS CodeArtifact for Techonomy](/en/projects/aws-codeartifact-for-techonomy)                                |
 | 2022               | [Kompas Planner for Clever Sports](/en/projects/kompas-planner-for-clever-sports)                            |
