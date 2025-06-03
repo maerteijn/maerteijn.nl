@@ -12,7 +12,7 @@
 | 2022               | [Kompas Planner for Clever Sports](/en/projects/kompas-planner-for-clever-sports)                            |
 | 2021               | [Wagtail Gorilla Forms for Techonomy](/en/projects/wagtail-gorilla-forms-for-techonomy)                      |
 | 2020               | [Wholesale E-commerce for Highbiza](/en/projects/wholesale-ecommerce-for-highbiza)                           |
-| 2020               | [My Personal Website with Vue.js](/en/projects/my-personal-website-with-vue)                                 |
+| 2020               | [My personal website with Vue.js](/en/projects/my-personal-website-with-vue)                                 |
 | 2019               | [Corporate website for Zumtobel](/en/projects/corporate-website-for-zumtobel)                                |
 | 2018 - 2019        | [High Performance Cluster API](/en/projects/high-performance-cluster-api)                                    |
 | 2018               | [Webshop and Microservices API for Liander](/en/projects/webshop-and-microservices-api-for-liander)          |
