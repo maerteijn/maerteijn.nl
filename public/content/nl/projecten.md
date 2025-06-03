@@ -4,15 +4,17 @@
 
 #### Overzicht
 
-| :calendar: Periode  | :file_folder: Project                                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------------ |
-| 2023                | [AWS CodeArtifact voor Techonomy](/nl/projecten/aws-codeartifact-voor-techonomy)                       |
-| 2022                | [Kompas Planner voor Clever Sports](/nl/projecten/kompas-planner-voor-clever-sports)                   |
-| 2021                | [Wagtail Gorilla Forms voor Techonomy](/nl/projecten/wagtail-gorilla-forms-voor-techonomy)             |
-| 2020                | [Groothandel E-commerce voor Highbiza](/nl/projecten/groothandel-ecommerce-voor-highbiza)              |
-| 2020                | [Mijn website met Vue.js](/nl/projecten/mijn-website-met-vue)                                          |
-| 2019                | [Corporate website voor Zumtobel](/nl/projecten/corporate-website-voor-zumtobel)                       |
-| 2018 - 2019         | [High Performance Cluster API](/nl/projecten/high-performance-cluster-api)                             |
-| 2018                | [Webshop en Microservices API voor Liander](/nl/projecten/webshop-en-microservices-api-voor-liander)   |
-| 2017                | [Raspberry PI Saltstack deployment voor Vadain](/nl/projecten/rpi-saltstack-deployment-voor-vadain)    |
-| 2015 - 2016         | [E-commerce platform voor Nutricia](/nl/projecten/e-commerce-platform-voor-nutricia)                   |
+| :calendar: Periode  | :file_folder: Project                                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------|
+| 2025                | [Klantcontact webapplicatie voor Beep for Help](/nl/projecten/klantcontact-webapplicatie-voor-beep-for-help)   |
+| 2024                | [Machinelearning Portal voor Track 32](/nl/projecten/machinelearning-portal-voor-track32)                      |
+| 2023                | [AWS CodeArtifact voor Techonomy](/nl/projecten/aws-codeartifact-voor-techonomy)                               |
+| 2022                | [Kompas Planner voor Clever Sports](/nl/projecten/kompas-planner-voor-clever-sports)                           |
+| 2021                | [Wagtail Gorilla Forms voor Techonomy](/nl/projecten/wagtail-gorilla-forms-voor-techonomy)                     |
+| 2020                | [Groothandel E-commerce voor Highbiza](/nl/projecten/groothandel-ecommerce-voor-highbiza)                      |
+| 2020                | [Mijn website met Vue.js](/nl/projecten/mijn-website-met-vue)                                                  |
+| 2019                | [Corporate website voor Zumtobel](/nl/projecten/corporate-website-voor-zumtobel)                               |
+| 2018 - 2019         | [High Performance Cluster API](/nl/projecten/high-performance-cluster-api)                                     |
+| 2018                | [Webshop en Microservices API voor Liander](/nl/projecten/webshop-en-microservices-api-voor-liander)           |
+| 2017                | [Raspberry PI Saltstack deployment voor Vadain](/nl/projecten/rpi-saltstack-deployment-voor-vadain)            |
+| 2015 - 2016         | [E-commerce platform voor Nutricia](/nl/projecten/e-commerce-platform-voor-nutricia)                           |

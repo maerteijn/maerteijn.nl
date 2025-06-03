@@ -1,611 +1,754 @@
 {
-  "site_settings": {
-    "title": "maerteijn - freelance software developer",
-    "default_language": "nl",
-    "languages": {
-      "nl": "en",
-      "en": "nl"
-    }
-  },
-  "pages": [
+    "site_settings":
     {
-      "title": "maerteijn - hallo",
-      "description": "Welkom, ik ben Martijn Jacobs, freelance software ontwikkelaar uit Arnhem",
-      "name": "hallo",
-      "path": "/nl",
-      "url": "/content/nl/hallo.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "footer_component": "LastUpdated",
-      "settings": {
-        "identifier": 1,
-        "language": "nl",
-        "show_in_menu": false
-       }
-    },
-    {
-       "title": "maerteijn - projecten",
-       "description": "Een overzicht van alle projecten die ik heb gedaan",
-       "name": "projecten",
-       "path": "/nl/projecten",
-       "url": "/content/nl/projecten.md",
-       "type": "ContentPage",
-       "content_component": "MarkdownViewer",
-       "settings": {
-         "identifier": 2,
-         "language": "nl",
-         "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - projecten - aws codeartifact voor techonomy",
-      "description": "AWS CodeArtifact Private PYPI Server",
-      "name": "aws-codeartifact-voor-techonomy",
-      "path": "/nl/projecten/aws-codeartifact-voor-techonomy",
-      "url": "/content/nl/projecten/aws-codeartifact-voor-techonomy.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 19,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
+        "title": "maerteijn - freelance software developer",
+        "default_language": "nl",
+        "languages":
+        {
+            "nl": "en",
+            "en": "nl"
         }
-      }
     },
-    {
-      "title": "maerteijn - projecten - kompas planner voor clever sports",
-      "description": "Kompas Planner: Volledige web applicatie",
-      "name": "kompas-planner-voor-clever-sports",
-      "path": "/nl/projecten/kompas-planner-voor-clever-sports",
-      "url": "/content/nl/projecten/kompas-planner-voor-clever-sports.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 20,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - wagtail gorilla forms voor techonomy",
-      "description": "Django / Wagtail integratie van een React applicatie",
-      "name": "wagtail-gorilla-forms-voor-techonomy",
-      "path": "/nl/projecten/wagtail-gorilla-forms-voor-techonomy",
-      "url": "/content/nl/projecten/wagtail-gorilla-forms-voor-techonomy.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 21,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - groothandel ecommerce voor highbiza",
-      "description": "Groothandel E-Commmerce voor Highbiza, gebouwd met Django Oscar",
-      "name": "groothandel-ecommerce-voor-highbiza",
-      "path": "/nl/projecten/groothandel-ecommerce-voor-highbiza",
-      "url": "/content/nl/projecten/groothandel-ecommerce-voor-highbiza.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 22,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - mijn website met vue",
-      "description": "Mijn eigen website, gebouwd met Vue.js",
-      "name": "mijn-website-met-vue",
-      "path": "/nl/projecten/mijn-website-met-vue",
-      "url": "/content/nl/projecten/mijn-website-met-vue.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 23,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - corporate website voor zumtobel",
-      "description": "De corporate website van Zumtobel, hebouwd met Wagtail",
-      "name": "corporate-website-voor-zumtobel",
-      "path": "/nl/projecten/corporate-website-voor-zumtobel",
-      "url": "/content/nl/projecten/corporate-website-voor-zumtobel.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 24,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - high performance cluster api",
-      "description": "Een API voor een High Performance Cluster, gebouwd met Django REST Framework",
-      "name": "high-performance-cluster-api",
-      "path": "/nl/projecten/high-performance-cluster-api",
-      "url": "/content/nl/projecten/high-performance-cluster-api.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 25,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - webshop en microservices api voor liander",
-      "description": "Een SPA applicatie voor Liander, gebouwd met React en Django REST Framework",
-      "name": "webshop-en-microservices-api-voor-liander",
-      "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
-      "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 26,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - rpi saltstack deployment voor vadain",
-      "description": "Raspberry Pi automatisering met Saltstack",
-      "name": "rpi-saltstack-deployment-voor-vadain",
-      "path": "/nl/projecten/rpi-saltstack-deployment-voor-vadain",
-      "url": "/content/nl/projecten/rpi-saltstack-deployment-voor-vadain.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 27,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projecten - e-commerce platform voor nutricia",
-      "description": "E-commerce API, gebouwd met Django Oscar API en Django REST Framework",
-      "name": "e-commerce-platform-voor-nutricia",
-      "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
-      "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 28,
-        "language": "nl",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "Alle projecten",
-          "path": "/nl/projecten"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - contact",
-      "description": "Een overzicht van kanalen hoe je mij kunt bereiken",
-      "name": "contact",
-      "path": "/nl/contact",
-      "url": "/content/nl/contact.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 3,
-        "language": "nl",
-        "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - blog",
-      "description": "Een overzicht van de blog artikelen",
-      "name": "blog",
-      "path": "/nl/blog",
-      "url": "/content/nl/blog.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 4,
-        "language": "nl",
-        "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - colofon",
-      "description": "Een overzicht van alle technieken en tools die ik heb gebruikt voor deze website",
-      "name": "colofon",
-      "path": "/nl/colophon",
-      "url": "/content/nl/colofon.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 5,
-        "language": "nl",
-        "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - home",
-      "name": "home",
-      "description": "Hi, I'm Martijn Jacobs, a freelance software developer based in Arnhem, NL",
-      "path": "/en",
-      "url": "/content/en/home.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "footer_component": "LastUpdated",
-      "settings": {
-        "identifier": 1,
-        "language": "en",
-        "show_in_menu": false
-       }
-    },
-    {
-      "title": "maerteijn - projects",
-      "description": "An overview of the projects I did in the past",
-      "name": "projects",
-      "path": "/en/projects",
-      "url": "/content/en/projects.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 2,
-        "language": "en",
-        "show_in_menu": true
-      }
-   },
-    {
-      "title": "maerteijn - projecten - aws codeartifact for techonomy",
-      "description": "AWS CodeArtifact Private PYPI Server",
-      "name": "aws-codeartifact-for-techonomy",
-      "path": "/en/projects/aws-codeartifact-for-techonomy",
-      "url": "/content/en/projects/aws-codeartifact-for-techonomy.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 19,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-    },
+    "pages":
+    [
+        {
+            "title": "maerteijn - hallo",
+            "description": "Welkom, ik ben Martijn Jacobs, freelance software ontwikkelaar uit Arnhem",
+            "name": "hallo",
+            "path": "/nl",
+            "url": "/content/nl/hallo.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "footer_component": "LastUpdated",
+            "settings":
+            {
+                "identifier": 1,
+                "language": "nl",
+                "show_in_menu": false
+            }
+        },
+        {
+            "title": "maerteijn - projecten",
+            "description": "Een overzicht van alle projecten die ik heb gedaan",
+            "name": "projecten",
+            "path": "/nl/projecten",
+            "url": "/content/nl/projecten.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 2,
+                "language": "nl",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - projecten - klantcontact webapplicatie voor beep for help",
+            "description": "Klantcontact webapplicatie met Django",
+            "name": "klantcontact-webapplicatie-voor-beep-for-help",
+            "path": "/nl/projecten/klantcontact-webapplicatie-voor-beep-for-help",
+            "url": "/content/nl/projecten/klantcontact-webapplicatie-voor-beep-for-help.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 17,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - machinelearning portal voor track32",
+            "description": "Machinelearning Portal met Django",
+            "name": "machinelearning-portal-voor-track32",
+            "path": "/nl/projecten/machinelearning-portal-voor-track32",
+            "url": "/content/nl/projecten/machinelearning-portal-voor-track32.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 18,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
 
-   {
-      "title": "maerteijn - projects - kompas planner for clever sports",
-      "description": "Kompas Planner: Full web application",
-      "name": "kompas-planner-for-clever-sports",
-      "path": "/en/projects/kompas-planner-for-clever-sports",
-      "url": "/content/en/projects/kompas-planner-for-clever-sports.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 20,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
+        {
+            "title": "maerteijn - projecten - aws codeartifact voor techonomy",
+            "description": "AWS CodeArtifact Private PYPI Server",
+            "name": "aws-codeartifact-voor-techonomy",
+            "path": "/nl/projecten/aws-codeartifact-voor-techonomy",
+            "url": "/content/nl/projecten/aws-codeartifact-voor-techonomy.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 19,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - kompas planner voor clever sports",
+            "description": "Kompas Planner: Volledige web applicatie",
+            "name": "kompas-planner-voor-clever-sports",
+            "path": "/nl/projecten/kompas-planner-voor-clever-sports",
+            "url": "/content/nl/projecten/kompas-planner-voor-clever-sports.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 20,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - wagtail gorilla forms voor techonomy",
+            "description": "Django / Wagtail integratie van een React applicatie",
+            "name": "wagtail-gorilla-forms-voor-techonomy",
+            "path": "/nl/projecten/wagtail-gorilla-forms-voor-techonomy",
+            "url": "/content/nl/projecten/wagtail-gorilla-forms-voor-techonomy.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 21,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - groothandel ecommerce voor highbiza",
+            "description": "Groothandel E-Commmerce voor Highbiza, gebouwd met Django Oscar",
+            "name": "groothandel-ecommerce-voor-highbiza",
+            "path": "/nl/projecten/groothandel-ecommerce-voor-highbiza",
+            "url": "/content/nl/projecten/groothandel-ecommerce-voor-highbiza.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 22,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - mijn website met vue",
+            "description": "Mijn eigen website, gebouwd met Vue.js",
+            "name": "mijn-website-met-vue",
+            "path": "/nl/projecten/mijn-website-met-vue",
+            "url": "/content/nl/projecten/mijn-website-met-vue.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 23,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - corporate website voor zumtobel",
+            "description": "De corporate website van Zumtobel, hebouwd met Wagtail",
+            "name": "corporate-website-voor-zumtobel",
+            "path": "/nl/projecten/corporate-website-voor-zumtobel",
+            "url": "/content/nl/projecten/corporate-website-voor-zumtobel.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 24,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - high performance cluster api",
+            "description": "Een API voor een High Performance Cluster, gebouwd met Django REST Framework",
+            "name": "high-performance-cluster-api",
+            "path": "/nl/projecten/high-performance-cluster-api",
+            "url": "/content/nl/projecten/high-performance-cluster-api.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 25,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - webshop en microservices api voor liander",
+            "description": "Een SPA applicatie voor Liander, gebouwd met React en Django REST Framework",
+            "name": "webshop-en-microservices-api-voor-liander",
+            "path": "/nl/projecten/webshop-en-microservices-api-voor-liander",
+            "url": "/content/nl/projecten/webshop-en-microservices-api-voor-liander.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 26,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - rpi saltstack deployment voor vadain",
+            "description": "Raspberry Pi automatisering met Saltstack",
+            "name": "rpi-saltstack-deployment-voor-vadain",
+            "path": "/nl/projecten/rpi-saltstack-deployment-voor-vadain",
+            "url": "/content/nl/projecten/rpi-saltstack-deployment-voor-vadain.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 27,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - e-commerce platform voor nutricia",
+            "description": "E-commerce API, gebouwd met Django Oscar API en Django REST Framework",
+            "name": "e-commerce-platform-voor-nutricia",
+            "path": "/nl/projecten/e-commerce-platform-voor-nutricia",
+            "url": "/content/nl/projecten/e-commerce-platform-voor-nutricia.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 28,
+                "language": "nl",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "Alle projecten",
+                    "path": "/nl/projecten"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - contact",
+            "description": "Een overzicht van kanalen hoe je mij kunt bereiken",
+            "name": "contact",
+            "path": "/nl/contact",
+            "url": "/content/nl/contact.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 3,
+                "language": "nl",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - blog",
+            "description": "Een overzicht van de blog artikelen",
+            "name": "blog",
+            "path": "/nl/blog",
+            "url": "/content/nl/blog.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 4,
+                "language": "nl",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - colofon",
+            "description": "Een overzicht van alle technieken en tools die ik heb gebruikt voor deze website",
+            "name": "colofon",
+            "path": "/nl/colophon",
+            "url": "/content/nl/colofon.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 5,
+                "language": "nl",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - home",
+            "name": "home",
+            "description": "Hi, I'm Martijn Jacobs, a freelance software developer based in Arnhem, NL",
+            "path": "/en",
+            "url": "/content/en/home.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "footer_component": "LastUpdated",
+            "settings":
+            {
+                "identifier": 1,
+                "language": "en",
+                "show_in_menu": false
+            }
+        },
+        {
+            "title": "maerteijn - projects",
+            "description": "An overview of the projects I did in the past",
+            "name": "projects",
+            "path": "/en/projects",
+            "url": "/content/en/projects.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 2,
+                "language": "en",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - projects - customer support web application for beep for help",
+            "description": "Customer support web application with Django",
+            "name": "customer-support-web-application-for-beep-for-help",
+            "path": "/en/projects/customer-support-web-application-for-beep-for-help",
+            "url": "/content/en/projects/customer-support-web-application-for-beep-for-help.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 17,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - machine learning portal for track32",
+            "description": "Machine Learning Portal with Django",
+            "name": "machine-learning-portal-for-track32",
+            "path": "/en/projects/machine-learning-portal-for-track32",
+            "url": "/content/en/projects/machine-learning-portal-for-track32.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 18,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projecten - aws codeartifact for techonomy",
+            "description": "AWS CodeArtifact Private PYPI Server",
+            "name": "aws-codeartifact-for-techonomy",
+            "path": "/en/projects/aws-codeartifact-for-techonomy",
+            "url": "/content/en/projects/aws-codeartifact-for-techonomy.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 19,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - kompas planner for clever sports",
+            "description": "Kompas Planner: Full web application",
+            "name": "kompas-planner-for-clever-sports",
+            "path": "/en/projects/kompas-planner-for-clever-sports",
+            "url": "/content/en/projects/kompas-planner-for-clever-sports.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 20,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - wagtail gorilla forms fors techonomy",
+            "description": "Django / Wagtail integration of an React application",
+            "name": "wagtail-gorilla-forms-for-techonomy",
+            "path": "/en/projects/wagtail-gorilla-forms-for-techonomy",
+            "url": "/content/en/projects/wagtail-gorilla-forms-for-techonomy.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 21,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - wholesale ecommerce for highbiza",
+            "description": "Wholesale E-commerce for Highbiza, built with Django Oscar",
+            "name": "wholesale-ecommerce-for-highbiza",
+            "path": "/en/projects/wholesale-ecommerce-for-highbiza",
+            "url": "/content/en/projects/wholesale-ecommerce-for-highbiza.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 22,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - my personal website with vue.js",
+            "description": "My personal website, built with Vue.js",
+            "name": "my-personal-website-with-vue",
+            "path": "/en/projects/my-personal-website-with-vue",
+            "url": "/content/en/projects/my-personal-website-with-vue.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 23,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - corporate website for zumtobel",
+            "description": "The Zumtobel corporate website, built with Wagtail",
+            "name": "corporate-website-for-zumtobel",
+            "path": "/en/projects/corporate-website-for-zumtobel",
+            "url": "/content/en/projects/corporate-website-for-zumtobel.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 24,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - high performance cluster api",
+            "name": "high-performance-cluster-api",
+            "description": "A High Performance Cluster API, built with Django REST Framework",
+            "path": "/en/projects/high-performance-cluster-api",
+            "url": "/content/en/projects/high-performance-cluster-api.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 25,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - webshop and microservices api for liander",
+            "name": "webshop-and-microservices-api-for-liander",
+            "description": "A SPA application for Liander, built with React and Django REST Framework",
+            "path": "/en/projects/webshop-and-microservices-api-for-liander",
+            "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 26,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - rpi saltstack deployment for vadain",
+            "description": "Raspberry Pi automated deployment with Saltstack",
+            "name": "rpi-saltstack-deployment-for-vadain",
+            "path": "/en/projects/rpi-saltstack-deployment-for-vadain",
+            "url": "/content/en/projects/rpi-saltstack-deployment-for-vadain.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 27,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - projects - e-commerce platform for nutricia",
+            "description": "E-commerce API built with Django Oscar API and Django REST Framework",
+            "name": "e-commerce-platform-for-nutricia",
+            "path": "/en/projects/e-commerce-platform-for-nutricia",
+            "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 28,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All projects",
+                    "path": "/en/projects"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - contact",
+            "description": "An overview how you can reach me",
+            "name": "contact",
+            "path": "/en/contact",
+            "url": "/content/en/contact.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 3,
+                "language": "en",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - blog",
+            "description": "An overview of all blog articles",
+            "name": "blog",
+            "path": "/en/blog",
+            "url": "/content/en/blog.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 4,
+                "language": "en",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - blog - django sync or async",
+            "description": "Django sync or async, that's the question",
+            "name": "django-sync-or-async",
+            "path": "/en/blog/django-sync-or-async",
+            "url": "/content/en/blog/django-sync-or-async.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 38,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All blog articles",
+                    "path": "/en/blog"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - blog - a private pypi server with aws codeartifact",
+            "description": "A private PyPI server with AWS CodeArtifact",
+            "name": "private-pypi-with-aws-codeartifact",
+            "path": "/en/blog/private-pypi-with-aws-codeartifact",
+            "url": "/content/en/blog/private-pypi-with-aws-codeartifact.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 39,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All blog articles",
+                    "path": "/en/blog"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - blog - beautiful asserts with your django test client",
+            "description": "Beatiful asserts with your Django Test Client",
+            "name": "beautiful-asserts-with-your-django-test-client",
+            "path": "/en/blog/beautiful-asserts-with-your-django-test-client",
+            "url": "/content/en/blog/beautiful-asserts-with-your-django-test-client.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 40,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All blog articles",
+                    "path": "/en/blog"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - blog - structural pattern matching with python",
+            "description": "Structural Pattern matching with Python",
+            "name": "structural-pattern-matching-with-python",
+            "path": "/en/blog/structural-pattern-matching-with-python",
+            "url": "/content/en/blog/structural-pattern-matching-with-python.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 41,
+                "language": "en",
+                "show_in_menu": false,
+                "backlink":
+                {
+                    "title": "All blog articles",
+                    "path": "/en/blog"
+                }
+            }
+        },
+        {
+            "title": "maerteijn - colophon",
+            "description": "An overview of all technologies and tools I used for this website",
+            "name": "colophon",
+            "path": "/en/colophon",
+            "url": "/content/en/colophon.md",
+            "type": "ContentPage",
+            "content_component": "MarkdownViewer",
+            "settings":
+            {
+                "identifier": 5,
+                "language": "en",
+                "show_in_menu": true
+            }
+        },
+        {
+            "title": "maerteijn - redirect",
+            "name": "Redirect",
+            "path": "/:pathMatch(.*)*",
+            "type": "RedirectPage",
+            "settings":
+            {}
         }
-      }
-   },
-   {
-      "title": "maerteijn - projects - wagtail gorilla forms fors techonomy",
-      "description": "Django / Wagtail integration of an React application",
-      "name": "wagtail-gorilla-forms-for-techonomy",
-      "path": "/en/projects/wagtail-gorilla-forms-for-techonomy",
-      "url": "/content/en/projects/wagtail-gorilla-forms-for-techonomy.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 21,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
+    ],
+    "logo_links":
+    [
+        {
+            "title": "LinkedIn",
+            "url": "https://www.linkedin.com/in/maerteijn/",
+            "font_awesome_icon": "fab-linkedin-in"
+        },
+        {
+            "title": "Github",
+            "url": "https://www.github.com/maerteijn/",
+            "font_awesome_icon": "fab-github"
+        },
+        {
+            "title": "Gitlab",
+            "url": "https://www.gitlab.com/maerteijn/",
+            "font_awesome_icon": "fab-gitlab"
         }
-      }
-   },
-   {
-      "title": "maerteijn - projects - wholesale ecommerce for highbiza",
-      "description": "Wholesale E-commerce for Highbiza, built with Django Oscar",
-      "name": "wholesale-ecommerce-for-highbiza",
-      "path": "/en/projects/wholesale-ecommerce-for-highbiza",
-      "url": "/content/en/projects/wholesale-ecommerce-for-highbiza.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 22,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projects - my personal website with vue.js",
-      "description": "My personal website, built with Vue.js",
-      "name": "my-personal-website-with-vue",
-      "path": "/en/projects/my-personal-website-with-vue",
-      "url": "/content/en/projects/my-personal-website-with-vue.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 23,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-   },
-   {
-      "title": "maerteijn - projects - corporate website for zumtobel",
-      "description": "The Zumtobel corporate website, built with Wagtail",
-      "name": "corporate-website-for-zumtobel",
-      "path": "/en/projects/corporate-website-for-zumtobel",
-      "url": "/content/en/projects/corporate-website-for-zumtobel.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 24,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-   },
-   {
-      "title": "maerteijn - projects - high performance cluster api",
-      "name": "high-performance-cluster-api",
-      "description": "A High Performance Cluster API, built with Django REST Framework",
-      "path": "/en/projects/high-performance-cluster-api",
-      "url": "/content/en/projects/high-performance-cluster-api.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 25,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projects - webshop and microservices api for liander",
-      "name": "webshop-and-microservices-api-for-liander",
-      "description": "A SPA application for Liander, built with React and Django REST Framework",
-      "path": "/en/projects/webshop-and-microservices-api-for-liander",
-      "url": "/content/en/projects/webshop-and-microservices-api-for-liander.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 26,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projects - rpi saltstack deployment for vadain",
-      "description": "Raspberry Pi automated deployment with Saltstack",
-      "name": "rpi-saltstack-deployment-for-vadain",
-      "path": "/en/projects/rpi-saltstack-deployment-for-vadain",
-      "url": "/content/en/projects/rpi-saltstack-deployment-for-vadain.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 27,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - projects - e-commerce platform for nutricia",
-      "description": "E-commerce API built with Django Oscar API and Django REST Framework",
-      "name": "e-commerce-platform-for-nutricia",
-      "path": "/en/projects/e-commerce-platform-for-nutricia",
-      "url": "/content/en/projects/e-commerce-platform-for-nutricia.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 28,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All projects",
-          "path": "/en/projects"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - contact",
-      "description": "An overview how you can reach me",
-      "name": "contact",
-      "path": "/en/contact",
-      "url": "/content/en/contact.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 3,
-        "language": "en",
-        "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - blog",
-      "description": "An overview of all blog articles",
-      "name": "blog",
-      "path": "/en/blog",
-      "url": "/content/en/blog.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 4,
-        "language": "en",
-        "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - blog - django sync or async",
-      "description": "Django sync or async, that's the question",
-      "name": "django-sync-or-async",
-      "path": "/en/blog/django-sync-or-async",
-      "url": "/content/en/blog/django-sync-or-async.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 38,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All blog articles",
-          "path": "/en/blog"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - blog - a private pypi server with aws codeartifact",
-      "description": "A private PyPI server with AWS CodeArtifact",
-      "name": "private-pypi-with-aws-codeartifact",
-      "path": "/en/blog/private-pypi-with-aws-codeartifact",
-      "url": "/content/en/blog/private-pypi-with-aws-codeartifact.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 39,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All blog articles",
-          "path": "/en/blog"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - blog - beautiful asserts with your django test client",
-      "description": "Beatiful asserts with your Django Test Client",
-      "name": "beautiful-asserts-with-your-django-test-client",
-      "path": "/en/blog/beautiful-asserts-with-your-django-test-client",
-      "url": "/content/en/blog/beautiful-asserts-with-your-django-test-client.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 40,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All blog articles",
-          "path": "/en/blog"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - blog - structural pattern matching with python",
-      "description": "Structural Pattern matching with Python",
-      "name": "structural-pattern-matching-with-python",
-      "path": "/en/blog/structural-pattern-matching-with-python",
-      "url": "/content/en/blog/structural-pattern-matching-with-python.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 41,
-        "language": "en",
-        "show_in_menu": false,
-        "backlink": {
-          "title": "All blog articles",
-          "path": "/en/blog"
-        }
-      }
-    },
-    {
-      "title": "maerteijn - colophon",
-      "description": "An overview of all technologies and tools I used for this website",
-      "name": "colophon",
-      "path": "/en/colophon",
-      "url": "/content/en/colophon.md",
-      "type": "ContentPage",
-      "content_component": "MarkdownViewer",
-      "settings": {
-        "identifier": 5,
-        "language": "en",
-        "show_in_menu": true
-       }
-    },
-    {
-      "title": "maerteijn - redirect",
-      "name": "Redirect",
-      "path": "/:pathMatch(.*)*",
-      "type": "RedirectPage",
-      "settings": {}
-    }
-  ],
-  "logo_links": [
-    {
-      "title": "LinkedIn",
-      "url": "https://www.linkedin.com/in/maerteijn/",
-      "font_awesome_icon": "fab-linkedin-in"
-    },
-    {
-      "title": "Github",
-      "url": "https://www.github.com/maerteijn/",
-      "font_awesome_icon": "fab-github"
-    },
-    {
-      "title": "Gitlab",
-      "url": "https://www.gitlab.com/maerteijn/",
-      "font_awesome_icon": "fab-gitlab"
-    }
-  ]
+    ]
 }
