@@ -12,7 +12,7 @@ De REST API is ontwikkeld inclusief:
 
 
 #### Uitgelichte technologieën
-- [Django REST Framework](https://www.django-rest-framework.org/) gebruikmakend van [PostgreSQL](https://www.postgresql.org/)
+- [Django REST Framework](https://www.django-rest-framework.org/) en [PostgreSQL](https://www.postgresql.org/)
 - Het uitmuntende [Dramatiq](https://dramatiq.io/) als communicatie-framework samen met [RabbitMQ](https://www.rabbitmq.com/)
 - Authenticatie en permissies met [Django Auth ADFS](https://github.com/jobec/django-auth-adfs)
 
