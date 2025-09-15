@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "VITE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vite build && npm run build:sitemap",
     "build:dev": "VITE_APP_BUILD_TIME=$(TZ=Europe/Amsterdam date) vite build --mode development",
     "build:css": "sass --verbose --load-path=./node_modules/ --load-path=./src ./src/scss/main.scss dist/main.css",
