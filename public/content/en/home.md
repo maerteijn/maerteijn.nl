@@ -9,7 +9,7 @@ __Maerteijn__ is an "[Old Dutch spelling](https://en.wikipedia.org/wiki/Old_Dutc
 
 Front-end development with Javascript, (S)CSS or frameworks like [Tailwind.css](https://tailwindcss.com) or [Vue.js](https://vuejs.org/) I also do when it's required for the project.
 
-I write code with as little AI assistance as possible and I highly value privacy and environmental impact.
+I like to write code by myself, and currently I'm a bit skeptical regarding AI assistance. I highly value privacy, security and environmental impact.
 
 I feel confident in different kinds of roles when I'm part of a project team, such as (lead-)developer, MR/PR reviewer or technical assessor. I'm perfectly fine to work completely independent as well.
 

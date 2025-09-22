@@ -7,7 +7,7 @@
 
 #### API first
 
-The Portal has to communicate with several services like the training backend(s) for the models. The Portal itself needs to be queried as well by the machines "on the spot", so a clear and future proof communication API, defined with [OpenAPI](https://swagger.io/specification/), was the main focus from the start. As we built the Portal with [Django](https://www.djangoproject.com/), we used [Django REST Framework](https://www.django-rest-framework.org/) as it's stable, feature complete and easy to extend. We also used [Flask](https://flask.palletsprojects.com/en/stable/) for the API implementation of the training backend(s): A small, simple, mature and easy to maintain web application platform and framework.
+The Portal has to communicate with several services like the training backend(s) for the models. The Portal itself needs to be queried as well by the machines "on the spot", so a clear and future-proof communication API, defined with [OpenAPI](https://swagger.io/specification/), was the main focus from the start. As we built the Portal with [Django](https://www.djangoproject.com/), we used [Django REST Framework](https://www.django-rest-framework.org/) as it's stable, feature complete and easy to extend. We also used [Flask](https://flask.palletsprojects.com/en/stable/) for the API implementation of the training backend(s): A small, simple, mature and easy to maintain web application platform and framework.
 
 #### Highlighted technologies
 - [Django](https://www.djangoproject.com/) with [Django REST Framework](https://www.django-rest-framework.org/) using [PostgreSQL](https://www.postgresql.org/)
