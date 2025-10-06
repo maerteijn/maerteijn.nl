@@ -140,5 +140,5 @@ $ twine upload --repository-url $AWS_CODEARTIFACT_PYPI_REPOSITORY_URL --username
 ```
 
 ### Useful links
-- https://jasonstitt.com/private-packages-codeartifact-poetry-workflow, an excellent tutorial with [poetry](https://python-poetry.org/)
-- https://docs.aws.amazon.com/codeartifact/latest/ug/python-configure-pip.html, configure pip with AWS CodeArtifact
+- [:link: Private packages with CodeArtifact and Poetry](https://jasonstitt.com/private-packages-codeartifact-poetry-workflow), an excellent tutorial with [poetry](https://python-poetry.org/)
+- [:link: Pip and CodeArtifact](https://docs.aws.amazon.com/codeartifact/latest/ug/python-configure-pip.html), how to configure pip with AWS CodeArtifact

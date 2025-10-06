@@ -217,4 +217,3 @@ Although [BeatifulSoup](https://www.crummy.com/software/BeautifulSoup/) has been
 #### Links
 
 - [:link: Full source code repository](https://github.com/maerteijn/beautiful-asserts), in case you want to checkout the code used in this article or run the tests yourself.
-- [:speech_balloon: Discussion page on Github](https://github.com/maerteijn/beautiful-asserts/discussions/categories/blog-post-discussion), any questions or remarks are welcome!
