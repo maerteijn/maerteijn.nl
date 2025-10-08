@@ -9,7 +9,7 @@ __Maerteijn__ is een "[Oudnederlandse](https://nl.wikipedia.org/wiki/Oudnederlan
 
 Front-end ontwikkeling met Javascript, (S)CSS of frameworks zoals [Tailwind.css](https://tailwindcss.com) [Vue.js](https://vuejs.org/) doe ik ook wanneer het project er om vraagt. 
 
-Ik schrijf code graag zelf en ben wat skeptisch over AI assistentie. Privacywaardes, security en millieu-impact heb ik hoog in het vaandel staan.
+Privacywaardes, security en milieu-impact heb ik hoog in het vaandel staan. De huidige AI trend volg ik op de voet en ik blijf tegelijkertijd ook skeptisch en kritisch. 
 
 Ik kan prima zelfstandig aan een project of opdracht werken. In projectteams kan ik allerlei rollen vervullen zoals (lead-)developer, reviewer van code of criticus van technische beslissingen.
 
