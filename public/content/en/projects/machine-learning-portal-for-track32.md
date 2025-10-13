@@ -14,14 +14,14 @@ The Portal has to communicate with several services like the training backend(s)
 - [Flask](https://flask.palletsprojects.com/en/stable/) web application framework
 - [MinIO](https://min.io/) for data storage of images
 - [Docker Compose](https://docs.docker.com/compose/) for testing Docker setups and for local development (including S3 storage via MinIO)
-- [Crumbles](https://github.com/maerteijn/crumbles/) A simple breadcrumb library for any python framework (which is a spin-off of this project)
+- [Crumbles](https://github.com/maerteijn/crumbles/) A simple breadcrumb library for any python framework (which is a spin-off project from this project)
 
 #### Factsheet
-|                            |                                                  |
-| -------------------------- | ------------------------------------------------ |
-| :calendar: **Period**      | 2024                                             |
-| :computer: **Role**        | Python and Front-end Developer, Consultant       |
-| :man: **Customer**         | [Track 32](https://www.track32.nl)               |
-| :office: **Contractor**    | [Vicktor](https://www.vicktor.nl)                |
-| :link: **Repository**      | [Github](https://github.com/maerteijn/crumbles/) |
+|                            |                                                                         |
+| -------------------------- | ----------------------------------------------------------------------- |
+| :calendar: **Period**      | 2024                                                                    |
+| :computer: **Role**        | Python and Front-end Developer, Consultant                              |
+| :man: **Customer**         | [Track 32](https://www.track32.nl)                                      |
+| :office: **Contractor**    | [Vicktor](https://www.vicktor.nl)                                       |
+| :link: **Repository**      | [Crumbles repository on Github](https://github.com/maerteijn/crumbles/) |
 

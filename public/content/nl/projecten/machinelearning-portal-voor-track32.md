@@ -16,11 +16,10 @@ De portal moet kunnen communiceren met verschillende services zoals de trainings
 - [Crumbles](https://github.com/maerteijn/crumbles/) Een simpep kruimepad library voor ieder Python framework (afgeleid van de implementatie in dit project
 
 #### Factsheet
-|                             |                                                  |
-| --------------------------- | ------------------------------------------------ |
-| :calendar: **Periode**      | 2024                                             |
-| :computer: **Rol**          | Python en Front-end ontwikkelaar, consultant     |
-| :man: **Klant**             | [Track 32](https://www.track32.nl)               |
-| :office: **Opdrachtgever**  | [Vicktor](https://www.vicktor.nl)                |
-| :link: **Repository**       | [Github](https://github.com/maerteijn/crumbles/) |
-
+|                             |                                                                         |
+| --------------------------- | ----------------------------------------------------------------------- |
+| :calendar: **Periode**      | 2024                                                                    |
+| :computer: **Rol**          | Python en Front-end ontwikkelaar, consultant                            |
+| :man: **Klant**             | [Track 32](https://www.track32.nl)                                      |
+| :office: **Opdrachtgever**  | [Vicktor](https://www.vicktor.nl)                                       |
+| :link: **Repository**       | [Crumbles repository op Github](https://github.com/maerteijn/crumbles/) |
