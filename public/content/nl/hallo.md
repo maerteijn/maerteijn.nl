@@ -7,9 +7,9 @@ __Maerteijn__ is een "[Oudnederlandse](https://nl.wikipedia.org/wiki/Oudnederlan
 ## Profiel
 ![Martijn](/images/photo-small.jpg#left =130x150) Ik heb 20+ jaar ervaring als software ontwikkelaar, met name met de programmeertaal [Python](https://www.python.org/). Ik schrijf graag leesbare en aanpasbare programmacode en ik ben van mening dat code pas software wordt als er een test voor is. Ik automatiseer en voorzie QA, Devops, packaging en deployment graag met diverse tools als [Docker](https://www.docker.com), [GitLab CI/CD](https://docs.gitlab.com/ee/ci/), [Github Actions](https://github.com/features/actions) of [Saltstack](https://www.saltstack.com/). De laatste jaren heb ik vooral met [Django](https://www.djangoproject.com/) gewerkt, in combinatie met [Django REST Framework](https://www.django-rest-framework.org/) en/of [Wagtail](https://wagtail.io/). 
 
-Front-end ontwikkeling met Javascript, (S)CSS of frameworks zoals [Tailwind.css](https://tailwindcss.com) [Vue.js](https://vuejs.org/) doe ik ook wanneer het project er om vraagt. 
+Front-end ontwikkeling met Javascript, (S)CSS of frameworks zoals [Tailwind.css](https://tailwindcss.com) en [Vue.js](https://vuejs.org/) zijn mij niet vreemd en doe ik ook wanneer het project er om vraagt.
 
-Privacywaardes, security en milieu-impact heb ik hoog in het vaandel staan. De huidige AI trend volg ik op de voet en ik blijf tegelijkertijd ook skeptisch en kritisch. 
+Privacywaardes, security en milieu-impact heb ik hoog in het vaandel staan. De huidige AI trend volg ik op de voet met een realistische en kritische blik.
 
 Ik kan prima zelfstandig aan een project of opdracht werken. In projectteams kan ik allerlei rollen vervullen zoals (lead-)developer, reviewer van code of criticus van technische beslissingen.
 
