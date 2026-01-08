@@ -15,7 +15,7 @@ Door het Vragenlijst model [abstract](https://docs.djangoproject.com/en/3.2/topi
 #### Uitgelichte technologieën
 - [Wagtail ModelAdmin](https://docs.wagtail.io/en/stable/reference/contrib/modeladmin/index.html), een uitstekende  Wagtail contrib applicatie om zo ieder Django model te kunnen beheren met de Wagtail UI
 - [Microsoft Playwright](https://playwright.dev/) met [Express](https://expressjs.com/) voor het schrijven van [E2E tests](https://github.com/maerteijn/maerteijn.nl/tree/master/tests/e2e), dit om zo te kunnen testen of de React componenten naar behoren functioneren
-- [Webpack Output](https://webpack.js.org/configuration/output/#outputlibrarytype), door `output.library.type` op `var` te zetten kunnen we de React componenten als javascript variabelen exporteren. Dit maakt het makkelijk om de compontenten met simpele javascript te integreren in de Wagtail UI
+- [Webpack Output](https://webpack.js.org/configuration/output/#outputlibrarytype), door `output.library.type` op `var` te zetten kunnen we de React componenten als javascript variabelen exporteren. Dit maakt het makkelijk om de componenten met simpele javascript te integreren in de Wagtail UI
 
 
 #### Factsheet
