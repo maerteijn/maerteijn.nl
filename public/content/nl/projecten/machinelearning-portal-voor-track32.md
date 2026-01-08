@@ -5,7 +5,7 @@
 #### Machinelearning Portal
 [Track 32](https://www.track32.nl/) is een bedrijf dat gespecialiseerd is in AI landbouw toepassingen, zowel hardware als software. Voor één van hun klanten (die machines bouwt voor de tuinbouw) wilden ze een Machinelearning Portal ontwikkelen zodat afnemers zelf hun Machinelearning modellen kunnen trainen: Een gestructureerde workflow voor een volledige "machinelearning flow", inclusief het opschonen van datasets, model training, modelvalidatie (detecties), modelbeheer, storage, etc. Deze Portal is geïmplementeerd en uitgeleverd en wordt tegenwoordig door datawetenschappers gebruikt als model storage, om data te exporteren/importeren en voor gegevensuitwisseling.
 
-#### API firdt
+#### API first
 De portal moet kunnen communiceren met verschillende services zoals de trainingsbackend(s) voor de modellen. De portal zelf moet ook door diverse machines worden geraadpleegd, dus een toekomstbestendige API definitie, opgesteld met [OpenAPI](https://swagger.io/specification/), stond als eerste op de roadmap. Omdat we de portal met [Django](https://www.djangoproject.com/) hebben gebouwd gebruikten we [Django REST Framework](https://www.django-rest-framework.org/) omdat het stabiel is, "feature complete" en eenvoudig uit te breiden is. We gebruikten ook [Flask](https://flask.palletsprojects.com/en/stable/) voor de API-implementatie van de trainingsbackend(s): een klein, eenvoudig, makkelijk te onderhouden webapplicatie platform en framework.
 
 #### Uitgelichte technologieën
